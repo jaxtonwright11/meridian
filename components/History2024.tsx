@@ -6,6 +6,10 @@ import styles from './History2024.module.css';
 
 const slides2024 = [
   {
+    src: '/IMG_1800.jpeg',
+    alt: 'Networking group with person in emerald green outfit at 2024 event',
+  },
+  {
     src: '/IMG_1802.jpeg',
     alt: 'Empty 2024 hotel ballroom before the event, stage with four chairs and Young & Gifted branding',
   },
@@ -20,18 +24,6 @@ const slides2024 = [
   {
     src: '/IMG_1806.jpeg',
     alt: 'Wider angle of 2024 panel with students approaching panelists',
-  },
-  {
-    src: '/IMG_8781.jpeg',
-    alt: '2024 networking group in hotel space',
-  },
-  {
-    src: '/IMG_1728.jpeg',
-    alt: 'Three people in suits in natural conversation in hotel hallway',
-  },
-  {
-    src: '/IMG_1808.jpeg',
-    alt: 'Two students in the audience at the 2024 event',
   },
 ];
 

@@ -25,9 +25,10 @@
 .headline {
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 600;
-  line-height: 1.08;
+  line-height: 1.15;
   margin-bottom: var(--space-lg);
   display: inline-block;
+  padding-bottom: 0.1em;
 }
 
 .headline span {

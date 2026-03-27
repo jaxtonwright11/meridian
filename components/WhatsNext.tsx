@@ -43,12 +43,24 @@ export function WhatsNext() {
         </AnimateIn>
         <AnimateIn delay={0.2}>
           <p className={styles.subtitle}>
-            The job market is shifting faster than most people expected.
-            AI is changing what skills matter and who gets hired. Meridian exists
-            because young people in Ventura County deserve to be in those conversations,
-            not reading about them later. The next conference is coming Winter 2026.
-            University chapter expansion is in development. If you want to be part
-            of what comes next, this is where that starts.
+            The rules of the job market are being rewritten. AI is replacing roles
+            faster than most schools are teaching people to adapt. The communities
+            that have historically had the least access to preparation are the ones
+            most at risk of being left behind again.
+          </p>
+        </AnimateIn>
+        <AnimateIn delay={0.3}>
+          <p className={styles.subtitle}>
+            Meridian exists to close that gap in Ventura County. Not by putting
+            young people in conversations. By giving them real access to the people,
+            knowledge, and rooms that change what is possible for them.
+          </p>
+        </AnimateIn>
+        <AnimateIn delay={0.4}>
+          <p className={styles.subtitle}>
+            The next conference is coming Winter 2026. University chapter expansion
+            is in development. If you want to be part of what comes next,
+            this is where it starts.
           </p>
         </AnimateIn>
 

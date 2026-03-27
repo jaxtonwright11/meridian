@@ -7,7 +7,7 @@ const tiers = [
   {
     name: 'Presenting Sponsor',
     price: '$5,000+',
-    accent: 'amethyst',
+    accent: 'gold',
     featured: true,
     benefits: [
       'Named presenting sponsor across all materials and communications',
@@ -53,8 +53,8 @@ export function Sponsors() {
         <AnimateIn delay={0.2}>
           <p className={styles.subtitle}>
             This is not logo placement on a banner. It is direct access to motivated
-            young people from Ventura County, CSR content that reflects genuine impact,
-            and brand association with a conference built on access.
+            young people, CSR content that reflects genuine impact, and brand
+            association with a conference built on access.
           </p>
         </AnimateIn>
 
@@ -64,7 +64,6 @@ export function Sponsors() {
               key={tier.name}
               className={`${styles.tierCard} ${tier.featured ? styles.featured : ''} ${styles[tier.accent]}`}
             >
-              {tier.featured && <span className={styles.badge}>Limited Positions</span>}
               <h3 className={styles.tierName}>{tier.name}</h3>
               <span className={styles.tierPrice}>{tier.price}</span>
               <div className={styles.divider} />

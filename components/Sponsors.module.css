@@ -42,17 +42,17 @@
 
 /* Featured card (Presenting Sponsor) */
 .featured {
-  border-color: var(--amethyst);
+  border-color: var(--gold);
   background: linear-gradient(
     180deg,
-    rgba(123, 94, 167, 0.08) 0%,
+    rgba(201, 168, 76, 0.08) 0%,
     var(--bg-primary) 40%
   );
 }
 
 .featured:hover {
-  border-color: var(--amethyst);
-  box-shadow: 0 12px 40px rgba(123, 94, 167, 0.15);
+  border-color: var(--gold);
+  box-shadow: 0 12px 40px rgba(201, 168, 76, 0.15);
 }
 
 /* Accent color overrides */
@@ -73,7 +73,7 @@
   position: absolute;
   top: calc(-1 * var(--space-xs) - 4px);
   left: var(--space-md);
-  background: var(--amethyst);
+  background: var(--gold);
   color: var(--text-primary);
   font-size: 11px;
   font-weight: 600;

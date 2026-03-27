@@ -35,37 +35,26 @@ export function Founder() {
               <p className={styles.role}>Founder, Meridian Conference</p>
               <div className={styles.bio}>
                 <p>
-                  Meridian started because of what Jaxton Wright kept watching happen
-                  in Ventura County: talented people getting shut out of rooms
-                  they actually belonged in.
+                  Meridian was built on a simple observation: the rooms that change
+                  trajectories should not require a certain last name or zip code to enter.
                 </p>
                 <p>
-                  I am 19, from Oxnard, CA, studying Honors Economics and Political Science
-                  at UC Berkeley. I run four things at once: PRISM (a geographic community
-                  perspective platform I founded with seed funding), Meridian Conference
-                  (a free youth leadership conference I started in Ventura County, ~150 young
-                  people, speakers from Netflix, OpenAI, and Chase Bank, December 2025),
-                  an AI consulting practice ($317K+ in documented revenue recovered for
-                  SoCal businesses), and DreamDealer (a real estate wholesaling pipeline
-                  in Southern California). Before all of that, I worked on AI policy with
-                  both sides of Congress, interned with Senator Schiff and Representative
-                  Mace in the same year, and was invited to speak on AI and youth opportunity
-                  at Harvard Kennedy School.
+                  Jaxton Wright is 19, from Oxnard, CA, studying Honors Economics and
+                  Political Science at UC Berkeley. The first Meridian event brought ~150
+                  young people into the same room as leaders from Netflix, OpenAI, and
+                  Chase Bank. The conversations were real, and the outcomes followed:
+                  mentorships, internship introductions, career pivots.
                 </p>
                 <p>
-                  I grew up in Southern California watching talented people get shut out
-                  of rooms they actually belonged in. Everything I build is some version
-                  of opening that door and scaling it.
+                  He has worked on AI policy with both sides of Congress, interning with
+                  Senator Schiff and Representative Mace in the same year, and was invited
+                  to speak on AI and youth opportunity at Harvard Kennedy School. Outside
+                  of Meridian, he founded PRISM, a seed-funded geographic community
+                  platform, and runs an AI consulting practice with $317K+ in documented
+                  revenue recovered for Southern California businesses.
                 </p>
                 <p>
-                  If any of this connects with you:{' '}
-                  <a
-                    href="https://calendly.com/jaxtonwright"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    calendly.com/jaxtonwright
-                  </a>
+                  That gap is what Meridian is closing.
                 </p>
               </div>
             </div>

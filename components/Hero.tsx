@@ -77,8 +77,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          Connecting young people from Ventura County to the rooms, people,
-          and opportunities they didn&apos;t know they could access.
+          Connecting young people to the rooms, people, and opportunities
+          they didn&apos;t know they could access.
         </motion.p>
 
         <motion.div

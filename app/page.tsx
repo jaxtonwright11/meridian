@@ -38,11 +38,11 @@ export default function Home() {
         <Hero />
         <ProofBar />
         <Mission />
-        <History2024 />
         <Recap />
+        <History2024 />
         <WhatsNext />
-        <Sponsors />
         <Founder />
+        <Sponsors />
         <Contact />
       </main>
       <Footer />

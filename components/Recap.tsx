@@ -6,12 +6,12 @@ import styles from './Recap.module.css';
 
 const slides2025 = [
   {
-    src: '/IMG_9354.jpeg',
-    alt: 'Empty December 2025 venue pre-event, purple/gray seats, full stage, three screens with branding',
-  },
-  {
     src: '/IMG_9547.jpeg',
     alt: 'Full group of approximately 150 people at December 2025 Meridian Conference',
+  },
+  {
+    src: '/IMG_9354.jpeg',
+    alt: 'Empty December 2025 venue pre-event, purple/gray seats, full stage, three screens with branding',
   },
   {
     src: '/IMG_1727.jpeg',
@@ -22,12 +22,12 @@ const slides2025 = [
     alt: 'Wide shot of full December 2025 panel, Jaxton moderating with five panelists',
   },
   {
-    src: '/IMG_1800.jpeg',
-    alt: 'Woman standing with microphone speaking to engaged crowd',
-  },
-  {
     src: '/IMG_9545.jpeg',
     alt: 'Awards ceremony with group on stage holding recognition plaques',
+  },
+  {
+    src: '/IMG_1728.jpeg',
+    alt: 'Woman standing with microphone speaking to crowd at December 2025',
   },
   {
     src: '/IMG_1809.jpeg',
@@ -56,7 +56,7 @@ export function Recap() {
 
         <AnimateIn delay={0.2}>
           <p className={styles.intro}>
-            ~150 young people from Ventura County walked into a room with
+            ~150 young people walked into a room with
             representatives from Netflix, OpenAI, and Chase Bank. Not for a
             lecture. For direct, face-to-face conversations with people who
             could change their trajectory. December 2025 was the last event

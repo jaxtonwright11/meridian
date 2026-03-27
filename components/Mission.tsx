@@ -58,16 +58,6 @@ export function Mission() {
               </p>
             </AnimateIn>
 
-            <AnimateIn delay={0.5} direction="right">
-              <div className={styles.founderPreview}>
-                <img
-                  src="/unnamed__3_.jpg"
-                  alt="Jaxton Wright, Founder of Meridian Conference"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
-                />
-                <p className={styles.founderName}>Jaxton Wright, Founder</p>
-              </div>
-            </AnimateIn>
           </div>
         </div>
       </div>

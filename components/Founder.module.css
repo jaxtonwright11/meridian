@@ -34,7 +34,7 @@
 }
 
 .secondaryPhoto {
-  width: 220px;
+  width: 100%;
 }
 
 .secondaryPhoto img {
@@ -92,7 +92,7 @@
   }
 
   .secondaryPhoto {
-    width: 180px;
+    width: 100%;
     margin: 0 auto;
   }
 

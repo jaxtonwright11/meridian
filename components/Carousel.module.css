@@ -6,9 +6,9 @@
 .viewport {
   position: relative;
   overflow: hidden;
-  border-radius: var(--card-radius);
+  border-radius: 0;
   height: var(--desktop-height, 500px);
-  background: var(--bg-primary);
+  background: transparent;
 }
 
 .track {
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-primary);
+  background: transparent;
 }
 
 .image {
@@ -46,11 +46,17 @@
   background: var(--bg-surface);
 }
 
+/* Controls row: arrows + dots together below image */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
 /* Arrows */
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -63,31 +69,22 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  z-index: 2;
   line-height: 1;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .arrow:hover {
   background: rgba(10, 25, 49, 0.95);
   border-color: var(--gold-dim);
-  transform: translateY(-50%) scale(1.05);
-}
-
-.arrowLeft {
-  left: 16px;
-}
-
-.arrowRight {
-  right: 16px;
+  transform: scale(1.05);
 }
 
 /* Dots */
 .dots {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 8px;
-  margin-top: var(--space-md);
 }
 
 .dot {
@@ -116,14 +113,5 @@
     width: 36px;
     height: 36px;
     font-size: 1.25rem;
-    display: none;
-  }
-
-  .arrowLeft {
-    left: 8px;
-  }
-
-  .arrowRight {
-    right: 8px;
   }
 }
