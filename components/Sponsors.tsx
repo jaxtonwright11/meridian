@@ -13,7 +13,7 @@ const tiers = [
       'Named presenting sponsor across all materials and communications',
       '5-minute stage address or panel seat',
       'Logo on event signage, digital materials, social media, and press',
-      'Dedicated recruitment table with direct access to young people',
+      'Dedicated recruitment table with pre-conference planning and optimization',
     ],
   },
   {

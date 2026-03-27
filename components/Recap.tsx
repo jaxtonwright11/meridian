@@ -87,6 +87,15 @@ export function Recap() {
                   Adriel Miramontes
                 </a>
                 , Journalist and Host, The Adriel Show
+                <br />
+                <a
+                  href="https://www.instagram.com/theadrielshow/reels/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  @theadrielshow on Instagram
+                </a>
               </cite>
             </div>
           </AnimateIn>
@@ -107,6 +116,15 @@ export function Recap() {
                   Jade Tran
                 </a>
                 , UCLA, Class of 2026
+                <br />
+                <a
+                  href="https://www.linkedin.com/in/jade-tran-449138254/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                >
+                  Jade Tran on LinkedIn
+                </a>
               </cite>
             </div>
           </AnimateIn>

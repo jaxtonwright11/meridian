@@ -48,6 +48,19 @@
   color: var(--gold-bright);
 }
 
+.socialLink {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text-dim) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.socialLink:hover {
+  color: var(--gold) !important;
+}
+
 @media (max-width: 768px) {
   .testimonials {
     grid-template-columns: 1fr;
