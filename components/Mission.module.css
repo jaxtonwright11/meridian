@@ -1,0 +1,91 @@
+.mission {
+  padding: var(--space-3xl) 0;
+}
+
+.headline {
+  margin-bottom: var(--space-xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.text p {
+  margin-bottom: var(--space-md);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.quote {
+  position: sticky;
+  top: 120px;
+}
+
+.pullQuote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1.5;
+  padding: var(--space-lg);
+  border-left: 2px solid var(--gold-dim);
+  margin-bottom: var(--space-xl);
+}
+
+.quoteMark {
+  font-size: 2em;
+  line-height: 0;
+  vertical-align: -0.3em;
+  color: var(--gold-dim);
+}
+
+.attribution {
+  font-size: 14px;
+  color: var(--text-dim);
+  letter-spacing: 0.03em;
+  margin-top: var(--space-sm);
+  padding-left: var(--space-lg);
+}
+
+.founderPreview {
+  text-align: center;
+}
+
+.photoPlaceholder {
+  width: 200px;
+  height: 250px;
+  border-radius: var(--card-radius);
+  background: linear-gradient(135deg, var(--bg-surface), var(--bg-elevated));
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-sm);
+}
+
+.photoPlaceholder span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: var(--gold-dim);
+  font-weight: 600;
+}
+
+.founderName {
+  font-size: 14px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .quote {
+    position: static;
+  }
+}

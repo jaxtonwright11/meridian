@@ -1,0 +1,106 @@
+/* ===== FOUNDER SECTION ===== */
+.founder {
+  padding: var(--space-3xl) 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* Photos */
+.photos {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.primaryPhoto {
+  text-align: center;
+}
+
+.primaryPhoto img {
+  aspect-ratio: 3 / 4;
+}
+
+.photoCaption {
+  font-size: 14px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+  margin-top: var(--space-xs);
+}
+
+.secondaryPhoto {
+  width: 220px;
+}
+
+.secondaryPhoto img {
+  aspect-ratio: 4 / 3;
+}
+
+/* Content */
+.content {
+  max-width: 600px;
+}
+
+.name {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: var(--space-xs);
+}
+
+.role {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-lg);
+}
+
+.bio p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  max-width: 100%;
+}
+
+.bio a {
+  color: var(--gold);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.bio a:hover {
+  color: var(--gold-bright);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .photos {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  .secondaryPhoto {
+    width: 180px;
+    margin: 0 auto;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .bio p {
+    text-align: left;
+  }
+}

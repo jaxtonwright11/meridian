@@ -1,0 +1,82 @@
+.proofBar {
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.stat {
+  text-align: center;
+}
+
+.number {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.orgs {
+  text-align: center;
+}
+
+.orgLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: var(--space-md);
+}
+
+.orgLogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.orgName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.orgName:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .orgLogos {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}

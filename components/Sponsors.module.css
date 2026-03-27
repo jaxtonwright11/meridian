@@ -1,0 +1,168 @@
+/* ===== SPONSORS SECTION ===== */
+.sponsors {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-surface);
+}
+
+.headline {
+  margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+  max-width: 640px;
+  margin-bottom: var(--space-2xl);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* ===== TIER GRID ===== */
+.tierGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+/* ===== TIER CARD ===== */
+.tierCard {
+  padding: var(--space-lg) var(--space-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tierCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Featured card (Presenting Sponsor) */
+.featured {
+  border-color: var(--amethyst);
+  background: linear-gradient(
+    180deg,
+    rgba(123, 94, 167, 0.08) 0%,
+    var(--bg-primary) 40%
+  );
+}
+
+.featured:hover {
+  border-color: var(--amethyst);
+  box-shadow: 0 12px 40px rgba(123, 94, 167, 0.15);
+}
+
+/* Accent color overrides */
+.amethyst .tierName {
+  color: var(--amethyst);
+}
+
+.gold .tierName {
+  color: var(--gold);
+}
+
+.default .tierName {
+  color: var(--text-secondary);
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: calc(-1 * var(--space-xs) - 4px);
+  left: var(--space-md);
+  background: var(--amethyst);
+  color: var(--text-primary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 4px;
+}
+
+/* Tier content */
+.tierName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.tierPrice {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin-bottom: var(--space-md);
+}
+
+/* Benefits list */
+.benefits {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+  margin-bottom: var(--space-lg);
+}
+
+.benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 6px 0;
+}
+
+.check {
+  color: var(--gold-dim);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* CTA button */
+.tierCta {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* In-kind note */
+.inkind {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .tierGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .featured {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .tierGrid {
+    gap: var(--space-lg);
+  }
+}

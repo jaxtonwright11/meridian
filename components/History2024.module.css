@@ -1,0 +1,11 @@
+/* ===== 2024 HISTORY SECTION ===== */
+.history {
+  padding: var(--space-3xl) 0;
+}
+
+.intro {
+  max-width: 720px;
+  margin-bottom: var(--space-2xl);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}

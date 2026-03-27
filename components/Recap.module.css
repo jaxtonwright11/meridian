@@ -1,0 +1,55 @@
+.recap {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-surface);
+}
+
+.intro {
+  max-width: 720px;
+  margin-bottom: var(--space-2xl);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.testimonial {
+  padding: var(--space-lg);
+  border-left: 2px solid var(--gold-dim);
+}
+
+.testimonial blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.testimonial cite {
+  font-style: normal;
+  font-size: 14px;
+  color: var(--text-dim);
+  letter-spacing: 0.03em;
+}
+
+.testimonial cite a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.testimonial cite a:hover {
+  color: var(--gold-bright);
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}
