@@ -74,9 +74,7 @@ export function Recap() {
           <AnimateIn delay={0.2}>
             <div className={styles.testimonial}>
               <blockquote>
-                &ldquo;The young people in that room came prepared. They asked real questions
-                and stayed after to keep the conversation going. I was grateful
-                to be invited to speak.&rdquo;
+                &ldquo;I had an amazing time speaking on my experience and being able to hear the experiences of so many other talented individuals.&rdquo;
               </blockquote>
               <cite>
                 <a
