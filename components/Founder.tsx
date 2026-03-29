@@ -36,7 +36,7 @@ export function Founder() {
               <div className={styles.bio}>
                 <p>
                   Jaxton Wright is 19 years old, from Oxnard, CA, studying Honors Economics and
-                  Political Science at UC Berkeley. The first Meridian event brought roughly 150
+                  Political Science at UC Berkeley. The first Meridian event brought ~150
                   young people into the same room as leaders from Netflix, OpenAI, and
                   Chase Bank. The conversations were real, and the outcomes were the following:
                   mentorships, internship introductions, career pivots.

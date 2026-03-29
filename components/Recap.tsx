@@ -56,7 +56,7 @@ export function Recap() {
 
         <AnimateIn delay={0.2}>
           <p className={styles.intro}>
-            Roughly 150 young people walked into a room with
+            ~150 young people walked into a room with
             representatives from Netflix, OpenAI, and Chase Bank. Not for a
             lecture. For direct, face-to-face conversations with people who
             could change their trajectory. December 2025 was the last event

@@ -26,13 +26,13 @@
 
 .pullQuote {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   font-style: italic;
   color: var(--gold);
   line-height: 1.5;
   padding: var(--space-lg);
   border-left: 2px solid var(--gold-dim);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-sm);
 }
 
 .quoteMark {

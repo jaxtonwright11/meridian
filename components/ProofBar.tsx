@@ -4,7 +4,7 @@ import { AnimateIn, StaggerContainer, StaggerItem } from './AnimateIn';
 import styles from './ProofBar.module.css';
 
 const stats = [
-  { number: 'roughly 150', label: 'Young People Attended' },
+  { number: '~150', label: 'Young People Attended' },
   { number: '3', label: 'Industry-Leading Organizations' },
   { number: 'Free', label: 'Admission, Always' },
 ];
