@@ -14,6 +14,7 @@ const tiers = [
       '5-minute stage address or panel seat',
       'Logo on event signage, digital materials, social media, and press',
       'Dedicated recruitment table with pre-conference planning and optimization',
+      'In-kind contributions welcomed (venue, catering, A/V, printing, etc.) and recognized at equivalent tier level',
     ],
   },
   {
@@ -69,7 +70,7 @@ export function Sponsors() {
               <div className={styles.divider} />
               <ul className={styles.benefits}>
                 {tier.benefits.map((b, i) => (
-                  <li key={i}>
+                  <li key={i} className={b.startsWith('In-kind') ? styles.inkindBenefit : undefined}>
                     <span className={styles.check}>&#10003;</span>
                     {b}
                   </li>
@@ -89,8 +90,7 @@ export function Sponsors() {
 
         <AnimateIn delay={0.4}>
           <p className={styles.inkind}>
-            In-kind sponsorships (venue, catering, technology, printing) are
-            welcomed and recognized at equivalent tier levels.
+            Have questions about sponsorship options? Reach out and we will find the right fit.
           </p>
         </AnimateIn>
       </div>

@@ -56,7 +56,7 @@ export function Recap() {
 
         <AnimateIn delay={0.2}>
           <p className={styles.intro}>
-            ~150 young people walked into a room with
+            Roughly 150 young people walked into a room with
             representatives from Netflix, OpenAI, and Chase Bank. Not for a
             lecture. For direct, face-to-face conversations with people who
             could change their trajectory. December 2025 was the last event
@@ -103,9 +103,8 @@ export function Recap() {
           <AnimateIn delay={0.3}>
             <div className={styles.testimonial}>
               <blockquote>
-                &ldquo;I expected a typical panel, but what I got was a genuine conversation
-                with people in the field I want to enter, and I was able to get direct
-                next steps and access. That is rare.&rdquo;
+                &ldquo;It was refreshing to hear directly from young people already making
+                waves. I walked out feeling inspired and empowered to do the same.&rdquo;
               </blockquote>
               <cite>
                 <a
@@ -115,7 +114,7 @@ export function Recap() {
                 >
                   Jade Tran
                 </a>
-                , UCLA, Class of 2026
+                , UCLA, Class of 2025
                 <br />
                 <a
                   href="https://www.linkedin.com/in/jade-tran-449138254/"

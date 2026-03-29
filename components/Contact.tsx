@@ -42,9 +42,9 @@ export function Contact() {
               <p className="caption">Get Involved</p>
               <h2>Let&apos;s Build This Together.</h2>
               <p className={styles.desc}>
-                Whether you want to sponsor, speak, partner, join the leadership
-                team, or get involved in building what comes next, this is where
-                it starts.
+                Where you are interested in sponsoring, speaking, partnering, joining
+                the leadership team, or getting involved in building what comes next,
+                this is where it starts.
               </p>
               <div className={styles.details}>
                 <div className={styles.detail}>

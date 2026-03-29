@@ -139,6 +139,13 @@
   margin-top: auto;
 }
 
+/* In-kind benefit highlight */
+.inkindBenefit {
+  font-size: 0.925rem !important;
+  color: var(--text-primary) !important;
+  font-weight: 500;
+}
+
 /* In-kind note */
 .inkind {
   text-align: center;

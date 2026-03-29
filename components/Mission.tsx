@@ -19,28 +19,27 @@ export function Mission() {
           <div className={styles.text}>
             <AnimateIn delay={0.2}>
               <p>
-                The opportunities available at elite institutions belong to every
-                young person in Ventura County. Not just the ones who already know
-                someone. Not just the ones whose parents went to college. Every
-                young person.
+                <strong>In mapping, a meridian is the highest point in the arc</strong> and the line that
+                connects where you are to your destination. For young people
+                who never thought they would have an opportunity to
+                sit in a room with executives, Meridian is that line. The line that
+                offers a face to face connection with success and opportunity.
               </p>
             </AnimateIn>
 
             <AnimateIn delay={0.3}>
               <p>
-                Meridian Conference exists to close that gap. We bring Fortune 500
-                leaders, founders, and executives into direct conversation with
-                young people who have the talent and ambition but not the access.
-                Free admission. No gatekeepers. No lectures.
+                The opportunities available at elite institutions belong to every
+                young person. Not just the ones who already know someone.
               </p>
             </AnimateIn>
 
             <AnimateIn delay={0.4}>
               <p>
-                A meridian is the highest point in the arc and the line that
-                connects where you are to where you&apos;re going. For young people from
-                Oxnard who never thought they could sit in a room with Netflix
-                and OpenAI executives, Meridian is that line.
+                Meridian Conference exists to close that gap. We bring Fortune 500
+                leaders, founders, and executives into direct conversation with
+                people who have the talent and ambition but not access. No
+                gatekeepers or lectures.
               </p>
             </AnimateIn>
           </div>
@@ -49,8 +48,8 @@ export function Mission() {
             <AnimateIn delay={0.3} direction="right">
               <blockquote className={styles.pullQuote}>
                 <span className={styles.quoteMark}>&ldquo;</span>
-                Every young person in Ventura County deserves access to the rooms
-                that change their path. That is what Meridian is building.
+                Every young person in Ventura County deserves access to rooms
+                that can change that path.
                 <span className={styles.quoteMark}>&rdquo;</span>
               </blockquote>
               <p className={styles.attribution}>

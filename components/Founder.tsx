@@ -35,18 +35,14 @@ export function Founder() {
               <p className={styles.role}>Founder, Meridian Conference</p>
               <div className={styles.bio}>
                 <p>
-                  Meridian was built on a simple observation: the rooms that change
-                  trajectories should not require a certain last name or zip code to enter.
-                </p>
-                <p>
-                  Jaxton Wright is 19, from Oxnard, CA, studying Honors Economics and
-                  Political Science at UC Berkeley. The first Meridian event brought ~150
+                  Jaxton Wright is 19 years old, from Oxnard, CA, studying Honors Economics and
+                  Political Science at UC Berkeley. The first Meridian event brought roughly 150
                   young people into the same room as leaders from Netflix, OpenAI, and
-                  Chase Bank. The conversations were real, and the outcomes followed:
+                  Chase Bank. The conversations were real, and the outcomes were the following:
                   mentorships, internship introductions, career pivots.
                 </p>
                 <p>
-                  He has worked on AI policy with both sides of Congress, interning with
+                  Jaxton has worked on AI policy with both sides of Congress, interning with
                   Senator Schiff and Representative Mace in the same year, and was invited
                   to speak on AI and youth opportunity at Harvard Kennedy School. Outside
                   of Meridian, he founded PRISM, a seed-funded geographic community

@@ -43,7 +43,7 @@ export function WhatsNext() {
         </AnimateIn>
         <AnimateIn delay={0.2}>
           <p className={styles.subtitle}>
-            The rules of the job market are being rewritten. AI is replacing roles
+            AI is replacing roles
             faster than most schools are teaching people to adapt. The communities
             that have historically had the least access to preparation are the ones
             most at risk of being left behind again.
