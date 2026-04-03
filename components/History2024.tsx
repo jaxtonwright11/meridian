@@ -39,9 +39,9 @@ export function History2024() {
         </AnimateIn>
         <AnimateIn delay={0.2}>
           <p className={styles.intro}>
-            This began in 2024 under the Young &amp; Gifted name, in partnership with
-            a local organization. About 30 people. Same mission, first execution,
-            and a learning experience that made December 2025 possible.
+            This began in 2024 in partnership with a local organization. About 30
+            people. Same mission, first execution, and a learning experience that
+            made December 2025 possible.
           </p>
         </AnimateIn>
         <AnimateIn delay={0.3}>

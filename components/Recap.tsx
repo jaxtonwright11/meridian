@@ -59,9 +59,8 @@ export function Recap() {
             ~150 young people walked into a room with
             representatives from Netflix, OpenAI, and Chase Bank. Not for a
             lecture. For direct, face-to-face conversations with people who
-            could change their trajectory. December 2025 was the last event
-            under the Young &amp; Gifted name and the first chapter of what
-            became Meridian.
+            could change their trajectory. December 2025 was the first chapter
+            of what became Meridian Conference.
           </p>
         </AnimateIn>
 
