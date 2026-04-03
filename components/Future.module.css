@@ -1,0 +1,94 @@
+/* ===== FUTURE SECTION ===== */
+.future {
+  padding: var(--space-3xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.future::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
+}
+
+.headline {
+  margin-bottom: var(--space-2xl);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.card {
+  padding: var(--space-xl) var(--space-lg);
+  background: var(--bg-surface);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: var(--card-radius);
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(201, 168, 76, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(201, 168, 76, 0.1);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-sm);
+  opacity: 0.85;
+}
+
+.cardValue {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.ctaWrap {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

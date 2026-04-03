@@ -48,7 +48,7 @@ export function Recap() {
     <section id="recap" className={styles.recap}>
       <div className="container">
         <AnimateIn>
-          <p className="caption">December 2025</p>
+          <p className="caption">Past Events</p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
           <h2>December 2025: The First Chapter</h2>

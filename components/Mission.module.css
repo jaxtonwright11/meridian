@@ -50,6 +50,23 @@
   padding-left: var(--space-lg);
 }
 
+.sectionRule {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  margin: var(--space-lg) 0;
+  max-width: 120px;
+}
+
+.closingStatement {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--gold);
+  opacity: 0.85;
+}
+
 .founderPreview {
   text-align: center;
 }

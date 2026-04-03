@@ -48,7 +48,7 @@ export function Nav() {
 
         <div className={styles.links}>
           <button onClick={() => scrollTo('mission')}>Mission</button>
-          <button onClick={() => scrollTo('recap')}>December 2025</button>
+          <button onClick={() => scrollTo('recap')}>Past Events</button>
           <button onClick={() => scrollTo('sponsors')}>Sponsors</button>
           <button onClick={() => scrollTo('contact')}>Contact</button>
           <button className={styles.cta} onClick={() => scrollTo('sponsors')}>
@@ -78,7 +78,7 @@ export function Nav() {
             transition={{ duration: 0.3 }}
           >
             <button onClick={() => scrollTo('mission')}>Mission</button>
-            <button onClick={() => scrollTo('recap')}>December 2025</button>
+            <button onClick={() => scrollTo('recap')}>Past Events</button>
             <button onClick={() => scrollTo('sponsors')}>Sponsors</button>
             <button onClick={() => scrollTo('contact')}>Contact</button>
             <button className={styles.mobileCta} onClick={() => scrollTo('sponsors')}>

@@ -19,27 +19,30 @@ export function Mission() {
           <div className={styles.text}>
             <AnimateIn delay={0.2}>
               <p>
-                <strong>In mapping, a meridian is the highest point in the arc</strong> and the line that
-                connects where you are to your destination. For young people
-                who never thought they would have an opportunity to
-                sit in a room with executives, Meridian is that line. The line that
-                offers a face to face connection with success and opportunity.
+                Meridian Conference brings Fortune 500 executives,
+                founders, and leaders into the same room as young people
+                who have the talent and ambition but lack the access, not
+                as a lecture, but a meeting.
               </p>
             </AnimateIn>
 
             <AnimateIn delay={0.3}>
               <p>
-                The opportunities available at elite institutions belong to every
-                young person. Not just the ones who already know someone.
+                The opportunities available at elite institutions belong
+                to every young person, not just those who already know
+                someone. Meridian Conference exists for that.
               </p>
             </AnimateIn>
 
             <AnimateIn delay={0.4}>
-              <p>
-                Meridian Conference exists to close that gap. We bring Fortune 500
-                leaders, founders, and executives into direct conversation with
-                people who have the talent and ambition but not access. No
-                gatekeepers or lectures.
+              <hr className={styles.sectionRule} />
+            </AnimateIn>
+
+            <AnimateIn delay={0.5}>
+              <p className={styles.closingStatement}>
+                A meridian is the highest point on an arc and the line
+                connecting where you are to your destination. That is
+                what we are building.
               </p>
             </AnimateIn>
           </div>
