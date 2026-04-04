@@ -50,7 +50,7 @@ export function Founder() {
                   revenue recovered for Southern California businesses.
                 </p>
                 <p>
-                  Meridian exists because access to rooms, people, and opportunities is not
+                  Meridian exists because access to rooms, people, and opportunities are not
                   distributed equally. That is the gap this conference is built to close.
                 </p>
               </div>
