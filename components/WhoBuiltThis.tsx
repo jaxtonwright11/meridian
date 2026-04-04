@@ -11,14 +11,14 @@ const mentors: PersonSlide[] = [
     name: 'George Leis',
     title: 'Chairman, YMCA of the USA / Executive Vice President, CalPrivate Bank',
     caption:
-      'George Leis has been Jaxton\'s mentor since junior year of high school, constantly giving him the encouragement to build and the guidance and help to do so. He personally donated $1,000 to make the first event possible. His investment in Meridian Conference is a direct extension of his investment in what young people from this community are capable of.',
+      'George Leis was among the first to believe in this conference and in the person building it. He personally donated $1,000 to make the first event possible. Every time Jaxton is in town, they meet, without exception. He was present at Jaxton\'s high school graduation. His investment in Meridian Conference is a direct extension of his investment in what young people from this community are capable of.',
   },
   {
     src: '/TedLawrenceOHSprincipal.WEBP',
     name: 'Dr. Ted Lawrence',
     title: 'Principal, Oxnard High School',
     caption:
-      'Dr. Ted Lawrence has been Jaxton\'s mentor since he sent a cold email two weeks before arriving at Oxnard High School about his vision to improve the school. When Meridian Conference came together, he forwarded it to his entire student body without hesitation. His leadership is rooted in radical accessibility, the belief that the right student meeting the right opportunity can change everything.',
+      'Dr. Ted Lawrence received a cold email about Meridian Conference and, without hesitation, forwarded it to his entire student body, personally urging every student to attend. His approach to leadership is rooted in radical accessibility, the belief that the right student connecting with the right opportunity at the right moment can change everything. He has been exactly that kind of leader for Jaxton from their very first conversation.',
   },
   {
     src: '/MarianneRamosCIHSprincipal.JPG',
