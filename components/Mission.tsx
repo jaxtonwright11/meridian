@@ -21,8 +21,9 @@ export function Mission() {
               <p>
                 Meridian Conference brings Fortune 500 executives,
                 founders, and leaders into the same room as young people
-                who have the talent and ambition but lack the access, not
-                as a lecture, but a meeting.
+                who have the talent and ambition, yet lack the access.
+                The space is designed to create those connections, not as
+                a lecture, but as a introductory meeting.
               </p>
             </AnimateIn>
 
