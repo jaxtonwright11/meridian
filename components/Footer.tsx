@@ -11,17 +11,23 @@ export function Footer() {
         <div className={styles.inner}>
           <div className={styles.brand}>
             <span className={styles.wordmark}>MERIDIAN</span>
-            <p className={styles.tagline}>Access changes everything.</p>
+            <p className={styles.tagline}>Not a lecture. A meeting.</p>
           </div>
           <nav className={styles.links}>
             <a href="#mission">Mission</a>
             <a href="#recap">Past Events</a>
             <a href="#sponsors">Sponsors</a>
-            <a href="#contact">Contact</a>
+            <a href="#apply">Get Involved</a>
           </nav>
         </div>
         <div className={styles.bottom}>
-          <p>&copy; {year} Meridian Conference LLC. All rights reserved.</p>
+          <div className={styles.bottomLeft}>
+            <div className={styles.sigLogos}>
+              <img src="/sig/berkeley-seal.png" alt="UC Berkeley" className={styles.sigLogo} />
+              <img src="/sig/meridian-m.png" alt="Meridian" className={styles.sigLogo} />
+            </div>
+            <p>&copy; {year} Meridian Conference LLC. All rights reserved.</p>
+          </div>
           <p className={styles.location}>Ventura County, California</p>
         </div>
       </div>
