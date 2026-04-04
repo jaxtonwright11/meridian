@@ -18,7 +18,7 @@ const mentors: PersonSlide[] = [
     name: 'Dr. Ted Lawrence',
     title: 'Principal, Oxnard High School',
     caption:
-      'Dr. Ted Lawrence received a cold email about Meridian Conference and, without hesitation, forwarded it to his entire student body, personally urging every student to attend. His approach to leadership is rooted in radical accessibility, the belief that the right student connecting with the right opportunity at the right moment can change everything. He has been exactly that kind of leader for Jaxton from their very first conversation.',
+      'Dr. Ted Lawrence has been Jaxton\'s mentor since he sent a cold email two weeks before arriving at Oxnard High School about his vision to improve the school. When Meridian Conference came together, he forwarded it to his entire student body without hesitation. His leadership is rooted in radical accessibility, the belief that the right student meeting the right opportunity can change everything.',
   },
   {
     src: '/MarianneRamosCIHSprincipal.JPG',
