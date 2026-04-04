@@ -12,7 +12,7 @@ export function Mission() {
         </AnimateIn>
 
         <AnimateIn delay={0.1}>
-          <h2 className={styles.headline}>Reverse Gatekeeping</h2>
+          <h2 className={styles.headline}>Reverse Gatekeeping.</h2>
         </AnimateIn>
 
         <div className={styles.grid}>
@@ -28,7 +28,7 @@ export function Mission() {
 
             <AnimateIn delay={0.3}>
               <p>
-                The opportunities available at elite institutions belong
+                The opportunities available at elite institutions should belong
                 to every young person, not just those who already know
                 someone. Meridian Conference exists for that.
               </p>
@@ -51,8 +51,9 @@ export function Mission() {
             <AnimateIn delay={0.3} direction="right">
               <blockquote className={styles.pullQuote}>
                 <span className={styles.quoteMark}>&ldquo;</span>
-                Every young person in Ventura County deserves access to rooms
-                that can change that path.
+                I walked into a room where people from Netflix and OpenAI were
+                talking to students like me. Not at us. To us. I left with a
+                mentor and a plan.
                 <span className={styles.quoteMark}>&rdquo;</span>
               </blockquote>
               <p className={styles.attribution}>

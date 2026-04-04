@@ -1,29 +1,11 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el) return;
-    // Disable on touch/mobile devices
-    if (window.matchMedia('(hover: none)').matches) return;
-
-    const handleMove = (e: MouseEvent) => {
-      const rect = el.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      el.style.setProperty('--mouse-x', `${x}%`);
-      el.style.setProperty('--mouse-y', `${y}%`);
-    };
-
-    el.addEventListener('mousemove', handleMove);
-    return () => el.removeEventListener('mousemove', handleMove);
-  }, []);
 
   return (
     <section id="hero" className={styles.hero} ref={heroRef}>
@@ -75,7 +57,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           An annual conference where students from Ventura County meet the
-          executives and founders who built something.
+          executives and founders who have built success.
         </motion.p>
 
         <motion.div
@@ -84,8 +66,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <a href="#sponsors" className="btn btn-gold">Become a Sponsor</a>
-          <a href="#mission" className="btn btn-ghost">Learn More</a>
+          <a href="#apply" className="btn btn-gold">Express Interest</a>
+          <a href="#sponsors" className="btn btn-ghost">Become a Sponsor</a>
         </motion.div>
       </div>
 
