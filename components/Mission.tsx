@@ -48,21 +48,6 @@ export function Mission() {
             </AnimateIn>
           </div>
 
-          <div className={styles.quote}>
-            <AnimateIn delay={0.3} direction="right">
-              <blockquote className={styles.pullQuote}>
-                <span className={styles.quoteMark}>&ldquo;</span>
-                I walked into a room where people from Netflix and OpenAI were
-                talking to students like me. Not at us. To us. I left with a
-                mentor and a plan.
-                <span className={styles.quoteMark}>&rdquo;</span>
-              </blockquote>
-              <p className={styles.attribution}>
-                Shaun Tolson, Ventura College, Class of 2028
-              </p>
-            </AnimateIn>
-
-          </div>
         </div>
       </div>
     </section>

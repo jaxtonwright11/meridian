@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { AnimateIn, StaggerContainer, StaggerItem } from './AnimateIn';
 import styles from './Sponsors.module.css';
 
@@ -41,6 +42,46 @@ const tiers = [
   },
 ];
 
+function TierCard({ tier }: { tier: typeof tiers[number] }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div
+      className={`${styles.tierCard} ${tier.featured ? styles.featured : ''} ${styles[tier.accent]} ${expanded ? styles.expanded : ''}`}
+      onMouseEnter={() => setExpanded(true)}
+      onMouseLeave={() => setExpanded(false)}
+      onClick={() => setExpanded((prev) => !prev)}
+    >
+      <div className={styles.tierHeader}>
+        <div>
+          <h3 className={styles.tierName}>{tier.name}</h3>
+          <span className={styles.tierPrice}>{tier.price}</span>
+        </div>
+        <span className={`${styles.chevron} ${expanded ? styles.chevronOpen : ''}`}>&#9662;</span>
+      </div>
+      <div className={`${styles.tierBody} ${expanded ? styles.tierBodyOpen : ''}`}>
+        <div className={styles.divider} />
+        <ul className={styles.benefits}>
+          {tier.benefits.map((b, i) => (
+            <li key={i} className={b.startsWith('In-kind') ? styles.inkindBenefit : undefined}>
+              <span className={styles.check}>&#10003;</span>
+              {b}
+            </li>
+          ))}
+        </ul>
+        <a
+          href="https://calendly.com/jaxtonwright"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`btn ${tier.featured ? 'btn-gold' : 'btn-ghost'} ${styles.tierCta}`}
+        >
+          Request Info
+        </a>
+      </div>
+    </div>
+  );
+}
+
 export function Sponsors() {
   return (
     <section id="sponsors" className={styles.sponsors}>
@@ -61,29 +102,8 @@ export function Sponsors() {
 
         <StaggerContainer className={styles.tierGrid} staggerDelay={0.15}>
           {tiers.map((tier) => (
-            <StaggerItem
-              key={tier.name}
-              className={`${styles.tierCard} ${tier.featured ? styles.featured : ''} ${styles[tier.accent]}`}
-            >
-              <h3 className={styles.tierName}>{tier.name}</h3>
-              <span className={styles.tierPrice}>{tier.price}</span>
-              <div className={styles.divider} />
-              <ul className={styles.benefits}>
-                {tier.benefits.map((b, i) => (
-                  <li key={i} className={b.startsWith('In-kind') ? styles.inkindBenefit : undefined}>
-                    <span className={styles.check}>&#10003;</span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://calendly.com/jaxtonwright"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`btn ${tier.featured ? 'btn-gold' : 'btn-ghost'} ${styles.tierCta}`}
-              >
-                Request Info
-              </a>
+            <StaggerItem key={tier.name}>
+              <TierCard tier={tier} />
             </StaggerItem>
           ))}
         </StaggerContainer>

@@ -24,11 +24,6 @@ const timeline = [
     title: 'Direct Access Sessions',
     desc: 'Small-group conversations between students and leaders. The rooms where trajectories change.',
   },
-  {
-    icon: '05',
-    title: 'Mentorship Matching',
-    desc: 'Structured connections that continue after the event. Not a one-day thing.',
-  },
 ];
 
 export function WhatsNext() {
@@ -43,22 +38,22 @@ export function WhatsNext() {
         </AnimateIn>
         <AnimateIn delay={0.2}>
           <p className={styles.subtitle}>
-            AI is replacing roles
-            faster than most schools are teaching people to adapt. The communities
-            that have historically had the least access to preparation are the ones
-            most at risk of being left behind again.
+            Students who lack access to preparation are the most at risk as
+            industries shift. AI is replacing roles faster than most schools
+            are teaching people to adapt, and historically underserved
+            communities face the steepest gap.
           </p>
         </AnimateIn>
         <AnimateIn delay={0.3}>
           <p className={styles.subtitle}>
-            Meridian exists to close that gap in Ventura County. Not by putting
-            young people in conversations. By giving them real access to the people,
-            knowledge, and rooms that change what is possible for them.
+            Meridian exists to close that gap in Ventura County by giving
+            students real access to the people, knowledge, and rooms that
+            change what is possible for them.
           </p>
         </AnimateIn>
         <AnimateIn delay={0.4}>
           <p className={styles.subtitle}>
-            The next conference is December 2026. University chapter expansion
+            December 2026 is the next conference. University chapter expansion
             is in development. If you want to be part of what comes next,
             this is where it starts.
           </p>

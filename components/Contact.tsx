@@ -40,9 +40,9 @@ export function Contact() {
           <AnimateIn direction="left">
             <div className={styles.info}>
               <p className="caption">Get Involved</p>
-              <h2>Let&apos;s Build This Together.</h2>
+              <h2>Reach Out Directly.</h2>
               <p className={styles.desc}>
-                Where you are interested in sponsoring, speaking, partnering, joining
+                Whether you are interested in sponsoring, speaking, partnering, joining
                 the leadership team, or getting involved in building what comes next,
                 this is where it starts.
               </p>

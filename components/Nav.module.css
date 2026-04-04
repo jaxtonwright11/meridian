@@ -82,13 +82,6 @@
 
 .hamburger {
   display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  z-index: 101;
 }
 
 .hamburgerLine {
@@ -128,46 +121,66 @@
   width: 100%;
 }
 
+/* ===== MOBILE STICKY BAR ===== */
+.mobileBar {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .links {
+  /* Hide desktop nav on mobile */
+  .nav {
     display: none;
   }
 
-  .hamburger {
+  /* Show mobile sticky bar */
+  .mobileBar {
     display: flex;
-  }
-
-  .inner {
-    justify-content: space-between;
-  }
-
-  .mobileMenu {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 24px var(--space-lg) 32px;
-    background: rgba(10, 25, 49, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 12px var(--space-md);
+    background: rgba(10, 25, 49, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(30, 58, 95, 0.4);
   }
 
-  .mobileMenu button {
-    font-family: 'DM Sans', sans-serif;
+  .mobileBarLogo {
+    font-family: 'Cormorant Garamond', serif;
     font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .mobileBarLinks {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .mobileBarLinks button {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
     font-weight: 500;
     color: var(--text-secondary);
     background: none;
     border: none;
     cursor: pointer;
-    padding: 12px 0;
-    width: 100%;
-    text-align: center;
     transition: color 0.2s;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
   }
 
-  .mobileMenu button:hover {
+  .mobileBarLinks button:hover {
     color: var(--text-primary);
   }
 }

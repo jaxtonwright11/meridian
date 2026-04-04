@@ -18,13 +18,6 @@ export function Founder() {
                 />
                 <p className={styles.photoCaption}>Jaxton Wright, Founder</p>
               </div>
-              <div className={styles.secondaryPhoto}>
-                <img
-                  src="/IMG_7433.jpeg"
-                  alt="Jaxton Wright speaking at a United States government podium"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
-                />
-              </div>
             </div>
           </AnimateIn>
 
@@ -35,7 +28,7 @@ export function Founder() {
               <p className={styles.role}>Founder, Meridian Conference</p>
               <div className={styles.bio}>
                 <p>
-                  Jaxton Wright is 19 years old, from Oxnard, CA, studying Honors Economics and
+                  Jaxton Wright is 19 years old, from Southern California, studying Honors Economics and
                   Political Science at UC Berkeley. The first Meridian event brought ~150
                   young people into the same room as leaders from Netflix, OpenAI, and
                   Chase Bank. The conversations were real, and the outcomes were the following:

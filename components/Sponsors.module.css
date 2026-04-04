@@ -33,6 +33,7 @@
   flex-direction: column;
   transition: all 0.3s ease;
   position: relative;
+  cursor: pointer;
 }
 
 .tierCard:hover {
@@ -68,6 +69,37 @@
   color: var(--text-secondary);
 }
 
+/* Tier header (always visible) */
+.tierHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chevron {
+  font-size: 1.2rem;
+  color: var(--gold-dim);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* Collapsible body */
+.tierBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.tierBodyOpen {
+  max-height: 600px;
+  opacity: 1;
+}
+
 /* Badge */
 .badge {
   position: absolute;
@@ -97,14 +129,13 @@
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1;
-  margin-bottom: var(--space-md);
 }
 
 .divider {
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--border), transparent);
-  margin-bottom: var(--space-md);
+  margin: var(--space-md) 0;
 }
 
 /* Benefits list */
@@ -154,6 +185,13 @@
   max-width: 600px;
   margin: 0 auto;
   font-style: italic;
+}
+
+/* ===== DESKTOP: expand on hover ===== */
+@media (min-width: 769px) {
+  .tierCard {
+    cursor: default;
+  }
 }
 
 /* ===== RESPONSIVE ===== */
