@@ -2,6 +2,11 @@
   padding: var(--space-3xl) 0;
 }
 
+.mission :global(.caption) {
+  font-size: 15px;
+  letter-spacing: 0.18em;
+}
+
 .headline {
   margin-bottom: var(--space-xl);
 }
@@ -15,18 +20,17 @@
 
 .text p {
   margin-bottom: var(--space-md);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 1.2rem;
+  line-height: 1.8;
 }
 
 .quote {
-  position: sticky;
-  top: 120px;
+  position: relative;
 }
 
 .pullQuote {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
   font-style: italic;
   color: var(--gold);
   line-height: 1.5;
@@ -61,7 +65,7 @@
 .closingStatement {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.75;
   color: var(--gold);
   opacity: 0.85;
