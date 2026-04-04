@@ -49,16 +49,33 @@
 }
 
 .socialLink {
-  display: inline-block;
-  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold) !important;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-dim);
+  padding-bottom: 2px;
+  letter-spacing: 0.03em;
+  transition: all 0.2s ease;
+}
+
+.socialLink::after {
+  content: '\2192';
   font-size: 13px;
-  color: var(--text-dim) !important;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  transition: transform 0.2s ease;
 }
 
 .socialLink:hover {
-  color: var(--gold) !important;
+  color: var(--gold-bright) !important;
+  border-bottom-color: var(--gold-bright);
+}
+
+.socialLink:hover::after {
+  transform: translateX(3px);
 }
 
 @media (max-width: 768px) {

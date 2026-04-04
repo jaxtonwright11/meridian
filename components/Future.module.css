@@ -80,8 +80,17 @@
   line-height: 1.2;
 }
 
+.body {
+  max-width: 620px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+}
+
 .ctaWrap {
   text-align: center;
+  margin-top: var(--space-xl);
 }
 
 @media (max-width: 768px) {

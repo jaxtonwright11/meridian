@@ -21,7 +21,7 @@ export function SideNav() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setVisible(window.scrollY > window.innerHeight * 0.5);
+      setVisible(window.scrollY > window.innerHeight * 0.2);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);

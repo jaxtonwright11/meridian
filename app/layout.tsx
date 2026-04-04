@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://meridianventura.com'),
   title: 'Meridian Conference | The Room Changes Everything',
-  description: 'Youth leadership conference connecting students from Ventura County to the rooms, people, and opportunities they didn\'t know they could access. Winter 2026.',
+  description: 'Youth leadership conference connecting students from Ventura County to the rooms, people, and opportunities they didn\'t know they could access. December 2026.',
   keywords: ['Meridian Conference', 'youth leadership', 'Ventura County', 'student opportunity', 'conference 2026'],
   authors: [{ name: 'Jaxton Wright' }],
   openGraph: {

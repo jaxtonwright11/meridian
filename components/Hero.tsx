@@ -1,13 +1,32 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 
 export function Hero() {
-  const words = ['The', 'Room', 'Changes', 'Everything.'];
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    // Disable on touch/mobile devices
+    if (window.matchMedia('(hover: none)').matches) return;
+
+    const handleMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      el.style.setProperty('--mouse-x', `${x}%`);
+      el.style.setProperty('--mouse-y', `${y}%`);
+    };
+
+    el.addEventListener('mousemove', handleMove);
+    return () => el.removeEventListener('mousemove', handleMove);
+  }, []);
 
   return (
-    <section id="hero" className={styles.hero}>
+    <section id="hero" className={styles.hero} ref={heroRef}>
       {/* Animated meridian line SVG background */}
       <svg className={styles.meridianLine} viewBox="0 0 1440 900" preserveAspectRatio="none">
         <motion.path
@@ -39,53 +58,31 @@ export function Hero() {
       </svg>
 
       <div className={`container ${styles.content}`}>
-        {/* CONTENT NEEDED FROM JAX:
-            - What: Meridian Conference logo (for hero placement)
-            - Format: SVG, white or gold on transparent
-            - Replace: Remove this comment block and add <img> tag
-            - Notes: Optional. Hero may work better without logo, just the wordmark in nav
-        */}
-
-        <h1 className={styles.headline}>
-          {words.map((word, i) => (
-            <motion.span
-              key={i}
-              className={word === 'Everything.' ? 'shimmer' : ''}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.3 + i * 0.12,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-            >
-              {word}{' '}
-            </motion.span>
-          ))}
-        </h1>
-
-        {/* CONTENT NEEDED FROM JAX:
-            - What: Final hero headline copy (confirm or replace "The Room Changes Everything.")
-            - Format: Text string, max 6 words
-            - Replace: The words array above
-            - Notes: Current copy is strong. Only replace if Jax has a clear preference.
-        */}
+        <motion.h1
+          className={styles.headline}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        >
+          Not a lecture.{' '}
+          <span className={styles.headlineAccent}>A meeting.</span>
+        </motion.h1>
 
         <motion.p
           className={styles.subtitle}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          Connecting young people from Ventura County to the people, rooms,
-          and opportunities they didn&apos;t know they could access.
+          An annual conference where students from Ventura County meet the
+          executives and founders who built something.
         </motion.p>
 
         <motion.div
           className={styles.ctas}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
         >
           <a href="#sponsors" className="btn btn-gold">Become a Sponsor</a>
           <a href="#mission" className="btn btn-ghost">Learn More</a>

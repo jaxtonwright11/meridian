@@ -39,7 +39,7 @@ export function WhatsNext() {
           <p className="caption">What&apos;s Next</p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h2>Winter 2026</h2>
+          <h2>What the Day Looks Like</h2>
         </AnimateIn>
         <AnimateIn delay={0.2}>
           <p className={styles.subtitle}>
@@ -58,7 +58,7 @@ export function WhatsNext() {
         </AnimateIn>
         <AnimateIn delay={0.4}>
           <p className={styles.subtitle}>
-            The next conference is coming Winter 2026. University chapter expansion
+            The next conference is December 2026. University chapter expansion
             is in development. If you want to be part of what comes next,
             this is where it starts.
           </p>

@@ -22,35 +22,35 @@ const mentors: PersonSlide[] = [
   },
   {
     src: '/MarianneRamosCIHSprincipal.JPG',
-    name: 'Ms. Marianne Ramos',
+    name: 'Marianne Ramos',
     title: 'Principal, Channel Islands High School',
     caption:
       'Ms. Marianne Ramos first crossed paths with Jaxton at a coat drive and a district board meeting. When Meridian Conference came across her desk, she shared it with her entire student body without hesitation, opening the door for her students to be part of something larger than their campus.',
   },
   {
     src: '/GarypetersonRMHSprincipal.WEBP',
-    name: 'Mr. Gary Peterson',
+    name: 'Gary Peterson',
     title: 'Principal, Rio Mesa High School',
     caption:
       'Mr. Gary Peterson and Jaxton first connected when he was an assistant principal at Oxnard High School, crossing paths regularly in the halls. He has always been someone who believed in doing what was right, and believed in Jaxton as someone who was trying to do the same. Now at Rio Mesa, he carries that same support forward.',
   },
   {
     src: '/BryanMartinRCHSprincipal.JPG',
-    name: 'Mr. Bryan Martin',
+    name: 'Bryan Martin',
     title: 'Principal, RCHS',
     caption:
       'Mr. Bryan Martin and Jaxton first crossed paths during the district-wide coat drive organized at Oxnard High School in the fall of 2024. His decision to support the conference is a reflection of the kind of leader he is.',
   },
   {
     src: '/ChrisRamosPHSPrincipal.WEBP',
-    name: 'Mr. Chris Ramos',
+    name: 'Chris Ramos',
     title: 'Principal, Pacifica High School',
     caption:
       'Mr. Chris Ramos and Jaxton connected through the coat drive and district board meeting. He has expressed genuine belief in what Jaxton is building and has been a champion of both the conference and the person behind it.',
   },
   {
     src: '/BrendaBravoHHSprincipal.JPG',
-    name: 'Ms. Brenda Bravo',
+    name: 'Brenda Bravo',
     title: 'Principal, Hueneme High School',
     caption:
       'Ms. Brenda Bravo chose to open her school to this conference and to the students it serves. That choice defines her role here.',

@@ -50,7 +50,8 @@ export function Founder() {
                   revenue recovered for Southern California businesses.
                 </p>
                 <p>
-                  That gap is what Meridian is closing.
+                  Meridian exists because access to rooms, people, and opportunities is not
+                  distributed equally. That is the gap this conference is built to close.
                 </p>
               </div>
             </div>

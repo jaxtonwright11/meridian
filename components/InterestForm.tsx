@@ -37,7 +37,7 @@ export function InterestForm() {
     <section id="apply" className={styles.section}>
       <div className="container">
         <AnimateIn>
-          <h2 className={styles.headline}>Be In The Room, June 2026</h2>
+          <h2 className={styles.headline}>Be In The Room, December 2026</h2>
         </AnimateIn>
 
         <AnimateIn delay={0.1}>
@@ -45,7 +45,7 @@ export function InterestForm() {
             <div className={styles.success}>
               <span className={styles.successIcon}>&#10003;</span>
               <h3>You&apos;re In</h3>
-              <p>We will be in touch as June 2026 approaches.</p>
+              <p>We will be in touch as December 2026 approaches.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className={styles.form}>
