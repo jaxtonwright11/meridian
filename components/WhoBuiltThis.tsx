@@ -7,49 +7,56 @@ import styles from './WhoBuiltThis.module.css';
 
 const mentors: PersonSlide[] = [
   {
-    src: '/Georgeleisandjaxtonpicture.jpeg',
+    src: '/opt/georgeleisandjaxtonpicture.webp',
+    mobileSrc: '/opt/georgeleisandjaxtonpicture-mobile.webp',
     name: 'George Leis',
     title: 'Chairman, YMCA of the USA / Executive Vice President, CalPrivate Bank',
     caption:
       'George Leis was among the first to believe in this conference and in the person building it. He personally donated $1,000 to make the first event possible. Every time Jaxton is in town, they meet, without exception. He was present at Jaxton\'s high school graduation. His investment in Meridian Conference is a direct extension of his investment in what young people from this community are capable of.',
   },
   {
-    src: '/TedLawrenceOHSprincipal.WEBP',
+    src: '/opt/tedlawrenceohsprincipal.webp',
+    mobileSrc: '/opt/tedlawrenceohsprincipal-mobile.webp',
     name: 'Dr. Ted Lawrence',
     title: 'Principal, Oxnard High School',
     caption:
       'Dr. Ted Lawrence has been Jaxton\'s mentor since he sent a cold email two weeks before arriving at Oxnard High School about his vision to improve the school. When Meridian Conference came together, he forwarded it to his entire student body without hesitation. His leadership is rooted in radical accessibility, the belief that the right student meeting the right opportunity can change everything.',
   },
   {
-    src: '/MarianneRamosCIHSprincipal.JPG',
+    src: '/opt/marianneramoscihsprincipal.webp',
+    mobileSrc: '/opt/marianneramoscihsprincipal-mobile.webp',
     name: 'Ms. Marianne Ramos',
     title: 'Principal, Channel Islands High School',
     caption:
       'Ms. Marianne Ramos first crossed paths with Jaxton at a coat drive and a district board meeting. When Meridian Conference came across her desk, she shared it with her entire student body without hesitation, opening the door for her students to be part of something larger than their campus.',
   },
   {
-    src: '/GarypetersonRMHSprincipal.WEBP',
+    src: '/opt/garypetersonrmhsprincipal.webp',
+    mobileSrc: '/opt/garypetersonrmhsprincipal-mobile.webp',
     name: 'Mr. Gary Peterson',
     title: 'Principal, Rio Mesa High School',
     caption:
       'Mr. Gary Peterson and Jaxton first connected when he was an assistant principal at Oxnard High School, crossing paths regularly in the halls. He has always been someone who believed in doing what was right, and believed in Jaxton as someone who was trying to do the same. Now at Rio Mesa, he carries that same support forward.',
   },
   {
-    src: '/BryanMartinRCHSprincipal.JPG',
+    src: '/opt/bryanmartinrchsprincipal.webp',
+    mobileSrc: '/opt/bryanmartinrchsprincipal-mobile.webp',
     name: 'Mr. Bryan Martin',
     title: 'Principal, RCHS',
     caption:
       'Mr. Bryan Martin and Jaxton first crossed paths during the district-wide coat drive organized at Oxnard High School in the fall of 2024. His decision to support the conference is a reflection of the kind of leader he is.',
   },
   {
-    src: '/ChrisRamosPHSPrincipal.WEBP',
+    src: '/opt/chrisramosphsprincipal.webp',
+    mobileSrc: '/opt/chrisramosphsprincipal-mobile.webp',
     name: 'Mr. Chris Ramos',
     title: 'Principal, Pacifica High School',
     caption:
       'Mr. Chris Ramos and Jaxton connected through the coat drive and district board meeting. He has expressed genuine belief in what Jaxton is building and has been a champion of both the conference and the person behind it.',
   },
   {
-    src: '/BrendaBravoHHSprincipal.JPG',
+    src: '/opt/brendabravohhsprincipal.webp',
+    mobileSrc: '/opt/brendabravohhsprincipal-mobile.webp',
     name: 'Ms. Brenda Bravo',
     title: 'Principal, Hueneme High School',
     caption:

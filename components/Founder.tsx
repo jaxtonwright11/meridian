@@ -12,8 +12,11 @@ export function Founder() {
             <div className={styles.photos}>
               <div className={styles.primaryPhoto}>
                 <img
-                  src="/unnamed__3_.jpg"
+                  src="/opt/unnamed__3_.webp"
+                  srcSet="/opt/unnamed__3_-mobile.webp 600w, /opt/unnamed__3_.webp 1200w"
+                  sizes="(max-width: 768px) 600px, 1200px"
                   alt="Jaxton Wright, Founder of Meridian Conference"
+                  decoding="async"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
                 />
                 <p className={styles.photoCaption}>Jaxton Wright, Founder</p>

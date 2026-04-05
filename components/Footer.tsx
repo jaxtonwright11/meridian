@@ -23,8 +23,8 @@ export function Footer() {
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
             <div className={styles.sigLogos}>
-              <img src="/sig/berkeley-seal.png" alt="UC Berkeley" className={styles.sigLogo} />
-              <img src="/sig/meridian-m.png" alt="Meridian" className={styles.sigLogo} />
+              <img src="/opt/berkeley-seal.webp" alt="UC Berkeley" className={styles.sigLogo} />
+              <img src="/opt/meridian-m.webp" alt="Meridian" className={styles.sigLogo} />
             </div>
             <p>&copy; {year} Meridian Conference LLC. All rights reserved.</p>
           </div>

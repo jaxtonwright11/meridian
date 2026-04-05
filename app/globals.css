@@ -1,7 +1,7 @@
 /* MERIDIAN CONFERENCE - Global Styles */
 /* Design Spec: meridian-design-spec.md */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+/* Fonts loaded via next/font in layout.tsx — no render-blocking @import */
 
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
@@ -34,8 +34,8 @@
   --space-md: 24px;
   --space-lg: 40px;
   --space-xl: 64px;
-  --space-2xl: 96px;
-  --space-3xl: 128px;
+  --space-2xl: 64px;
+  --space-3xl: 80px;
 
   /* Layout */
   --max-width: 1200px;
@@ -57,7 +57,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
   font-size: 18px;
   line-height: 1.6;
   color: var(--text-primary);
@@ -67,7 +67,7 @@ body {
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
   font-weight: 600;
   line-height: 1.15;
   color: var(--text-primary);

@@ -6,39 +6,38 @@ import styles from './Recap.module.css';
 
 const slides2025 = [
   {
-    src: '/IMG_9547.jpeg',
+    src: '/opt/img_9547.webp',
+    mobileSrc: '/opt/img_9547-mobile.webp',
     alt: 'Full group of approximately 150 people at December 2025 Meridian Conference',
   },
   {
-    src: '/IMG_9354.jpeg',
-    alt: 'Empty December 2025 venue pre-event, purple/gray seats, full stage, three screens with branding',
-  },
-  {
-    src: '/IMG_1727.jpeg',
-    alt: 'Jaxton Wright at the event podium holding a mic with panelists seated beside him',
-  },
-  {
-    src: '/IMG_9543.jpeg',
+    src: '/opt/img_9543.webp',
+    mobileSrc: '/opt/img_9543-mobile.webp',
     alt: 'Wide shot of full December 2025 panel, Jaxton moderating with five panelists',
   },
   {
-    src: '/IMG_9545.jpeg',
-    alt: 'Awards ceremony with group on stage holding recognition plaques',
-  },
-  {
-    src: '/IMG_1728.jpeg',
+    src: '/opt/img_1728.webp',
+    mobileSrc: '/opt/img_1728-mobile.webp',
     alt: 'Woman standing with microphone speaking to crowd at December 2025',
   },
   {
-    src: '/IMG_1809.jpeg',
+    src: '/opt/img_1809.webp',
+    mobileSrc: '/opt/img_1809-mobile.webp',
     alt: 'Two students in candid conversation at the event',
   },
   {
-    src: '/IMG_9544.jpeg',
+    src: '/opt/img_9545.webp',
+    mobileSrc: '/opt/img_9545-mobile.webp',
+    alt: 'Awards ceremony with group on stage holding recognition plaques',
+  },
+  {
+    src: '/opt/img_9544.webp',
+    mobileSrc: '/opt/img_9544-mobile.webp',
     alt: 'Four people in a casual post-event group moment backstage',
   },
   {
-    src: '/selfieofmygirlfriendmeandbestfriendaftertheevent.jpeg',
+    src: '/opt/selfieofmygirlfriendmeandbestfriendaftertheevent.webp',
+    mobileSrc: '/opt/selfieofmygirlfriendmeandbestfriendaftertheevent-mobile.webp',
     alt: 'Jaxton Wright with friends after the December 2025 conference',
   },
 ];
