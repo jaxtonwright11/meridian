@@ -15,11 +15,11 @@ export function Founder() {
                   src="/opt/unnamed__3_.webp"
                   srcSet="/opt/unnamed__3_-mobile.webp 600w, /opt/unnamed__3_.webp 1200w"
                   sizes="(max-width: 768px) 600px, 1200px"
-                  alt="Jaxton Wright, Founder of Meridian Conference"
+                  alt="Jaxton Bruce Wright, Founder of Meridian Conference"
                   decoding="async"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }}
                 />
-                <p className={styles.photoCaption}>Jaxton Wright, Founder</p>
+                <p className={styles.photoCaption}>Jaxton Bruce Wright, Founder</p>
               </div>
             </div>
           </AnimateIn>
@@ -27,11 +27,11 @@ export function Founder() {
           <AnimateIn direction="right" delay={0.15}>
             <div className={styles.content}>
               <p className="caption">The Founder</p>
-              <h2 className={styles.name}>Jaxton Wright</h2>
+              <h2 className={styles.name}>Jaxton Bruce Wright</h2>
               <p className={styles.role}>Founder, Meridian Conference</p>
               <div className={styles.bio}>
                 <p>
-                  Jaxton Wright is 19 years old, from Southern California, studying Honors Economics and
+                  Jaxton Bruce Wright is 19 years old, from Southern California, studying Honors Economics and
                   Political Science at UC Berkeley. The first Meridian event brought ~150
                   young people into the same room as leaders from Netflix, OpenAI, and
                   Chase Bank. The conversations were real, and the outcomes were the following:
