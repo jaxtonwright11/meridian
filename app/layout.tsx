@@ -21,12 +21,12 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://meridianventura.com'),
   title: 'Meridian Conference | Not a lecture. A meeting.',
-  description: 'Youth leadership conference connecting students from Ventura County to the rooms, people, and opportunities they didn\'t know they could access. December 2026.',
-  keywords: ['Meridian Conference', 'youth leadership', 'Ventura County', 'student opportunity', 'conference 2026'],
+  description: 'A free youth leadership conference connecting students from Los Angeles and Ventura Counties to the rooms, people, and opportunities they deserve. Late November 2026.',
+  keywords: ['Meridian Conference', 'youth leadership', 'Los Angeles County, Ventura County, Southern California', 'student opportunity', 'conference 2026'],
   authors: [{ name: 'Jaxton Wright' }],
   openGraph: {
     title: 'Meridian Conference | Not a lecture. A meeting.',
-    description: 'Connecting students from Ventura County to the rooms, people, and opportunities they didn\'t know they could access.',
+    description: 'A free youth leadership conference serving Los Angeles and Ventura Counties. Direct access to executives, founders, and leaders. November 2026.',
     url: 'https://meridianventura.com',
     siteName: 'Meridian Conference',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Meridian Conference | Not a lecture. A meeting.',
-    description: 'Connecting students from Ventura County to the rooms, people, and opportunities they didn\'t know they could access.',
+    description: 'A free youth leadership conference serving Los Angeles and Ventura Counties. Direct access to executives, founders, and leaders. November 2026.',
     images: ['/og-image.jpg'],
   },
   robots: { index: true, follow: true },

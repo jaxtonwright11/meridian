@@ -46,8 +46,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
         >
-          Not a lecture.{' '}
-          <span className={styles.headlineAccent}>A meeting.</span>
+          A conference organized by students,{' '}
+          <span className={styles.headlineAccent}>for students.</span>
         </motion.h1>
 
         <motion.p
@@ -56,8 +56,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          An annual conference where students from Ventura County meet the
-          executives and founders who have built success.
+          Connecting ambitious students from Los Angeles and Ventura Counties to
+          the rooms, relationships, and opportunities that can change their trajectory.
         </motion.p>
 
         <motion.div

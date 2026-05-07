@@ -23,12 +23,11 @@ export function Footer() {
         <div className={styles.bottom}>
           <div className={styles.bottomLeft}>
             <div className={styles.sigLogos}>
-              <img src="/opt/berkeley-seal.webp" alt="UC Berkeley" className={styles.sigLogo} />
               <img src="/opt/meridian-m.webp" alt="Meridian" className={styles.sigLogo} />
             </div>
             <p>&copy; {year} Meridian Conference LLC. All rights reserved.</p>
           </div>
-          <p className={styles.location}>Ventura County, California</p>
+          <p className={styles.location}>Los Angeles and Ventura Counties, California</p>
         </div>
       </div>
     </footer>

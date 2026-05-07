@@ -4,7 +4,10 @@
 
 .subtitle {
   max-width: 600px;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-sm);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
 }
 
 .timeline {
@@ -26,6 +29,12 @@
   border-color: var(--gold-dim);
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cardFeatured {
+  border-color: var(--gold-dim);
+  background: linear-gradient(135deg, var(--bg-surface), var(--bg-elevated));
+  box-shadow: 0 0 0 1px var(--gold-dim), 0 8px 32px rgba(201, 168, 76, 0.12);
 }
 
 .cardIcon {

@@ -31,23 +31,19 @@ export function Founder() {
               <p className={styles.role}>Founder, Meridian Conference</p>
               <div className={styles.bio}>
                 <p>
-                  Jaxton Bruce Wright is 19 years old, from Southern California, studying Honors Economics and
-                  Political Science at UC Berkeley. The first Meridian event brought ~150
-                  young people into the same room as leaders from Netflix, OpenAI, and
-                  Chase Bank. The conversations were real, and the outcomes were the following:
-                  mentorships, internship introductions, career pivots.
+                  Jaxton Wright built Meridian because the rooms that change trajectories
+                  should not require a last name or a zip code to enter.
                 </p>
                 <p>
-                  Jaxton has worked on AI policy with both sides of Congress, interning with
-                  Senator Schiff and Representative Mace in the same year, and was invited
-                  to speak on AI and youth opportunity at Harvard Kennedy School. Outside
-                  of Meridian, he founded PRISM, a seed-funded geographic community
-                  platform, and runs an AI consulting practice with $317K+ in documented
-                  revenue recovered for Southern California businesses.
+                  The first Meridian event brought 150 young people face-to-face with leaders
+                  from Netflix, OpenAI, and Chase Bank. Not for a lecture. For direct
+                  conversations that led to real mentorships, internship introductions, and
+                  career pivots.
                 </p>
                 <p>
-                  Meridian exists because access to rooms, people, and opportunities are not
-                  distributed equally. That is the gap this conference is focused on closing.
+                  The next conference is coming to Los Angeles County in late November 2026,
+                  serving 400 students from across Los Angeles and Ventura Counties. Free for
+                  every student who attends.
                 </p>
               </div>
             </div>
