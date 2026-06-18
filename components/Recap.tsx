@@ -35,11 +35,6 @@ const slides2025 = [
     mobileSrc: '/opt/img_9544-mobile.webp',
     alt: 'Four people in a casual post-event group moment backstage',
   },
-  {
-    src: '/opt/selfieofmygirlfriendmeandbestfriendaftertheevent.webp',
-    mobileSrc: '/opt/selfieofmygirlfriendmeandbestfriendaftertheevent-mobile.webp',
-    alt: 'Jaxton Wright with friends after the December 2025 conference',
-  },
 ];
 
 export function Recap() {

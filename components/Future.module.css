@@ -1,5 +1,6 @@
 .section {
-  background: var(--paper-2);
+  background: var(--band);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .dayHead {

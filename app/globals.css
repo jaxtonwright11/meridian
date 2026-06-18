@@ -1,26 +1,29 @@
 /* MERIDIAN CONFERENCE. Global Styles */
-/* Warm editorial institution. Paper, ink, one muted gold. */
+/* Warm editorial institution. Layered paper, ink, one muted gold. */
 /* Fonts loaded via next/font in layout.tsx */
 
 /* ===== DESIGN TOKENS ===== */
 :root {
   /* Ink */
-  --ink: #16130F;
-  --ink-soft: #3D3730;
+  --ink: #1C1813;
+  --ink-soft: #423A30;
   --stone: #6B6358;
 
-  /* Paper */
-  --paper: #FBF9F4;
-  --paper-2: #F4F0E8;
+  /* Paper surfaces, lightest to deepest */
+  --paper: #FCFAF6;     /* lightest sheets / cards */
+  --paper-2: #F2ECE1;   /* light band */
+  --band: #E8DECB;      /* deep band */
+  --bg: #E3D8C3;        /* outer body frame, deepest in the warm family */
 
   /* Lines */
-  --line: #E2DBCF;
-  --line-strong: #D5CCBE;
+  --line: #DBD2C2;
+  --line-strong: #CDC2AE;
 
   /* Gold, the only accent */
   --gold: #A9802C;
+  --gold-ink: #876219;  /* darker gold for small label text (legible) */
   --gold-soft: #C8A24B;
-  --gold-wash: #F6EEDD;
+  --gold-wash: #F2E7CC;
 
   /* Layout */
   --max-width: 1120px;
@@ -28,8 +31,9 @@
   --section-pad-y: 88px;
   --section-pad-y-tight: 56px;
 
-  /* Document panel shadow (special use only) */
-  --doc-shadow: 0 18px 60px rgba(22, 19, 15, 0.08);
+  /* Panel shadow (sheet of paper on a darker frame) */
+  --panel-shadow: 0 1px 2px rgba(28, 24, 19, 0.04), 0 16px 38px rgba(28, 24, 19, 0.05);
+  --doc-shadow: 0 18px 60px rgba(28, 24, 19, 0.08);
 }
 
 /* ===== RESET ===== */
@@ -51,7 +55,7 @@ body {
   font-size: 15.5px;
   line-height: 1.6;
   color: var(--ink-soft);
-  background-color: var(--paper-2);
+  background-color: var(--bg);
   overflow-x: hidden;
 }
 
@@ -60,12 +64,12 @@ h1, h2, h3, h4 {
   font-family: var(--font-fraunces), Georgia, serif;
   color: var(--ink);
   font-weight: 600;
-  line-height: 1.12;
+  line-height: 1.1;
   letter-spacing: -0.015em;
 }
 
-h1 { font-size: clamp(46px, 7vw, 88px); line-height: 0.96; font-weight: 500; }
-h2 { font-size: clamp(28px, 3vw, 42px); }
+h1 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1.04; font-weight: 600; }
+h2 { font-size: clamp(30px, 3.4vw, 46px); }
 h3 { font-size: 22px; }
 h4 { font-size: 18px; }
 
@@ -85,7 +89,28 @@ a {
   transition: color 0.18s ease;
 }
 
-a:hover { color: var(--gold); }
+a:hover { color: var(--gold-ink); }
+
+/* ===== EYEBROW (mono filing label) ===== */
+.eyebrow,
+.caption {
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== META / MONO LINE ===== */
+.meta {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--stone);
+}
 
 /* ===== LAYOUT ===== */
 .container {
@@ -105,25 +130,18 @@ section {
   position: relative;
 }
 
-/* ===== EYEBROW (mono filing label) ===== */
-.eyebrow,
-.caption {
-  display: block;
-  font-family: var(--font-mono), monospace;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 500;
-  margin-bottom: 18px;
-}
+/* ===== SURFACE HELPERS ===== */
+/* A section that reads as a deep band on the page. */
+.band { background: var(--band); }
+.surface-paper { background: var(--paper); }
 
-/* ===== META / MONO LINE ===== */
-.meta {
-  font-family: var(--font-mono), monospace;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: var(--stone);
+/* A "sheet of paper" panel: a defined box around a chunk of content. */
+.panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 44px 48px;
+  box-shadow: var(--panel-shadow);
 }
 
 /* ===== BUTTONS ===== */
@@ -165,13 +183,6 @@ section {
 .btn-ghost:hover {
   border-color: var(--ink);
   color: var(--ink);
-}
-
-/* ===== SHEET PANEL (paper-on-paper) ===== */
-.sheet {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  padding: 36px 40px;
 }
 
 /* ===== HAIRLINE RULES ===== */
@@ -227,10 +238,11 @@ section {
 }
 .addon .k {
   font-family: var(--font-mono), monospace;
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
+  font-weight: 600;
   white-space: nowrap;
 }
 .addon p { font-size: 14px; color: var(--ink-soft); margin: 0; max-width: none; }
@@ -241,9 +253,10 @@ section {
     --section-pad-y: 60px;
     --section-pad-y-tight: 44px;
   }
-  .container, .container-narrow { padding: 0 24px; }
+  .container, .container-narrow { padding: 0 22px; }
   body { font-size: 15px; }
   .btn { width: 100%; }
+  .panel { padding: 30px 24px; }
   .proof { flex-direction: column; }
   .proof .fig {
     border-right: none;
@@ -252,7 +265,6 @@ section {
   }
   .proof .fig:last-child { border-bottom: none; }
   .addon { flex-direction: column; gap: 6px; }
-  .sheet { padding: 28px 24px; }
 }
 
 /* ===== REDUCED MOTION ===== */

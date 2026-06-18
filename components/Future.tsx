@@ -6,35 +6,35 @@ import styles from './Future.module.css';
 const stops = [
   {
     time: 'Before 11',
-    title: 'Arrive on campus',
-    desc: 'Students arrive on campus. The group from Ventura County travels up together.',
+    title: 'Doors open',
+    desc: 'Students arrive, get their name, and find their footing before the floor fills.',
     soft: true,
   },
   {
     time: '10:45',
     title: 'Check-in, portraits, ask cards',
-    desc: 'Every student gets a real portrait they keep, then fills an ask card noting what they are looking for and who they want to meet. They carry the card through the day, so leaders can approach them with context.',
+    desc: 'Every student sits for a real portrait they keep. Then they fill an ask card: what they are looking for, and who they want to meet. The card stays on them all day, so a leader can walk up already knowing why.',
   },
   {
     time: '11:15',
     title: 'The open floor',
-    desc: 'The leaders circulate and come to the students. Partner organizations hold stations students can visit. Hosts keep the floor moving so no student is left on their own.',
+    desc: 'No stage to wait behind. The leaders move through the room and come to the students. Partner organizations run stations you can walk up to, and hosts keep the floor moving so no one is left standing alone.',
   },
   {
     time: '12:00',
     title: 'Keynote conversations',
-    desc: 'A small set of leaders in conversation, rather than scripted speeches. Each one names the specific favor they are offering students that day.',
+    desc: 'A few leaders, in conversation instead of scripted speeches. Each one says out loud the specific favor they are putting on the table that day.',
   },
   {
     time: '12:45',
     title: 'Direct access and the 30-second favor',
-    desc: 'Leaders move between small groups and act on the ask cards with introductions, referrals, and direct connections. Each favor is posted to the Favor Wall, which fills as the day runs.',
+    desc: 'The center of the day. Leaders move between small groups and act on the ask cards on the spot: an introduction, a referral, a direct line in. The whole room is built to make a small favor easy to give and impossible to forget.',
     favor: true,
   },
   {
     time: '2:15',
     title: 'The close',
-    desc: 'Every student is entered into the Meridian network, leaves with a standing way to ask for help, and hears from Meridian within two weeks. The follow-up sits with us, not the student.',
+    desc: 'Before they leave, every student is entered into the Meridian network with a standing way to ask for help, and will hear from Meridian within two weeks. The follow-up is our job, not theirs.',
   },
   {
     time: 'After 3:00',
@@ -110,6 +110,17 @@ export function Future() {
             </AnimateIn>
           ))}
         </div>
+
+        <AnimateIn delay={0.1}>
+          <div className={`addon ${styles.addon}`}>
+            <span className="k">The Favor Wall</span>
+            <p>
+              One wall in the room fills through the day. Every favor a leader gives gets
+              written up and posted as it happens, so the access is not a promise. It is
+              on the wall, in front of everyone, by the time the day ends.
+            </p>
+          </div>
+        </AnimateIn>
 
         <AnimateIn delay={0.1}>
           <div className={`addon ${styles.addon}`}>

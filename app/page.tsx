@@ -6,7 +6,6 @@ import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
 import { Mission } from '@/components/Mission';
 import { Recap } from '@/components/Recap';
-import { Speakers } from '@/components/Speakers';
 import { Future } from '@/components/Future';
 import { Partners } from '@/components/Partners';
 import { Founder } from '@/components/Founder';
@@ -39,7 +38,6 @@ export default function Home() {
         <Hero />
         <Mission />
         <Recap />
-        <Speakers />
         <Future />
         <Partners />
         <Founder />
