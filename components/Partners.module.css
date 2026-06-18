@@ -1,0 +1,31 @@
+.partners {
+  background: var(--paper-2);
+}
+
+.headline { margin-bottom: 0; }
+
+.lead {
+  margin-top: 28px;
+  max-width: 64ch;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+
+.lead p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.note {
+  margin-top: 16px;
+  font-family: var(--font-mono), monospace;
+  font-size: 12.5px !important;
+  letter-spacing: 0.02em;
+  color: var(--stone) !important;
+  line-height: 1.6 !important;
+}
+
+@media (max-width: 768px) {
+  .lead p { font-size: 16.5px; }
+}

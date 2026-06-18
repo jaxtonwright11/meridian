@@ -1,106 +1,76 @@
-/* ===== FOUNDER SECTION ===== */
 .founder {
-  padding: var(--space-3xl) 0;
+  background: var(--paper-2);
 }
 
 .layout {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: var(--space-2xl);
+  grid-template-columns: 320px 1fr;
+  gap: 56px;
   align-items: start;
+  max-width: var(--max-width-editorial);
+  margin: 0 auto;
 }
 
-/* Photos */
 .photos {
   width: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
 }
 
 .primaryPhoto {
-  text-align: center;
+  padding: 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
 }
 
 .primaryPhoto img {
   aspect-ratio: 3 / 4;
+  display: block;
 }
 
 .photoCaption {
-  font-size: 14px;
-  color: var(--text-dim);
-  letter-spacing: 0.05em;
-  margin-top: var(--space-xs);
+  margin-top: 10px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  color: var(--stone);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.secondaryPhoto {
-  width: 100%;
-}
-
-.secondaryPhoto img {
-  aspect-ratio: 4 / 3;
-}
-
-/* Content */
-.content {
-  max-width: 600px;
-}
+.content { max-width: 560px; }
 
 .name {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  margin-bottom: var(--space-xs);
+  font-size: clamp(30px, 4vw, 44px);
+  margin-bottom: 6px;
 }
 
 .role {
-  font-size: 14px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: var(--space-lg);
+  color: var(--stone);
+  margin-bottom: 28px;
 }
 
 .bio p {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: var(--text-secondary);
-  margin-bottom: var(--space-md);
-  max-width: 100%;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+  max-width: 60ch;
 }
 
-.bio a {
-  color: var(--gold);
-  font-weight: 600;
-  transition: color 0.2s ease;
+.contactLine {
+  margin-top: 24px;
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.02em;
 }
 
-.bio a:hover {
-  color: var(--gold-bright);
-}
+.sep { color: var(--line-strong); margin: 0 10px; }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .layout {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-    text-align: center;
-  }
-
-  .photos {
-    width: 240px;
-    margin: 0 auto;
-  }
-
-  .secondaryPhoto {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .content {
-    max-width: 100%;
-  }
-
-  .bio p {
-    text-align: left;
-  }
+  .layout { grid-template-columns: 1fr; gap: 32px; }
+  .photos { width: 240px; }
+  .content { max-width: 100%; }
 }

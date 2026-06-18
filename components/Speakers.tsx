@@ -39,12 +39,12 @@ const speakers: PersonSlide[] = [
 export function Speakers() {
   return (
     <section id="speakers" className={styles.speakers}>
-      <div className="container">
+      <div className="container-narrow">
         <AnimateIn>
-          <p className="caption">December 2025</p>
+          <p className="eyebrow">December 2025</p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h2>Past Speakers</h2>
+          <h2>Who came to speak</h2>
         </AnimateIn>
         <AnimateIn delay={0.2}>
           <PersonCarousel slides={speakers} />

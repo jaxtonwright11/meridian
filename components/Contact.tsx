@@ -39,18 +39,17 @@ export function Contact() {
         <div className={styles.layout}>
           <AnimateIn direction="left">
             <div className={styles.info}>
-              <p className="caption">Get Involved</p>
-              <h2>Reach Out Directly.</h2>
+              <p className="eyebrow">Contact</p>
+              <h2>Reach out directly</h2>
               <p className={styles.desc}>
-                Whether you are interested in sponsoring, speaking, partnering, joining
-                the leadership team, or getting involved in building what comes next,
-                this is where it starts.
+                For leaders who want to be in the room, partners, anyone who wants to
+                help build it, or a student with a question. This is where it starts.
               </p>
               <div className={styles.details}>
                 <div className={styles.detail}>
                   <span className={styles.detailLabel}>Email</span>
-                  <a href="mailto:jaxtonwright11@gmail.com">
-                    jaxtonwright11@gmail.com
+                  <a href="mailto:jaxtonwright11@berkeley.edu">
+                    jaxtonwright11@berkeley.edu
                   </a>
                 </div>
                 <div className={styles.detail}>
@@ -76,26 +75,15 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className={styles.form}>
-                <div className={styles.row}>
-                  <div className={styles.field}>
-                    <label htmlFor="name">Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div className={styles.field}>
-                    <label htmlFor="org">Organization</label>
-                    <input
-                      type="text"
-                      id="org"
-                      name="organization"
-                      placeholder="Company or school"
-                    />
-                  </div>
+                <div className={styles.field}>
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Your full name"
+                  />
                 </div>
                 <div className={styles.field}>
                   <label htmlFor="email">Email</label>
@@ -108,32 +96,18 @@ export function Contact() {
                   />
                 </div>
                 <div className={styles.field}>
-                  <label htmlFor="role">I&apos;m interested as a…</label>
-                  <select id="role" name="role" required defaultValue="">
-                    <option value="" disabled>
-                      Select one
-                    </option>
-                    <option value="sponsor">Sponsor</option>
-                    <option value="speaker">Speaker</option>
-                    <option value="volunteer">Volunteer</option>
-                    <option value="partner">Community Partner</option>
-                    <option value="student">Student Attendee</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div className={styles.field}>
                   <label htmlFor="message">Message</label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
-                    placeholder="Tell us what you have in mind…"
+                    placeholder="Whatever you have in mind."
                   />
                 </div>
                 {error && (
                   <p className={styles.error}>
                     Something went wrong. Please email{' '}
-                    <a href="mailto:jaxtonwright11@gmail.com">jaxtonwright11@gmail.com</a> directly.
+                    <a href="mailto:jaxtonwright11@berkeley.edu">jaxtonwright11@berkeley.edu</a> directly.
                   </p>
                 )}
                 <button type="submit" className="btn btn-gold" disabled={sending}>

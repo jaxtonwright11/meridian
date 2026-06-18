@@ -7,27 +7,22 @@ export function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className="container-narrow">
         <div className={styles.inner}>
           <div className={styles.brand}>
-            <span className={styles.wordmark}>MERIDIAN</span>
-            <p className={styles.tagline}>Not a lecture. A meeting.</p>
+            <span className={styles.wordmark}>Meridian<span className={styles.dot}>.</span></span>
           </div>
           <nav className={styles.links}>
             <a href="#mission">Mission</a>
-            <a href="#recap">Past Events</a>
-            <a href="#sponsors">Sponsors</a>
-            <a href="#apply">Get Involved</a>
+            <a href="#the-day">The day</a>
+            <a href="#recap">Past</a>
+            <a href="#partners">Partners</a>
+            <a href="#contact">Contact</a>
           </nav>
         </div>
         <div className={styles.bottom}>
-          <div className={styles.bottomLeft}>
-            <div className={styles.sigLogos}>
-              <img src="/opt/meridian-m.webp" alt="Meridian" className={styles.sigLogo} />
-            </div>
-            <p>&copy; {year} Meridian Conference LLC. All rights reserved.</p>
-          </div>
-          <p className={styles.location}>Los Angeles and Ventura Counties, California</p>
+          <p className={styles.copy}>&copy; {year} Meridian Conference LLC</p>
+          <p className={styles.location}>jaxtonwright11@berkeley.edu &middot; calendly.com/jaxtonwright</p>
         </div>
       </div>
     </footer>

@@ -11,7 +11,7 @@ const slides2024 = [
   },
   {
     src: '/IMG_1802.jpeg',
-    alt: 'Empty 2024 hotel ballroom before the event, stage with four chairs and Young & Gifted branding',
+    alt: 'Empty 2024 hotel ballroom before the event, stage with four chairs and conference branding',
   },
   {
     src: '/IMG_1805.jpeg',

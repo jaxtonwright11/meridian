@@ -67,9 +67,12 @@ const mentors: PersonSlide[] = [
 export function WhoBuiltThis() {
   return (
     <section id="who-built-this" className={styles.section}>
-      <div className="container">
+      <div className="container-narrow">
         <AnimateIn>
-          <h2>Who Helped Build This</h2>
+          <p className="eyebrow">Support</p>
+        </AnimateIn>
+        <AnimateIn delay={0.05}>
+          <h2>Who helped build this</h2>
         </AnimateIn>
         <AnimateIn delay={0.1}>
           <PersonCarousel slides={mentors} />

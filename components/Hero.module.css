@@ -1,110 +1,155 @@
 .hero {
-  position: relative;
-  min-height: 100vh;
+  padding-top: 40px;
+  padding-bottom: var(--section-pad-y);
+  background: var(--paper-2);
+}
+
+.inner {
+  max-width: var(--max-width-editorial);
+}
+
+/* Masthead */
+.topcontact {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  color: var(--stone);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.topcontact b { color: var(--ink); font-weight: 600; }
+
+.masthead {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
-  --mouse-x: 50%;
-  --mouse-y: 50%;
-  background: radial-gradient(
-    circle at var(--mouse-x) var(--mouse-y),
-    rgba(201, 168, 76, 0.06) 0%,
-    transparent 60%
-  ), var(--bg-primary);
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 22px;
+  border-bottom: 1.5px solid var(--ink);
+  gap: 24px;
 }
 
-.meridianLine {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+.wordmark {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--ink);
+}
+.wordmark span { color: var(--gold); }
+
+.mastMeta {
+  text-align: right;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  color: var(--stone);
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+  text-transform: uppercase;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding-top: 80px;
-}
+/* Lead */
+.blurb { margin-top: 48px; }
 
 .headline {
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: var(--space-lg);
-  display: block;
+  margin-top: 4px;
+  max-width: 18ch;
 }
 
-.headlineAccent {
-  display: inline-block;
-  background: linear-gradient(
-    90deg,
-    var(--gold) 0%,
-    var(--gold-bright) 40%,
-    var(--gold) 60%,
-    var(--gold-bright) 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 5s ease infinite;
+.lead {
+  margin-top: 28px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 60ch;
 }
 
-@keyframes shimmer {
-  0% { background-position: 200% center; }
-  100% { background-position: -200% center; }
+.leadSub {
+  margin-top: 14px;
+  font-size: 15.5px;
+  color: var(--ink-soft);
+  max-width: 60ch;
 }
 
-.subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--text-secondary);
-  max-width: 580px;
-  margin: 0 auto var(--space-xl);
-  line-height: 1.7;
+/* Waitlist capture */
+.waitlist {
+  margin-top: 40px;
+  max-width: 480px;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
 }
 
-.ctas {
+.waitlistHead {
   display: flex;
-  gap: var(--space-sm);
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
 }
 
-.scrollIndicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+.waitlistNote {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  color: var(--stone);
+  letter-spacing: 0.02em;
 }
 
-.scrollLine {
-  width: 1px;
-  height: 48px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-  animation: scrollPulse 2s ease infinite;
+.waitlistForm {
+  display: flex;
+  gap: 10px;
 }
 
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
-  50% { opacity: 0.8; transform: scaleY(1); }
+.waitlistForm input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  padding: 13px 16px;
+  font-family: var(--font-hanken), sans-serif;
+  font-size: 15px;
+  color: var(--ink);
+  transition: border-color 0.18s ease;
 }
+
+.waitlistForm input[type="email"]::placeholder { color: var(--stone); opacity: 0.6; }
+.waitlistForm input[type="email"]:focus { outline: none; border-color: var(--ink); }
+
+.waitlistForm .btn { flex-shrink: 0; padding-left: 28px; padding-right: 28px; }
+
+.waitlistSuccess {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.waitlistError {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #9A3412;
+}
+.waitlistError a { color: var(--gold); }
+
+.seeDay {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+  transition: color 0.18s, border-color 0.18s;
+}
+.seeDay:hover { color: var(--gold); border-color: var(--gold); }
 
 @media (max-width: 768px) {
-  .hero {
-    /* Static background on mobile — no cursor gradient */
-    background: var(--bg-primary);
-  }
-
-  .headline {
-    font-size: clamp(2.2rem, 10vw, 3.5rem);
-  }
-
-  .ctas {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0 var(--space-md);
-  }
+  .masthead { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .mastMeta { text-align: left; }
+  .wordmark { font-size: 30px; }
+  .blurb { margin-top: 36px; }
+  .lead { font-size: 16.5px; }
+  .waitlist { max-width: 100%; }
+  .waitlistForm { flex-direction: column; }
+  .waitlistForm .btn { width: 100%; }
 }

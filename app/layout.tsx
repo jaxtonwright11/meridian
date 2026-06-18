@@ -1,41 +1,49 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
+import { Fraunces, Hanken_Grotesk, Spline_Sans_Mono } from 'next/font/google';
 import './globals.css';
 
-const cormorant = Cormorant_Garamond({
+const fraunces = Fraunces({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-cormorant',
+  variable: '--font-fraunces',
   display: 'swap',
 });
 
-const dmSans = DM_Sans({
+const hanken = Hanken_Grotesk({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-dm-sans',
+  variable: '--font-hanken',
+  display: 'swap',
+});
+
+const splineMono = Spline_Sans_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-mono',
   display: 'swap',
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://meridianventura.com'),
-  title: 'Meridian Conference | Not a lecture. A meeting.',
-  description: 'A free youth leadership conference connecting students from Los Angeles and Ventura Counties to the rooms, people, and opportunities they deserve. Late November 2026.',
-  keywords: ['Meridian Conference', 'youth leadership', 'Los Angeles County, Ventura County, Southern California', 'student opportunity', 'conference 2026'],
+  title: 'Meridian Conference',
+  description:
+    'A free, student-run conference that brings university students from across Los Angeles face to face with founders, executives, and industry leaders. This November.',
+  keywords: ['Meridian Conference', 'student access', 'Los Angeles', 'founders', 'executives', 'conference 2026'],
   authors: [{ name: 'Jaxton Wright' }],
   openGraph: {
-    title: 'Meridian Conference | Not a lecture. A meeting.',
-    description: 'A free youth leadership conference serving Los Angeles and Ventura Counties. Direct access to executives, founders, and leaders. November 2026.',
+    title: 'Meridian Conference',
+    description:
+      'A free conference that brings students face to face with founders, executives, and leaders. Rather than students lining up to introduce themselves, the leaders work the room and come to the students.',
     url: 'https://meridianventura.com',
     siteName: 'Meridian Conference',
     type: 'website',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Meridian Conference. Access Changes Everything' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Meridian Conference' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Meridian Conference | Not a lecture. A meeting.',
-    description: 'A free youth leadership conference serving Los Angeles and Ventura Counties. Direct access to executives, founders, and leaders. November 2026.',
+    title: 'Meridian Conference',
+    description:
+      'A free conference that brings students face to face with founders, executives, and leaders. This November.',
     images: ['/og-image.jpg'],
   },
   robots: { index: true, follow: true },
@@ -47,11 +55,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${hanken.variable} ${splineMono.variable}`}
+    >
       <head>
         {/* POSTHOG SNIPPET - JAX TO ADD KEY HERE */}
       </head>
-      <body className="grain">
+      <body>
         {children}
       </body>
     </html>

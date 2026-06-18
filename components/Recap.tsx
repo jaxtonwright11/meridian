@@ -45,21 +45,20 @@ const slides2025 = [
 export function Recap() {
   return (
     <section id="recap" className={styles.recap}>
-      <div className="container">
+      <div className="container-narrow">
         <AnimateIn>
-          <p className="caption">Past Events</p>
+          <p className="eyebrow">December 2025</p>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h2>December 2025: The First Chapter</h2>
+          <h2>The first event</h2>
         </AnimateIn>
 
         <AnimateIn delay={0.2}>
           <p className={styles.intro}>
-            ~150 young people walked into a room with
-            representatives from Netflix, OpenAI, and Chase Bank. Not for a
-            lecture. For direct, face-to-face conversations with people who
-            could change their trajectory. December 2025 was the first chapter
-            of what became Meridian Conference.
+            About 150 students walked into a room with leaders from Netflix, OpenAI,
+            and Chase Bank. Not for a lecture. For direct, face-to-face conversations
+            with people who could open a real door. December 2025 was the first
+            Meridian, and the proof of what this November is built on.
           </p>
         </AnimateIn>
 

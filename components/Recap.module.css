@@ -1,85 +1,68 @@
 .recap {
-  padding: var(--space-3xl) 0;
-  background: var(--bg-surface);
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .intro {
-  max-width: 720px;
-  margin-bottom: var(--space-2xl);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  max-width: 64ch;
+  margin-bottom: 40px;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
 }
 
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-  margin-top: var(--space-2xl);
+  gap: 32px;
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+  padding-top: 40px;
 }
 
 .testimonial {
-  padding: var(--space-lg);
-  border-left: 2px solid var(--gold-dim);
+  padding-left: 22px;
+  border-left: 2px solid var(--gold);
 }
 
 .testimonial blockquote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem;
-  font-style: italic;
-  color: var(--text-primary);
-  line-height: 1.6;
-  margin-bottom: var(--space-sm);
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
 }
 
 .testimonial cite {
   font-style: normal;
-  font-size: 14px;
-  color: var(--text-dim);
+  font-family: var(--font-mono), monospace;
+  font-size: 11.5px;
+  color: var(--stone);
   letter-spacing: 0.03em;
+  line-height: 1.7;
 }
 
 .testimonial cite a {
-  color: var(--gold);
-  text-decoration: none;
-  transition: color 0.2s ease;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 3px;
 }
 
-.testimonial cite a:hover {
-  color: var(--gold-bright);
-}
+.testimonial cite a:hover { color: var(--gold); }
 
 .socialLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: 600;
+  display: inline-block;
+  margin-top: 8px;
   color: var(--gold) !important;
   text-decoration: none;
-  border-bottom: 1px solid var(--gold-dim);
-  padding-bottom: 2px;
-  letter-spacing: 0.03em;
-  transition: all 0.2s ease;
 }
 
-.socialLink::after {
-  content: '\2192';
-  font-size: 13px;
-  transition: transform 0.2s ease;
-}
-
-.socialLink:hover {
-  color: var(--gold-bright) !important;
-  border-bottom-color: var(--gold-bright);
-}
-
-.socialLink:hover::after {
-  transform: translateX(3px);
-}
+.socialLink:hover { color: var(--ink) !important; }
 
 @media (max-width: 768px) {
-  .testimonials {
-    grid-template-columns: 1fr;
-  }
+  .testimonials { grid-template-columns: 1fr; gap: 28px; }
 }
