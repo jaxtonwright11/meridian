@@ -1,11 +1,11 @@
 .founder {
-  background: var(--band);
+  background: var(--page-b);
 }
 
 .layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 56px;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 52px;
   align-items: start;
 }
 
@@ -33,7 +33,7 @@
   text-transform: uppercase;
 }
 
-.content { max-width: 560px; }
+.content { max-width: 600px; min-width: 0; }
 
 .name {
   font-size: clamp(30px, 4vw, 44px);
@@ -63,6 +63,7 @@
   font-family: var(--font-mono), monospace;
   font-size: 12px;
   letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
 }
 
 .sep { color: var(--line-strong); margin: 0 10px; }

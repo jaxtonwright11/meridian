@@ -7,8 +7,7 @@ export function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className="container">
-       <div className={`chunk ${styles.chunk}`}>
+      <div className="container-narrow">
         <div className={styles.inner}>
           <div className={styles.brand}>
             <span className={styles.wordmark}>Meridian<span className={styles.dot}>.</span></span>
@@ -25,7 +24,6 @@ export function Footer() {
           <p className={styles.copy}>&copy; {year} Meridian Conference LLC</p>
           <p className={styles.location}>jaxtonwright11@berkeley.edu &middot; calendly.com/jaxtonwright</p>
         </div>
-       </div>
       </div>
     </footer>
   );

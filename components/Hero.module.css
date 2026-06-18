@@ -1,7 +1,7 @@
 .hero {
   padding-top: 92px;
   padding-bottom: 34px;
-  background: var(--paper);
+  background: var(--page-a);
 }
 
 .inner {

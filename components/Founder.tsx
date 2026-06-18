@@ -7,7 +7,7 @@ export function Founder() {
   return (
     <section id="founder" className={styles.founder}>
       <div className="container">
-       <div className="chunk">
+       <div className="chunk" style={{ maxWidth: '1000px' }}>
         <div className={styles.layout}>
           <AnimateIn direction="left">
             <div className={styles.photos}>

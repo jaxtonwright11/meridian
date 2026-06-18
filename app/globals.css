@@ -32,6 +32,13 @@
   --box-inset: #DCC8AC;     /* lighter inset inside a box (e.g. waitlist) */
   --gold-on-box: #6E5214;   /* deep gold label, legible on tan */
 
+  /* Page: two alternating dark-brown shades the tan boxes sit on. */
+  --page-a: #371D10;
+  --page-b: #45291A;
+  --on-page: #F0E4D1;       /* light text for the few bits directly on the page */
+  --on-page-soft: #C9B79C;
+  --on-page-gold: #D8AE5E;
+
   /* Layout */
   --max-width: 1120px;
   --max-width-editorial: 940px;
@@ -62,7 +69,7 @@ body {
   font-size: 15.5px;
   line-height: 1.6;
   color: var(--ink-soft);
-  background-color: var(--bg);
+  background-color: var(--page-a);
   overflow-x: hidden;
 }
 

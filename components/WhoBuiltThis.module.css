@@ -1,7 +1,13 @@
 .section {
-  background: var(--paper);
+  background: var(--page-a);
 }
 
 .section h2 {
   margin-bottom: 36px;
+  color: var(--on-page);
+}
+
+/* Eyebrow sits directly on the dark page, so lighten it. */
+.section :global(.eyebrow) {
+  color: var(--on-page-gold);
 }
