@@ -1,11 +1,10 @@
 .mission {
   background: var(--band);
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
 }
 
 .headline {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
+  font-size: clamp(38px, 4.6vw, 58px);
 }
 
 .text {

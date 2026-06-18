@@ -1,7 +1,11 @@
 .footer {
-  padding: 48px 0 40px;
-  border-top: 1.5px solid var(--ink);
+  padding: 34px 0 44px;
   background: var(--paper);
+}
+
+.chunk {
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .inner {

@@ -6,8 +6,8 @@
 :root {
   /* Ink */
   --ink: #1C1813;
-  --ink-soft: #423A30;
-  --stone: #6B6358;
+  --ink-soft: #3E362B;
+  --stone: #5A5042;   /* darkened so secondary text stays readable on tan */
 
   /* Paper surfaces, lightest to deepest */
   --paper: #FCFAF6;     /* lightest sheets / cards */
@@ -24,6 +24,13 @@
   --gold-ink: #876219;  /* darker gold for small label text (legible) */
   --gold-soft: #C8A24B;
   --gold-wash: #F2E7CC;
+
+  /* Chunk box: a warm tan (a lightened #885945) consistent on top of the
+     alternating page shades. Light enough to keep black text readable. */
+  --box: #CBAC8B;
+  --box-line: #BE9D79;      /* subtle box edge */
+  --box-inset: #DCC8AC;     /* lighter inset inside a box (e.g. waitlist) */
+  --gold-on-box: #6E5214;   /* deep gold label, legible on tan */
 
   /* Layout */
   --max-width: 1120px;
@@ -96,13 +103,16 @@ a:hover { color: var(--gold-ink); }
 .caption {
   display: block;
   font-family: var(--font-mono), monospace;
-  font-size: 13px;
-  letter-spacing: 0.16em;
+  font-size: 14px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-ink);
   font-weight: 600;
   margin-bottom: 20px;
 }
+/* On a tan box, use the deeper gold so the label stays legible. */
+.chunk .eyebrow,
+.chunk .caption { color: var(--gold-on-box); }
 
 /* ===== META / MONO LINE ===== */
 .meta {
@@ -126,16 +136,34 @@ a:hover { color: var(--gold-ink); }
 }
 
 section {
-  padding: var(--section-pad-y) 0;
+  padding: 34px 0;
   position: relative;
 }
 
 /* ===== SURFACE HELPERS ===== */
-/* A section that reads as a deep band on the page. */
+/* Page bands: the two alternating shades the page steps between. */
 .band { background: var(--band); }
 .surface-paper { background: var(--paper); }
 
-/* A "sheet of paper" panel: a defined box around a chunk of content. */
+/* ===== CHUNK BOX =====
+   The recurring tan box that holds one chunk of the page. Centered, hugs the
+   content, sits on whichever page shade is behind it. */
+.chunk {
+  max-width: var(--max-width-editorial);
+  margin: 0 auto;
+  background: var(--box);
+  border: 1px solid var(--box-line);
+  border-radius: 6px;
+  padding: 46px 52px;
+  box-shadow: 0 1px 2px rgba(40, 28, 16, 0.06), 0 20px 46px rgba(40, 28, 16, 0.10);
+  /* Darken hairlines so they read on the tan surface (text stays dark). */
+  --line: #B0926B;
+  --line-strong: #A2825A;
+}
+
+.chunk-wide { max-width: var(--max-width); }
+
+/* A "sheet of paper" panel (kept for any special document surfaces). */
 .panel {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -253,9 +281,11 @@ section {
     --section-pad-y: 60px;
     --section-pad-y-tight: 44px;
   }
-  .container, .container-narrow { padding: 0 22px; }
+  section { padding: 16px 0; }
+  .container, .container-narrow { padding: 0 16px; }
   body { font-size: 15px; }
   .btn { width: 100%; }
+  .chunk { padding: 30px 22px; border-radius: 5px; }
   .panel { padding: 30px 24px; }
   .proof { flex-direction: column; }
   .proof .fig {

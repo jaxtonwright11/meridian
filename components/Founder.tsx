@@ -7,6 +7,7 @@ export function Founder() {
   return (
     <section id="founder" className={styles.founder}>
       <div className="container">
+       <div className="chunk">
         <div className={styles.layout}>
           <AnimateIn direction="left">
             <div className={styles.photos}>
@@ -56,6 +57,7 @@ export function Founder() {
             </div>
           </AnimateIn>
         </div>
+       </div>
       </div>
     </section>
   );

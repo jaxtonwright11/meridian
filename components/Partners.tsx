@@ -6,7 +6,8 @@ import styles from './Partners.module.css';
 export function Partners() {
   return (
     <section id="partners" className={styles.partners}>
-      <div className="container-narrow">
+      <div className="container">
+       <div className="chunk">
         <AnimateIn>
           <p className="eyebrow">Partners</p>
         </AnimateIn>
@@ -29,6 +30,7 @@ export function Partners() {
             </p>
           </AnimateIn>
         </div>
+       </div>
       </div>
     </section>
   );

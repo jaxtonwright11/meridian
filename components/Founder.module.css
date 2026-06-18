@@ -1,6 +1,5 @@
 .founder {
   background: var(--band);
-  border-bottom: 1px solid var(--line-strong);
 }
 
 .layout {
@@ -8,8 +7,6 @@
   grid-template-columns: 320px 1fr;
   gap: 56px;
   align-items: start;
-  max-width: var(--max-width-editorial);
-  margin: 0 auto;
 }
 
 .photos {

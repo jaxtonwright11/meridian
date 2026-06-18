@@ -36,6 +36,7 @@ export function Contact() {
   return (
     <section id="contact" className={styles.contact}>
       <div className="container">
+       <div className="chunk">
         <div className={styles.layout}>
           <AnimateIn direction="left">
             <div className={styles.info}>
@@ -117,6 +118,7 @@ export function Contact() {
             )}
           </AnimateIn>
         </div>
+       </div>
       </div>
     </section>
   );

@@ -5,10 +5,8 @@
 .layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  gap: 48px;
   align-items: start;
-  max-width: var(--max-width-editorial);
-  margin: 0 auto;
 }
 
 .info h2 { margin-bottom: 18px; }

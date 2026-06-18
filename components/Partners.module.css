@@ -1,6 +1,5 @@
 .partners {
   background: var(--paper);
-  border-bottom: 1px solid var(--line-strong);
 }
 
 .headline { margin-bottom: 0; }

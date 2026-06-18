@@ -6,7 +6,8 @@ import styles from './Mission.module.css';
 export function Mission() {
   return (
     <section id="mission" className={styles.mission}>
-      <div className="container-narrow">
+      <div className="container">
+       <div className="chunk">
         <AnimateIn>
           <p className="eyebrow">The mission</p>
         </AnimateIn>
@@ -58,6 +59,7 @@ export function Mission() {
             </figure>
           </AnimateIn>
         </div>
+       </div>
       </div>
     </section>
   );

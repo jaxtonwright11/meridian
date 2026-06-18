@@ -1,6 +1,5 @@
 .section {
   background: var(--band);
-  border-bottom: 1px solid var(--line-strong);
 }
 
 .dayHead {
@@ -106,9 +105,7 @@
 
 /* Beyond the day */
 .beyond {
-  margin-top: 64px;
-  border-top: 1.5px solid var(--ink);
-  padding-top: 48px;
+  margin-top: 34px;
 }
 
 .bgrid {

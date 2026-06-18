@@ -40,7 +40,8 @@ const slides2025 = [
 export function Recap() {
   return (
     <section id="recap" className={styles.recap}>
-      <div className="container-narrow">
+      <div className="container">
+       <div className="chunk">
         <AnimateIn>
           <p className="eyebrow">December 2025</p>
         </AnimateIn>
@@ -118,6 +119,7 @@ export function Recap() {
             </div>
           </AnimateIn>
         </div>
+       </div>
       </div>
     </section>
   );

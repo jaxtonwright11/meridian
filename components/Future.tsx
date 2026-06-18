@@ -74,7 +74,8 @@ const beyond = [
 export function Future() {
   return (
     <section id="the-day" className={styles.section}>
-      <div className="container-narrow">
+      <div className="container">
+       <div className="chunk">
         <AnimateIn>
           <p className="eyebrow">The day</p>
         </AnimateIn>
@@ -131,9 +132,10 @@ export function Future() {
             </p>
           </div>
         </AnimateIn>
+       </div>
 
         {/* Beyond the day */}
-        <div id="beyond" className={styles.beyond}>
+        <div id="beyond" className={`chunk ${styles.beyond}`}>
           <AnimateIn>
             <p className="eyebrow">Beyond the day</p>
           </AnimateIn>
