@@ -58,9 +58,10 @@
 }
 
 .headline {
-  font-size: clamp(28px, 3.3vw, 41px);
-  line-height: 1.1;
-  max-width: none;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  max-width: 12ch;
 }
 
 .lead {

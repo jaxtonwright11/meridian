@@ -45,14 +45,11 @@ export function Hero() {
           {/* Lead */}
           <div className={styles.blurb}>
             <span className={`eyebrow ${styles.eyebrow}`}>What Meridian is</span>
-            <h1 className={styles.headline}>
-              A free conference that brings students face to face with founders,
-              executives, and leaders.
-            </h1>
+            <h1 className={styles.headline}>The leaders come to you.</h1>
             <p className={styles.lead}>
-              Meridian is a free, student-run conference. It puts university students
-              from across Los Angeles in direct conversation with founders, executives,
-              and industry leaders. Rather than students lining up to introduce themselves,
+              Meridian is a free, student-run conference that puts university students
+              from across Los Angeles face to face with founders, executives, and
+              industry leaders. Rather than students lining up to introduce themselves,
               the leaders work the room and come to the students.
             </p>
             <p className={styles.leadSub}>

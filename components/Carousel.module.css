@@ -61,7 +61,7 @@
   height: 44px;
   border-radius: 2px;
   border: 1px solid var(--line-strong);
-  background: var(--paper);
+  background: transparent;
   color: var(--ink);
   font-size: 1.6rem;
   cursor: pointer;
@@ -76,7 +76,7 @@
 
 .arrow:hover {
   border-color: var(--ink);
-  color: var(--gold);
+  color: var(--gold-on-box);
 }
 
 /* Dots */
