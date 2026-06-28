@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 56px;
+  padding-top: 62px;
   padding-bottom: 34px;
   background: var(--page-a);
 }
@@ -133,7 +133,7 @@
 .seeDay:hover { color: var(--gold-ink); }
 
 @media (max-width: 768px) {
-  .hero { padding-top: 50px; }
+  .hero { padding-top: 54px; }
   .sheet { padding: 32px 22px 36px; }
   .masthead { flex-direction: column; align-items: flex-start; gap: 16px; }
   .mastMeta { text-align: left; }

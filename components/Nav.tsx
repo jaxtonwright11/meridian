@@ -39,7 +39,8 @@ export function Nav() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <button className={styles.logo} onClick={() => scrollToId('hero')} aria-label="Back to top">
-          Meridian<span>.</span>
+          <img src="/opt/meridian-m.webp" alt="" aria-hidden="true" className={styles.logoMark} />
+          <span className={styles.logoWord}>Meridian<span className={styles.logoDot}>.</span></span>
         </button>
 
         <div className={styles.scroller}>
