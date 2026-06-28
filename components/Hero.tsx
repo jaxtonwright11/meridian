@@ -1,33 +1,10 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { RegisterForm } from './RegisterForm';
+import { EVENT_DATE, EVENT_DATE_SHORT, EVENT_VENUE, EVENT_TIME } from '@/config';
 import styles from './Hero.module.css';
 
 export function Hero() {
-  const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState(false);
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSending(true);
-    setError(false);
-    const data = new FormData(e.currentTarget);
-    data.append('interest', 'waitlist');
-    try {
-      const res = await fetch('https://formspree.io/f/xqegkaaa', {
-        method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
-      });
-      if (res.ok) setSubmitted(true);
-      else throw new Error('failed');
-    } catch {
-      setError(true);
-      setSending(false);
-    }
-  };
-
   return (
     <section id="hero" className={styles.hero}>
       <div className={`container ${styles.inner}`}>
@@ -36,16 +13,16 @@ export function Hero() {
           <div className={styles.masthead}>
             <div className={styles.wordmark}>Meridian<span>.</span></div>
             <div className={styles.mastMeta}>
-              The conference &middot; This November<br />
-              A major Los Angeles university campus<br />
-              11 AM&ndash;3 PM &middot; meridianventura.com
+              The conference &middot; {EVENT_DATE}<br />
+              {EVENT_VENUE}<br />
+              {EVENT_TIME} &middot; meridianventura.com
             </div>
           </div>
 
           {/* Lead */}
           <div className={styles.blurb}>
             <span className={`eyebrow ${styles.eyebrow}`}>What Meridian is</span>
-            <h1 className={styles.headline}>The leaders come to you.</h1>
+            <h1 className={styles.headline}>The leaders come to you</h1>
             <p className={styles.lead}>
               Meridian is a free, student-run conference that puts university students
               from across Los Angeles face to face with founders, executives, and
@@ -55,40 +32,34 @@ export function Hero() {
             <p className={styles.leadSub}>
               It is built and run by a UC Berkeley undergraduate from Oxnard. The first
               event, in December 2025, brought about 150 students together with leaders
-              from Netflix, OpenAI, and Chase Bank. This November it returns, built for 400.
+              from Netflix, OpenAI, and Chase Bank. It returns {EVENT_DATE_SHORT}, built for 400.
             </p>
 
-            {/* Waitlist capture */}
-            <div id="waitlist" className={styles.waitlist}>
-              <div className={styles.waitlistHead}>
-                <span className={styles.waitlistTitle}>Join the waitlist</span>
-                <span className={styles.waitlistNote}>Free for every student. This November.</span>
+            {/* December 2025 proof */}
+            <figure className={styles.heroFigure}>
+              <img
+                src="/opt/img_9547.webp"
+                srcSet="/opt/img_9547-mobile.webp 600w, /opt/img_9547.webp 1200w"
+                sizes="(max-width: 768px) 100vw, 820px"
+                alt="About 150 students and leaders together at the first Meridian Conference, December 2025"
+                loading="eager"
+                decoding="async"
+                className={styles.heroImg}
+              />
+              <figcaption className={styles.heroCaption}>
+                December 2025 &mdash; the first Meridian.
+              </figcaption>
+            </figure>
+
+            {/* Registration capture (always visible) */}
+            <div id="register" className={styles.register}>
+              <div className={styles.registerHead}>
+                <span className={styles.registerTitle}>Reserve your spot</span>
+                <span className={styles.registerNote}>Free for every student &middot; {EVENT_DATE_SHORT}</span>
               </div>
-              {submitted ? (
-                <p className={styles.waitlistSuccess}>
-                  You&apos;re on the list. We&apos;ll be in touch as the day approaches.
-                </p>
-              ) : (
-                <form className={styles.waitlistForm} onSubmit={handleSubmit}>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="your@email.com"
-                    aria-label="Email address"
-                  />
-                  <button type="submit" className="btn btn-ink" disabled={sending}>
-                    {sending ? 'Sending…' : 'RSVP'}
-                  </button>
-                </form>
-              )}
-              {error && (
-                <p className={styles.waitlistError}>
-                  Something went wrong. Email{' '}
-                  <a href="mailto:jaxtonwright11@berkeley.edu">jaxtonwright11@berkeley.edu</a> instead.
-                </p>
-              )}
+              <RegisterForm source="hero" />
             </div>
+
             <a href="#the-day" className={styles.seeDay}>What the day looks like &rarr;</a>
           </div>
         </div>

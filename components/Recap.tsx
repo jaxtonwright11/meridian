@@ -2,6 +2,7 @@
 
 import { AnimateIn } from './AnimateIn';
 import { Carousel } from './Carousel';
+import { EVENT_DATE_SHORT } from '@/config';
 import styles from './Recap.module.css';
 
 const slides2025 = [
@@ -54,7 +55,7 @@ export function Recap() {
             About 150 students walked into a room with leaders from Netflix, OpenAI,
             and Chase Bank. Not for a lecture. For direct, face-to-face conversations
             with people who could open a real door. December 2025 was the first
-            Meridian, and the proof of what this November is built on.
+            Meridian, and the proof of what {EVENT_DATE_SHORT} is built on.
           </p>
         </AnimateIn>
 

@@ -1,87 +1,63 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import styles from './Nav.module.css';
 
+// Jump-nav follows the page order. "Who helped" sits immediately after
+// "Founder" and targets the existing #who-built-this section.
 const links = [
-  { id: 'the-day', label: 'The day' },
   { id: 'recap', label: 'Past' },
+  { id: 'the-day', label: 'The day' },
   { id: 'partners', label: 'Partners' },
   { id: 'founder', label: 'Founder' },
+  { id: 'who-built-this', label: 'Who helped' },
   { id: 'contact', label: 'Contact' },
 ];
 
+function scrollToId(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const lenis = (window as unknown as { lenis?: { scrollTo: (t: Element, o?: object) => void } }).lenis;
+  if (lenis?.scrollTo) {
+    lenis.scrollTo(el, { offset: -72, duration: 1.1 });
+  } else {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 120);
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
-  }, [menuOpen]);
-
-  const scrollTo = (id: string) => {
-    setMenuOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <button className={styles.logo} onClick={() => scrollTo('hero')}>
+        <button className={styles.logo} onClick={() => scrollToId('hero')} aria-label="Back to top">
           Meridian<span>.</span>
         </button>
 
-        <div className={styles.links}>
-          {links.map((l) => (
-            <button key={l.id} onClick={() => scrollTo(l.id)}>
-              {l.label}
-            </button>
-          ))}
-          <button className={styles.cta} onClick={() => scrollTo('waitlist')}>
-            Join the waitlist
-          </button>
-        </div>
-
-        <button
-          className={styles.hamburger}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-        >
-          <span className={`${styles.hamburgerLine} ${menuOpen ? styles.hamburgerOpen : ''}`} />
-          <span className={`${styles.hamburgerLine} ${menuOpen ? styles.hamburgerOpen : ''}`} />
-          <span className={`${styles.hamburgerLine} ${menuOpen ? styles.hamburgerOpen : ''}`} />
-        </button>
-      </div>
-
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            className={styles.mobileMenu}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          >
+        <div className={styles.scroller}>
+          <div className={styles.pills}>
             {links.map((l) => (
-              <button key={l.id} onClick={() => scrollTo(l.id)}>
+              <button key={l.id} className={styles.pill} onClick={() => scrollToId(l.id)}>
                 {l.label}
               </button>
             ))}
-            <button className={styles.mobileCta} onClick={() => scrollTo('waitlist')}>
-              Join the waitlist
+            <button
+              className={`${styles.pill} ${styles.cta}`}
+              onClick={() => scrollToId('register')}
+            >
+              Reserve
             </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 }
