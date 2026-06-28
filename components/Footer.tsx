@@ -10,7 +10,6 @@ export function Footer() {
       <div className="container-narrow">
         <div className={styles.inner}>
           <div className={styles.brand}>
-            <img src="/opt/meridian-m.webp" alt="" aria-hidden="true" className={styles.brandMark} />
             <span className={styles.wordmark}>Meridian<span className={styles.dot}>.</span></span>
           </div>
           <nav className={styles.links}>
