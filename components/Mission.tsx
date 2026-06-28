@@ -14,7 +14,7 @@ export function Mission() {
         </AnimateIn>
 
         <AnimateIn delay={0.1}>
-          <h2 className={styles.headline}>Reverse gatekeeping</h2>
+          <h2 className={styles.headline}>Reverse gatekeeping.</h2>
         </AnimateIn>
 
         <AnimateIn delay={0.15}>

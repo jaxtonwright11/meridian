@@ -12,7 +12,6 @@ import { Founder } from '@/components/Founder';
 import { WhoBuiltThis } from '@/components/WhoBuiltThis';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
-import { RegisterModal } from '@/components/RegisterModal';
 
 export default function Home() {
   useEffect(() => {
@@ -53,7 +52,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <RegisterModal />
     </>
   );
 }
