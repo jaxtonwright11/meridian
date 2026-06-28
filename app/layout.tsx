@@ -19,7 +19,7 @@ const hanken = Hanken_Grotesk({
 
 const splineMono = Spline_Sans_Mono({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-mono',
   display: 'swap',
 });
