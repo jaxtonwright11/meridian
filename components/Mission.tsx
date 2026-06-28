@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimateIn } from './AnimateIn';
+import { EVENT_DATE, EVENT_VENUE } from '@/config';
 import styles from './Mission.module.css';
 
 export function Mission() {
@@ -13,7 +14,13 @@ export function Mission() {
         </AnimateIn>
 
         <AnimateIn delay={0.1}>
-          <h2 className={styles.headline}>Reverse gatekeeping.</h2>
+          <h2 className={styles.headline}>Reverse gatekeeping</h2>
+        </AnimateIn>
+
+        <AnimateIn delay={0.15}>
+          <p className={styles.dateline}>
+            {EVENT_DATE} &middot; {EVENT_VENUE} &middot; Free for every student
+          </p>
         </AnimateIn>
 
         <div className={styles.text}>

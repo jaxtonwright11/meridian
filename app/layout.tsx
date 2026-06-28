@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Fraunces, Hanken_Grotesk, Spline_Sans_Mono } from 'next/font/google';
+import { EVENT_DATE } from '@/config';
 import './globals.css';
 
 const fraunces = Fraunces({
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://meridianventura.com'),
   title: 'Meridian Conference',
   description:
-    'A free, student-run conference that brings university students from across Los Angeles face to face with founders, executives, and industry leaders. This November.',
+    `A free, student-run conference that brings university students from across Los Angeles face to face with founders, executives, and industry leaders. ${EVENT_DATE}.`,
   keywords: ['Meridian Conference', 'student access', 'Los Angeles', 'founders', 'executives', 'conference 2026'],
   authors: [{ name: 'Jaxton Wright' }],
   openGraph: {
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Meridian Conference',
     description:
-      'A free conference that brings students face to face with founders, executives, and leaders. This November.',
+      `A free conference that brings students face to face with founders, executives, and leaders. ${EVENT_DATE}.`,
     images: ['/og-image.jpg'],
   },
   robots: { index: true, follow: true },

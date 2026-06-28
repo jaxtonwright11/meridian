@@ -160,7 +160,7 @@ export function Future() {
 
           <AnimateIn delay={0.2}>
             <div className={styles.ctaWrap}>
-              <a href="#waitlist" className="btn btn-ink">Join the waitlist</a>
+              <a href="#register" className="btn btn-ink">Reserve your spot</a>
             </div>
           </AnimateIn>
         </div>

@@ -12,6 +12,7 @@ import { Founder } from '@/components/Founder';
 import { WhoBuiltThis } from '@/components/WhoBuiltThis';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import { RegisterModal } from '@/components/RegisterModal';
 
 export default function Home() {
   useEffect(() => {
@@ -22,13 +23,20 @@ export default function Home() {
       wheelMultiplier: 1.3,
     });
 
+    // Expose the instance so the nav can drive smooth jump-scrolling with a
+    // fixed-header offset (see Nav.tsx).
+    (window as unknown as { lenis?: Lenis }).lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
 
-    return () => lenis.destroy();
+    return () => {
+      delete (window as unknown as { lenis?: Lenis }).lenis;
+      lenis.destroy();
+    };
   }, []);
 
   return (
@@ -36,8 +44,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Mission />
         <Recap />
+        <Mission />
         <Future />
         <Partners />
         <Founder />
@@ -45,6 +53,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <RegisterModal />
     </>
   );
 }

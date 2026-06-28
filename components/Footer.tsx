@@ -13,10 +13,11 @@ export function Footer() {
             <span className={styles.wordmark}>Meridian<span className={styles.dot}>.</span></span>
           </div>
           <nav className={styles.links}>
+            <a href="#recap">Past</a>
             <a href="#mission">Mission</a>
             <a href="#the-day">The day</a>
-            <a href="#recap">Past</a>
             <a href="#partners">Partners</a>
+            <a href="#who-built-this">Who helped</a>
             <a href="#contact">Contact</a>
           </nav>
         </div>

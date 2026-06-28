@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimateIn } from './AnimateIn';
+import { EVENT_DATE_SHORT, EVENT_VENUE } from '@/config';
 import styles from './Founder.module.css';
 
 export function Founder() {
@@ -42,9 +43,9 @@ export function Founder() {
                   direct conversations, and the introductions and referrals that followed.
                 </p>
                 <p>
-                  This November, Meridian returns to a major Los Angeles university campus,
-                  built for 400 students from across Los Angeles, with high school students
-                  from Ventura County invited. Free for every student who attends.
+                  On {EVENT_DATE_SHORT}, Meridian returns to {EVENT_VENUE}, built for 400
+                  students from across Los Angeles, with high school students from Ventura
+                  County invited. Free for every student who attends.
                 </p>
                 <p className={styles.contactLine}>
                   <a href="mailto:jaxtonwright11@berkeley.edu">jaxtonwright11@berkeley.edu</a>
