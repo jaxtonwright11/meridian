@@ -17,14 +17,15 @@ export const EVENT_VENUE = 'a major Los Angeles university';
 export const EVENT_TIME = '11 AM–3 PM';
 
 /**
- * Registration endpoint — the deployed Google Apps Script Web App URL bound to
- * the registration sheet (sheet id 1oZRuKfm_kTSU98zLwJy7ECtzLwaQG6jzlCyGiF5N8Ro).
+ * RSVP endpoint — where "Reserve your spot" submissions go.
  *
- * PLACEHOLDER — paste the deployed `/exec` URL here after publishing the Apps
- * Script (see REGISTRATION-SETUP.md). It will look like:
- *   'https://script.google.com/macros/s/AKfycb.../exec'
+ * This uses Formspree, the same service the contact form already uses, so RSVPs
+ * land in the Formspree inbox (email per signup) + dashboard at formspree.io,
+ * exportable to CSV / Google Sheets. No Google Apps Script needed. See
+ * REGISTRATION-SETUP.md for how to view RSVPs or swap in a dedicated form.
  *
- * While this is empty, the registration UI still works end-to-end (shows the
- * success state) but no row is written. Set it to start recording signups.
+ * Currently reuses the existing contact form id; RSVPs are labelled "New
+ * Meridian RSVP" so they're easy to spot. To give RSVPs their own form/quota,
+ * create a new Formspree form and paste its URL here.
  */
-export const REGISTER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz54ZTJP6y0z1vzjuYclhF4DmdQHXGeDBbCSZuztzjajvP4y1K0Mfj4i09xvDAHtKo-SA/exec';
+export const REGISTER_ENDPOINT = 'https://formspree.io/f/xqegkaaa';

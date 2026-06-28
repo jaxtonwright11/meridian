@@ -1,72 +1,40 @@
-# Registration → Google Sheet setup
+# RSVP collection — how it works
 
-The "Reserve your spot" forms (hero capture + first-visit popup) POST signups to a
-Google Apps Script Web App bound to your registration sheet:
+The "Reserve your spot" forms (the hero capture + the first-visit popup) send RSVPs
+to **Formspree** — the same service the contact form already uses. No Google Apps
+Script, no spreadsheet wiring, nothing to deploy.
 
-- Sheet: https://docs.google.com/spreadsheets/d/1oZRuKfm_kTSU98zLwJy7ECtzLwaQG6jzlCyGiF5N8Ro/edit
-- Sheet id: `1oZRuKfm_kTSU98zLwJy7ECtzLwaQG6jzlCyGiF5N8Ro`
+- Endpoint: `REGISTER_ENDPOINT` in `config.ts` → `https://formspree.io/f/xqegkaaa`
+- Each RSVP sends: `email`, `source` (`hero` or `popup`), `ts`, and a `_subject`
+  of **"New Meridian RSVP (…)"** so it's easy to spot.
 
-Each submission appends a row: **[timestamp, email, source]** (source is `hero` or `popup`).
+## Where the RSVPs go (your "vault")
 
-## 1. Add the Apps Script
+1. **Email:** every RSVP emails the address on the Formspree form, subject
+   "New Meridian RSVP …".
+2. **Dashboard:** sign in at **https://formspree.io** → your form → **Submissions**.
+   You can **export to CSV** anytime, and Formspree can pipe submissions into
+   Google Sheets / Slack / etc. from **Integrations** (no code).
 
-1. Open the sheet → **Extensions → Apps Script**.
-2. Delete any boilerplate and paste this:
+## Good to know
 
-```javascript
-function doPost(e) {
-  try {
-    // Open by ID so this works whether the script is bound or standalone.
-    // (getActiveSpreadsheet() returns null in a web app / standalone script.)
-    var sheet = SpreadsheetApp
-      .openById('1oZRuKfm_kTSU98zLwJy7ECtzLwaQG6jzlCyGiF5N8Ro')
-      .getSheets()[0];
-    var data = JSON.parse(e.postData.contents);
-    sheet.appendRow([new Date(), data.email || '', data.source || 'site']);
-    return ContentService
-      .createTextOutput(JSON.stringify({ ok: true }))
-      .setMimeType(ContentService.MimeType.JSON);
-  } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
-      .setMimeType(ContentService.MimeType.JSON);
-  }
-}
-```
+- **Free tier = 50 submissions/month**, shared with the contact form (same form id).
+  For a few hundred RSVPs you have two easy options, no code changes to the site:
+  - **Upgrade Formspree** (a paid plan lifts the cap), or
+  - **Give RSVPs their own form** (recommended for clean separation): at
+    formspree.io create a new form → copy its URL → paste it into
+    `REGISTER_ENDPOINT` in `config.ts`. That gives RSVPs a separate inbox and quota.
 
-3. Save (disk icon).
+## Want RSVPs in a real Google Sheet (free, unlimited)?
 
-## 2. Deploy as a Web App
+If you'd rather they land directly in a Google Sheet without Apps Script, the
+clean path is a **Google Form as the backend**:
 
-1. **Deploy → New deployment** → gear icon → **Web app**.
-2. Settings:
-   - **Execute as:** Me
-   - **Who has access:** Anyone
-3. **Deploy**, authorize when prompted, and copy the **Web app URL** — it ends in `/exec`,
-   e.g. `https://script.google.com/macros/s/AKfycb.../exec`.
+1. Create a Google **Form** with one short-answer **Email** question.
+2. In the form's **Responses** tab, click the Sheets icon to create/link a
+   responses spreadsheet (one click — this is where every RSVP lands).
+3. Send me (Claude) the form's public link and I'll wire the site to post into it
+   — I can pull the field id from the form myself, so you don't touch any code.
 
-## 3. Wire it into the site
-
-Open `config.ts` and paste the URL into `REGISTER_ENDPOINT`:
-
-```ts
-export const REGISTER_ENDPOINT = 'https://script.google.com/macros/s/AKfycb.../exec';
-```
-
-Commit + redeploy (Vercel). That's it.
-
-## 4. Test it
-
-1. On the live site, submit a real email in the hero "Reserve your spot" box.
-2. Confirm a new row appears in the sheet.
-
-### Note on `no-cors`
-
-The site posts with `fetch(..., { mode: 'no-cors' })` because Apps Script Web Apps
-don't return CORS headers. The browser therefore gets an **opaque response** it can't
-read, so the front end treats a completed request as success. This is expected — verify
-success by checking that the row actually lands in the sheet, not by the UI alone.
-
-If you ever redeploy the script, use **Manage deployments → edit (pencil) → Version: New
-version** so the `/exec` URL stays the same (a brand-new deployment gives a new URL you'd
-have to paste again).
+This keeps everything point-and-click on your side (no Apps Script) and the
+responses auto-fill the Google Sheet.

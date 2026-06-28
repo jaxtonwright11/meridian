@@ -43,30 +43,27 @@ export function RegisterForm({
     setStatus('sending');
     setMessage('');
 
-    const payload = JSON.stringify({
-      email: value,
-      ts: new Date().toISOString(),
-      source,
-    });
-
     try {
       if (REGISTER_ENDPOINT) {
-        // Google Apps Script Web Apps don't return CORS headers, so we POST with
-        // mode 'no-cors'. The response is opaque (unreadable), so a completed
-        // request is treated as success — confirm a real submission lands a row
-        // in the sheet. Content-Type text/plain keeps it a "simple" request (no
-        // preflight); Apps Script still reads e.postData.contents as JSON.
-        await fetch(REGISTER_ENDPOINT, {
+        // Formspree accepts JSON over CORS and returns a readable response, so we
+        // can confirm success for real. `_subject` labels the notification email;
+        // `source` records where the RSVP came from (hero / popup).
+        const res = await fetch(REGISTER_ENDPOINT, {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: payload,
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            email: value,
+            source,
+            ts: new Date().toISOString(),
+            _subject: `New Meridian RSVP (${source})`,
+          }),
         });
+        if (!res.ok) throw new Error('Submission failed');
       } else {
-        // Endpoint not configured yet (see config.ts). Show the success state so
-        // the flow can be demoed; no row is written until the URL is filled in.
+        // No endpoint configured (see config.ts). Show success so the flow can be
+        // demoed; nothing is recorded until REGISTER_ENDPOINT is set.
         // eslint-disable-next-line no-console
-        console.warn('[Meridian] REGISTER_ENDPOINT is empty — set it in config.ts to record signups.');
+        console.warn('[Meridian] REGISTER_ENDPOINT is empty — set it in config.ts to record RSVPs.');
       }
       setStatus('success');
       onSuccess?.();
