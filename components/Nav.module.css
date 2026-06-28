@@ -27,33 +27,21 @@
   gap: 16px;
 }
 
-/* Wordmark — M badge + "Meridian.", always visible, top-left */
+/* Wordmark — always visible, top-left */
 .logo {
   flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-.logoMark {
-  width: 24px;
-  height: 24px;
-  flex: 0 0 auto;
-  display: block;
-  border-radius: 5px;
-}
-.logoWord {
   font-family: var(--font-fraunces), Georgia, serif;
   font-size: 19px;
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1;
   color: var(--on-page);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
-.logoDot { color: var(--on-page-gold); }
+.logo span { color: var(--on-page-gold); }
 
 /* Jump links sit on the right; become a tidy scroll strip when they overflow. */
 .scroller {
@@ -113,8 +101,7 @@
   .nav { padding: 10px 0; }
   .scrolled { padding: 8px 0; }
   .inner { padding: 0 12px; gap: 10px; }
-  .logoMark { width: 21px; height: 21px; }
-  .logoWord { font-size: 17px; }
+  .logo { font-size: 17px; }
   .pills { gap: 18px; }
   .pill { font-size: 13.5px; }
   /* fade the scroll edges only when the row actually scrolls (mobile) */
