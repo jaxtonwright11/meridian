@@ -55,11 +55,12 @@
 .socialLink {
   display: inline-block;
   margin-top: 8px;
-  color: var(--gold) !important;
+  color: var(--ink) !important;
+  font-weight: 700;
   text-decoration: none;
 }
 
-.socialLink:hover { color: var(--ink) !important; }
+.socialLink:hover { color: var(--gold) !important; }
 
 @media (max-width: 768px) {
   .testimonials { grid-template-columns: 1fr; gap: 28px; }
