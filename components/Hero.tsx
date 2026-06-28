@@ -22,7 +22,7 @@ export function Hero() {
           {/* Lead */}
           <div className={styles.blurb}>
             <span className={`eyebrow ${styles.eyebrow}`}>What Meridian is</span>
-            <h1 className={styles.headline}>The leaders come to you</h1>
+            <h1 className={styles.headline}>The leaders come to you.</h1>
             <p className={styles.lead}>
               Meridian is a free, student-run conference that puts university students
               from across Los Angeles face to face with founders, executives, and
@@ -35,29 +35,13 @@ export function Hero() {
               from Netflix, OpenAI, and Chase Bank. It returns {EVENT_DATE_SHORT}, built for 400.
             </p>
 
-            {/* December 2025 proof */}
-            <figure className={styles.heroFigure}>
-              <img
-                src="/opt/img_9547.webp"
-                srcSet="/opt/img_9547-mobile.webp 600w, /opt/img_9547.webp 1200w"
-                sizes="(max-width: 768px) 100vw, 820px"
-                alt="About 150 students and leaders together at the first Meridian Conference, December 2025"
-                loading="eager"
-                decoding="async"
-                className={styles.heroImg}
-              />
-              <figcaption className={styles.heroCaption}>
-                December 2025 &mdash; the first Meridian.
-              </figcaption>
-            </figure>
-
             {/* Registration capture (always visible) */}
             <div id="register" className={styles.register}>
               <div className={styles.registerHead}>
                 <span className={styles.registerTitle}>Reserve your spot</span>
                 <span className={styles.registerNote}>Free for every student &middot; {EVENT_DATE_SHORT}</span>
               </div>
-              <RegisterForm source="hero" />
+              <RegisterForm source="hero" buttonLabel="RSVP" />
             </div>
 
             <a href="#the-day" className={styles.seeDay}>What the day looks like &rarr;</a>

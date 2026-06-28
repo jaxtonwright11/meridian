@@ -53,7 +53,7 @@ export function Nav() {
               className={`${styles.pill} ${styles.cta}`}
               onClick={() => scrollToId('register')}
             >
-              Reserve
+              RSVP
             </button>
           </div>
         </div>
