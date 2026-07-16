@@ -1,0 +1,46 @@
+/* Meridian design-sync — cssEntry supplement.
+ *
+ * These :root definitions supply values the shipped static CSS does not,
+ * so the Claude Design bundle renders on-brand. NONE of this edits the
+ * production site (app/globals.css is untouched); it only feeds the sync.
+ *
+ * 1. Font-family variables. In the app these are set by next/font on <html>
+ *    at runtime, so they are absent from static CSS. We alias them to the
+ *    real Google families (shipped as @font-face via cfg.extraFonts).
+ * 2. Spacing scale. Referenced by several components but never defined in the
+ *    repo (a latent gap; the components that use it are not on the live page).
+ * 3. Legacy-token compatibility aliases. WhatsNext / ProofBar / StatBar are
+ *    remnants of an earlier dark-theme design and reference tokens that no
+ *    longer exist. We alias them onto the current warm-editorial palette so
+ *    they render in-brand rather than unstyled.
+ *
+ * This file is concatenated ahead of a verbatim mirror of app/globals.css to
+ * produce .design-sync/meridian-css-entry.css (cfg.cssEntry). Regenerate on
+ * any globals.css change — see .design-sync/NOTES.md.
+ */
+:root {
+  /* 1. Fonts (next/font vars, resolved to the real families) */
+  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-hanken: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* 2. Spacing scale (undefined in-repo) */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 28px;
+  --space-xl: 44px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* 3. Legacy dark-theme tokens → current warm palette */
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-soft);
+  --text-dim: var(--stone);
+  --bg-surface: var(--box);
+  --bg-elevated: var(--box-inset);
+  --border: var(--box-line);
+  --card-radius: 6px;
+  --gold-bright: var(--gold-soft);
+  --gold-dim: var(--gold-ink);
+}

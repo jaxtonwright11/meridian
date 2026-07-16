@@ -1,0 +1,359 @@
+/* Meridian design-sync — cssEntry supplement.
+ *
+ * These :root definitions supply values the shipped static CSS does not,
+ * so the Claude Design bundle renders on-brand. NONE of this edits the
+ * production site (app/globals.css is untouched); it only feeds the sync.
+ *
+ * 1. Font-family variables. In the app these are set by next/font on <html>
+ *    at runtime, so they are absent from static CSS. We alias them to the
+ *    real Google families (shipped as @font-face via cfg.extraFonts).
+ * 2. Spacing scale. Referenced by several components but never defined in the
+ *    repo (a latent gap; the components that use it are not on the live page).
+ * 3. Legacy-token compatibility aliases. WhatsNext / ProofBar / StatBar are
+ *    remnants of an earlier dark-theme design and reference tokens that no
+ *    longer exist. We alias them onto the current warm-editorial palette so
+ *    they render in-brand rather than unstyled.
+ *
+ * This file is concatenated ahead of a verbatim mirror of app/globals.css to
+ * produce .design-sync/meridian-css-entry.css (cfg.cssEntry). Regenerate on
+ * any globals.css change — see .design-sync/NOTES.md.
+ */
+:root {
+  /* 1. Fonts (next/font vars, resolved to the real families) */
+  --font-fraunces: 'Fraunces', Georgia, serif;
+  --font-hanken: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* 2. Spacing scale (undefined in-repo) */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 28px;
+  --space-xl: 44px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* 3. Legacy dark-theme tokens → current warm palette */
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-soft);
+  --text-dim: var(--stone);
+  --bg-surface: var(--box);
+  --bg-elevated: var(--box-inset);
+  --border: var(--box-line);
+  --card-radius: 6px;
+  --gold-bright: var(--gold-soft);
+  --gold-dim: var(--gold-ink);
+}
+/* MERIDIAN CONFERENCE. Global Styles */
+/* Warm editorial institution. Layered paper, ink, one muted gold. */
+/* Fonts loaded via next/font in layout.tsx */
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  /* Ink */
+  --ink: #1C1813;
+  --ink-soft: #3E362B;
+  --stone: #5A5042;   /* darkened so secondary text stays readable on tan */
+
+  /* Paper surfaces, lightest to deepest */
+  --paper: #FCFAF6;     /* lightest sheets / cards */
+  --paper-2: #F2ECE1;   /* light band */
+  --band: #E8DECB;      /* deep band */
+  --bg: #E3D8C3;        /* outer body frame, deepest in the warm family */
+
+  /* Lines */
+  --line: #DBD2C2;
+  --line-strong: #CDC2AE;
+
+  /* Gold, the only accent */
+  --gold: #A9802C;
+  --gold-ink: #876219;  /* darker gold for small label text (legible) */
+  --gold-soft: #C8A24B;
+  --gold-wash: #F2E7CC;
+
+  /* Chunk box: a warm tan (a lightened #885945) consistent on top of the
+     alternating page shades. Light enough to keep black text readable. */
+  --box: #CBAC8B;
+  --box-line: #BE9D79;      /* subtle box edge */
+  --box-inset: #DCC8AC;     /* lighter inset inside a box (e.g. waitlist) */
+  --gold-on-box: #6E5214;   /* deep gold label, legible on tan */
+
+  /* Page: two alternating dark-brown shades the tan boxes sit on. */
+  --page-a: #371D10;
+  --page-b: #45291A;
+  --on-page: #F0E4D1;       /* light text for the few bits directly on the page */
+  --on-page-soft: #C9B79C;
+  --on-page-gold: #D8AE5E;
+
+  /* Layout */
+  --max-width: 1120px;
+  --max-width-editorial: 940px;
+  --section-pad-y: 88px;
+  --section-pad-y-tight: 56px;
+
+  /* Panel shadow (sheet of paper on a darker frame) */
+  --panel-shadow: 0 1px 2px rgba(28, 24, 19, 0.04), 0 16px 38px rgba(28, 24, 19, 0.05);
+  --doc-shadow: 0 18px 60px rgba(28, 24, 19, 0.08);
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scroll */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-hanken), system-ui, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  background-color: var(--page-a);
+  overflow-x: hidden;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1.04; font-weight: 600; }
+h2 { font-size: clamp(30px, 3.4vw, 46px); }
+h3 { font-size: 22px; }
+h4 { font-size: 18px; }
+
+p {
+  color: var(--ink-soft);
+  max-width: 70ch;
+}
+
+strong { color: var(--ink); font-weight: 600; }
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: color 0.18s ease;
+}
+
+a:hover { color: var(--gold-ink); }
+
+/* ===== EYEBROW (mono filing label) ===== */
+.eyebrow,
+.caption {
+  display: block;
+  font-family: var(--font-mono), monospace;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* On a tan box, use the deeper gold so the label stays legible. */
+.chunk .eyebrow,
+.chunk .caption { color: var(--gold-on-box); }
+
+/* ===== META / MONO LINE ===== */
+.meta {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--stone);
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.container-narrow {
+  max-width: var(--max-width-editorial);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+section {
+  padding: 34px 0;
+  position: relative;
+}
+
+/* ===== SURFACE HELPERS ===== */
+/* Page bands: the two alternating shades the page steps between. */
+.band { background: var(--band); }
+.surface-paper { background: var(--paper); }
+
+/* ===== CHUNK BOX =====
+   The recurring tan box that holds one chunk of the page. Centered, hugs the
+   content, sits on whichever page shade is behind it. */
+.chunk {
+  max-width: var(--max-width-editorial);
+  margin: 0 auto;
+  background: var(--box);
+  border: 1px solid var(--box-line);
+  border-radius: 6px;
+  padding: 46px 52px;
+  box-shadow: 0 1px 2px rgba(40, 28, 16, 0.06), 0 20px 46px rgba(40, 28, 16, 0.10);
+  /* Darken hairlines so they read on the tan surface (text stays dark). */
+  --line: #B0926B;
+  --line-strong: #A2825A;
+}
+
+.chunk-wide { max-width: var(--max-width); }
+
+/* A "sheet of paper" panel (kept for any special document surfaces). */
+.panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 44px 48px;
+  box-shadow: var(--panel-shadow);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  border: 1px solid var(--ink);
+  text-decoration: none;
+}
+
+.btn-ink,
+.btn-gold {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn-ink:hover,
+.btn-gold:hover {
+  background: #000;
+  color: var(--paper);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+
+.btn-ghost:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* ===== HAIRLINE RULES ===== */
+.rule {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.rule-ink {
+  border: none;
+  border-top: 1.5px solid var(--ink);
+  margin: 0;
+}
+
+/* ===== PROOF BLOCK ===== */
+.proof {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.proof .fig {
+  flex: 1;
+  padding: 18px 28px 18px 0;
+  border-right: 1px solid var(--line);
+}
+.proof .fig:last-child { border-right: none; padding-right: 0; }
+.proof .fig .n {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.proof .fig .l {
+  margin-top: 8px;
+  font-size: 12.5px;
+  color: var(--stone);
+  line-height: 1.4;
+  max-width: 22ch;
+}
+
+/* ===== ADD-ON CALLOUT ===== */
+.addon {
+  border: 1px dashed var(--line-strong);
+  border-radius: 2px;
+  padding: 16px 22px;
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+.addon .k {
+  font-family: var(--font-mono), monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-ink);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.addon p { font-size: 14px; color: var(--ink-soft); margin: 0; max-width: none; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  :root {
+    --section-pad-y: 60px;
+    --section-pad-y-tight: 44px;
+  }
+  section { padding: 16px 0; }
+  .container, .container-narrow { padding: 0 16px; }
+  body { font-size: 15px; }
+  .btn { width: 100%; }
+  .chunk { padding: 30px 22px; border-radius: 5px; }
+  .panel { padding: 30px 24px; }
+  .proof { flex-direction: column; }
+  .proof .fig {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0;
+  }
+  .proof .fig:last-child { border-bottom: none; }
+  .addon { flex-direction: column; gap: 6px; }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "projectId": "d0293871-c0e8-49fe-97ba-18d31ebc1bf1",
+  "shape": "package",
+  "pkg": "meridian-landing",
+  "globalName": "MeridianDS",
+  "srcDir": "components",
+  "tsconfig": "tsconfig.json",
+  "cssEntry": ".design-sync/meridian-css-entry.css",
+  "extraFonts": [".design-sync/assets/meridian-fonts.css"],
+  "readmeHeader": ".design-sync/conventions.md",
+  "componentSrcMap": {
+    "AnimateIn": null,
+    "StaggerContainer": null,
+    "StaggerItem": null,
+    "OptImg": null,
+    "History2024": null
+  },
+  "overrides": {
+    "Nav": { "cardMode": "single", "viewport": "1280x110" },
+    "WhatsNext": { "cardMode": "column" }
+  }
+}
