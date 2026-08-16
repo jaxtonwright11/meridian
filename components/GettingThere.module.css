@@ -1,0 +1,52 @@
+.section {
+  background: var(--page-a);
+}
+
+.lead {
+  margin-top: 20px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.details {
+  margin-top: 26px;
+  border-top: 1px solid var(--line-strong);
+  max-width: 560px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  padding: 11px 2px;
+  border-bottom: 1px solid var(--line);
+}
+
+.row dt {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-on-box);
+  font-weight: 600;
+  padding-top: 2px;
+}
+
+.row dd {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.tba {
+  color: var(--stone);
+  font-style: italic;
+}
+
+.access {
+  margin-top: 22px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  max-width: 62ch;
+}

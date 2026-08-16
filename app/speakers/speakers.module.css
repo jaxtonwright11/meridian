@@ -1,0 +1,82 @@
+.main {
+  background: var(--page-a);
+}
+
+.section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.headline {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  margin-top: 22px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 62ch;
+}
+
+.blocks {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.block {
+  border-top: 1.5px solid var(--ink);
+  padding-top: 14px;
+}
+
+.blockTitle {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.block p {
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.62;
+}
+
+.founder {
+  margin-top: 30px;
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold-on-box);
+  font-weight: 600;
+}
+
+.cta {
+  margin-top: 26px;
+  border-top: 1px solid var(--line-strong);
+  padding-top: 24px;
+}
+
+.ctaLabel {
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-on-box);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.ctaAlt {
+  margin-top: 12px;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 768px) {
+  .section { padding-top: 40px; }
+  .blocks { grid-template-columns: 1fr; }
+}

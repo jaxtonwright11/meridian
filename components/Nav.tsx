@@ -1,17 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { REGISTRATION_FORM_URL } from '@/config';
 import styles from './Nav.module.css';
 
-// Jump-nav follows the page order. "Who helped" sits immediately after
-// "Founder" and targets the existing #who-built-this section.
+// Three items only. Everything else still exists at its anchor (or on
+// /partners and /speakers, linked from the footer); it just is not surfaced
+// here. Students get one path: understand the day, see the room, register.
 const links = [
-  { id: 'recap', label: 'Past' },
   { id: 'the-day', label: 'The day' },
-  { id: 'partners', label: 'Partners' },
-  { id: 'founder', label: 'Founder' },
-  { id: 'who-built-this', label: 'Who helped' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'speakers', label: 'Speakers' },
 ];
 
 function scrollToId(id: string) {
@@ -25,7 +23,12 @@ function scrollToId(id: string) {
   }
 }
 
-export function Nav() {
+interface NavProps {
+  /** False on /partners, /speakers, /terms: anchors then link back to /#… */
+  home?: boolean;
+}
+
+export function Nav({ home = true }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -38,23 +41,37 @@ export function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <button className={styles.logo} onClick={() => scrollToId('hero')} aria-label="Back to top">
-          Meridian<span>.</span>
-        </button>
+        {home ? (
+          <button className={styles.logo} onClick={() => scrollToId('hero')} aria-label="Back to top">
+            Meridian<span>.</span>
+          </button>
+        ) : (
+          <a className={styles.logo} href="/" aria-label="Meridian home">
+            Meridian<span>.</span>
+          </a>
+        )}
 
         <div className={styles.scroller}>
           <div className={styles.pills}>
-            {links.map((l) => (
-              <button key={l.id} className={styles.pill} onClick={() => scrollToId(l.id)}>
-                {l.label}
-              </button>
-            ))}
-            <button
+            {links.map((l) =>
+              home ? (
+                <button key={l.id} className={styles.pill} onClick={() => scrollToId(l.id)}>
+                  {l.label}
+                </button>
+              ) : (
+                <a key={l.id} className={styles.pill} href={`/#${l.id}`}>
+                  {l.label}
+                </a>
+              ),
+            )}
+            <a
               className={`${styles.pill} ${styles.cta}`}
-              onClick={() => scrollToId('register')}
+              href={REGISTRATION_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              RSVP
-            </button>
+              Register
+            </a>
           </div>
         </div>
       </div>

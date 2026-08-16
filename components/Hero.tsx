@@ -1,7 +1,7 @@
 'use client';
 
-import { RegisterForm } from './RegisterForm';
-import { EVENT_DATE, EVENT_DATE_SHORT, EVENT_VENUE, EVENT_TIME } from '@/config';
+import { RegisterCta } from './RegisterCta';
+import { EVENT_DATE, EVENT_VENUE, EVENT_TIME } from '@/config';
 import styles from './Hero.module.css';
 
 export function Hero() {
@@ -9,40 +9,37 @@ export function Hero() {
     <section id="hero" className={styles.hero}>
       <div className={`container ${styles.inner}`}>
         <div className={styles.sheet}>
-          {/* Masthead */}
+          {/* Masthead. The meta block is desktop-only (hidden on mobile via CSS). */}
           <div className={styles.masthead}>
             <div className={styles.wordmark}>Meridian<span>.</span></div>
             <div className={styles.mastMeta}>
               The conference &middot; {EVENT_DATE}<br />
-              {EVENT_VENUE}<br />
+              {EVENT_VENUE}, Los Angeles<br />
               {EVENT_TIME} &middot; meridianventura.com
             </div>
           </div>
 
-          {/* Lead */}
+          {/* Lead. The register button must clear the fold on a 375px viewport,
+              so it sits directly under the subhead; prose follows. */}
           <div className={styles.blurb}>
             <span className={`eyebrow ${styles.eyebrow}`}>What Meridian is</span>
-            <h1 className={styles.headline}>The leaders come to you.</h1>
+            <h1 className={styles.headline}>CEOs come to you.</h1>
+            <p className={styles.subhead}>24 executives. 400 students.</p>
+
+            <RegisterCta id="register" />
+
             <p className={styles.lead}>
-              Meridian is a free, student-run conference that puts university students
-              from across Los Angeles face to face with founders, executives, and
-              industry leaders. Rather than students lining up to introduce themselves,
-              the leaders work the room and come to the students.
+              Meridian is a free conference on {EVENT_DATE} at {EVENT_VENUE}, for
+              university students across Los Angeles and Ventura Counties. It is built
+              and run by a UC Berkeley undergraduate from Oxnard.
             </p>
             <p className={styles.leadSub}>
-              It is built and run by a UC Berkeley undergraduate from Oxnard. The first
-              event, in December 2025, brought about 150 students together with leaders
-              from Netflix, OpenAI, and Chase Bank. It returns {EVENT_DATE_SHORT}, built for 400.
+              The format is inverted. Leaders don&apos;t speak from a stage and leave.
+              They circulate, sit with students, and each one names a single concrete
+              thing they can do for someone in the room. Every commitment made that day
+              is tracked and closed out by Meridian within two weeks, so students never
+              have to chase anyone.
             </p>
-
-            {/* Registration capture (always visible) */}
-            <div id="register" className={styles.register}>
-              <div className={styles.registerHead}>
-                <span className={styles.registerTitle}>Reserve your spot</span>
-                <span className={styles.registerNote}>Free for every student &middot; {EVENT_DATE_SHORT}</span>
-              </div>
-              <RegisterForm source="hero" buttonLabel="RSVP" />
-            </div>
 
             <a href="#the-day" className={styles.seeDay}>What the day looks like &rarr;</a>
           </div>

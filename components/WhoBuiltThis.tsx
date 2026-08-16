@@ -5,15 +5,8 @@ import { PersonCarousel } from './PersonCarousel';
 import type { PersonSlide } from './PersonCarousel';
 import styles from './WhoBuiltThis.module.css';
 
+// George Leis is featured in the Behind Meridian section above, not repeated here.
 const mentors: PersonSlide[] = [
-  {
-    src: '/opt/georgeleisandjaxtonpicture.webp',
-    mobileSrc: '/opt/georgeleisandjaxtonpicture-mobile.webp',
-    name: 'George Leis',
-    title: 'Chairman, YMCA of the USA / Executive Vice President, CalPrivate Bank',
-    caption:
-      'George Leis was among the first to believe in this conference and in the person building it. He personally donated $1,000 to make the first event possible. Every time Jaxton is in town, they meet, without exception. He was present at Jaxton\'s high school graduation. His investment in Meridian Conference is a direct extension of his investment in what young people from this community are capable of.',
-  },
   {
     src: '/opt/tedlawrenceohsprincipal.webp',
     mobileSrc: '/opt/tedlawrenceohsprincipal-mobile.webp',

@@ -64,6 +64,9 @@ export function PersonCarousel({ slides }: PersonCarouselProps) {
             srcSet={slide.mobileSrc ? `${slide.mobileSrc} 600w, ${slide.src} 1200w` : undefined}
             sizes={slide.mobileSrc ? '(max-width: 768px) 600px, 1200px' : undefined}
             alt={slide.name}
+            width={1200}
+            height={800}
+            loading="lazy"
             decoding="async"
             className={styles.image}
           />

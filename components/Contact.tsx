@@ -34,7 +34,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className={styles.contact}>
+    <section id="inquiries" className={styles.contact}>
       <div className="container">
        <div className="chunk">
         <div className={styles.layout}>
@@ -43,8 +43,8 @@ export function Contact() {
               <p className="eyebrow">Contact</p>
               <h2>Reach out directly</h2>
               <p className={styles.desc}>
-                For leaders who want to be in the room, partners, anyone who wants to
-                help build it, or a student with a question. This is where it starts.
+                For leaders who want to be in the room, partners, sponsors, and press.
+                This is where it starts.
               </p>
               <div className={styles.details}>
                 <div className={styles.detail}>

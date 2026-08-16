@@ -111,6 +111,8 @@ export function Carousel({ slides, desktopHeight = 500, mobileHeight = 350 }: Ca
                       srcSet={slide.mobileSrc ? `${slide.mobileSrc} 600w, ${slide.src} 1200w` : undefined}
                       sizes={slide.mobileSrc ? '(max-width: 768px) 600px, 1200px' : undefined}
                       alt={slide.alt}
+                      width={1200}
+                      height={800}
                       loading={i <= 1 ? 'eager' : 'lazy'}
                       decoding="async"
                       className={styles.image}

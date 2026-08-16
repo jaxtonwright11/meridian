@@ -18,6 +18,9 @@ export function Founder() {
                   srcSet="/opt/unnamed__3_-mobile.webp 600w, /opt/unnamed__3_.webp 1200w"
                   sizes="(max-width: 768px) 600px, 1200px"
                   alt="Jaxton Bruce Wright, Founder of Meridian Conference"
+                  width={1200}
+                  height={1500}
+                  loading="lazy"
                   decoding="async"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '2px' }}
                 />
@@ -35,17 +38,10 @@ export function Founder() {
                 <p>
                   Jaxton Bruce Wright is a UC Berkeley undergraduate from Oxnard. He built
                   Meridian because the rooms that change a person&apos;s path should not
-                  require a last name or a zip code to enter.
-                </p>
-                <p>
-                  The first event, in December 2025, brought about 150 students face to face
-                  with leaders from Netflix, OpenAI, and Chase Bank. Not for a lecture. For
-                  direct conversations, and the introductions and referrals that followed.
-                </p>
-                <p>
-                  On {EVENT_DATE_SHORT}, Meridian returns to {EVENT_VENUE}, built for 400
-                  students from across Los Angeles, with high school students from Ventura
-                  County invited. Free for every student who attends.
+                  require a last name or a zip code to enter. The first event, in December
+                  2025, put about 150 students into direct conversation with senior
+                  leaders, and the introductions and referrals that followed proved the
+                  format. On {EVENT_DATE_SHORT} it returns to {EVENT_VENUE}, built for 400.
                 </p>
                 <p className={styles.contactLine}>
                   <a href="mailto:jaxtonwright11@berkeley.edu">jaxtonwright11@berkeley.edu</a>
