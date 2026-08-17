@@ -15,7 +15,6 @@ export function Footer() {
           </div>
           <nav className={styles.links}>
             <a href="/#the-day">The day</a>
-            <a href="/#speakers">Speakers</a>
             <a href="/#faq">FAQ</a>
             <a href="/partners/">For partners</a>
             <a href="/speakers/">For speakers</a>

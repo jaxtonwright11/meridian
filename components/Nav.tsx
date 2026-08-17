@@ -9,7 +9,7 @@ import styles from './Nav.module.css';
 // here. Students get one path: understand the day, see the room, register.
 const links = [
   { id: 'the-day', label: 'The day' },
-  { id: 'speakers', label: 'Speakers' },
+  // { id: 'speakers', label: 'Speakers' } returns with the speakers section.
 ];
 
 function scrollToId(id: string) {

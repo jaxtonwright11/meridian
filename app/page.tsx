@@ -5,7 +5,6 @@ import { SmoothScroll } from '@/components/SmoothScroll';
 import { Banner } from '@/components/Banner';
 import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
-import { Speakers } from '@/components/Speakers';
 import { HowItWorks } from '@/components/HowItWorks';
 import { Proof } from '@/components/Proof';
 import { Future } from '@/components/Future';
@@ -39,7 +38,9 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Speakers />
+        {/* Speakers section (components/Speakers.tsx) is parked until speaker
+            cards with photos are ready — re-import <Speakers /> here and
+            restore the nav/footer "Speakers" links to bring it back. */}
         <HowItWorks />
         <Proof />
         <Future />
