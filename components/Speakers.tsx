@@ -7,11 +7,9 @@ export interface Speaker {
   name: string;
   title: string;
   org: string;
-  photo?: string;
 }
 
 // Add a speaker by adding an entry here. No markup changes needed.
-// `photo` is optional; cards render fine without one.
 const speakers: Speaker[] = [
   { name: 'George Leis', title: 'Chairman', org: 'YMCA of the USA' },
   { name: 'Deontay Wilder', title: 'Former WBC Heavyweight Champion', org: 'Boxing' },
@@ -21,6 +19,11 @@ const speakers: Speaker[] = [
   { name: 'Joe Killinger', title: 'CEO', org: 'Commercial Brokerage' },
 ];
 
+/**
+ * The lineup as an editorial roster, not cards: big names down the left,
+ * role and organization on the right, one hairline per row. Reads like a
+ * masthead rather than a directory.
+ */
 export function Speakers() {
   return (
     <section id="speakers" className={styles.section}>
@@ -33,23 +36,13 @@ export function Speakers() {
             <h2>Who&apos;s in the room</h2>
           </AnimateIn>
 
-          <StaggerContainer className={styles.grid} staggerDelay={0.06}>
+          <StaggerContainer className={styles.roster} staggerDelay={0.05}>
             {speakers.map((s) => (
-              <StaggerItem key={s.name} className={styles.card}>
-                {s.photo && (
-                  <img
-                    src={s.photo}
-                    alt={s.name}
-                    width={400}
-                    height={400}
-                    loading="lazy"
-                    decoding="async"
-                    className={styles.photo}
-                  />
-                )}
+              <StaggerItem key={s.name} className={styles.row}>
                 <h3 className={styles.name}>{s.name}</h3>
-                <p className={styles.role}>{s.title}</p>
-                <p className={styles.org}>{s.org}</p>
+                <p className={styles.role}>
+                  {s.title} <span className={styles.org}>&middot; {s.org}</span>
+                </p>
               </StaggerItem>
             ))}
           </StaggerContainer>

@@ -34,7 +34,7 @@ export function Hero() {
               and run by a UC Berkeley undergraduate from Oxnard.
             </p>
             <p className={styles.leadSub}>
-              The format is inverted. Leaders don&apos;t speak from a stage and leave.
+              Leaders don&apos;t speak from a stage and leave.
               They circulate, sit with students, and each one names a single concrete
               thing they can do for someone in the room. Every commitment made that day
               is tracked and closed out by Meridian within two weeks, so students never

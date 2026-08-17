@@ -7,6 +7,7 @@ import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
 import { Speakers } from '@/components/Speakers';
 import { HowItWorks } from '@/components/HowItWorks';
+import { Proof } from '@/components/Proof';
 import { Future } from '@/components/Future';
 import { FAQ } from '@/components/FAQ';
 import { GettingThere } from '@/components/GettingThere';
@@ -40,6 +41,7 @@ export default function Home() {
         <Hero />
         <Speakers />
         <HowItWorks />
+        <Proof />
         <Future />
         <FAQ />
         <GettingThere />

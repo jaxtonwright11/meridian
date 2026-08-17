@@ -5,12 +5,8 @@ import { Carousel } from './Carousel';
 import { EVENT_DATE_SHORT } from '@/config';
 import styles from './Recap.module.css';
 
+// The full-group shot moved to the home page's Proof section.
 const slides2025 = [
-  {
-    src: '/opt/img_9547.webp',
-    mobileSrc: '/opt/img_9547-mobile.webp',
-    alt: 'Full group of approximately 150 people at December 2025 Meridian Conference',
-  },
   {
     src: '/opt/img_9543.webp',
     mobileSrc: '/opt/img_9543-mobile.webp',
@@ -92,33 +88,8 @@ export function Recap() {
             </div>
           </AnimateIn>
 
-          <AnimateIn delay={0.3}>
-            <div className={styles.testimonial}>
-              <blockquote>
-                &ldquo;It was refreshing to hear directly from young people already making
-                waves. I walked out feeling inspired and empowered to do the same.&rdquo;
-              </blockquote>
-              <cite>
-                <a
-                  href="https://www.linkedin.com/in/jade-tran-449138254/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Jade Tran
-                </a>
-                , UCLA, Class of 2025
-                <br />
-                <a
-                  href="https://www.linkedin.com/in/jade-tran-449138254/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.socialLink}
-                >
-                  Jade Tran on LinkedIn
-                </a>
-              </cite>
-            </div>
-          </AnimateIn>
+          {/* Jade Tran's quote lives on the home page's Proof section now,
+              so each voice appears once. */}
         </div>
        </div>
       </div>
