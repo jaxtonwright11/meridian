@@ -7,9 +7,17 @@ import styles from './Nav.module.css';
 // Three items only. Everything else still exists at its anchor (or on
 // /partners and /speakers, linked from the footer); it just is not surfaced
 // here. Students get one path: understand the day, see the room, register.
+// Anchors on the home page.
 const links = [
   { id: 'the-day', label: 'The day' },
-  // { id: 'speakers', label: 'Speakers' } returns with the speakers section.
+  { id: 'faq', label: 'FAQ' },
+];
+
+// Separate routes, surfaced in the top nav alongside the anchors.
+const pages = [
+  { href: '/partners/', label: 'Partners' },
+  { href: '/speakers/', label: 'For speakers' },
+  { href: '/terms/', label: 'Terms' },
 ];
 
 function scrollToId(id: string) {
@@ -64,16 +72,23 @@ export function Nav({ home = true }: NavProps) {
                 </a>
               ),
             )}
-            <a
-              className={`${styles.pill} ${styles.cta}`}
-              href={REGISTRATION_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Register
-            </a>
+            {pages.map((p) => (
+              <a key={p.href} className={styles.pill} href={p.href}>
+                {p.label}
+              </a>
+            ))}
           </div>
         </div>
+
+        {/* Outside the scroller so Register never scrolls out of reach. */}
+        <a
+          className={`${styles.pill} ${styles.cta}`}
+          href={REGISTRATION_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Register
+        </a>
       </div>
     </nav>
   );

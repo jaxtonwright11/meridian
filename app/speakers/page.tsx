@@ -63,9 +63,9 @@ export default function SpeakersPage() {
                 <div className={styles.block}>
                   <h2 className={styles.blockTitle}>Nothing to prepare, nothing to carry</h2>
                   <p>
-                    Nothing needs preparing, and nothing needs carrying afterward. Every
-                    commitment made that day is tracked and closed out by Meridian
-                    within two weeks, so students never get handed your inbox.
+                    Nothing needs preparing, and nothing needs carrying afterward. You
+                    give what you want to give on the day, and that is the whole ask.
+                    Students never get handed your inbox.
                   </p>
                 </div>
               </div>

@@ -34,11 +34,9 @@ export function Hero() {
               and run by a UC Berkeley undergraduate from Oxnard.
             </p>
             <p className={styles.leadSub}>
-              Leaders don&apos;t speak from a stage and leave.
-              They circulate, sit with students, and each one names a single concrete
-              thing they can do for someone in the room. Every commitment made that day
-              is tracked and closed out by Meridian within two weeks, so students never
-              have to chase anyone.
+              Leaders don&apos;t speak from a stage and leave. They circulate, sit with
+              students, and each one names a single concrete thing they can do for
+              someone in the room.
             </p>
 
             <a href="#the-day" className={styles.seeDay}>What the day looks like &rarr;</a>

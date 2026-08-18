@@ -16,8 +16,8 @@ const steps = [
   },
   {
     n: '03',
-    title: 'Meridian closes the loop',
-    desc: 'The day ends, the follow-through starts. Closing out what was promised to you is our job, done within two weeks, not yours.',
+    title: 'You leave with something real',
+    desc: 'Not a stack of business cards. An introduction, a referral, a name to write to, and a room full of people who now know what you are working on.',
   },
 ];
 

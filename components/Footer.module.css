@@ -39,18 +39,11 @@
 
 .contactRoutes {
   display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
   padding: 16px 0;
   border-top: 1px solid rgba(240, 228, 209, 0.14);
   margin-bottom: 2px;
-}
-
-.route {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  text-decoration: none;
 }
 
 .routeLabel {
@@ -61,24 +54,7 @@
   color: var(--on-page-gold);
 }
 
-.routeEmail {
-  font-size: 12.5px;
-  color: var(--on-page-soft);
-  transition: color 0.18s;
-}
-
-.route:hover .routeEmail { color: var(--on-page); }
-
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-top: 16px;
-  border-top: 1px solid rgba(240, 228, 209, 0.14);
-  gap: 16px;
-}
-
-.copy,
+.route:hover .copy,
 .location {
   font-family: var(--font-mono), monospace;
   font-size: 10.5px;
@@ -86,15 +62,23 @@
   color: var(--on-page-soft);
 }
 
-.nonprofit {
-  margin-top: 3px;
-  font-size: 11.5px;
-  color: var(--on-page-soft);
-  max-width: none;
-}
 
 @media (max-width: 768px) {
   .inner { flex-direction: column; align-items: flex-start; gap: 16px; }
   .links { gap: 16px; }
   .bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
+
+.emails {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.emails a {
+  font-size: 12.5px;
+  color: var(--on-page-soft);
+  transition: color 0.18s;
+}
+
+.emails a:hover { color: var(--on-page); }
