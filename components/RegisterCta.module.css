@@ -2,16 +2,6 @@
   margin-top: 26px;
 }
 
-.seats {
-  font-family: var(--font-mono), monospace;
-  font-size: 11.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold-on-box);
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
 .button {
   font-size: 13px;
   padding: 16px 34px;

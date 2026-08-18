@@ -3,9 +3,7 @@ import { SmoothScroll } from '@/components/SmoothScroll';
 import { Nav } from '@/components/Nav';
 import { PartnersIntro } from '@/components/PartnersIntro';
 import { Recap } from '@/components/Recap';
-import { BehindMeridian } from '@/components/BehindMeridian';
 import { Founder } from '@/components/Founder';
-import { WhoBuiltThis } from '@/components/WhoBuiltThis';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 
@@ -23,9 +21,7 @@ export default function PartnersPage() {
       <main>
         <PartnersIntro />
         <Recap />
-        <BehindMeridian />
         <Founder />
-        <WhoBuiltThis />
         <Contact />
       </main>
       <Footer />

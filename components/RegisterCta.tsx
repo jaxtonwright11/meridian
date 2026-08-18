@@ -1,6 +1,6 @@
 'use client';
 
-import { REGISTRATION_FORM_URL, SEATS_LINE, EVENT_DATE_SHORT } from '@/config';
+import { REGISTRATION_FORM_URL, EVENT_DATE_SHORT } from '@/config';
 import styles from './RegisterCta.module.css';
 
 interface RegisterCtaProps {
@@ -17,14 +17,13 @@ interface RegisterCtaProps {
 export function RegisterCta({ id, className = '', compact = false }: RegisterCtaProps) {
   return (
     <div id={id} className={`${styles.wrap} ${compact ? styles.compact : ''} ${className}`}>
-      <p className={styles.seats}>{SEATS_LINE}</p>
       <a
         href={REGISTRATION_FORM_URL}
         target="_blank"
         rel="noopener noreferrer"
         className={`btn btn-ink ${styles.button}`}
       >
-        Register for {EVENT_DATE_SHORT} &rarr;
+        Register for {EVENT_DATE_SHORT}
       </a>
       {!compact && (
         <p className={styles.note}>

@@ -23,8 +23,7 @@ export function PartnersIntro() {
           <AnimateIn delay={0.2}>
             <p className={styles.lead}>
               Students are not short on ability. They are short on the informal
-              machinery that turns ability into access, and short on anyone whose job
-              it is to close the loop afterward. Meridian supplies both. The rooms
+              machinery that turns ability into access. Meridian supplies it. The rooms
               that change a person&apos;s path should not require a last name or a zip
               code to enter.
             </p>

@@ -1,12 +1,24 @@
 'use client';
 
-import { AnimateIn } from './AnimateIn';
+import { AnimateIn, StaggerContainer, StaggerItem } from './AnimateIn';
 import styles from './BehindMeridian.module.css';
 
-/**
- * The merged "who is behind this" section: the General Atomics Sciences
- * Education Foundation and George Leis, one place, one answer.
- */
+// Confirmed partners only. Nothing goes on this list until the organization
+// has said yes in writing.
+const partners: { name: string; role: string }[] = [
+  { name: 'USC NAI', role: 'Bringing students' },
+  { name: 'LA Promise Fund', role: 'Bringing students' },
+  { name: 'I Have A Dream Foundation LA', role: 'Bringing students' },
+  { name: 'MANA de San Diego', role: 'Bringing students' },
+  { name: 'San Diego Diplomacy Council', role: 'Bringing students' },
+  { name: 'EnCorps', role: 'Running the aerospace design lab' },
+  { name: 'Las Fotos Project', role: 'Student photographers on the day' },
+  { name: 'Campaign Zero', role: 'Keynote' },
+  { name: 'LA Clippers', role: 'Raffle items and merch' },
+  { name: 'UCLA SOLE', role: 'Campus ally, spreading the word at UCLA' },
+  { name: '826LA', role: 'Spreading the word' },
+];
+
 export function BehindMeridian() {
   return (
     <section id="partners" className={styles.section}>
@@ -19,57 +31,33 @@ export function BehindMeridian() {
             <h2>Who is behind it</h2>
           </AnimateIn>
 
-          <div className={styles.grid}>
-            <AnimateIn delay={0.15}>
-              <div className={styles.block}>
-                <h3 className={styles.blockTitle}>
-                  General Atomics Sciences Education Foundation
-                </h3>
-                <p>
-                  The foundation is funding Meridian and bringing a hands-on aerospace
-                  engineering lab to the day. Students build something real, not sit
-                  through a talk.
-                </p>
-              </div>
-            </AnimateIn>
+          <AnimateIn delay={0.15}>
+            <div className={styles.lead}>
+              <h3 className={styles.funder}>General Atomics</h3>
+              <p>
+                The General Atomics Sciences Education Foundation funded Meridian and
+                is bringing a hands-on aerospace engineering lab to the day. Students
+                build something real instead of sitting through a talk.
+              </p>
+            </div>
+          </AnimateIn>
 
-            <AnimateIn delay={0.2}>
-              <div className={styles.block}>
-                <div className={styles.person}>
-                  <img
-                    src="/opt/georgeleisandjaxtonpicture.webp"
-                    srcSet="/opt/georgeleisandjaxtonpicture-mobile.webp 600w, /opt/georgeleisandjaxtonpicture.webp 1200w"
-                    sizes="(max-width: 768px) 600px, 400px"
-                    alt="George Leis with Jaxton Wright"
-                    width={600}
-                    height={450}
-                    loading="lazy"
-                    decoding="async"
-                    className={styles.photo}
-                  />
-                  <div>
-                    <h3 className={styles.blockTitle}>George Leis</h3>
-                    <p className={styles.personRole}>
-                      Chairman, YMCA of the USA &middot; Executive Vice President, CalPrivate Bank
-                    </p>
-                  </div>
-                </div>
-                <p>
-                  George Leis was among the first to believe in this conference and in
-                  the person building it. He personally donated $1,000 to make the first
-                  event possible, was present at Jaxton&apos;s high school graduation,
-                  and they meet every time Jaxton is in town, without exception. His
-                  investment in Meridian is a direct extension of his investment in what
-                  young people from this community are capable of.
-                </p>
-              </div>
-            </AnimateIn>
-          </div>
+          <AnimateIn delay={0.2}>
+            <p className={styles.listLabel}>Working with us</p>
+          </AnimateIn>
+
+          <StaggerContainer className={styles.roster} staggerDelay={0.04}>
+            {partners.map((p) => (
+              <StaggerItem key={p.name} className={styles.row}>
+                <span className={styles.name}>{p.name}</span>
+                <span className={styles.role}>{p.role}</span>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
 
           <AnimateIn delay={0.25}>
             <p className={styles.note}>
-              More partners and the leaders joining them will be named here as they are
-              confirmed.
+              More partners will be named here as they are confirmed.
             </p>
           </AnimateIn>
         </div>

@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 56px;
+  padding-top: 0;
   padding-bottom: 34px;
   background: var(--page-a);
 }
@@ -107,7 +107,7 @@
 .seeDay:hover { color: var(--gold-ink); }
 
 @media (max-width: 768px) {
-  .hero { padding-top: 28px; }
+  .hero { padding-top: 0; }
   .sheet { padding: 26px 22px 32px; }
   .masthead { padding-bottom: 16px; }
   /* Per Jax: drop the date/venue meta block on mobile. The same facts sit in

@@ -17,8 +17,8 @@ const faqs: Faq[] = [
     a: 'Yes. No ticket, no fee, nothing sold.',
   },
   {
-    q: 'Do I need to be a certain major or year?',
-    a: 'No. Any university student.',
+    q: 'Who can come?',
+    a: 'Anyone who is excited to be there. University students of any major or year, high school students, and people who already graduated. There is no cutoff. If you are ready to meet people, you belong in the room.',
   },
   {
     q: 'Can I bring a friend?',
@@ -26,23 +26,15 @@ const faqs: Faq[] = [
   },
   {
     q: 'What should I wear?',
-    a: 'Whatever you would wear to meet someone you respect. No suit required.',
+    a: 'Business casual is ideal. If that is not something you have, wear whatever you would wear to meet people you respect. Nobody is checking.',
   },
   {
     q: 'Do I have to stay the whole time?',
-    a: 'No. Come for what is useful to you.',
+    a: 'Stay the whole time. The best conversations happen late in the day, after people have loosened up and the room knows who you are. The students who arrive first and leave last get the most out of it.',
   },
   {
     q: 'What if I have never done anything like this?',
-    a: 'Most people there have not. The format exists specifically so you do not have to introduce yourself cold.',
-  },
-  {
-    q: 'Is parking available?',
-    a: 'Parking details will be posted here the moment the room is contracted. Check back, or watch your email after you register.',
-  },
-  {
-    q: 'Can high school students attend?',
-    a: 'The day is built for university students, with high school students from Ventura County and the local area invited as well.',
+    a: 'Many people there have not. You introduce yourself, they introduce themselves, and it goes from there. Your ask card does a lot of the work for you, because people can see what you are looking for before they walk up.',
   },
 ];
 
@@ -99,9 +91,8 @@ export function FAQ() {
 
           <AnimateIn delay={0.2}>
             <p className={styles.still}>
-              Something else?{' '}
-              <a href={`mailto:${CONTACT_EMAIL}?subject=Student%20question`}>Email us</a> and a
-              person answers.
+              Something else? Email us at{' '}
+              <a href={`mailto:${CONTACT_EMAIL}?subject=Student%20question`}>{CONTACT_EMAIL}</a>
             </p>
           </AnimateIn>
         </div>

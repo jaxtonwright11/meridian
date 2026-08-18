@@ -6,7 +6,8 @@ import { Banner } from '@/components/Banner';
 import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
 import { HowItWorks } from '@/components/HowItWorks';
-import { Proof } from '@/components/Proof';
+import { WhoBuiltThis } from '@/components/WhoBuiltThis';
+import { BehindMeridian } from '@/components/BehindMeridian';
 import { Future } from '@/components/Future';
 import { FAQ } from '@/components/FAQ';
 import { GettingThere } from '@/components/GettingThere';
@@ -17,9 +18,7 @@ import { Footer } from '@/components/Footer';
 const MOVED_ANCHORS: Record<string, string> = {
   recap: '/partners/#recap',
   mission: '/partners/#mission',
-  partners: '/partners/#partners',
   founder: '/partners/#founder',
-  'who-built-this': '/partners/#who-built-this',
   beyond: '/partners/#recap',
 };
 
@@ -42,7 +41,8 @@ export default function Home() {
             cards with photos are ready — re-import <Speakers /> here and
             restore the nav/footer "Speakers" links to bring it back. */}
         <HowItWorks />
-        <Proof />
+        <WhoBuiltThis />
+        <BehindMeridian />
         <Future />
         <FAQ />
         <GettingThere />
