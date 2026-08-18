@@ -26,13 +26,8 @@ export const VENUE_DETAILS = {
   address: '200 De Neve, Los Angeles, CA 90095',
 };
 
-/**
- * Meridian's Instagram, where day-of updates are posted.
- * NOT SET YET: paste the profile URL here and the getting-there section turns
- * the mention into a real link. Until then it renders as plain text so the
- * live site never ships a dead link.
- */
-export const INSTAGRAM_URL: string | null = null;
+/** Jaxton's Instagram, where day-of updates are posted. */
+export const INSTAGRAM_URL: string | null = 'https://www.instagram.com/jaxtonwright/';
 
 /** Contact. Both addresses are shown together, no routing. */
 export const CONTACT_EMAIL = 'jaxtonwright11@berkeley.edu';

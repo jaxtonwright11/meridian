@@ -15,6 +15,8 @@ const partners: { name: string; role: string }[] = [
   { name: 'Las Fotos Project', role: 'Student photographers on the day' },
   { name: 'Campaign Zero', role: 'Keynote' },
   { name: 'LA Clippers', role: 'Raffle items and merch' },
+  { name: 'UCLA SOLE', role: 'Campus ally, spreading the word at UCLA' },
+  { name: '826LA', role: 'Spreading the word' },
 ];
 
 export function BehindMeridian() {
