@@ -1,0 +1,55 @@
+.section {
+  background: var(--page-b);
+}
+
+.roster {
+  margin-top: 28px;
+  border-top: 1.5px solid var(--ink);
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 2px;
+  border-bottom: 1px solid var(--line);
+}
+
+.name {
+  font-size: clamp(21px, 2.6vw, 26px);
+  line-height: 1.15;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.role {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.org {
+  color: var(--gold-ink);
+}
+
+.more {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 56ch;
+}
+
+@media (max-width: 560px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    padding: 13px 2px;
+  }
+  .role { text-align: left; }
+  .name { font-size: 21px; }
+}

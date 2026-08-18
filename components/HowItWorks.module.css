@@ -1,0 +1,40 @@
+.section {
+  background: var(--page-a);
+}
+
+.steps {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.step {
+  border-top: 1.5px solid var(--ink);
+  padding-top: 16px;
+}
+
+.num {
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--gold-on-box);
+  font-weight: 600;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.desc {
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 768px) {
+  .steps { grid-template-columns: 1fr; gap: 20px; }
+}

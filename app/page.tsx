@@ -1,55 +1,51 @@
 'use client';
 
 import { useEffect } from 'react';
-import Lenis from 'lenis';
+import { SmoothScroll } from '@/components/SmoothScroll';
+import { Banner } from '@/components/Banner';
 import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
-import { Mission } from '@/components/Mission';
-import { Recap } from '@/components/Recap';
+import { HowItWorks } from '@/components/HowItWorks';
+import { Proof } from '@/components/Proof';
 import { Future } from '@/components/Future';
-import { Partners } from '@/components/Partners';
-import { Founder } from '@/components/Founder';
-import { WhoBuiltThis } from '@/components/WhoBuiltThis';
-import { Contact } from '@/components/Contact';
+import { FAQ } from '@/components/FAQ';
+import { GettingThere } from '@/components/GettingThere';
 import { Footer } from '@/components/Footer';
+
+// Sections that used to live on this page and moved to /partners. Previously
+// shared deep links (e.g. meridianventura.com/#founder) must still resolve.
+const MOVED_ANCHORS: Record<string, string> = {
+  recap: '/partners/#recap',
+  mission: '/partners/#mission',
+  partners: '/partners/#partners',
+  founder: '/partners/#founder',
+  'who-built-this': '/partners/#who-built-this',
+  beyond: '/partners/#recap',
+};
 
 export default function Home() {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.0,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1.3,
-    });
-
-    // Expose the instance so the nav can drive smooth jump-scrolling with a
-    // fixed-header offset (see Nav.tsx).
-    (window as unknown as { lenis?: Lenis }).lenis = lenis;
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+    const hash = window.location.hash.replace('#', '');
+    if (hash && MOVED_ANCHORS[hash]) {
+      window.location.replace(MOVED_ANCHORS[hash]);
     }
-    requestAnimationFrame(raf);
-
-    return () => {
-      delete (window as unknown as { lenis?: Lenis }).lenis;
-      lenis.destroy();
-    };
   }, []);
 
   return (
     <>
+      <SmoothScroll />
+      <Banner />
       <Nav />
       <main>
         <Hero />
-        <Recap />
-        <Mission />
+        {/* Speakers section (components/Speakers.tsx) is parked until speaker
+            cards with photos are ready — re-import <Speakers /> here and
+            restore the nav/footer "Speakers" links to bring it back. */}
+        <HowItWorks />
+        <Proof />
         <Future />
-        <Partners />
-        <Founder />
-        <WhoBuiltThis />
-        <Contact />
+        <FAQ />
+        <GettingThere />
       </main>
       <Footer />
     </>

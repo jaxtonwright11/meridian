@@ -64,9 +64,18 @@
   max-width: 12ch;
 }
 
+.subhead {
+  margin-top: 16px;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(19px, 2.4vw, 24px);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
 .lead {
-  margin-top: 24px;
-  font-size: 17px;
+  margin-top: 28px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--ink-soft);
   max-width: 62ch;
@@ -78,41 +87,6 @@
   line-height: 1.6;
   color: var(--stone);
   max-width: 62ch;
-}
-
-/* Registration box */
-.register {
-  margin-top: 32px;
-  max-width: 520px;
-  background: var(--box-inset);
-  border: 1px solid var(--box-line);
-  border-radius: 4px;
-  padding: 22px 24px;
-}
-
-.registerHead {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.registerTitle {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-
-.registerNote {
-  font-family: var(--font-mono), monospace;
-  font-size: 11px;
-  color: var(--stone);
-  letter-spacing: 0.02em;
-  text-align: right;
-  text-transform: uppercase;
 }
 
 .seeDay {
@@ -133,14 +107,14 @@
 .seeDay:hover { color: var(--gold-ink); }
 
 @media (max-width: 768px) {
-  .hero { padding-top: 50px; }
-  .sheet { padding: 32px 22px 36px; }
-  .masthead { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .mastMeta { text-align: left; }
+  .hero { padding-top: 28px; }
+  .sheet { padding: 26px 22px 32px; }
+  .masthead { padding-bottom: 16px; }
+  /* Per Jax: drop the date/venue meta block on mobile. The same facts sit in
+     the lead a few lines down, and the register button needs the fold room. */
+  .mastMeta { display: none; }
   .wordmark { font-size: 30px; }
-  .blurb { margin-top: 32px; }
-  .lead { font-size: 16px; }
-  .register { max-width: 100%; }
-  .registerHead { flex-direction: column; gap: 4px; }
-  .registerNote { text-align: left; }
+  .blurb { margin-top: 22px; }
+  .eyebrow { margin-bottom: 12px; }
+  .headline { font-size: clamp(40px, 11.5vw, 48px); }
 }

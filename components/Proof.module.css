@@ -1,0 +1,44 @@
+.section {
+  background: var(--page-b);
+}
+
+.figure {
+  margin: 0;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid var(--box-line);
+}
+
+.caption {
+  margin-top: 10px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-on-box);
+  font-weight: 600;
+}
+
+.quote {
+  margin: 24px 0 0;
+  border-left: 2px solid var(--gold);
+  padding-left: 18px;
+}
+
+.blockquote {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(17px, 2.2vw, 21px);
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}

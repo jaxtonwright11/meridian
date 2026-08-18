@@ -1,0 +1,40 @@
+.wrap {
+  margin-top: 26px;
+}
+
+.seats {
+  font-family: var(--font-mono), monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-on-box);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.button {
+  font-size: 13px;
+  padding: 16px 34px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.compact { margin-top: 0; }
+.compact .button { max-width: 320px; padding: 14px 28px; }
+
+@media (max-width: 560px) {
+  /* Keep "Register for November 14 →" on one line at 375px. */
+  .button {
+    max-width: none;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    padding: 15px 18px;
+  }
+}

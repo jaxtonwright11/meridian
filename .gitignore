@@ -7,3 +7,17 @@ ds-bundle/
 .design-sync/.cache/
 .design-sync/learnings/
 .design-sync/node_modules
+
+# Personal Claude Code permissions — not shared config
+.claude/settings.local.json
+
+# WSL alternate-data-stream metadata (created when copying files from Windows)
+*:Zone.Identifier
+
+# Visual-audit / Playwright artifacts
+screenshots/
+.playwright-mcp/
+
+# Never commit binaries or Windows profile dirs dropped into the repo
+*.exe
+C:\\*

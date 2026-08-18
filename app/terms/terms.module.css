@@ -1,0 +1,48 @@
+.main {
+  background: var(--page-a);
+}
+
+.section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.doc {
+  max-width: 780px;
+}
+
+.headline {
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.meta {
+  margin-top: 14px;
+  font-family: var(--font-mono), monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--stone);
+  line-height: 1.7;
+}
+
+.body {
+  margin-top: 30px;
+}
+
+.body h2 {
+  font-size: 19px;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.body p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  max-width: 66ch;
+}
+
+@media (max-width: 768px) {
+  .section { padding-top: 40px; }
+}

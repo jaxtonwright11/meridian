@@ -1,5 +1,7 @@
 .nav {
-  position: fixed;
+  /* Sticky (not fixed) so the dismissible registration banner above it can
+     occupy the true top of the page and scroll away naturally. */
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -100,13 +102,22 @@
 @media (max-width: 768px) {
   .nav { padding: 10px 0; }
   .scrolled { padding: 8px 0; }
-  .inner { padding: 0 12px; gap: 10px; }
-  .logo { font-size: 17px; }
-  .pills { gap: 18px; }
-  .pill { font-size: 13.5px; }
+  .inner { padding: 0 12px; gap: 8px; }
+  .logo { font-size: 16px; }
+  .pills { gap: 13px; }
+  .pill { font-size: 12px; }
+  .cta { font-size: 11.5px; padding: 5px 10px; margin-left: 0; }
   /* fade the scroll edges only when the row actually scrolls (mobile) */
   .scroller {
     -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 12px), transparent 100%);
             mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 12px), transparent 100%);
   }
+}
+
+/* Anchor variants of .logo / .pill / .cta (used on subpages and for the
+   external register link) should not pick up global link underlines. */
+a.logo,
+a.pill,
+a.cta {
+  text-decoration: none;
 }
