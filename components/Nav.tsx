@@ -25,6 +25,9 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
           <a className="m-logo" href="/" aria-label={`${SITE_NAME} home`}>
             {SITE_NAME}<span>.</span>
           </a>
+          <a className="btn btn-ink m-register" href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
+            Register
+          </a>
           <nav className={`m-nav ${open ? 'open' : ''}`} aria-label="Main">
             {items.map((i) => {
               const current = i.match.some((m) => path === m || path.startsWith(m + '/'));
@@ -35,9 +38,6 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
               );
             })}
           </nav>
-          <a className="btn btn-ink m-register" href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
-            Register
-          </a>
           <button className="m-menu" aria-expanded={open} aria-label="Menu" onClick={() => setOpen(!open)}>
             {open ? 'Close' : 'Menu'}
           </button>

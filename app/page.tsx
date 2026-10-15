@@ -21,9 +21,9 @@ export default function Home() {
           <div className="m-wrap">
             <span className="m-eyebrow">Los Angeles</span>
             <h1>Reverse gatekeeping.</h1>
-            <p className="m-sub">Meridian brings students and executives together in person, by field.</p>
-            <p className="m-lead" style={{ marginTop: 16 }}>
-              We start with a conference in Los Angeles on November 14, free for every student.
+            <p className="m-sub">
+              Meridian brings students and executives together in person, by field. We start with
+              a conference in Los Angeles on November 14, free for every student.
             </p>
             <div className="m-actions">
               <RegisterButton>Register for {EVENT_DATE_SHORT}</RegisterButton>

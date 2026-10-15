@@ -91,7 +91,7 @@ export default function ConferencePage() {
                 <div className="m-person" key={l.slug}>
                   <img src={l.photo} alt={l.name} width={300} height={300} loading="lazy" />
                   <h3>{l.name}</h3>
-                  {title(l) && <p>{title(l)}</p>}
+                  {title(l) && <p className="m-role">{title(l)}</p>}
                 </div>
               ))}
             </div>

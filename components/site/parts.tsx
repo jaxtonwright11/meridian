@@ -169,7 +169,7 @@ export function TeamStrip() {
             <div className="m-person" key={m.slug}>
               <img src={m.photo} alt={m.name} width={400} height={400} loading="lazy" />
               <h3>{m.name}</h3>
-              <p>{m.role}</p>
+              <p className="m-role">{m.role}</p>
             </div>
           ))}
         </div>

@@ -3,6 +3,7 @@ import { Fraunces, Hanken_Grotesk, Spline_Sans_Mono } from 'next/font/google';
 import './globals.css';
 import './site.css';
 import { SITE_NAME } from '@/config';
+import { RevealOnScroll } from '@/components/RevealOnScroll';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -85,16 +86,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
+    <html suppressHydrationWarning
       lang="en"
       className={`${fraunces.variable} ${hanken.variable} ${splineMono.variable}`}
     >
       <head>
         {/* POSTHOG SNIPPET - JAX TO ADD KEY HERE */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSONLD) }} />
         {children}
+        <RevealOnScroll />
       </body>
     </html>
   );

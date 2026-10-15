@@ -49,7 +49,7 @@ export const REGISTRATION_CLOSES_LABEL = 'November 7';
 export const MEETUPS = {
   count: 25,
   fields: 6,
-  cadence: 'roughly two a month',
+  cadence: 'two a month',
   startsAfter: '2026-11-14',
   firstFields: ['engineering', 'pre-med', 'business'],
 };
