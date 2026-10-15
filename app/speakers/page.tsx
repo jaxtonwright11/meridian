@@ -3,7 +3,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Premise } from '@/components/Premise';
 import { PersonContact } from '@/components/PersonContact';
-import { Explore, MEETUP_SENTENCE } from '@/components/site/parts';
+import { Explore, MEETUP_SENTENCE, StatRow } from '@/components/site/parts';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
 export const metadata: Metadata = {
@@ -30,6 +30,8 @@ export default function SpeakersPage() {
             </p>
           </div>
         </section>
+
+        <StatRow />
 
         <section className="m-section">
           <div className="m-wrap">

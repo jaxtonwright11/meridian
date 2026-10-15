@@ -2,7 +2,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import {
-  MeridianLine, Doors, SlimConferenceBand, LeadersBand, TeamStrip, PartnerList,
+  MeridianLine, StatRow, Doors, SlimConferenceBand, LeadersBand, TeamStrip, PartnerList,
   PressLinks, RegisterButton, WhatMeridianDoes, NameNote,
 } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
@@ -31,6 +31,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <StatRow />
 
         {/* 2. Leaders proof band */}
         <LeadersBand />

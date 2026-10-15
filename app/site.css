@@ -473,3 +473,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-people.m-team { gap: 32px 28px; border: 0; }
 .m-people.m-team .m-person, .m-people.m-team .m-person + .m-person { padding: 0; border: 0; }
 .m-h1-long { font-size: clamp(26px, 3vw, 38px); }
+
+/* Stat row: company traction */
+.m-statsec { padding-top: 8px; }
+.m-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.m-stat { display: flex; flex-direction: column; gap: 8px; padding: 26px 24px 22px; background-color: var(--surface);
+  border: 1px solid var(--rule); border-radius: 14px; box-shadow: var(--shadow-soft);
+  background-image: linear-gradient(var(--gold), var(--gold)); background-size: 100% 6px; background-position: top; background-repeat: no-repeat; }
+.m-stat .n { font-family: var(--font-fraunces), Georgia, serif; font-weight: 600; font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: -0.03em; color: var(--heading); }
+.m-stat .n-text { font-size: clamp(26px, 2.6vw, 34px); line-height: 1.1; letter-spacing: -0.02em; padding-top: 10px; }
+.m-stat .l { font-size: 17px; line-height: 1.35; font-weight: 600; color: var(--ink); max-width: 22ch; }
+@media (max-width: 900px) { .m-stats { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .m-stats { grid-template-columns: 1fr; } }

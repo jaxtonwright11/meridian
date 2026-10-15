@@ -144,7 +144,7 @@ export function LeadersBand() {
   return (
     <section className="m-section m-alt" aria-labelledby="leaders-h">
       <div className="m-wrap">
-        <span className="m-eyebrow">{confirmedLeaders.length} leaders confirmed</span>
+        <span className="m-eyebrow">Leaders</span>
         <h2 id="leaders-h" className="m-title">Leaders joining us on {EVENT_DATE_SHORT}</h2>
         <LeadersViewer tiles={tiles} />
         {names.length > 0 && (
@@ -180,6 +180,35 @@ export function TeamStrip() {
           {all.map((m) => (<TeamTile m={m} key={m.slug} />))}
         </div>
         <p className="m-actions"><a className="btn btn-tan" href="/team/">Meet the team</a></p>
+      </div>
+    </section>
+  );
+}
+
+/** Company traction, from data. Current numbers only; nothing here is a promise. */
+export function StatRow() {
+  const stats = [
+    { n: String(confirmedLeaders.length), l: 'leaders confirmed' },
+    { n: String(livePartners.length), l: 'partners working with us' },
+    { n: String(MEETUPS.count), l: `meetups planned across ${numWord(MEETUPS.fields)} fields, ${MEETUPS.cadence}` },
+  ];
+  return (
+    <section className="m-section m-statsec" aria-label="Meridian in numbers">
+      <div className="m-wrap">
+        <div className="m-stats">
+          {stats.map((x) => (
+            <div className="m-stat" key={x.l}>
+              <span className="n">{x.n}</span>
+              <span className="l">{x.l}</span>
+            </div>
+          ))}
+          {press.length > 0 && (
+            <div className="m-stat">
+              <span className="n n-text">In the press</span>
+              <a className="l m-link" href={press[0].url} target="_blank" rel="noopener">Read the recent media</a>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

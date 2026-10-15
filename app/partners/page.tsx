@@ -3,7 +3,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { ContactForm } from '@/components/ContactForm';
 import { PersonContact } from '@/components/PersonContact';
-import { Explore, PressLinks } from '@/components/site/parts';
+import { Explore, PressLinks, StatRow } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
 import { confirmedLeaders, title } from '@/data/leaders';
 import { livePartners } from '@/data/partners';
@@ -36,6 +36,8 @@ export default function PartnersPage() {
             </p>
           </div>
         </section>
+
+        <StatRow />
 
         {/* 2. What a meetup looks like. TODO(jax): confirm the winning team prize wording. */}
         <section className="m-section">
