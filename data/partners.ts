@@ -2,7 +2,7 @@
 // renders. `line` says what the partner is doing, never a status.
 // Internal notes from the brief are deliberately not in this file.
 
-export type PartnerGroup = 'UCLA' | 'USC' | 'Community and nonprofit' | 'Companies and brands';
+export type PartnerGroup = 'UCLA' | 'USC' | 'Community and nonprofit' | 'Companies';
 export type PartnerKind = 'Office or department' | 'Student organization';
 
 export interface Partner {
@@ -13,7 +13,7 @@ export interface Partner {
   line: string;
 }
 
-export const GROUPS: PartnerGroup[] = ['UCLA', 'USC', 'Community and nonprofit', 'Companies and brands'];
+export const GROUPS: PartnerGroup[] = ['UCLA', 'USC', 'Community and nonprofit', 'Companies'];
 
 export const partners: Partner[] = [
   { name: 'Undergraduate Students Association Council', group: 'UCLA', kind: 'Student organization', status: 'live', line: 'Student government sharing Meridian across UCLA.' },
@@ -46,8 +46,8 @@ export const partners: Partner[] = [
   { name: 'Project ECHO', group: 'Community and nonprofit', status: 'check', line: '' },
   { name: 'HOPE', group: 'Community and nonprofit', status: 'check', line: '' },
   { name: 'Youth Cinema Project', group: 'Community and nonprofit', status: 'check', line: '' },
-  { name: 'LA Clippers', group: 'Companies and brands', status: 'live', line: 'Team gear and prizes for the room.' },
-  { name: 'Petersen Automotive Museum', group: 'Companies and brands', status: 'live', line: 'Bringing vehicles and staff to the floor, and sharing their volunteer program and summer internships with students.' },
+  { name: 'LA Clippers', group: 'Companies', status: 'live', line: 'Team gear and prizes for the room.' },
+  { name: 'Petersen Automotive Museum', group: 'Companies', status: 'live', line: 'Bringing vehicles and staff to the floor, and sharing their volunteer program and summer internships with students.' },
   { name: 'Campaign Zero', group: 'Community and nonprofit', status: 'check', line: '' },
 ];
 

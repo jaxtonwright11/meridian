@@ -91,7 +91,7 @@ export default function PartnersPage() {
           <div className="m-wrap">
             <span className="m-eyebrow">Who we work with</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-              <div><h3>Companies and brands</h3><p>Brands working with us on tables and the day itself.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#companies-and-brands">See the group</a></p></div>
+              <div><h3>Companies</h3><p>Companies working with us on tables and the day itself.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#companies">See the group</a></p></div>
               <div><h3>Campus offices and departments</h3><p>UCLA and USC departments and student organizations reaching their students.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#ucla">See the group</a></p></div>
               <div><h3>Nonprofits and community organizations</h3><p>Programs that bring their students and alumni to the day.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#community-and-nonprofit">See the group</a></p></div>
             </div>
