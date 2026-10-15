@@ -28,7 +28,7 @@ const splineMono = Spline_Sans_Mono({
 
 // One canonical description everywhere (meta, og, twitter).
 const DESCRIPTION =
-  'Meridian brings students and executives together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, free for every student, then scales into 25 in-person meetups across six fields.';
+  'Meridian brings students and executives together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, free for every student, then expands into in-person events by field.';
 
 const HOME_TITLE = 'Meridian | Students and executives, together in person, by field';
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://meridianventura.com'),
   title: { default: HOME_TITLE, template: '%s | Meridian' },
   description: DESCRIPTION,
-  keywords: ['Meridian', 'students', 'executives', 'Los Angeles', 'meetups by field', 'UCLA'],
+  keywords: ['Meridian', 'students', 'executives', 'Los Angeles', 'events by field', 'UCLA'],
   authors: [{ name: 'Jaxton Wright' }],
   icons: {
     icon: [

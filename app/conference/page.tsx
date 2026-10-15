@@ -4,7 +4,7 @@ import { Footer } from '@/components/Footer';
 import { Premise } from '@/components/Premise';
 import { Schedule } from '@/components/Schedule';
 import { GettingThere } from '@/components/GettingThere';
-import { Explore, RegisterButton, MEETUP_SENTENCE } from '@/components/site/parts';
+import { Explore, RegisterButton, EVENTS_SENTENCE } from '@/components/site/parts';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 import { EVENT_DATE, EVENT_NAME, EVENT_VENUE, EVENT_TIME, REGISTRATION_CLOSES_LABEL } from '@/config';
 
@@ -122,7 +122,7 @@ export default function ConferencePage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">After November 14</span>
-            <p className="m-lead">{MEETUP_SENTENCE}</p>
+            <p className="m-lead">{EVENTS_SENTENCE}</p>
             <p style={{ marginTop: 16 }}><a className="m-link" href="/partners/">Partner with Meridian</a></p>
           </div>
         </section>

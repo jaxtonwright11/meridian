@@ -476,7 +476,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* Stat row: company traction */
 .m-statsec { padding-top: 8px; }
-.m-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.m-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 .m-stat { display: flex; flex-direction: column; gap: 8px; padding: 26px 24px 22px; background-color: var(--surface);
   border: 1px solid var(--rule); border-radius: 14px; box-shadow: var(--shadow-soft);
   background-image: linear-gradient(var(--gold), var(--gold)); background-size: 100% 6px; background-position: top; background-repeat: no-repeat; }

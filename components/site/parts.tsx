@@ -7,9 +7,9 @@ import { LeadersViewer, type Tile } from './LeadersViewer';
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-/** Plain-words meetup plan, read from config. */
-export const MEETUP_SENTENCE =
-  `Starting ${EVENT_DATE_SHORT}, Meridian scales from one conference into a company that hosts ${MEETUPS.count} in-person meetups across ${numWord(MEETUPS.fields)} fields over the following year, ${MEETUPS.cadence}, beginning with ${list(MEETUPS.firstFields)}. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.`;
+/** Plain-words plan for after the conference. No counts or cadence: the plan is not confirmed. */
+export const EVENTS_SENTENCE =
+  `Starting ${EVENT_DATE_SHORT}, Meridian scales from one conference into a company that hosts in-person events by field, beginning with ${list(MEETUPS.firstFields)}. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.`;
 
 export const NETWORK_SENTENCE =
   'Everyone who attends joins the Meridian network, which connects students to each other and to executives in their field.';
@@ -83,13 +83,12 @@ export function WhatMeridianDoes() {
         <p style={{ marginTop: 12 }}><a className="m-link" href="/conference/">See the conference</a></p>
       </div>
       <div>
-        <h3>Meetups by field</h3>
+        <h3>Events by field</h3>
         <p>
-          In-person meetups, each in one field, beginning with {list(MEETUPS.firstFields)}.
+          In-person events, each in one field, beginning with {list(MEETUPS.firstFields)}.
           Each brings executives from that field together with students from across Los Angeles
           campuses, with student teams working the same challenge side by side.
         </p>
-        <p style={{ marginTop: 10 }}>Twenty-five meetups across {numWord(MEETUPS.fields)} fields, {MEETUPS.cadence}.</p>
       </div>
       <div>
         <h3>The network</h3>
@@ -190,7 +189,6 @@ export function StatRow() {
   const stats = [
     { n: String(confirmedLeaders.length), l: 'leaders confirmed' },
     { n: String(livePartners.length), l: 'partners working with us' },
-    { n: String(MEETUPS.count), l: `meetups planned across ${numWord(MEETUPS.fields)} fields, ${MEETUPS.cadence}` },
   ];
   return (
     <section className="m-section m-statsec" aria-label="Meridian in numbers">

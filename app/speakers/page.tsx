@@ -3,7 +3,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Premise } from '@/components/Premise';
 import { PersonContact } from '@/components/PersonContact';
-import { Explore, MEETUP_SENTENCE, StatRow } from '@/components/site/parts';
+import { Explore, EVENTS_SENTENCE, StatRow } from '@/components/site/parts';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
 export const metadata: Metadata = {
@@ -84,7 +84,7 @@ export default function SpeakersPage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">After November 14</span>
-            <p className="m-lead">{MEETUP_SENTENCE}</p>
+            <p className="m-lead">{EVENTS_SENTENCE}</p>
             <p className="m-lead" style={{ marginTop: 12 }}>If you would like to be involved beyond the day, tell us which field.</p>
           </div>
         </section>

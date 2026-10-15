@@ -43,7 +43,8 @@ export const EVENT_NAME = 'Meridian Conference';
 export const REGISTRATION_CLOSES_LABEL = 'November 7';
 
 /**
- * The meetup plan after November 14. Never hardcode these in components.
+ * Events after November 14. Only firstFields is published. count, fields and
+ * cadence are NOT published: the plan is not confirmed (Jax, Oct 15).
  * Only the three first fields are named; the other three are not public.
  */
 export const MEETUPS = {
