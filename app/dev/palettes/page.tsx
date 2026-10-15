@@ -27,8 +27,8 @@ export default function Palettes() {
                 <section className="m-hero" style={{ padding: '40px 0 32px' }}>
                   <MeridianLine />
                   <span className="m-eyebrow">Los Angeles</span>
-                  <h1 style={{ fontSize: 'clamp(30px, 4vw, 48px)' }}>Meridian brings students and executives together in person, by field.</h1>
-                  <p className="m-lead">We start with a conference in Los Angeles on November 14, free for every student, then scale into 25 in-person meetups across six fields.</p>
+                  <h1 style={{ fontSize: 'clamp(40px, 6vw, 72px)' }}>Reverse gatekeeping.</h1>
+                  <p className="m-sub">Meridian brings students and executives together in person, by field.</p>
                   <div className="m-actions"><RegisterButton /><a className="m-link" href="/partners/">Partner with Meridian</a></div>
                 </section>
                 <Doors />

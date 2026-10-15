@@ -9,9 +9,6 @@ import { FirstMeridian } from '@/components/FirstMeridian';
 import { CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT } from '@/config';
 import { press } from '@/data/press';
 
-const SUBHEAD =
-  'We start with a conference in Los Angeles on November 14, free for every student, then scale into 25 in-person meetups across six fields.';
-
 export default function Home() {
   return (
     <div className="m-page">
@@ -19,12 +16,12 @@ export default function Home() {
       <Nav />
       <main id="main">
         {/* 1. Hero */}
-        <section className="m-hero">
+        <section className="m-hero m-hero-home">
           <MeridianLine />
           <div className="m-wrap">
             <span className="m-eyebrow">Los Angeles</span>
-            <h1>Meridian brings students and executives together in person, by field.</h1>
-            <p className="m-lead">{SUBHEAD}</p>
+            <h1>Reverse gatekeeping.</h1>
+            <p className="m-sub">Meridian brings students and executives together in person, by field.</p>
             <div className="m-actions">
               <RegisterButton>Register for {EVENT_DATE_SHORT}</RegisterButton>
               <a className="m-link" href="/partners/">Partner with Meridian</a>
