@@ -6,18 +6,18 @@ import { founder, team, detail } from '@/data/team';
 
 export const metadata: Metadata = {
   title: 'Team',
-  description: 'The student team that runs Meridian, across USC, UCLA, and UC Berkeley.',
+  description: 'The team behind Meridian, across UCLA, USC, and UC Berkeley.',
 };
 
 export default function TeamPage() {
   return (
     <div className="m-page">
       <Nav trail={[{ label: 'About', href: '/about/' }, { label: 'Team' }]} />
-      <main>
+      <main id="main">
         <section className="m-hero" style={{ paddingBottom: 32 }}>
           <div className="m-wrap">
             <h1>The team</h1>
-            <p className="m-lead" style={{ marginTop: 16 }}>Meridian is run by students at USC, UCLA, and UC Berkeley.</p>
+            <p className="m-lead" style={{ marginTop: 16 }}>A team across UCLA, USC, and UC Berkeley.</p>
           </div>
         </section>
         <section className="m-section">
@@ -30,6 +30,7 @@ export default function TeamPage() {
                   <p className="role">{m.role}</p>
                   {detail(m) && <p className="det">{detail(m)}</p>}
                   {m.approved && m.bio && <p style={{ marginTop: 10, fontSize: 15 }}>{m.bio}</p>}
+                  {m.slug === 'jaxton-wright' && <p style={{ marginTop: 10, fontSize: 15 }}><a className="m-link" href="/about/#founder">About the founder</a></p>}
                 </article>
               ))}
             </div>

@@ -3,7 +3,8 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { ContactForm } from '@/components/ContactForm';
 import { PersonContact } from '@/components/PersonContact';
-import { Explore, PressLinks, NETWORK_SENTENCE } from '@/components/site/parts';
+import { Explore, PressLinks } from '@/components/site/parts';
+import { FirstMeridian } from '@/components/FirstMeridian';
 import { confirmedLeaders, title } from '@/data/leaders';
 import { livePartners } from '@/data/partners';
 import { press } from '@/data/press';
@@ -15,15 +16,14 @@ export const metadata: Metadata = {
     'Meridian is scaling from one conference into a company that hosts in-person meetups by field. Companies, campus offices, and nonprofit partners work with us from the November 14 conference onward.',
 };
 
-// TODO(jax): the four "what is in it for you" blocks and the how-it-works steps
-// live in the v2 brief, which did not arrive. The blocks below use only
-// statements that appear in the v3 brief; how-it-works is not rendered.
+// Brief v2 6.6 with v3 19.2 order. The universities block is left off until a
+// university confirms (v2 6.6).
 export default function PartnersPage() {
   const first = confirmedLeaders.slice(0, 5);
   return (
     <div className="m-page">
       <Nav />
-      <main>
+      <main id="main">
         {/* 1. Lead */}
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
@@ -59,15 +59,15 @@ export default function PartnersPage() {
           </div>
         </section>
 
-        {/* 4. What is in it for you */}
+        {/* 4. What is in it for you (brief v2 6.6) */}
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">What is in it for you</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>Students</h3><p>Students from across Los Angeles campuses, in person, working next to your team.</p></div>
-              <div><h3>Executives</h3><p>Executives from your field in the same room.</p></div>
-              <div><h3>Presence</h3><p>Your name, your people, and your gear are on site at the meetup you host.</p></div>
-              <div><h3>The network</h3><p>{NETWORK_SENTENCE}</p></div>
+              <div><h3>Your name, in the room</h3><p>Partners run tables at the conference and are named in the room and in what we publish.</p></div>
+              <div><h3>Meetups by field, under your name</h3><p>After the conference, we host in-person meetups by field, like engineering, pre-med, or business, under a partner&apos;s name, tent, and gear. Students form teams and build something from the same prompt, and the winning team takes home a prize from the partner or a cash prize.</p></div>
+              <div><h3>Executives from your field</h3><p>Each meetup has one or two executives from that field. Your people meet them too.</p></div>
+              <div><h3>Students and press, through who you are</h3><p>Students and press get to know a partner through its people and what it cares about, not a logo on a banner.</p></div>
             </div>
           </div>
         </section>
@@ -86,18 +86,34 @@ export default function PartnersPage() {
             </p>
             <p className="m-lead" style={{ marginTop: 12 }}>Backed by George Leis, Chairman, YMCA of the USA.</p>
             {press.length > 0 && <div style={{ marginTop: 12 }}><PressLinks showPage={false} /></div>}
-            <blockquote style={{ margin: '28px 0 0', maxWidth: '62ch' }}>
-              <p style={{ fontFamily: 'var(--font-fraunces), Georgia, serif', fontSize: 22, color: 'var(--heading)' }}>
-                &ldquo;I had an amazing time speaking on my experience and being able to hear the
-                experiences of so many other talented individuals.&rdquo;
-              </p>
-              <footer className="m-small" style={{ marginTop: 10 }}>
-                <a href="https://www.instagram.com/theadrielshow/reels/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 700, color: 'var(--ink)' }}>Adriel Miramontes</a>
-                , Journalist and Host, The Adriel Show
-              </footer>
-            </blockquote>
           </div>
         </section>
+
+        {/* Who we work with. The universities block stays off until a university says yes. */}
+        <section className="m-section">
+          <div className="m-wrap">
+            <span className="m-eyebrow">Who we work with</span>
+            <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+              <div><h3>Companies and brands</h3><p>Brands working with us on meetups, tables, and the day itself.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#companies-and-brands">See the group</a></p></div>
+              <div><h3>Campus offices and departments</h3><p>UCLA and USC departments and student organizations reaching their students.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#ucla">See the group</a></p></div>
+              <div><h3>Nonprofits and community organizations</h3><p>Programs that bring their students and alumni to the day.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#community-and-nonprofit">See the group</a></p></div>
+            </div>
+          </div>
+        </section>
+
+        {/* 6. How it works */}
+        <section className="m-section">
+          <div className="m-wrap">
+            <span className="m-eyebrow">How it works</span>
+            <div className="m-three">
+              <div><h3>1. Tell us</h3><p>Tell us who you are and what you would like to do.</p></div>
+              <div><h3>2. We talk</h3><p>We talk and find the right fit.</p></div>
+              <div><h3>3. We build it together</h3><p>We build it together, starting with November 14 and continuing after.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <FirstMeridian detail />
 
         {/* 7. Form and contact */}
         <section className="m-section" id="inquiries">
@@ -106,6 +122,7 @@ export default function PartnersPage() {
             <h2 className="m-display m-h2">What would you like to do with Meridian?</h2>
             <ContactForm />
             <div style={{ marginTop: 48 }}><PersonContact /></div>
+            <p className="m-small" style={{ marginTop: 28 }}>The General Atomics Sciences Education Foundation funds Meridian and the aerospace design lab.</p>
           </div>
         </section>
       </main>

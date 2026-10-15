@@ -19,6 +19,7 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
 
   return (
     <>
+      <a className="m-skip" href="#main">Skip to content</a>
       <header className="m-header">
         <div className="m-header-in">
           <a className="m-logo" href="/" aria-label={`${SITE_NAME} home`}>

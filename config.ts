@@ -14,17 +14,11 @@ export const EVENT_DATE = 'Saturday, November 14, 2026';
 /** Short date for inline copy and registration prompts. */
 export const EVENT_DATE_SHORT = 'November 14';
 
-/** Venue, now confirmed down to the building. */
+/** Venue. UCLA only: never a building, room or address (brief v2 section 2). */
 export const EVENT_VENUE = 'UCLA';
 
 /** Event time window. */
 export const EVENT_TIME = '11 AM to 3 PM';
-
-/** Confirmed venue details. */
-export const VENUE_DETAILS = {
-  building: 'Covel Commons',
-  address: '200 De Neve, Los Angeles, CA 90095',
-};
 
 /** Instagram (@meridianconference), where day-of updates are posted. */
 export const INSTAGRAM_URL: string | null = 'https://www.instagram.com/meridianconference/';
@@ -71,6 +65,13 @@ export const PARTNER_NAMED_BY = '';
  * TODO(jax): switch to a branded address (for example hello@meridianventura.com
  * forwarding to the team inbox). One value, so it changes everywhere.
  */
-export const CONTACT_EMAIL_PUBLIC = CONTACT_EMAIL;
+export const CONTACT_EMAIL_PUBLIC = CONTACT_EMAIL_TEAM;
 
 export const CALENDLY_URL = 'https://calendly.com/jaxtonwright';
+
+/** Founder links. Used on the About page only. */
+export const INSTAGRAM_FOUNDER_URL = 'https://www.instagram.com/jaxtonwright/';
+export const LINKEDIN_FOUNDER_URL = 'https://www.linkedin.com/in/jaxtonwright/';
+
+/** Shown in the footer. */
+export const SITE_UPDATED = 'October 15, 2026';

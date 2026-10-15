@@ -1,7 +1,7 @@
 import { REGISTRATION_FORM_URL, MEETUPS, EVENT_DATE_SHORT, EVENT_VENUE } from '@/config';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 import { team, founder } from '@/data/team';
-import { livePartners } from '@/data/partners';
+import { livePartners, homePartners } from '@/data/partners';
 import { press } from '@/data/press';
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -53,22 +53,64 @@ export function MeridianLine() {
 export function Doors() {
   const doors = [
     { h: 'Students', p: 'The conference is free, the leaders come to you, and nothing needs preparing. See how it works and register.', l: 'For students', href: '/students/' },
-    // TODO(jax): executive door copy lives in the v2 brief
-    { h: 'Executives', p: `Spend a day with students from across Los Angeles campuses, in your field, on ${EVENT_DATE_SHORT}. See what the conference asks of leaders.`, l: 'For executives', href: '/speakers/' },
-    { h: 'Partners', p: 'Companies, campus offices, and nonprofit partners work with us from the November 14 conference onward.', l: 'For partners', href: '/partners/' },
+    { h: 'Executives', p: 'Spend the day getting to know students, alongside the other leaders in the room. See what the day involves and who is joining.', l: 'For executives', href: '/speakers/' },
+    { h: 'Partners', p: 'Companies, campus offices, and nonprofits are working with Meridian on the conference and on what comes after it. See what that looks like.', l: 'For partners', href: '/partners/' },
   ];
   return (
     <div className="m-wrap">
+      <h2 className="m-display m-h2">Where would you like to start?</h2>
       <div className="m-doors">
         {doors.map((d) => (
           <div className="m-door" key={d.h}>
             <h3>{d.h}</h3>
             <p>{d.p}</p>
-            <a className="m-link" href={d.href}>{d.l} &rarr;</a>
+            <a className="m-link" href={d.href}>{d.l}</a>
           </div>
         ))}
       </div>
     </div>
+  );
+}
+
+/** The three blocks of what Meridian does. Used on the home and About pages. */
+export function WhatMeridianDoes() {
+  return (
+    <div className="m-three">
+      <div>
+        <h3>The conference</h3>
+        <p>A free day at UCLA where leaders from every field come to students. November 14.</p>
+        <p style={{ marginTop: 12 }}><a className="m-link" href="/conference/">See the conference</a></p>
+      </div>
+      <div>
+        <h3>Meetups by field</h3>
+        <p>
+          In-person meetups, each in one field, beginning with {list(MEETUPS.firstFields)}.
+          Each brings executives from that field together with students from across Los Angeles
+          campuses, with student teams working the same challenge side by side.
+        </p>
+        <p style={{ marginTop: 10 }}>Twenty-five meetups across {numWord(MEETUPS.fields)} fields, {MEETUPS.cadence}.</p>
+      </div>
+      <div>
+        <h3>The network</h3>
+        <p>{NETWORK_SENTENCE}</p>
+      </div>
+    </div>
+  );
+}
+
+/** The name note, with the meridian line passing through it. */
+export function NameNote() {
+  return (
+    <section className="m-section" style={{ position: 'relative', overflow: 'hidden' }} aria-labelledby="name-h">
+      <MeridianLine />
+      <div className="m-wrap" style={{ position: 'relative' }}>
+        <span className="m-eyebrow" id="name-h">The name</span>
+        <p className="m-display" style={{ maxWidth: '26ch' }}>
+          A meridian is the highest point in the arc and the line connecting where you are to where
+          you are going. The line runs through here.
+        </p>
+      </div>
+    </section>
   );
 }
 
@@ -124,7 +166,7 @@ export function TeamStrip() {
     <section className="m-section" aria-labelledby="team-h">
       <div className="m-wrap">
         <span className="m-eyebrow">The team</span>
-        <h2 id="team-h" className="m-display m-h2">Run by students at USC, UCLA, and UC Berkeley</h2>
+        <h2 id="team-h" className="m-display m-h2">A team across UCLA, USC, and UC Berkeley</h2>
         <div className="m-people m-team">
           {all.map((m) => (
             <div className="m-person" key={m.slug}>
@@ -140,8 +182,8 @@ export function TeamStrip() {
   );
 }
 
-export function PartnerList({ limit, heading = true }: { limit?: number; heading?: boolean }) {
-  const rows = limit ? livePartners.slice(0, limit) : livePartners;
+export function PartnerList({ heading = true, home = false }: { heading?: boolean; home?: boolean }) {
+  const rows = home ? homePartners : livePartners;
   return (
     <div>
       {heading && <span className="m-eyebrow">Who is working with us</span>}
@@ -149,7 +191,7 @@ export function PartnerList({ limit, heading = true }: { limit?: number; heading
         {rows.map((p) => (
           <div className="m-row" key={p.name}>
             <span className="n">{p.name}</span>
-            <span className="r">{p.role}</span>
+            <span className="r">{p.line}</span>
           </div>
         ))}
       </div>

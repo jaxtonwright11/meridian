@@ -1,18 +1,23 @@
-import { EVENT_DATE_SHORT } from '@/config';
-
-/** Short proof block: December 2025. Facts as past facts, one quote, no commentary. */
-export function FirstMeridian() {
+/** The first Meridian, December 2025. Past facts, two photos, one quote, no commentary. */
+export function FirstMeridian({ detail = false }: { detail?: boolean }) {
   return (
     <section className="m-section" id="first-meridian">
       <div className="m-wrap">
         <span className="m-eyebrow">December 2025</span>
         <h2 className="m-display m-h2">The first Meridian</h2>
         <p className="m-lead">
-          About 150 students met leaders from Netflix, OpenAI, and Chase Bank in direct,
-          face-to-face conversations. 23 executives attended, and nine students left with
-          internships. {EVENT_DATE_SHORT} is built on that event.
+          About 150 students met leaders from Netflix, OpenAI, and Chase Bank. Not for a lecture.
+          For conversations that turned into mentorships, internship introductions, and career
+          pivots. November 14 is bigger.
         </p>
-        <blockquote style={{ margin: '28px 0 0', maxWidth: '62ch' }}>
+        <p className="m-lead" style={{ marginTop: 12 }}>
+          23 executives attended, and nine students left with internships.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20, margin: '28px 0' }}>
+          <img src="/opt/img_9543.webp" alt="Wide shot of full December 2025 panel, Jaxton moderating with five panelists" width={1200} height={800} loading="lazy" style={{ width: '100%', height: 'auto' }} />
+          <img src="/opt/img_1728.webp" alt="Woman standing with microphone speaking to crowd at December 2025" width={1200} height={800} loading="lazy" style={{ width: '100%', height: 'auto' }} />
+        </div>
+        <blockquote style={{ margin: '0', maxWidth: '62ch' }}>
           <p style={{ fontFamily: 'var(--font-fraunces), Georgia, serif', fontSize: 22, color: 'var(--heading)' }}>
             &ldquo;I had an amazing time speaking on my experience and being able to hear the
             experiences of so many other talented individuals.&rdquo;
@@ -25,7 +30,7 @@ export function FirstMeridian() {
             , Journalist and Host, The Adriel Show
           </footer>
         </blockquote>
-        <p style={{ marginTop: 20 }}><a className="m-link" href="/past/">The first Meridian in photos</a></p>
+        {!detail && <p style={{ marginTop: 20 }}><a className="m-link" href="/past/">The first Meridian</a></p>}
       </div>
     </section>
   );

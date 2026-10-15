@@ -1,12 +1,10 @@
-// Leader roster. Data, never hardcoded in components.
+// Public leader roster, as of October 15, 2026 (brief v2 section 7.2, v3 sections 12 to 14, 22).
 //
-// Order is roster order (best known first); the tail stays last.
-// A photo renders only when photoApproved is true. A bio renders only when
-// bioApproved is true. Nothing here is ever shown as a placeholder face.
-//
-// TODO(jax): this roster was built from meridian-leader-bios.md plus names in
-// the brief. The v2 brief (31 confirmed leaders, with titles) did not arrive,
-// so titles marked null are missing, and the count is lower than 31.
+// Order is Jax's order (best known first). Never re-sort. 36 records, 31 confirmed.
+// Only status "confirmed" renders anywhere, including meta tags and alt text.
+// A photo renders only when photoApproved is true and a file exists. A bio
+// renders only when bioApproved is true. No placeholder faces.
+// Internal notes from the brief are deliberately not in this file.
 
 export interface Leader {
   slug: string;
@@ -18,16 +16,41 @@ export interface Leader {
   photo?: string;
   photoApproved: boolean;
   status: 'confirmed' | 'check';
+  format?: 'virtual' | 'in-person';
 }
 
 const p = (slug: string) => `/opt/people/${slug}.webp`;
 
 export const leaders: Leader[] = [
   {
+    slug: 'jeff-hoffman',
+    name: 'Jeff Hoffman',
+    roles: ['Former NASA astronaut', 'Professor, MIT'],
+    bioApproved: false,
+    photoApproved: false,
+    status: 'check',
+    format: 'virtual',
+  },
+  {
+    slug: 'adam-steltzner',
+    name: 'Dr. Adam Steltzner',
+    roles: ['NASA Jet Propulsion Laboratory'],
+    bioApproved: false,
+    photoApproved: false,
+    status: 'check',
+  },
+  {
+    slug: 'stacy-brown-philpot',
+    name: 'Stacy Brown-Philpot',
+    roles: ['Founder and Managing Partner, Cherryrock Capital', 'Former CEO, TaskRabbit'],
+    bioApproved: false,
+    photoApproved: false,
+    status: 'check',
+  },
+  {
     slug: 'george-leis',
     name: 'George Leis',
     roles: ['Chairman, YMCA of the USA', 'President, Cal Private Bank'],
-    // Approved by Jax (brief section 15). Last two sentences removed.
     bio: 'George was the first person to believe in this conference and in the student building it. He put in the first $1,000, which is what made the first event possible at all.\n\nHe has never treated it as a donation and walked away. Every time Jaxton is in town they meet, without exception, and he was there at his high school graduation.',
     bioApproved: true,
     photo: p('george-leis'),
@@ -35,11 +58,19 @@ export const leaders: Leader[] = [
     status: 'confirmed',
   },
   {
+    slug: 'charles-hudson',
+    name: 'Charles Hudson',
+    roles: ['Venture capitalist and founder, Precursor Ventures'],
+    bioApproved: false,
+    photoApproved: false,
+    status: 'check',
+  },
+  {
     slug: 'alex-mcdowell',
     name: 'Alex McDowell',
     roles: ['Production Designer, Minority Report and Fight Club', 'Professor, USC School of Cinematic Arts'],
     bio: 'Alex McDowell is a production designer whose work includes Minority Report, Fight Club, The Crow, and Man of Steel. He is a Professor of Practice at the USC School of Cinematic Arts, where he directs the World Building Media Lab, and a Royal Designer for Industry, the United Kingdom’s highest honor for designers.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('alex-mcdowell'),
     photoApproved: true,
     status: 'confirmed',
@@ -47,9 +78,9 @@ export const leaders: Leader[] = [
   {
     slug: 'deray-mckesson',
     name: 'DeRay Mckesson',
-    roles: ['CEO, Campaign Zero'], // TODO(jax): his organization lists Executive Director
+    roles: ['CEO, Campaign Zero'],
     bio: 'DeRay Mckesson is a co-founder of Campaign Zero, a policy platform focused on reducing police violence, and a longtime organizer from Baltimore. He hosts the podcast Pod Save the People, wrote the book On the Other Side of Freedom, and is a graduate of Bowdoin College.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('deray-mckesson'),
     photoApproved: true,
     status: 'confirmed',
@@ -59,17 +90,18 @@ export const leaders: Leader[] = [
     name: 'Dr. Rosaly Lopes',
     roles: ['Senior Research Scientist, NASA Jet Propulsion Laboratory'],
     bio: 'Dr. Rosaly Lopes is a planetary geologist and volcanologist and a Senior Research Scientist at NASA’s Jet Propulsion Laboratory. She worked on the Galileo mission to Jupiter and the Cassini mission to Saturn, and received the American Astronomical Society’s Carl Sagan Medal for communicating science to the public.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('rosaly-lopes'),
     photoApproved: true,
     status: 'confirmed',
+    format: 'virtual',
   },
   {
     slug: 'paul-rusnak',
     name: 'Paul Rusnak',
-    roles: ['Founder, Rusnak Auto Group'], // TODO(jax): roster said CEO; public sources say chairman
+    roles: ['Founder, Rusnak Auto Group'],
     bio: 'Paul Rusnak is the founder of Rusnak Auto Group, a family-owned luxury automotive group based in Southern California. He began his career in the auto industry in 1959 and built the group from a single dealership.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('paul-rusnak'),
     photoApproved: true,
     status: 'confirmed',
@@ -79,9 +111,25 @@ export const leaders: Leader[] = [
     name: 'David Lash',
     roles: ['Managing Counsel for Pro Bono and Public Interest Services, O’Melveny & Myers'],
     bio: 'David Lash oversees O’Melveny & Myers’ national and international pro bono program. He previously served as executive director of Bet Tzedek, one of the largest legal services agencies in the country, and was named to the Los Angeles Business Journal’s 2024 Top 100 Lawyers list.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('david-lash'),
     photoApproved: true,
+    status: 'confirmed',
+  },
+  {
+    slug: 'ben-talei',
+    name: 'Dr. Ben Talei',
+    roles: ['Plastic Surgeon', 'Founder, Beverly Hills Center for Plastic and Laser Surgery'],
+    bioApproved: false,
+    photoApproved: false,
+    status: 'check',
+  },
+  {
+    slug: 'michael-ayad',
+    name: 'Dr. Michael Ayad',
+    roles: ['Neurosurgeon, NewYork-Presbyterian Brooklyn Methodist'],
+    bioApproved: false,
+    photoApproved: false,
     status: 'confirmed',
   },
   {
@@ -89,7 +137,7 @@ export const leaders: Leader[] = [
     name: 'Tony Shriller',
     roles: ['Founder, Shriller Creative', 'Comedian and TEDx Speaker'],
     bio: 'Tony Shriller is a stand-up comedian, TEDx speaker, and the founder of Shriller Creative, which helps speakers and experts turn their ideas into content. His first stand-up special, filmed at the Ice House in Pasadena, was released in 2024.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('tony-shriller'),
     photoApproved: true,
     status: 'confirmed',
@@ -98,7 +146,6 @@ export const leaders: Leader[] = [
     slug: 'carlos-gonzales',
     name: 'Carlos Gonzales',
     roles: ['Vice President of Manufacturing, The Peggs Company'],
-    // No bio yet. Name, title and photo only.
     bioApproved: false,
     photo: p('carlos-gonzales'),
     photoApproved: true,
@@ -109,7 +156,7 @@ export const leaders: Leader[] = [
     name: 'Chris Swain',
     roles: ['Co-founder, EA Game Innovation Lab', 'USC Iovine and Young Academy'],
     bio: 'Chris Swain is a professor at the USC Iovine and Young Academy, where he teaches innovation and venture development. He co-founded the Electronic Arts Game Innovation Lab at USC, has co-founded three venture-backed companies, and was an early member of the design firm R/GA.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('chris-swain'),
     photoApproved: true,
     status: 'confirmed',
@@ -119,9 +166,17 @@ export const leaders: Leader[] = [
     name: 'Michael Kang',
     roles: ['Graduate Director of Film and Television Production, LMU School of Film and Television'],
     bio: 'Michael Kang is a filmmaker and the Graduate Director of Film and Television Production at Loyola Marymount University. His first feature film, The Motel, premiered at the Sundance Film Festival and won the Humanitas Prize.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('michael-kang'),
     photoApproved: true,
+    status: 'confirmed',
+  },
+  {
+    slug: 'sheena-franklin',
+    name: 'Sheena D. Franklin',
+    roles: ['Founder and CEO, K’ept Health'],
+    bioApproved: false,
+    photoApproved: false,
     status: 'confirmed',
   },
   {
@@ -129,9 +184,17 @@ export const leaders: Leader[] = [
     name: 'Paul C. Pereira, JD',
     roles: ['SVP, Patient Advocacy and Government Affairs, Ardelyx'],
     bio: 'Paul Pereira is Senior Vice President of Patient Advocacy and Government Affairs at Ardelyx. Earlier in his career he led patient advocacy at Saniona and at Vertex Pharmaceuticals.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('paul-pereira'),
     photoApproved: true,
+    status: 'confirmed',
+  },
+  {
+    slug: 'julian-lewis',
+    name: 'Julian Lewis',
+    roles: ['Board Member, EnCorps', 'Formerly Lockheed Martin'],
+    bioApproved: false,
+    photoApproved: false,
     status: 'confirmed',
   },
   {
@@ -139,17 +202,18 @@ export const leaders: Leader[] = [
     name: 'Ellen Junn',
     roles: ['Former President, California State University, Stanislaus'],
     bio: 'Dr. Ellen Junn served as the 11th president of California State University, Stanislaus, from 2016 to 2023, and was the first Korean American woman to lead a four-year public university in the United States. Her 37 years in the California State University system included provost roles at San José State and Dominguez Hills.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('ellen-junn'),
     photoApproved: true,
     status: 'confirmed',
+    format: 'in-person',
   },
   {
     slug: 'yan-searcy',
     name: 'Dr. Yan Searcy',
     roles: ['Dean, California State University, Northridge'],
     bio: 'Dr. Yan Searcy is Dean of the College of Social and Behavioral Sciences at California State University, Northridge, a role he has held since 2018. He holds degrees from the University of Notre Dame, the University of Wisconsin-Madison, and the University of Chicago.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('yan-searcy'),
     photoApproved: true,
     status: 'confirmed',
@@ -159,7 +223,7 @@ export const leaders: Leader[] = [
     name: 'Dr. Bob Dodge',
     roles: ['President, Physicians for Social Responsibility Los Angeles'],
     bio: 'Dr. Bob Dodge is a family physician in Ventura and the President of Physicians for Social Responsibility Los Angeles. He also co-chairs a national committee of Physicians for Social Responsibility and writes regularly on public health and peace.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('bob-dodge'),
     photoApproved: true,
     status: 'confirmed',
@@ -169,7 +233,7 @@ export const leaders: Leader[] = [
     name: 'Joe Killinger',
     roles: ['Co-founder, Commercial Brokers International'],
     bio: 'Joe Killinger is a co-founder of Commercial Brokers International, a commercial real estate brokerage based in Los Angeles. He has worked in commercial real estate for more than three decades as a broker, investor, and operator.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('joe-killinger'),
     photoApproved: true,
     status: 'confirmed',
@@ -179,9 +243,35 @@ export const leaders: Leader[] = [
     name: 'Jody Stiger',
     roles: ['Deputy Chief, Administrative Services Division, LA Metro Department of Public Safety'],
     bio: 'Jody Stiger is Deputy Chief of the Administrative Services Division at LA Metro. He is a Marine Corps veteran with a 29-year career at the Los Angeles Police Department, and previously served as Systemwide Director of Community Safety at the University of California Office of the President.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('jody-stiger'),
     photoApproved: true,
+    status: 'confirmed',
+  },
+  {
+    slug: 'tama-hasson',
+    name: 'Dr. Tama Hasson',
+    roles: ['Assistant Vice Provost of Undergraduate Research Centers, UCLA', 'Director, Undergraduate Research Center, Sciences'],
+    bio: 'Dr. Tama Hasson is Assistant Vice Provost of Undergraduate Research Centers at UCLA and Director of the Undergraduate Research Center, Sciences. She leads the center that connects UCLA undergraduates with research opportunities.',
+    bioApproved: true,
+    photo: p('tama-hasson'),
+    photoApproved: true,
+    status: 'confirmed',
+  },
+  {
+    slug: 'julie-sina',
+    name: 'Julie Sina',
+    roles: ['Chief of Staff to the Chancellor, UCLA'],
+    bioApproved: false,
+    photoApproved: false,
+    status: 'confirmed',
+  },
+  {
+    slug: 'shanna-shaked',
+    name: 'Dr. Shanna Shaked',
+    roles: ['UCLA Center for Education Innovation and Learning in the Sciences'],
+    bioApproved: false,
+    photoApproved: false,
     status: 'confirmed',
   },
   {
@@ -189,7 +279,7 @@ export const leaders: Leader[] = [
     name: 'Laura Barry',
     roles: ['Realtor, Barry Estates, Rancho Santa Fe'],
     bio: 'Laura Barry is an owner of Barry Estates in Rancho Santa Fe, where she specializes in luxury homes. She is consistently ranked among the top-producing agents in San Diego County and is a graduate of UC San Diego.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('laura-barry'),
     photoApproved: true,
     status: 'confirmed',
@@ -197,9 +287,9 @@ export const leaders: Leader[] = [
   {
     slug: 'troy-palmquist',
     name: 'Troy Palmquist',
-    roles: ['Founder, HomeCode Advisors'],
+    roles: ['Founder, HomeCode Advisors (real estate and proptech)'],
     bio: 'Troy Palmquist is the founder of HomeCode Advisors, which helps real estate teams and proptech companies grow. He previously served as a vice president at eXp Realty and founded two brokerages in Ventura County, The Address and DOORA.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('troy-palmquist'),
     photoApproved: true,
     status: 'confirmed',
@@ -209,48 +299,31 @@ export const leaders: Leader[] = [
     name: 'Rich Block',
     roles: ['Former President, Santa Barbara Zoo'],
     bioApproved: false,
-    photoApproved: false,
-    status: 'confirmed',
-  },
-  {
-    slug: 'tama-hasson',
-    name: 'Tama Hasson',
-    roles: [], // TODO(jax): title and bio were not in the bios file I received
-    bioApproved: false,
-    photo: p('tama-hasson'),
     photoApproved: true,
     status: 'confirmed',
   },
   {
-    slug: 'michael-ayad',
-    name: 'Dr. Michael Ayad',
-    roles: [], // TODO(jax): title lives in the v2 roster
+    slug: 'jayha-buhs-jackson',
+    name: 'Jayha Buhs Jackson',
+    roles: ['UCLA Student Body President'],
     bioApproved: false,
     photoApproved: false,
     status: 'confirmed',
   },
-  {
-    slug: 'sheena-franklin',
-    name: 'Sheena D. Franklin',
-    roles: [], // TODO(jax): title lives in the v2 roster
-    bioApproved: false,
-    photoApproved: false,
-    status: 'confirmed',
-  },
-  // Tail of the roster stays last, in this order.
   {
     slug: 'jimmy-ellis',
-    name: 'Jimmy Ellis',
-    roles: [], // TODO(jax): title and bio were not in the bios file I received
+    name: 'Jimmy Ellis, Ph.D.',
+    roles: ['Director of Academic and Student Services, UC Washington Center (UCDC)'],
+    bio: 'Dr. Jimmy Ellis is Director of Academic and Student Services at the University of California Washington Center, where he works on internships, experiential learning, and early career development for UC students. He was previously Associate Dean of Undergraduate Education at American University and holds a PhD in Public Administration and Policy from American University.',
+    bioApproved: true,
     photo: p('jimmy-ellis'),
     photoApproved: true,
-    bioApproved: false,
     status: 'confirmed',
   },
   {
     slug: 'jack-rosenthal',
-    name: 'Jack Rosenthal',
-    roles: [], // TODO(jax): title lives in the v2 roster
+    name: 'Jack Rosenthal, PE',
+    roles: ['Retired Engineer, Honeywell', 'Engineering Teacher'],
     bioApproved: false,
     photoApproved: false,
     status: 'confirmed',
@@ -258,7 +331,7 @@ export const leaders: Leader[] = [
   {
     slug: 'chelsea-amihere',
     name: 'Chelsea Amihere',
-    roles: [], // TODO(jax): title lives in the v2 roster
+    roles: ['K-12 Outreach Chair, SWE Los Angeles'],
     bioApproved: false,
     photoApproved: false,
     status: 'confirmed',
@@ -268,17 +341,17 @@ export const leaders: Leader[] = [
     name: 'Dr. Naveen Vetcha',
     roles: ['NASA Marshall Space Flight Center'],
     bio: 'Dr. Naveen Vetcha is an aerospace engineer who supports NASA’s Marshall Space Flight Center, where his work has included rocket engine analysis and NASA’s Centennial Challenges program. He earned his master’s degree and PhD in mechanical engineering at UCLA and was named one of 35 space professionals under 35 by the International Institute of Space Commerce in 2018.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('naveen-vetcha'),
     photoApproved: true,
     status: 'confirmed',
   },
   {
     slug: 'ep-mcknight',
-    name: 'EP McKnight', // TODO(jax): roster said "Dr."; her public bio lists no doctorate
+    name: 'EP McKnight',
     roles: ['Author, Playwright, and Motivational Speaker'],
     bio: 'EP McKnight is a poet, actress, playwright, and motivational speaker. She tours her one-woman play I Question America, about civil rights leader Fannie Lou Hamer, which she has performed at more than eighty colleges and universities.',
-    bioApproved: false,
+    bioApproved: true,
     photo: p('ep-mcknight'),
     photoApproved: true,
     status: 'confirmed',
@@ -287,7 +360,7 @@ export const leaders: Leader[] = [
 
 export const confirmedLeaders = leaders.filter((l) => l.status === 'confirmed');
 
-/** Confirmed leaders with an approved photo, in roster order. */
+/** Confirmed leaders with an approved photo and a file, in roster order. */
 export const photoLeaders = confirmedLeaders.filter((l) => l.photo && l.photoApproved);
 
 export const title = (l: Leader) => l.roles[0];

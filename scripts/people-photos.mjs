@@ -50,11 +50,14 @@ const FILES = {
   'yansearcyheadshot.jpg': 'yan-searcy',
 };
 
+// Wide source photos where the face sits off-center need an explicit anchor.
+const POSITION = { 'cheryl-zhang': 'northeast', 'anahi-ceja': 'north', 'aaron-colgan': 'north' };
+
 await mkdir(OUT, { recursive: true });
 for (const [file, slug] of Object.entries(FILES)) {
   const info = await sharp(join(SRC, file))
     .rotate()
-    .resize(800, 800, { fit: 'cover', position: 'attention', withoutEnlargement: false })
+    .resize(800, 800, { fit: 'cover', position: POSITION[slug] ?? 'attention', withoutEnlargement: false })
     .webp({ quality: 82 })
     .toFile(join(OUT, `${slug}.webp`));
   console.log(slug.padEnd(18), info.size);

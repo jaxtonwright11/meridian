@@ -286,3 +286,7 @@ a:hover { color: var(--gold-deep); }
   .m-register { width: auto; }
 }
 @media (max-width: 520px) { .m-cards { grid-template-columns: 1fr; } .m-fgrid { grid-template-columns: 1fr; } }
+
+.m-skip { position: absolute; left: -9999px; top: 8px; background: var(--ink); color: #fff; padding: 10px 14px; z-index: 100; }
+.m-skip:focus { left: 8px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }

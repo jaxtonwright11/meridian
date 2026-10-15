@@ -33,7 +33,7 @@ export default function Palettes() {
                 </section>
                 <Doors />
                 <div style={{ margin: '32px 0' }}><SlimConferenceBand /></div>
-                <PartnerList limit={6} />
+                <PartnerList home />
               </div>
             </div>
             <div className="m-footer" style={{ marginTop: 24, padding: '20px 0' }}>

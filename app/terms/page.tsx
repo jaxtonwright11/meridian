@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { EVENT_DATE, EVENT_VENUE, CONTACT_EMAIL } from '@/config';
+import { EVENT_DATE, EVENT_VENUE, CONTACT_EMAIL_PUBLIC as CONTACT_EMAIL } from '@/config';
 import styles from './terms.module.css';
 
 export const metadata: Metadata = {

@@ -45,14 +45,15 @@ export function ContactForm() {
       <label style={label} htmlFor="f-type">Which describes you (optional)</label>
       <select style={field} id="f-type" name="describes">
         <option value="">Choose one</option>
-        <option>Executive or leader</option>
-        <option>Company</option>
-        <option>Campus office</option>
-        <option>Nonprofit</option>
+        <option>Company or brand</option>
+        <option>Campus office or department</option>
+        <option>Nonprofit or community organization</option>
+        <option>University</option>
         <option>Other</option>
       </select>
       <label style={label} htmlFor="f-msg">What would you like to do with Meridian?</label>
       <textarea style={{ ...field, minHeight: 120 }} id="f-msg" name="message" required />
+      <p className="m-small" style={{ marginTop: 14 }}>We read every message and reply personally.</p>
       {state === 'error' && (
         <p role="alert" style={{ marginTop: 14 }}>
           Something went wrong. Please write to <a className="m-link" href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>{CONTACT_EMAIL_PUBLIC}</a> directly.

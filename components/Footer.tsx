@@ -1,4 +1,4 @@
-import { CONTACT_EMAIL_PUBLIC, INSTAGRAM_URL, SITE_NAME } from '@/config';
+import { CONTACT_EMAIL_PUBLIC, INSTAGRAM_URL, SITE_NAME, SITE_UPDATED } from '@/config';
 
 const cols = [
   { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/'], ['About', '/about/']] },
@@ -37,7 +37,7 @@ export function Footer() {
         </div>
         <div className="m-fbottom">
           <span>&copy; {new Date().getFullYear()} {SITE_NAME}</span>
-          <span>meridianventura.com</span>
+          <span>Last updated {SITE_UPDATED}</span>
         </div>
       </div>
     </footer>

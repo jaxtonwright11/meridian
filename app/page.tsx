@@ -3,10 +3,10 @@ import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import {
   MeridianLine, Doors, SlimConferenceBand, LeadersBand, TeamStrip, PartnerList,
-  PressLinks, RegisterButton, MEETUP_SENTENCE, NETWORK_SENTENCE,
+  PressLinks, RegisterButton, WhatMeridianDoes, NameNote,
 } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
-import { MEETUPS, CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT } from '@/config';
+import { CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT } from '@/config';
 import { press } from '@/data/press';
 
 const SUBHEAD =
@@ -17,7 +17,7 @@ export default function Home() {
     <div className="m-page">
       <MovedAnchors />
       <Nav />
-      <main>
+      <main id="main">
         {/* 1. Hero */}
         <section className="m-hero">
           <MeridianLine />
@@ -54,29 +54,12 @@ export default function Home() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">What Meridian does</span>
-            <div className="m-three">
-              <div>
-                <h3>The conference</h3>
-                <p>A free day at UCLA where leaders from every field come to students. November 14.</p>
-                <p style={{ marginTop: 12 }}><a className="m-link" href="/conference/">See the conference</a></p>
-              </div>
-              <div>
-                <h3>Meetups by field</h3>
-                <p>
-                  In-person meetups, each in one field, beginning with engineering, pre-med, and business.
-                  Twenty-five meetups across six fields, {MEETUPS.cadence}.
-                </p>
-              </div>
-              <div>
-                <h3>The network</h3>
-                <p>{NETWORK_SENTENCE}</p>
-              </div>
-            </div>
+            <WhatMeridianDoes />
           </div>
         </section>
 
-        {/* 6. The name. TODO(jax): the name note from v2 section 4 did not arrive,
-            so this section is not rendered until the text is added. */}
+        {/* 6. The name */}
+        <NameNote />
 
         {/* 7. Slim conference band */}
         <SlimConferenceBand />
@@ -86,7 +69,7 @@ export default function Home() {
         {/* 8. Who is working with us */}
         <section className="m-section">
           <div className="m-wrap">
-            <PartnerList limit={10} />
+            <PartnerList home />
             <p className="m-names"><a className="m-link" href="/partners/directory/">See all partners</a></p>
           </div>
         </section>
@@ -110,8 +93,7 @@ export default function Home() {
           <div className="m-wrap">
             <span className="m-eyebrow">About</span>
             <p className="m-lead">
-              Meridian was founded by Jaxton Wright, a junior at UC Berkeley, and is run with a
-              student team across USC, UCLA, and UC Berkeley.{' '}
+              A team across UCLA, USC, and UC Berkeley. Founded by Jaxton Wright.{' '}
               <a className="m-link" href="/about/">About Meridian</a>
             </p>
           </div>

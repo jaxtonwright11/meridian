@@ -1,30 +1,74 @@
 import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { PartnerList, Explore } from '@/components/site/parts';
+import { Explore } from '@/components/site/parts';
+import { GROUPS, livePartners, type Partner } from '@/data/partners';
 
 export const metadata: Metadata = {
   title: 'Partner directory',
-  description: 'The organizations working with Meridian.',
+  description: 'The organizations working with Meridian on November 14.',
 };
 
+const slug = (g: string) => g.toLowerCase().replace(/[^a-z]+/g, '-');
+
+function Rows({ rows }: { rows: Partner[] }) {
+  return (
+    <div className="m-list">
+      {rows.map((p) => (
+        <div className="m-row" key={p.name}>
+          <span className="n">{p.name}</span>
+          <span className="r">{p.line}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function DirectoryPage() {
+  const groups = GROUPS.filter((g) => livePartners.some((p) => p.group === g));
   return (
     <div className="m-page">
       <Nav trail={[{ label: 'Partners', href: '/partners/' }, { label: 'Directory' }]} />
-      <main>
+      <div className="m-subnav" aria-label="Groups">
+        <div className="m-subnav-in">
+          {groups.map((g) => (<a key={g} href={`#${slug(g)}`}>{g}</a>))}
+        </div>
+      </div>
+      <main id="main">
         <section className="m-hero" style={{ paddingBottom: 32 }}>
           <div className="m-wrap">
-            <h1>Partner directory</h1>
-            <p className="m-lead" style={{ marginTop: 16 }}>Organizations working with Meridian. A partner is listed once it has confirmed in writing.</p>
+            <h1>Who is working with us</h1>
+            <p className="m-lead" style={{ marginTop: 16 }}>
+              The organizations working with Meridian on November 14. More are named here as they confirm.
+            </p>
           </div>
         </section>
-        <section className="m-section">
-          <div className="m-wrap"><PartnerList heading={false} /></div>
-        </section>
+        {groups.map((g) => {
+          const rows = livePartners.filter((p) => p.group === g);
+          const kinds = (['Office or department', 'Student organization'] as const)
+            .filter((k) => rows.some((r) => r.kind === k));
+          return (
+            <section className="m-section" id={slug(g)} key={g}>
+              <div className="m-wrap">
+                <h2 className="m-display m-h2">{g}</h2>
+                {g === 'UCLA' || g === 'USC' ? (
+                  kinds.map((k) => (
+                    <div key={k} style={{ marginBottom: 24 }}>
+                      <span className="m-eyebrow">{k}</span>
+                      <Rows rows={rows.filter((r) => r.kind === k)} />
+                    </div>
+                  ))
+                ) : (
+                  <Rows rows={rows} />
+                )}
+              </div>
+            </section>
+          );
+        })}
         <section className="m-section">
           <div className="m-wrap">
-            <a className="btn btn-ink" href="/partners/#inquiries">Partner with Meridian</a>
+            <p className="m-lead">More partners are named here as they confirm.</p>
+            <div className="m-actions"><a className="btn btn-ink" href="/partners/#inquiries">Partner with Meridian</a></div>
           </div>
         </section>
       </main>

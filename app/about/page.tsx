@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { Explore, RegisterButton } from '@/components/site/parts';
+import { Explore, RegisterButton, WhatMeridianDoes, MeridianLine } from '@/components/site/parts';
+import { founder, team } from '@/data/team';
+import { INSTAGRAM_FOUNDER_URL, LINKEDIN_FOUNDER_URL } from '@/config';
 import { leaders } from '@/data/leaders';
 
 export const metadata: Metadata = {
@@ -20,11 +22,11 @@ export default function AboutPage() {
   return (
     <div className="m-page">
       <Nav />
-      <main>
+      <main id="main">
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">About</span>
-            <h1>Meridian is a company that brings students and executives together, in person, by field.</h1>
+            <h1>Meridian is a company that brings students and executives together in person, by field.</h1>
           </div>
         </section>
 
@@ -40,6 +42,24 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="m-section" style={{ position: 'relative', overflow: 'hidden' }}>
+          <MeridianLine />
+          <div className="m-wrap" style={{ position: 'relative' }}>
+            <span className="m-eyebrow">The name</span>
+            <p className="m-display" style={{ maxWidth: '26ch' }}>
+              A meridian is the highest point in the arc and the line connecting where you are to
+              where you are going. The line runs through here.
+            </p>
+          </div>
+        </section>
+
+        <section className="m-section">
+          <div className="m-wrap">
+            <span className="m-eyebrow">What we do</span>
+            <WhatMeridianDoes />
+          </div>
+        </section>
+
         <section className="m-section" id="founder">
           <div className="m-wrap">
             <span className="m-eyebrow">The founder</span>
@@ -50,9 +70,29 @@ export default function AboutPage() {
                 <h2 className="m-h2" style={{ marginBottom: 6 }}>Jaxton Wright</h2>
                 <p className="m-small" style={{ marginBottom: 18 }}>Founder. Junior, Honors Economics, UC Berkeley.</p>
                 <p className="m-lead">{FOUNDER_BIO}</p>
-                <p style={{ marginTop: 16 }}><a className="m-link" href="/team/">Meet the team</a></p>
+                <p style={{ marginTop: 16, display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+                  <a className="m-link" href={INSTAGRAM_FOUNDER_URL} target="_blank" rel="noopener noreferrer">Instagram</a>
+                  <a className="m-link" href={LINKEDIN_FOUNDER_URL} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="m-section">
+          <div className="m-wrap">
+            <span className="m-eyebrow">The team</span>
+            <p className="m-lead" style={{ marginBottom: 18 }}>A team across UCLA, USC, and UC Berkeley.</p>
+            <div className="m-people m-team">
+              {[founder, ...team].map((m) => (
+                <div className="m-person" key={m.slug}>
+                  <img src={m.photo} alt={m.name} width={300} height={300} loading="lazy" />
+                  <h3>{m.name}</h3>
+                  <p>{m.role}</p>
+                </div>
+              ))}
+            </div>
+            <p className="m-names"><a className="m-link" href="/team/">Meet the team</a></p>
           </div>
         </section>
 
@@ -72,7 +112,13 @@ export default function AboutPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <div className="m-actions" style={{ marginTop: 0 }}><RegisterButton /></div>
+            <p className="m-lead">The General Atomics Sciences Education Foundation funds Meridian and the aerospace design lab.</p>
+            <p className="m-small" style={{ marginTop: 12 }}>
+              <a className="m-link" href="/past/">Past events</a>{' '}&nbsp;{' '}
+              <a className="m-link" href="/press/">Press</a>{' '}&nbsp;{' '}
+              <a className="m-link" href="/contact/">Contact</a>
+            </p>
+            <div className="m-actions" style={{ marginTop: 24 }}><RegisterButton /></div>
           </div>
         </section>
       </main>

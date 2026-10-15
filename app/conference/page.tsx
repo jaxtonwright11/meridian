@@ -6,11 +6,11 @@ import { Schedule } from '@/components/Schedule';
 import { GettingThere } from '@/components/GettingThere';
 import { Explore, RegisterButton, MEETUP_SENTENCE } from '@/components/site/parts';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
-import { EVENT_DATE, EVENT_NAME, EVENT_VENUE, REGISTRATION_CLOSES_LABEL, VENUE_DETAILS } from '@/config';
+import { EVENT_DATE, EVENT_NAME, EVENT_VENUE, EVENT_TIME, REGISTRATION_CLOSES_LABEL } from '@/config';
 
 export const metadata: Metadata = {
   title: { absolute: `${EVENT_NAME} | ${EVENT_DATE} at ${EVENT_VENUE}` },
-  description: `${EVENT_NAME}, ${EVENT_DATE} at ${VENUE_DETAILS.building}, ${EVENT_VENUE}. Free for every student. Meridian brings students and executives together in person, by field.`,
+  description: `${EVENT_NAME}, ${EVENT_DATE} at ${EVENT_VENUE}. Free for every student. Meridian brings students and executives together in person, by field.`,
 };
 
 const EVENT_JSONLD = {
@@ -19,13 +19,14 @@ const EVENT_JSONLD = {
   name: EVENT_NAME,
   startDate: '2026-11-14T11:00:00-08:00',
   endDate: '2026-11-14T15:00:00-08:00',
-  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
   location: {
     '@type': 'Place',
-    name: `${VENUE_DETAILS.building}, ${EVENT_VENUE}`,
-    address: VENUE_DETAILS.address,
+    name: EVENT_VENUE,
+    address: { '@type': 'PostalAddress', addressLocality: 'Los Angeles', addressRegion: 'CA' },
   },
   isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: 'https://forms.gle/Q9khivMSRpyesMNu8', availability: 'https://schema.org/InStock' },
   organizer: { '@type': 'Organization', name: 'Meridian', url: 'https://meridianventura.com' },
 };
 
@@ -44,11 +45,11 @@ export default function ConferencePage() {
           <a href="#getting-there">Getting there</a>
         </div>
       </div>
-      <main>
+      <main id="main">
         {/* 1-2. Header, register */}
         <section className="m-hero" style={{ paddingBottom: 56 }}>
           <div className="m-wrap">
-            <span className="m-eyebrow">{EVENT_DATE} &middot; {VENUE_DETAILS.building}, {EVENT_VENUE}</span>
+            <span className="m-eyebrow">{EVENT_DATE} at {EVENT_VENUE}. {EVENT_TIME}.</span>
             <h1>Meridian Conference</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               The conference is where Meridian starts. Meridian brings students and executives
@@ -65,14 +66,17 @@ export default function ConferencePage() {
         {/* 3. Premise */}
         <section className="m-section"><div className="m-wrap"><Premise /></div></section>
 
-        {/* 4. What the day includes. TODO(jax): v2 6.2 wording did not arrive. */}
+        {/* 4. What the day includes (brief v2 6.2) */}
         <section className="m-section" id="the-day">
           <div className="m-wrap">
             <span className="m-eyebrow">What the day includes</span>
-            <div className="m-three">
-              <div><h3>Time with leaders</h3><p>Leaders from every field get to know students, and each one is looking to help with opportunities they manage.</p></div>
-              <div><h3>Demo day</h3><p>Student founders and researchers present to peers and executives on the floor.</p></div>
-              <div><h3>Engineering design lab</h3><p>A lab for students, run by NASA engineers.</p></div>
+            <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+              <div><h3>Aerospace design lab</h3><p>Led by NASA engineers. You spend the day building something real instead of sitting through a talk about it.</p></div>
+              <div><h3>Demo day</h3><p>Students present research, startups, and projects to executives, investors, other students, and press.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/demo-day/">About demo day</a></p></div>
+              <div><h3>Free professional headshots</h3><p>Photographers from Las Fotos Project shoot you for free and the pictures are yours to keep.</p></div>
+              <div><h3>Partner tables</h3><p>The organizations that brought students run tables of their own. Walk up to any of them, no introduction needed.</p></div>
+              <div><h3>Petersen Automotive Museum</h3><p>The museum is bringing vehicles and staff to the floor.</p></div>
+              <div><h3>Someone to introduce you</h3><p>Hosts work the floor all day. If walking up to a stranger is not your thing, find one and they will make the introduction.</p></div>
             </div>
           </div>
         </section>
