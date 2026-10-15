@@ -11,11 +11,11 @@ const slides2024 = [
   },
   {
     src: '/IMG_1802.jpeg',
-    alt: 'Empty 2024 hotel ballroom before the event, stage with four chairs and conference branding',
+    alt: 'Empty 2024 hotel ballroom before the event, with four chairs set out',
   },
   {
     src: '/IMG_1805.jpeg',
-    alt: '2024 panel on stage with speakers in hotel venue',
+    alt: '2024 panel with speakers in a hotel venue',
   },
   {
     src: '/IMG_1803.jpeg',

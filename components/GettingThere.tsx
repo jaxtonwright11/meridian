@@ -1,68 +1,33 @@
-'use client';
-
-import { AnimateIn } from './AnimateIn';
-import { RegisterCta } from './RegisterCta';
-import { EVENT_VENUE, EVENT_DATE, EVENT_TIME, VENUE_DETAILS, INSTAGRAM_URL } from '@/config';
-import styles from './GettingThere.module.css';
-
-const rows = [
-  { label: 'Building', value: VENUE_DETAILS.building },
-  { label: 'Address', value: VENUE_DETAILS.address },
-  { label: 'Date', value: `${EVENT_DATE}, ${EVENT_TIME}` },
-];
+import { EVENT_DATE, EVENT_TIME, EVENT_VENUE, INSTAGRAM_URL, VENUE_DETAILS } from '@/config';
 
 export function GettingThere() {
+  const rows = [
+    ['Building', VENUE_DETAILS.building],
+    ['Address', VENUE_DETAILS.address],
+    ['Date', `${EVENT_DATE}, ${EVENT_TIME}`],
+  ];
   return (
-    <section id="getting-there" className={styles.section}>
-      <div className="container">
-        <div className="chunk">
-          <AnimateIn>
-            <p className="eyebrow">Getting there</p>
-          </AnimateIn>
-          <AnimateIn delay={0.1}>
-            <h2>
-              {VENUE_DETAILS.building} at {EVENT_VENUE}
-            </h2>
-          </AnimateIn>
-
-          <AnimateIn delay={0.15}>
-            <p className={styles.lead}>
-              We are at {VENUE_DETAILS.building}, {VENUE_DETAILS.address}. Put that
-              address into your maps app and it will take you to the door.
-            </p>
-          </AnimateIn>
-
-          <AnimateIn delay={0.2}>
-            <dl className={styles.details}>
-              {rows.map((r) => (
-                <div key={r.label} className={styles.row}>
-                  <dt>{r.label}</dt>
-                  <dd>{r.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </AnimateIn>
-
-          <AnimateIn delay={0.25}>
-            <p className={styles.updates}>
-              {INSTAGRAM_URL ? (
-                <>
-                  Follow{' '}
-                  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-                    Meridian on Instagram
-                  </a>{' '}
-                  for parking and day-of updates.
-                </>
-              ) : (
-                <>Follow Meridian on Instagram for parking and day-of updates.</>
-              )}
-            </p>
-          </AnimateIn>
-
-          <AnimateIn delay={0.3}>
-            <RegisterCta />
-          </AnimateIn>
+    <section className="m-section" id="getting-there">
+      <div className="m-wrap">
+        <span className="m-eyebrow">Getting there</span>
+        <h2 className="m-display m-h2">{VENUE_DETAILS.building} at {EVENT_VENUE}</h2>
+        <div className="m-list" style={{ maxWidth: 720 }}>
+          {rows.map(([k, v]) => (
+            <div className="m-row" key={k}>
+              <span className="r" style={{ fontFamily: 'var(--font-mono), monospace', textTransform: 'uppercase', letterSpacing: '.1em', fontSize: 12 }}>{k}</span>
+              <span className="n" style={{ fontSize: 18 }}>{v}</span>
+            </div>
+          ))}
         </div>
+        <p className="m-small" style={{ marginTop: 16 }}>
+          Put the address into your maps app and it will take you to the door.{' '}
+          {INSTAGRAM_URL && (
+            <>
+              Parking and day-of updates are on{' '}
+              <a className="m-link" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">Instagram</a>.
+            </>
+          )}
+        </p>
       </div>
     </section>
   );

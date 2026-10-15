@@ -5,7 +5,7 @@ import { EVENT_DATE, EVENT_VENUE, CONTACT_EMAIL } from '@/config';
 import styles from './terms.module.css';
 
 export const metadata: Metadata = {
-  title: 'Event Terms | Meridian Conference',
+  title: 'Event terms',
   description:
     'Meridian Conference event terms and code of conduct: registration, photo and video, sharing your ask, communications, attendees under 18, accessibility, and safety.',
 };

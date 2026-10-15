@@ -7,7 +7,7 @@ const timeline = [
   {
     icon: '01',
     title: 'The 30-Second Favors',
-    desc: 'Speakers offer real help on stage: internship intros, mentorship, career guidance with follow-through.',
+    desc: 'Leaders offer help in person: internship intros, mentorship, career guidance with follow-through.',
     featured: true,
   },
   {
