@@ -47,7 +47,7 @@ export const partners: Partner[] = [
   { name: 'HOPE', group: 'Community and nonprofit', status: 'check', line: '' },
   { name: 'Youth Cinema Project', group: 'Community and nonprofit', status: 'check', line: '' },
   { name: 'LA Clippers', group: 'Companies', status: 'live', line: 'Team gear and prizes for the room.' },
-  { name: 'Petersen Automotive Museum', group: 'Companies', status: 'live', line: 'Bringing vehicles and staff to the floor, and sharing their volunteer program and summer internships with students.' },
+  { name: 'Petersen Automotive Museum', group: 'Companies', status: 'live', line: 'Bringing a 1955 Pontiac and a 1955 Bel Air to the floor, with staff, and sharing their volunteer program and summer internships with students.' },
   { name: 'Campaign Zero', group: 'Community and nonprofit', status: 'check', line: '' },
 ];
 

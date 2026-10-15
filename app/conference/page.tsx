@@ -75,7 +75,7 @@ export default function ConferencePage() {
               <div><h3>Demo day</h3><p>Students present research, startups, and projects to executives, investors, other students, and press.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/demo-day/">About demo day</a></p></div>
               <div><h3>Free professional headshots</h3><p>Photographers from Las Fotos Project shoot you for free and the pictures are yours to keep.</p></div>
               <div><h3>Partner tables</h3><p>The organizations that brought students run tables of their own. Walk up to any of them, no introduction needed.</p></div>
-              <div><h3>Petersen Automotive Museum</h3><p>The museum is bringing vehicles and staff to the floor.</p></div>
+              <div><h3>Petersen Automotive Museum</h3><p>The museum is bringing a 1955 Pontiac and a 1955 Bel Air to the floor, with staff.</p></div>
               <div><h3>Someone to introduce you</h3><p>Hosts work the floor all day. If walking up to a stranger is not your thing, find one and they will make the introduction.</p></div>
             </div>
           </div>
