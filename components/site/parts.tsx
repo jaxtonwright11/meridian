@@ -1,6 +1,6 @@
 import { REGISTRATION_FORM_URL, MEETUPS, EVENT_DATE_SHORT, EVENT_VENUE } from '@/config';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
-import { team, founder } from '@/data/team';
+import { team, founder, detailLines, type TeamMember } from '@/data/team';
 import { livePartners, homePartners } from '@/data/partners';
 import { press } from '@/data/press';
 import { LeadersViewer, type Tile } from './LeadersViewer';
@@ -106,7 +106,7 @@ export function NameNote() {
       <MeridianLine />
       <div className="m-wrap" style={{ position: 'relative' }}>
         <span className="m-eyebrow" id="name-h">The name</span>
-        <p className="m-display" style={{ maxWidth: '26ch' }}>
+        <p className="m-idea m-name">
           A meridian is the highest point in the arc and the line connecting where you are to where
           you are going. The line runs through here.
         </p>
@@ -156,7 +156,19 @@ export function LeadersBand() {
   );
 }
 
-/** Founder and team, as proof. Photo, name, role. */
+/** One person: photo, name, bold title, then school, year, major. */
+export function TeamTile({ m }: { m: TeamMember }) {
+  return (
+    <div className="m-person">
+      <img src={m.photo} alt={m.name} width={400} height={400} loading="lazy" />
+      <h3>{m.name}</h3>
+      <p className="m-role">{m.role}</p>
+      {detailLines(m).map((l) => (<p className="m-dl" key={l}>{l}</p>))}
+    </div>
+  );
+}
+
+/** Founder and team, as proof. */
 export function TeamStrip() {
   const all = [founder, ...team];
   return (
@@ -165,13 +177,7 @@ export function TeamStrip() {
         <span className="m-eyebrow">The team</span>
         <h2 id="team-h" className="m-title">A team across UCLA, USC, and UC Berkeley</h2>
         <div className="m-people m-team">
-          {all.map((m) => (
-            <div className="m-person" key={m.slug}>
-              <img src={m.photo} alt={m.name} width={400} height={400} loading="lazy" />
-              <h3>{m.name}</h3>
-              <p className="m-role">{m.role}</p>
-            </div>
-          ))}
+          {all.map((m) => (<TeamTile m={m} key={m.slug} />))}
         </div>
         <p className="m-actions"><a className="btn btn-tan" href="/team/">Meet the team</a></p>
       </div>

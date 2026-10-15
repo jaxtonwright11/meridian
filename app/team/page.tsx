@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Explore, RegisterButton } from '@/components/site/parts';
-import { founder, team, detail } from '@/data/team';
+import { founder, team, detailLines } from '@/data/team';
 
 export const metadata: Metadata = {
   title: 'Team',
@@ -27,8 +27,8 @@ export default function TeamPage() {
                 <article className="m-card" key={m.slug}>
                   <img src={m.photo} alt={m.name} width={400} height={400} loading="lazy" />
                   <h3>{m.name}</h3>
-                  <p className="role">{m.role}</p>
-                  {detail(m) && <p className="det">{detail(m)}</p>}
+                  <p className="m-role">{m.role}</p>
+                  {detailLines(m).map((l) => (<p className="m-dl" key={l}>{l}</p>))}
                   {m.approved && m.bio && <p style={{ marginTop: 10, fontSize: 15 }}>{m.bio}</p>}
                   {m.slug === 'jaxton-wright' && <p style={{ marginTop: 10, fontSize: 15 }}><a className="m-link" href="/about/#founder">About the founder</a></p>}
                 </article>

@@ -460,3 +460,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .m-door, .m-door + .m-door { display: flex; flex-direction: column; align-items: flex-start; }
 .m-door-cta { margin-top: auto; }
+
+/* School, year, major under the bold title */
+.m-dl { font-size: 15px; line-height: 1.4; color: var(--ink-soft); font-weight: 500; max-width: none; }
+.m-role + .m-dl { margin-top: 2px; }
+
+/* Reading-size display copy everywhere (was oversized) */
+.m-display { font-size: clamp(24px, 2.8vw, 36px); line-height: 1.25; max-width: 42ch; }
+.m-idea.m-name { font-size: clamp(22px, 2.6vw, 30px); }
+.m-h1-long { font-size: clamp(28px, 3.4vw, 44px); line-height: 1.15; max-width: 28ch; }
+/* Team grid: even spacing, no divider lines so rows line up */
+.m-people.m-team { gap: 32px 28px; border: 0; }
+.m-people.m-team .m-person, .m-people.m-team .m-person + .m-person { padding: 0; border: 0; }
+.m-h1-long { font-size: clamp(26px, 3vw, 38px); }

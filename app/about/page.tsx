@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { Explore, RegisterButton, WhatMeridianDoes, MeridianLine } from '@/components/site/parts';
+import { Explore, RegisterButton, WhatMeridianDoes, MeridianLine, TeamTile } from '@/components/site/parts';
 import { founder, team } from '@/data/team';
+
 import { INSTAGRAM_FOUNDER_URL, LINKEDIN_FOUNDER_URL } from '@/config';
 import { leaders } from '@/data/leaders';
 
@@ -26,14 +27,14 @@ export default function AboutPage() {
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">About</span>
-            <h1>Meridian is a company that brings students and executives together in person, by field.</h1>
+            <h1 className="m-h1-long">Meridian is a company that brings students and executives together in person, by field.</h1>
           </div>
         </section>
 
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">The idea</span>
-            <p className="m-display">
+            <p className="m-idea">
               College and networking were supposed to open doors, and instead the goalposts keep
               moving further out. Meridian exists to <strong>reverse gatekeeping</strong>. We bring
               students into the same room as the people in their field, in person, and make that an
@@ -46,7 +47,7 @@ export default function AboutPage() {
           <MeridianLine />
           <div className="m-wrap" style={{ position: 'relative' }}>
             <span className="m-eyebrow">The name</span>
-            <p className="m-display" style={{ maxWidth: '26ch' }}>
+            <p className="m-idea m-name">
               A meridian is the highest point in the arc and the line connecting where you are to
               where you are going. The line runs through here.
             </p>
@@ -84,13 +85,7 @@ export default function AboutPage() {
             <span className="m-eyebrow">The team</span>
             <p className="m-lead" style={{ marginBottom: 18 }}>A team across UCLA, USC, and UC Berkeley.</p>
             <div className="m-people m-team">
-              {[founder, ...team].map((m) => (
-                <div className="m-person" key={m.slug}>
-                  <img src={m.photo} alt={m.name} width={300} height={300} loading="lazy" />
-                  <h3>{m.name}</h3>
-                  <p className="m-role">{m.role}</p>
-                </div>
-              ))}
+              {[founder, ...team].map((m) => (<TeamTile m={m} key={m.slug} />))}
             </div>
             <p className="m-names"><a className="m-link" href="/team/">Meet the team</a></p>
           </div>
