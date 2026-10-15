@@ -3,6 +3,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Explore } from '@/components/site/parts';
 import { CONTACT_EMAIL_PUBLIC } from '@/config';
+import { PRESS_URL } from '@/data/press';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -41,8 +42,8 @@ export default function ContactPage() {
               </div>
               <div className="m-route">
                 <h3>Press</h3>
-                <p>Facts, photos, and a contact for press.</p>
-                <div className="m-actions"><a className="btn btn-tan" href="/press/">Press page</a><a className="m-link" href={`${mail}?subject=Press`}>{CONTACT_EMAIL_PUBLIC}</a></div>
+                <p>Recent coverage, and a contact for press.</p>
+                <div className="m-actions"><a className="btn btn-tan" href={PRESS_URL} target="_blank" rel="noopener">Read the recent media</a><a className="m-link" href={`${mail}?subject=Press`}>{CONTACT_EMAIL_PUBLIC}</a></div>
               </div>
             </div>
           </div>

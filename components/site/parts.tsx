@@ -24,7 +24,7 @@ export function Explore({ links }: { links: [string, string][] }) {
     <div className="m-wrap">
       <nav className="m-explore" aria-label="Explore">
         <span>Explore</span>
-        {links.map(([l, h]) => (<a key={h} className="m-link" href={h}>{l}</a>))}
+        {links.map(([l, h]) => (<a key={h} className="m-link" href={h} {...(h.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}>{l}</a>))}
       </nav>
     </div>
   );
@@ -228,7 +228,6 @@ export function PressLinks({ showPage = true }: { showPage?: boolean }) {
   return (
     <p style={{ display: 'flex', gap: 28, flexWrap: 'wrap', alignItems: 'baseline' }}>
       <a className="m-link" href={press[0].url} target="_blank" rel="noopener">Read the recent media</a>
-      {showPage && <a className="m-link" href="/press/">Press page</a>}
     </p>
   );
 }

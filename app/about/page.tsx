@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { Explore, RegisterButton, WhatMeridianDoes, MeridianLine, TeamTile } from '@/components/site/parts';
 import { founder, team } from '@/data/team';
 
+import { PRESS_URL } from '@/data/press';
 import { INSTAGRAM_FOUNDER_URL, LINKEDIN_FOUNDER_URL } from '@/config';
 import { leaders } from '@/data/leaders';
 
@@ -110,14 +111,14 @@ export default function AboutPage() {
             <p className="m-lead">The General Atomics Sciences Education Foundation funds Meridian and the aerospace design lab.</p>
             <p className="m-small" style={{ marginTop: 12 }}>
               <a className="m-link" href="/past/">Past events</a>{' '}&nbsp;{' '}
-              <a className="m-link" href="/press/">Press</a>{' '}&nbsp;{' '}
+              <a className="m-link" href={PRESS_URL} target="_blank" rel="noopener">Press</a>{' '}&nbsp;{' '}
               <a className="m-link" href="/contact/">Contact</a>
             </p>
             <div className="m-actions" style={{ marginTop: 24 }}><RegisterButton /></div>
           </div>
         </section>
       </main>
-      <Explore links={[['Team', '/team/'], ['Past events', '/past/'], ['Partners', '/partners/'], ['Press', '/press/']]} />
+      <Explore links={[['Team', '/team/'], ['Past events', '/past/'], ['Partners', '/partners/'], ['Press', PRESS_URL]]} />
       <Footer />
     </div>
   );

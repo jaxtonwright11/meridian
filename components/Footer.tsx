@@ -1,9 +1,10 @@
+import { PRESS_URL } from '@/data/press';
 import { CONTACT_EMAIL_PUBLIC, INSTAGRAM_URL, SITE_NAME, SITE_UPDATED } from '@/config';
 
 const cols = [
   { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/'], ['About', '/about/']] },
   { h: 'Conference', links: [['Leaders', '/leaders/'], ['Demo day', '/demo-day/'], ['FAQ', '/faq/']] },
-  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Past events', '/past/'], ['Press', '/press/'], ['Contact', '/contact/']] },
+  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Past events', '/past/'], ['Press', PRESS_URL], ['Contact', '/contact/']] },
   { h: 'Legal', links: [['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
 ];
 
@@ -30,7 +31,7 @@ export function Footer() {
             <div key={c.h}>
               <h4>{c.h}</h4>
               <ul>
-                {c.links.map(([l, h]) => (<li key={h}><a href={h}>{l}</a></li>))}
+                {c.links.map(([l, h]) => (<li key={h}><a href={h} {...(h.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}>{l}</a></li>))}
               </ul>
             </div>
           ))}

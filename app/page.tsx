@@ -2,8 +2,8 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import {
-  MeridianLine, StatRow, Doors, SlimConferenceBand, LeadersBand, TeamStrip, PartnerList,
-  PressLinks, RegisterButton, WhatMeridianDoes, NameNote,
+  MeridianLine, StatRow, Doors, LeadersBand, TeamStrip, PartnerList,
+  PressLinks, RegisterButton,
 } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
 import { CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT } from '@/config';
@@ -32,6 +32,27 @@ export default function Home() {
           </div>
         </section>
 
+        {/* What is Meridian: a short answer, early, with the unique parts called out. */}
+        <section className="m-section" aria-labelledby="what-h">
+          <div className="m-wrap">
+            <span className="m-eyebrow">Meridian</span>
+            <h2 id="what-h" className="m-title">What is Meridian?</h2>
+            <p className="m-lead" style={{ maxWidth: '62ch' }}>
+              Meridian is a company, and the conference is where it starts. Leaders from every field
+              come to you, each one looking to help with opportunities they manage. Student founders
+              and researchers present at demo day, and NASA engineers run a hands-on design lab.
+              After November 14, Meridian hosts in-person events by field, and everyone who attends
+              joins the Meridian network.
+            </p>
+            <div className="m-chips">
+              <span>Leaders come to you</span>
+              <span>Demo day for student founders</span>
+              <span>Design lab led by NASA engineers</span>
+              <span>A network by field</span>
+            </div>
+          </div>
+        </section>
+
         <StatRow />
 
         {/* 2. Leaders proof band */}
@@ -55,21 +76,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5. What Meridian does */}
-        <section className="m-section">
-          <div className="m-wrap">
-            <span className="m-eyebrow">The company</span>
-            <h2 className="m-title">What Meridian does</h2>
-            <WhatMeridianDoes />
-          </div>
-        </section>
-
-        {/* 6. The name */}
-        <NameNote />
-
-        {/* 7. Slim conference band */}
-        <SlimConferenceBand />
-
         {/* 8. Who is working with us */}
         <section className="m-section">
           <div className="m-wrap">
@@ -91,16 +97,6 @@ export default function Home() {
 
         {/* 10. The first Meridian */}
         <FirstMeridian />
-
-        {/* 11. About strip */}
-        <section className="m-section">
-          <div className="m-wrap">
-            <span className="m-eyebrow">About</span>
-            <h2 className="m-title">About Meridian</h2>
-            <p className="m-lead">A team across UCLA, USC, and UC Berkeley. Founded by Jaxton Wright.</p>
-            <p className="m-actions"><a className="btn btn-tan" href="/about/">About Meridian</a></p>
-          </div>
-        </section>
 
         {/* 12. Closing band */}
         <section className="m-section">
