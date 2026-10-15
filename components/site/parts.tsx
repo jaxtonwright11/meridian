@@ -7,19 +7,8 @@ import { LeadersViewer, type Tile } from './LeadersViewer';
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-/** Plain-words plan for after the conference. No counts or cadence: the plan is not confirmed. */
-export const EVENTS_SENTENCE =
-  `Starting ${EVENT_DATE_SHORT}, Meridian scales from one conference into a company that hosts in-person events by field, beginning with ${list(MEETUPS.firstFields)}. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.`;
-
-export const NETWORK_SENTENCE =
-  'Everyone who attends joins the Meridian network, which connects students to each other and to executives in their field.';
-
-function numWord(n: number) {
-  return ({ 6: 'six', 5: 'five', 4: 'four', 7: 'seven' } as Record<number, string>)[n] ?? String(n);
-}
-function list(a: string[]) {
-  return a.length < 3 ? a.join(' and ') : `${a.slice(0, -1).join(', ')}, and ${a[a.length - 1]}`;
-}
+export { EVENTS_SENTENCE, NETWORK_SENTENCE, numWord, list } from '@/lib/copy';
+import { NETWORK_SENTENCE, numWord, list } from '@/lib/copy';
 
 export function RegisterButton({ children = `Register for ${EVENT_DATE_SHORT}` }: { children?: React.ReactNode }) {
   return (
