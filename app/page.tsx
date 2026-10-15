@@ -22,9 +22,12 @@ export default function Home() {
             <span className="m-eyebrow">Los Angeles</span>
             <h1>Reverse gatekeeping.</h1>
             <p className="m-sub">Meridian brings students and executives together in person, by field.</p>
+            <p className="m-lead" style={{ marginTop: 16 }}>
+              We start with a conference in Los Angeles on November 14, free for every student.
+            </p>
             <div className="m-actions">
               <RegisterButton>Register for {EVENT_DATE_SHORT}</RegisterButton>
-              <a className="m-link" href="/partners/">Partner with Meridian</a>
+              <a className="btn btn-tan" href="/partners/">Partner with Meridian</a>
             </div>
           </div>
         </section>
@@ -32,13 +35,16 @@ export default function Home() {
         {/* 2. Leaders proof band */}
         <LeadersBand />
 
+        <TeamStrip />
+
         {/* 3. Three doors */}
         <section className="m-section"><Doors /></section>
 
         {/* 4. The idea */}
         <section className="m-section">
           <div className="m-wrap">
-            <p className="m-display">
+            <span className="m-eyebrow">The idea</span>
+            <p className="m-idea">
               College and networking were supposed to open doors, and instead the goalposts
               keep moving further out. Meridian exists to <strong>reverse gatekeeping</strong>.
               We bring students into the same room as the people in their field, in person,
@@ -50,7 +56,8 @@ export default function Home() {
         {/* 5. What Meridian does */}
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What Meridian does</span>
+            <span className="m-eyebrow">The company</span>
+            <h2 className="m-title">What Meridian does</h2>
             <WhatMeridianDoes />
           </div>
         </section>
@@ -61,13 +68,11 @@ export default function Home() {
         {/* 7. Slim conference band */}
         <SlimConferenceBand />
 
-        <TeamStrip />
-
         {/* 8. Who is working with us */}
         <section className="m-section">
           <div className="m-wrap">
             <PartnerList home />
-            <p className="m-names"><a className="m-link" href="/partners/directory/">See all partners</a></p>
+            <p className="m-actions"><a className="btn btn-tan" href="/partners/directory/">See all partners</a></p>
           </div>
         </section>
 
@@ -76,7 +81,7 @@ export default function Home() {
           <section className="m-section">
             <div className="m-wrap">
               <span className="m-eyebrow">In the press</span>
-              <h2 className="m-display m-h2">Recent media</h2>
+              <h2 className="m-title">Recent media</h2>
               <PressLinks />
             </div>
           </section>
@@ -89,21 +94,22 @@ export default function Home() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">About</span>
-            <p className="m-lead">
-              A team across UCLA, USC, and UC Berkeley. Founded by Jaxton Wright.{' '}
-              <a className="m-link" href="/about/">About Meridian</a>
-            </p>
+            <h2 className="m-title">About Meridian</h2>
+            <p className="m-lead">A team across UCLA, USC, and UC Berkeley. Founded by Jaxton Wright.</p>
+            <p className="m-actions"><a className="btn btn-tan" href="/about/">About Meridian</a></p>
           </div>
         </section>
 
         {/* 12. Closing band */}
         <section className="m-section">
           <div className="m-wrap">
-            <h2 className="m-display m-h2">Questions?</h2>
-            <p className="m-lead">We reply personally.</p>
-            <div className="m-actions">
-              <a className="btn btn-ink" href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>Write to us</a>
-              <a className="m-link" href="/faq/">Read the FAQ</a>
+            <div className="m-closing">
+              <h2 className="m-title" style={{ marginBottom: 8 }}>Questions?</h2>
+              <p className="m-lead">We reply personally.</p>
+              <div className="m-actions">
+                <a className="btn btn-ink" href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>Write to us</a>
+                <a className="btn btn-tan" href="/faq/">Read the FAQ</a>
+              </div>
             </div>
           </div>
         </section>

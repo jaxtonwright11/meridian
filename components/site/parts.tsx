@@ -3,6 +3,7 @@ import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 import { team, founder } from '@/data/team';
 import { livePartners, homePartners } from '@/data/partners';
 import { press } from '@/data/press';
+import { LeadersViewer, type Tile } from './LeadersViewer';
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
@@ -58,14 +59,14 @@ export function Doors() {
   ];
   return (
     <div className="m-wrap">
-      <h2 className="m-display m-h2">Where would you like to start?</h2>
+      <h2 className="m-title">Where would you like to start?</h2>
       <div className="m-doors">
         {doors.map((d) => (
-          <div className="m-door" key={d.h}>
+          <a className="m-door" key={d.h} href={d.href}>
             <h3>{d.h}</h3>
             <p>{d.p}</p>
-            <a className="m-link" href={d.href}>{d.l}</a>
-          </div>
+            <span className="btn btn-ink m-door-cta">{d.l}</span>
+          </a>
         ))}
       </div>
     </div>
@@ -75,7 +76,7 @@ export function Doors() {
 /** The three blocks of what Meridian does. Used on the home and About pages. */
 export function WhatMeridianDoes() {
   return (
-    <div className="m-three">
+    <div className="m-three m-cards3">
       <div>
         <h3>The conference</h3>
         <p>A free day at UCLA where leaders from every field come to students. November 14.</p>
@@ -116,44 +117,40 @@ export function NameNote() {
 
 export function SlimConferenceBand() {
   return (
-    <div className="m-slim">
-      <div className="m-slim-in">
+    <div className="m-wrap">
+      <div className="m-slim">
         <p>The first Meridian conference is Saturday, {EVENT_DATE_SHORT} at {EVENT_VENUE}. Free for every student.</p>
         <div className="m-actions">
           <RegisterButton>Register</RegisterButton>
-          <a className="m-link" href="/conference/">Everything about the day</a>
+          <a className="btn btn-tan" href="/conference/">Everything about the day</a>
         </div>
       </div>
     </div>
   );
 }
 
-/** Leaders proof band. Renders from data; photo only if approved. */
+/** Leaders proof band. Pages through every leader with an approved photo. */
 export function LeadersBand() {
-  const shown = photoLeaders.slice(0, 6);
-  const shownSlugs = new Set(shown.map((l) => l.slug));
-  const rest = confirmedLeaders.filter((l) => !shownSlugs.has(l.slug));
-  const names = rest.slice(0, 8);
-  const more = confirmedLeaders.length - shown.length - names.length;
+  const tiles: Tile[] = photoLeaders.map((l) => ({
+    slug: l.slug,
+    name: l.name,
+    title: title(l),
+    photo: l.photo as string,
+    bio: l.bioApproved ? l.bio : undefined,
+    virtual: l.format === 'virtual',
+  }));
+  const photoSlugs = new Set(tiles.map((t) => t.slug));
+  const names = confirmedLeaders.filter((l) => !photoSlugs.has(l.slug)).map((l) => l.name);
   return (
-    <section className="m-section" aria-labelledby="leaders-h">
+    <section className="m-section m-alt" aria-labelledby="leaders-h">
       <div className="m-wrap">
         <span className="m-eyebrow">{confirmedLeaders.length} leaders confirmed</span>
-        <h2 id="leaders-h" className="m-display m-h2">Leaders joining us on {EVENT_DATE_SHORT}</h2>
-        <div className="m-people">
-          {shown.map((l) => (
-            <div className="m-person" key={l.slug}>
-              <img src={l.photo} alt={l.name} width={400} height={400} loading="lazy" />
-              <h3>{l.name}</h3>
-              {title(l) && <p>{title(l)}</p>}
-            </div>
-          ))}
-        </div>
-        <p className="m-names">
-          {names.map((l) => l.name).join(', ')}
-          {more > 0 && `, and ${more} more`}.{' '}
-          <a className="m-link" href="/leaders/">See everyone joining</a>
-        </p>
+        <h2 id="leaders-h" className="m-title">Leaders joining us on {EVENT_DATE_SHORT}</h2>
+        <LeadersViewer tiles={tiles} />
+        {names.length > 0 && (
+          <p className="m-names"><strong>Also joining:</strong> {names.join(', ')}.</p>
+        )}
+        <p className="m-names"><a className="m-link" href="/leaders/">See everyone joining</a></p>
       </div>
     </section>
   );
@@ -166,7 +163,7 @@ export function TeamStrip() {
     <section className="m-section" aria-labelledby="team-h">
       <div className="m-wrap">
         <span className="m-eyebrow">The team</span>
-        <h2 id="team-h" className="m-display m-h2">A team across UCLA, USC, and UC Berkeley</h2>
+        <h2 id="team-h" className="m-title">A team across UCLA, USC, and UC Berkeley</h2>
         <div className="m-people m-team">
           {all.map((m) => (
             <div className="m-person" key={m.slug}>
@@ -176,7 +173,7 @@ export function TeamStrip() {
             </div>
           ))}
         </div>
-        <p className="m-names"><a className="m-link" href="/team/">Meet the team</a></p>
+        <p className="m-actions"><a className="btn btn-tan" href="/team/">Meet the team</a></p>
       </div>
     </section>
   );
@@ -186,12 +183,17 @@ export function PartnerList({ heading = true, home = false }: { heading?: boolea
   const rows = home ? homePartners : livePartners;
   return (
     <div>
-      {heading && <span className="m-eyebrow">Who is working with us</span>}
-      <div className="m-list">
+      {heading && (
+        <>
+          <span className="m-eyebrow">Partners</span>
+          <h2 className="m-title">Who is working with us</h2>
+        </>
+      )}
+      <div className="m-pgrid">
         {rows.map((p) => (
-          <div className="m-row" key={p.name}>
-            <span className="n">{p.name}</span>
-            <span className="r">{p.line}</span>
+          <div className="m-pcard" key={p.name}>
+            <h3>{p.name}</h3>
+            <p>{p.line}</p>
           </div>
         ))}
       </div>

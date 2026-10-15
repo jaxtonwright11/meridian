@@ -4,7 +4,7 @@ export function FirstMeridian({ detail = false }: { detail?: boolean }) {
     <section className="m-section" id="first-meridian">
       <div className="m-wrap">
         <span className="m-eyebrow">December 2025</span>
-        <h2 className="m-display m-h2">The first Meridian</h2>
+        <h2 className="m-title">The first Meridian</h2>
         <p className="m-lead">
           About 150 students met leaders from Netflix, OpenAI, and Chase Bank. Not for a lecture.
           For conversations that turned into mentorships, internship introductions, and career
