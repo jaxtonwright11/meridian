@@ -39,15 +39,14 @@ export default function PartnersPage() {
 
         <StatRow />
 
-        {/* 2. What an event looks like. TODO(jax): confirm the winning team prize wording. */}
+        {/* 2. What an event looks like. No partner has hosted one yet, so nothing here says one has. */}
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">What an event looks like</span>
             <p className="m-display" style={{ maxWidth: '34ch', fontSize: 'clamp(24px, 3vw, 36px)' }}>
               An event is one field, in person. Take engineering: executives from engineering
               companies join, students from across Los Angeles campuses arrive, and student teams
-              work the same challenge side by side. The winning team takes home a prize from the
-              partner that hosts it, and the partner&apos;s name, people, and gear are on site.
+              work the same challenge side by side.
             </p>
             {PARTNER_NAMED_BY && (
               <p className="m-small" style={{ marginTop: 10 }}>
@@ -63,7 +62,7 @@ export default function PartnersPage() {
             <span className="m-eyebrow">What is in it for you</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Your name, in the room</h3><p>Partners run tables at the conference and are named in the room and in what we publish.</p></div>
-              <div><h3>Events by field, under your name</h3><p>After the conference, we host in-person events by field, like engineering, pre-med, or business, under a partner&apos;s name, tent, and gear. Students form teams and build something from the same prompt, and the winning team takes home a prize from the partner or a cash prize.</p></div>
+              <div><h3>Events by field, built with you</h3><p>After the conference, we host in-person events by field, like engineering, pre-med, or business. We plan each one with the organizations it fits, so a partner helps shape it from the start.</p></div>
               <div><h3>Executives from your field</h3><p>Each event has one or two executives from that field. Your people meet them too.</p></div>
               <div><h3>Students and press, through who you are</h3><p>Students and press get to know a partner through its people and what it cares about, not a logo on a banner.</p></div>
             </div>
@@ -92,7 +91,7 @@ export default function PartnersPage() {
           <div className="m-wrap">
             <span className="m-eyebrow">Who we work with</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-              <div><h3>Companies and brands</h3><p>Brands working with us on events, tables, and the day itself.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#companies-and-brands">See the group</a></p></div>
+              <div><h3>Companies and brands</h3><p>Brands working with us on tables and the day itself.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#companies-and-brands">See the group</a></p></div>
               <div><h3>Campus offices and departments</h3><p>UCLA and USC departments and student organizations reaching their students.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#ucla">See the group</a></p></div>
               <div><h3>Nonprofits and community organizations</h3><p>Programs that bring their students and alumni to the day.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#community-and-nonprofit">See the group</a></p></div>
             </div>
