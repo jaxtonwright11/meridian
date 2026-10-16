@@ -35,18 +35,20 @@ export default function Home() {
         <section className="m-section m-band-tan" aria-labelledby="what-h">
           <div className="m-wrap">
             <h2 id="what-h" className="m-title">What is Meridian?</h2>
-            <p className="m-lead" style={{ maxWidth: '62ch' }}>
-              Meridian is a company, and the conference is where it starts. Leaders from every field
+            <div className="m-whatcard">
+            <p className="m-lead" >
+              Meridian starts with a conference on November 14. Leaders from every field
               come to you, each one looking to help with opportunities they manage. Student founders
               and researchers present at demo day, and NASA engineers run a hands-on design lab.
               After November 14, Meridian hosts in-person events by field, and everyone who attends
               joins the Meridian network.
             </p>
-            <p className="m-lead" style={{ maxWidth: '62ch' }}>
+            <p className="m-lead" >
               College and networking were supposed to open doors, and instead the goalposts keep
               moving further out. Meridian exists to <strong>reverse gatekeeping</strong>: we bring
               students into the same room as the people in their field, in person.
             </p>
+            </div>
             <div className="m-chips">
               <span>Leaders come to you</span>
               <span>Demo day for student founders</span>

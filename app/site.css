@@ -559,11 +559,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-navlink:hover { background: rgba(255,255,255,.45) !important; transform: none; box-shadow: none; }
 .m-navlink[aria-current="page"] { background: #fff !important; border-bottom: 0; padding-bottom: 8px; box-shadow: 0 1px 3px rgba(43,28,15,.2); }
 .btn { border-radius: 999px; }
-.m-register { padding: 15px 30px; font-size: 13px; letter-spacing: .08em; }
 .m-door, .m-pcard, .m-stat, .m-cards3 > div { box-shadow: inset 0 1px 0 rgba(255,255,255,.55), var(--shadow-soft); }
-.m-hero-home { background: radial-gradient(900px 380px at 78% 0%, rgba(242,201,76,.28), transparent 70%), var(--paper); }
+.m-hero-home { background: var(--paper); }
 .m-band-tan { background: var(--tan-box); border-top: 1px solid var(--tan-line); border-bottom: 1px solid var(--tan-line); }
-.m-band-tan .m-chips span { background: #fff; }
+.m-band-tan .m-chips span { background: #2B1C0F; color: #F2ECE0; border-color: #2B1C0F; }
 .m-band-dark { background: #2B1C0F; color: #F2ECE0; }
 .m-band-dark h2, .m-band-dark h3, .m-band-dark strong { color: #FBF7EE; }
 .m-band-dark p, .m-band-dark .m-names { color: #E4D6BF; }
@@ -591,7 +590,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   text-transform: none !important; letter-spacing: 0 !important; font-weight: 600;
 }
 .btn { font-size: 16px; padding: 14px 28px; }
-.m-register { font-size: 16px; padding: 14px 30px; }
+.m-register { font-size: 16px; padding: 10px 26px; line-height: 1.2; }
 .m-navlink, [data-palette="current"] .m-navlink { font-size: 15px; padding: 9px 18px; }
 .m-eyebrow { font-size: 15px; }
 .m-btn, .btn { -webkit-font-smoothing: antialiased; }
+
+.m-whatcard { background: #fff; border: 1px solid var(--tan-line); border-radius: 18px; padding: 32px 36px; max-width: 760px; box-shadow: var(--shadow-soft); }
+.m-whatcard .m-lead { max-width: none; color: var(--ink); }
+.m-whatcard .m-lead + .m-lead { margin-top: 16px; }
+@media (max-width: 600px) { .m-whatcard { padding: 22px 20px; } }

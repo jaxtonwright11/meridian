@@ -13,7 +13,7 @@ import { PARTNER_NAMED_BY } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'Partners',
-  'Meridian is scaling from one conference into a company that hosts in-person events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
+  'Meridian is scaling from one conference into in-person events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
   '/partners/',
 );
 
@@ -30,7 +30,7 @@ export default function PartnersPage() {
           <div className="m-wrap">
             <h1>Partner with Meridian.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
-              Meridian is scaling from one conference into a company that hosts in-person events
+              Meridian is scaling from one conference into in-person events
               by field. Companies, campus offices, and community partners work with us from the
               November 14 conference onward.
             </p>
