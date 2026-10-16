@@ -22,7 +22,7 @@ export default function Home() {
             <h1>CEOs come to you.</h1>
             <p className="m-sub">
               Meridian brings executives, students, and ideas together. We start with
-              a <a className="m-sublink" href="/conference/">conference in Los Angeles</a> on November 14, free for every student.
+              a <a className="m-sublink" href="/conference/">conference</a> in Los Angeles on November 14, free for every student.
             </p>
             <div className="m-actions">
               <RegisterButton>Register for Nov. 14</RegisterButton>

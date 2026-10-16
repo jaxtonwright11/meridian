@@ -687,3 +687,5 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
 .m-sublink { color: inherit; text-decoration: underline; text-decoration-color: var(--gold-deep); text-decoration-thickness: 2px; text-underline-offset: 5px; }
 .m-sublink:hover { text-decoration-color: var(--heading); }
 .m-sublink:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
+/* Home hero: keep the meridian lines in a strip below the text, not through it */
+.m-hero-home .m-line { top: auto; bottom: 0; height: 64px; }
