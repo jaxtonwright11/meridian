@@ -26,6 +26,7 @@ export default function Home() {
             <p className="m-proof">Last time: <strong>150 students</strong>, <strong>23 executives</strong>, <strong>9 internships</strong>.</p>
             <div className="m-actions">
               <RegisterButton>Register for {EVENT_DATE_SHORT}</RegisterButton>
+              <a className="btn btn-tan" href="/leaders/">See who is joining</a>
               <a className="btn btn-tan" href="/partners/">Partner with Meridian</a>
             </div>
           </div>
