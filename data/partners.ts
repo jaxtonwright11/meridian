@@ -52,7 +52,7 @@ export const partners: Partner[] = [
   { name: 'Campaign Zero', group: 'Community organizations', status: 'check', line: '' },
 ];
 
-/** Main page for each partner. NAI has no confirmed main page yet, so its name is plain text. */
+/** Main page for each partner. */
 const URLS: Record<string, string> = {
   'Undergraduate Students Association Council': 'https://usac.ucla.edu',
   'Student Organizations, Leadership & Engagement': 'https://sole.ucla.edu',
@@ -62,6 +62,7 @@ const URLS: Record<string, string> = {
   'UCLA Design Media Arts': 'https://dma.ucla.edu',
   'UCLA Black Alumni Association': 'https://www.uclablackalumni.org',
   'USC Latino Alumni Association': 'https://alumni.usc.edu/laa/',
+  'USC Neighborhood Academic Initiative': 'https://communities.usc.edu/educational-partnerships/nai/',
   'USC Iovine and Young Academy': 'https://iovine-young.usc.edu',
   '826LA': 'https://826la.org',
   'LA Promise Fund': 'https://www.lapromisefund.org',
