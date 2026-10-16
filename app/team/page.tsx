@@ -31,8 +31,8 @@ export default function TeamPage() {
                   <h3>{m.linkedin ? <a className="m-namelink" href={m.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`}>{m.name}</a> : m.name}</h3>
                   <p className="m-role">{m.role}</p>
                   {detailLines(m).map((l) => (<p className="m-dl" key={l}>{l}</p>))}
-                  {m.approved && m.bio && <p style={{ marginTop: 10, fontSize: 15 }}>{m.bio}</p>}
-                  {m.slug === 'jaxton-wright' && <p style={{ marginTop: 10, fontSize: 15 }}><a className="m-link" href="/about/#founder">About the founder</a></p>}
+                  {m.approved && m.bio && <p style={{ marginTop: 10 }}>{m.bio}</p>}
+                  {m.slug === 'jaxton-wright' && <p style={{ marginTop: 10 }}><a className="m-link" href="/about/#founder">About the founder</a></p>}
                 </article>
               ))}
             </div>

@@ -17,7 +17,7 @@ export const schedule: { approved: boolean; items: ScheduleItem[]; allDay: strin
     { time: '10:30', title: 'Doors Open', body: 'Check in, pick up your name tag, and settle in.', status: 'live' },
     { time: '11:00', title: 'Welcome', body: 'A short welcome and how the day works.', status: 'live' },
     { time: '11:15', title: 'Roundtables', body: 'Small groups by field and goal, each with an executive or host. The first aerospace lab session and the demo day expo run at the same time.', status: 'live' },
-    { time: '12:05', title: 'Executive Introductions', body: 'Each executive introduces themselves to the room in under a minute.', status: 'live' },
+    { time: '12:05', title: 'Executive Introductions', body: 'Executives who would like to introduce themselves do so in under a minute each.', status: 'live' },
     { time: '12:35', title: 'Group Photo', body: 'One photo of everyone in the room.', status: 'live' },
     { time: '12:45', title: 'Lunch', body: 'Tables mix field, school, and year, with an executive or host at most of them.', status: 'live' },
     {

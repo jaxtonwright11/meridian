@@ -263,8 +263,6 @@ a:hover { color: var(--gold-deep); }
 .m-card .det { font-size: 14px; color: var(--stone); }
 
 /* Palette preview frames */
-.m-pal { margin: 40px 0; border: 1px solid #999; }
-.m-pal-label { background: #222; color: #fff; font: 600 13px var(--font-mono), monospace; letter-spacing: .1em; text-transform: uppercase; padding: 8px 14px; }
 
 @media (max-width: 900px) {
   .m-wrap, .m-header-in, .m-trail, .m-subnav-in, .m-slim-in { padding-left: 16px; padding-right: 16px; }
@@ -365,7 +363,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* Leader viewer */
 .m-vbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 14px; }
 
-.m-vbtns .btn { padding: 10px 18px; width: auto; }
 .m-people .m-tile, .m-people .m-tile + .m-tile { padding: 20px 16px; }
 .m-tile { background: none; border: 0; border-right: 1px solid var(--rule); text-align: left; cursor: pointer; font: inherit; color: inherit; transition: background .18s ease; }
 .m-tile:hover, .m-tile.on { background: var(--tan-box); }
@@ -416,7 +413,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-slim, .m-closing { background-color: var(--tan-box); background-image: linear-gradient(var(--gold), var(--gold)); background-size: 6px 100%; background-position: left; padding-left: 40px; }
 .m-vpanel { background-color: var(--surface); border-color: var(--rule); background-image: linear-gradient(var(--gold), var(--gold)); background-size: 6px 100%; background-position: left; padding-left: 32px; }
 .m-door:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
-.m-pcard:hover, .m-cards3 > div:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+.m-pcard:hover, .m-cards3 > div:hover { transform: none; box-shadow: none; }
+.m-pcard:hover { background-color: var(--tan-hover); }
 
 /* Readable text inside boxes: heavier, larger, darker */
 .m-door p, .m-pcard p, .m-cards3 p, .m-slim p, .m-closing p, .m-vpanel p { font-size: 17px; line-height: 1.55; font-weight: 500; color: #1E1B18; }
@@ -541,8 +539,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-spot-bar { justify-content: center; gap: 22px; }
 
 /* Short "what is Meridian" highlights */
-.m-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-.m-chips span { font-weight: 700; font-size: 16px; color: var(--ink); background: var(--tan-box); border: 1px solid var(--tan-line); border-radius: 999px; padding: 10px 18px; }
 
 /* Names link to LinkedIn */
 .m-namelink { text-decoration-line: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 5px; transition: color .25s var(--ease), text-decoration-color .25s var(--ease); }
@@ -561,25 +557,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .btn { border-radius: 999px; }
 .m-door, .m-pcard, .m-stat, .m-cards3 > div { box-shadow: inset 0 1px 0 rgba(255,255,255,.55), var(--shadow-soft); }
 .m-hero-home { background: var(--paper); }
-.m-band-dark { background: #2B1C0F; color: #F2ECE0; }
-.m-band-dark h2, .m-band-dark h3, .m-band-dark strong { color: #FBF7EE; }
-.m-band-dark p, .m-band-dark .m-names { color: #E4D6BF; }
-.m-band-dark a.m-link { color: #F2C94C; }
-.m-band-dark .btn { background: #F2ECE0; color: #2B1C0F; border-color: #F2ECE0; }
-.m-band-dark .m-tile, .m-band-dark .m-person { color: #F2ECE0; }
-.m-band-dark .m-tile *, .m-band-dark .m-person * { color: inherit; }
-.m-closing-dark { background-color: #2B1C0F; background-image: linear-gradient(var(--gold-bright), var(--gold-bright)); border-color: #2B1C0F; }
-.m-closing-dark h2, .m-closing-dark p { color: #FBF7EE; }
-.m-closing-dark .btn-ink { background: #F2ECE0; color: #2B1C0F; border-color: #F2ECE0; }
 .m-faq { border-top: 0; }
 .m-faq details { background: #fff; border: 1px solid var(--tan-line); border-radius: 12px; margin-bottom: 12px; padding: 0 20px; box-shadow: var(--shadow-soft); }
 .m-faq details p { padding-right: 0; }
 @media (max-width: 900px) { .m-nav.open { border-radius: 14px; } .m-navlink { border-radius: 10px; } }
-.m-band-dark .m-small, .m-band-dark .m-vbar span { color: #E4D6BF; }
-.m-band-dark .m-role, .m-band-dark .m-person p.m-role, .m-band-dark .m-tile p { color: #FBF7EE; }
-.m-band-dark .m-tile { border-right-color: rgba(255,255,255,.14); }
-.m-band-dark .m-tile:hover, .m-band-dark .m-tile.on { background: rgba(255,255,255,.1); }
-.m-band-dark .m-people { border-color: rgba(255,255,255,.14); }
 .m-hero-home h1 { font-size: clamp(38px, 5.6vw, 76px); max-width: 16ch; line-height: 1.02; }
 
 /* Smoother type in buttons, tabs and labels: plain sans, normal case, no wide tracking */
@@ -591,12 +572,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-register { font-size: 16px; padding: 10px 26px; line-height: 1.2; }
 .m-navlink, [data-palette="current"] .m-navlink { font-size: 15px; padding: 9px 18px; }
 .m-eyebrow { font-size: 15px; }
-.m-btn, .btn { -webkit-font-smoothing: antialiased; }
+.btn { -webkit-font-smoothing: antialiased; }
 
-.m-whatcard { background: #fff; border: 1px solid var(--tan-line); border-radius: 18px; padding: 32px 36px; max-width: 760px; box-shadow: var(--shadow-soft); }
-.m-whatcard .m-lead { max-width: none; color: var(--ink); }
-.m-whatcard .m-lead + .m-lead { margin-top: 16px; }
-@media (max-width: 600px) { .m-whatcard { padding: 22px 20px; } }
 
 /* ---- Revisions: square boxes below the header, no gold bars, no dark bands, brown buttons with yellow text ---- */
 .btn { border-radius: 4px; }
@@ -621,13 +598,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-step[open] summary::after { content: '\2212'; }
 .m-step summary h3 { margin: 0; font-size: 22px; }
 .m-step p { padding-bottom: 18px; }
-.m-step .m-stepn { font-weight: 700; font-size: 15px; color: var(--gold-deep); margin-bottom: 6px; display: block; }
 .m-step h3 { font-size: 24px; margin-bottom: 8px; color: var(--heading); }
 .m-step p { font-size: 17px; line-height: 1.5; color: var(--ink); }
 .m-whatp { font-size: 20px; line-height: 1.6; color: var(--ink); max-width: 62ch; }
 .m-whatp a { color: var(--heading); font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold-deep); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 @media (max-width: 900px) { .m-section.m-pathsec .m-path { grid-template-columns: 1fr; } }
-.m-step .m-stepn, .m-route .m-link, .m-door .m-link, .m-pcard .m-link, .m-closing .m-link, .m-slim .m-link { color: var(--heading); }
+.m-route .m-link, .m-door .m-link, .m-pcard .m-link, .m-closing .m-link, .m-slim .m-link { color: var(--heading); }
 
 /* ---- Mobile round: caps buttons with outlines, black Register, titleband, controls ---- */
 .btn, .m-navlink, .m-menu { text-transform: uppercase !important; letter-spacing: .05em !important; font-weight: 700; }
@@ -637,8 +613,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .btn-tan { border: 1px solid #A8895C; }
 .m-register { font-size: 13px; padding: 10px 22px; }
 .m-navlink, [data-palette="current"] .m-navlink { font-size: 12.5px; padding: 10px 16px; }
-.m-titleband { background: var(--tan-box); border-top: 1px solid var(--tan-line); border-bottom: 1px solid var(--tan-line); padding: 26px 0 22px; }
-.m-titleband .m-title { margin: 0; }
 .m-whatp { margin-top: 0; }
 .m-count { font-size: 17px; font-weight: 700; color: var(--ink); white-space: nowrap; text-align: center; min-width: 120px; }
 .m-vbar .btn { flex: none; }
@@ -722,3 +696,40 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
 /* Home hero: half the space above the headline */
 .m-hero.m-hero-home { padding-top: 44px; }
 @media (max-width: 900px) { .m-hero.m-hero-home { padding-top: 28px; } }
+
+/* ---- Audit round 2 fixes ---- */
+/* About: founder photo and bio stack on phones */
+@media (max-width: 700px) {
+  .m-person-block { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .m-person-block img { max-width: 260px; }
+}
+/* Small phones: header fits at 320px */
+@media (max-width: 380px) {
+  .m-header-in { gap: 8px; }
+  .m-logo { font-size: 21px; }
+  .m-register { padding: 9px 12px; }
+  .m-menu { padding: 8px 10px; }
+}
+/* Tap targets */
+@media (max-width: 900px) {
+  .m-register, .m-menu { min-height: 44px; }
+  .m-logo { display: inline-flex; align-items: center; min-height: 44px; }
+}
+.m-trail a { display: inline-block; padding: 5px 0; }
+.m-names .m-link, .m-actions .m-link { display: inline-block; padding: 10px 0; }
+.m-pcard { position: relative; }
+.m-pcard .m-pname::after, .m-row .m-pname::after { content: ''; position: absolute; inset: 0; }
+.m-row { position: relative; }
+/* Phones: body text at least 16px */
+@media (max-width: 600px) {
+  .m-three p, .m-pcard p, .m-row p, .m-door p, .m-run-row p, .m-run-row li, .m-names, .m-row .r, .m-dl, .m-role, .m-person p, .m-person p.m-role, .m-person p.m-dl, .m-card p, .m-card .role, .m-card .det { font-size: 16px; }
+}
+/* First two sections do not fade in, so the first text paints at once */
+@media (prefers-reduced-motion: no-preference) {
+  .js main > section:nth-of-type(-n+2) { opacity: 1; transform: none; transition: none; }
+}
+
+/* Standalone links: taller tap area on phones */
+@media (max-width: 900px) {
+  .m-footer li a, .m-explore .m-link, .m-small .m-link, .m-three .m-link, .m-legal a { display: inline-block; padding: 10px 0; }
+}

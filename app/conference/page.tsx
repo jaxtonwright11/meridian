@@ -87,7 +87,7 @@ export default function ConferencePage() {
         {/* 5. Who will be in the room */}
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">{confirmedLeaders.length} executives so far</span>
+            <span className="m-eyebrow">{confirmedLeaders.length} Executives So Far</span>
             <h2 className="m-display m-h2">Who Will Be in the Room</h2>
             <div className="m-people m-twelve">
               {twelve.map((l) => (

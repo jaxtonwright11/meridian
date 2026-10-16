@@ -12,7 +12,7 @@ export function Schedule() {
       <div className="m-wrap">
         <span className="m-eyebrow">Schedule</span>
         <h2 className="m-display m-h2" >
-          The day {!schedule.approved && <span className="m-tag">Draft</span>}
+          The Day {!schedule.approved && <span className="m-tag">Draft</span>}
         </h2>
         <p className="m-small" style={{ marginBottom: 18 }}>The schedule for the day.</p>
         <div className="m-time">
@@ -31,7 +31,7 @@ export function Schedule() {
             </div>
           ))}
         </div>
-        <p className="m-small" style={{ marginTop: 20, marginBottom: 6 }}>All day</p>
+        <p className="m-small" style={{ marginTop: 20, marginBottom: 6 }}>All Day</p>
         <div className="m-list">
           {schedule.allDay.map((a) => (<div className="m-row" key={a} style={{ gridTemplateColumns: '1fr' }}><span>{a}</span></div>))}
         </div>

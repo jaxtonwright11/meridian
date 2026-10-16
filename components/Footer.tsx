@@ -4,7 +4,7 @@ import { CONTACT_EMAIL_PUBLIC, INSTAGRAM_URL, SITE_NAME } from '@/config';
 const cols = [
   { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/'], ['About', '/about/']] },
   { h: 'Conference', links: [['Who Is Joining', '/leaders/'], ['Demo Day', '/demo-day/'], ['FAQ', '/faq/']] },
-  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Past events', '/past/'], ['Press', PRESS_URL], ['Contact', '/contact/']] },
+  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Past Events', '/past/'], ['Press', PRESS_URL], ['Contact', '/contact/']] },
   { h: 'Legal', links: [['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
 ];
 

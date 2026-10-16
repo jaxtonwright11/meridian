@@ -28,7 +28,7 @@ export default function PartnersPage() {
         {/* 1. Lead */}
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
-            <h1>Partner with Meridian.</h1>
+            <h1>Partner With Meridian.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian starts with a conference and creates hackathon-style events
               by field. Companies, campus offices, and community partners work with us from the
@@ -140,7 +140,7 @@ export default function PartnersPage() {
           </div>
         </section>
       </main>
-      <Explore links={[['Partner directory', '/partners/directory/'], ['Conference', '/conference/'], ['About', '/about/']]} />
+      <Explore links={[['Partner Directory', '/partners/directory/'], ['Conference', '/conference/'], ['About', '/about/']]} />
       <Footer />
     </div>
   );

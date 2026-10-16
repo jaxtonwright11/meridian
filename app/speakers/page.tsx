@@ -75,7 +75,7 @@ export default function SpeakersPage() {
             <span className="m-eyebrow">What You Do</span>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Work the Room</h3><p>Get to know students in small groups.</p></div>
-              <div><h3>Introductions</h3><p>Short introductions, if you would like them. A few minutes, no deck: who you are, what you built, and one thing a student can use on Monday. Guests who would rather spend the day in conversation do that instead.</p></div>
+              <div><h3>Introductions</h3><p>Short introductions, if you would like them. Under a minute each, no deck: who you are, what you built, and one thing a student can use on Monday. Guests who would rather spend the day in conversation do that instead.</p></div>
               <div><h3>The Engineering Design Lab</h3><p>A hands-on build led by NASA engineers, a natural home for technical executives who want time with students at a table.</p></div>
               <div><h3>Demo Day</h3><p>Student teams present what they are building. A natural stop for investors, founders, and anyone who wants to see student work up close.</p></div>
             </div>

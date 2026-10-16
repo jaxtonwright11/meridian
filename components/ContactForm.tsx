@@ -45,7 +45,7 @@ export function ContactForm() {
       <label style={label} htmlFor="f-type">Which describes you (optional)</label>
       <select style={field} id="f-type" name="describes">
         <option value="">Choose one</option>
-        <option>Company or brand</option>
+        <option>Company</option>
         <option>Campus office or department</option>
         <option>Community organization</option>
         <option>University</option>

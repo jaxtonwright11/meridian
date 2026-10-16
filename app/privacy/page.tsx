@@ -14,13 +14,13 @@ export const metadata: Metadata = pageMeta(
 // TODO(jax): counsel review before this goes live. Plain-language draft; no legal
 // claims beyond what the site actually does today.
 const blocks = [
-  { h: 'What we collect', p: 'Two things, and only when you send them. The contact and partnership form on this site collects your name, organization, role, email, and your message. Registration for November 14 happens in a Google Form, which collects what that form asks for. This site has no accounts, no newsletter signup, and no directory.' },
-  { h: 'How we use it', p: 'To reply to you, to run the conference, and to follow up with the people we pick for demo day. We write to people personally and we do not sell or rent your information.' },
-  { h: 'Who handles it', p: 'Your form message is delivered to us by Formspree. Registration responses are stored by Google in a spreadsheet we control. Our hosting provider may keep standard server logs, such as IP addresses and the pages requested. Each of these providers has its own privacy policy.' },
-  { h: 'Photos and video', p: 'Meridian photographs and films the day. Your image may appear in our recap film, on this website, and on social media. You agree to that when you register, as described in the event terms.' },
-  { h: 'Cookies and tracking', p: 'This site does not use advertising trackers. We do not run ad networks or sell data to them.' },
-  { h: 'Students under 18', p: 'Students under 18 register with a parent or guardian’s contact information, and a parent or guardian signs them in at check-in.' },
-  { h: 'Questions, access, and removal', p: `Write to us to ask what we hold about you, to correct it, or to have it removed.` },
+  { h: 'What We Collect', p: 'Two things, and only when you send them. The contact and partnership form on this site collects your name, organization, role, email, and your message. Registration for November 14 happens in a Google Form, which collects what that form asks for. This site has no accounts, no newsletter signup, and no directory.' },
+  { h: 'How We Use It', p: 'To reply to you, to run the conference, and to follow up with the people we pick for demo day. We write to people personally and we do not sell or rent your information.' },
+  { h: 'Who Handles It', p: 'Your form message is delivered to us by Formspree. Registration responses are stored by Google in a spreadsheet we control. Our hosting provider may keep standard server logs, such as IP addresses and the pages requested. Each of these providers has its own privacy policy.' },
+  { h: 'Photos and Video', p: 'Meridian photographs and films the day. Your image may appear in our recap film, on this website, and on social media. You agree to that when you register, as described in the event terms.' },
+  { h: 'Cookies and Tracking', p: 'This site does not use advertising trackers. We do not run ad networks or sell data to them.' },
+  { h: 'Students Under 18', p: 'Students under 18 register with a parent or guardian’s contact information, and a parent or guardian signs them in at check-in.' },
+  { h: 'Questions, Access, and Removal', p: `Write to us to ask what we hold about you, to correct it, or to have it removed.` },
 ];
 
 export default function PrivacyPage() {

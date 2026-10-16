@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
@@ -8,6 +9,8 @@ import {
 import { FirstMeridian } from '@/components/FirstMeridian';
 import { CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT } from '@/config';
 import { press } from '@/data/press';
+
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 export default function Home() {
   return (

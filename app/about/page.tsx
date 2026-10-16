@@ -125,7 +125,7 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Explore links={[['Team', '/team/'], ['Past events', '/past/'], ['Partners', '/partners/'], ['Press', PRESS_URL]]} />
+      <Explore links={[['Team', '/team/'], ['Past Events', '/past/'], ['Partners', '/partners/'], ['Press', PRESS_URL]]} />
       <Footer />
     </div>
   );

@@ -136,7 +136,7 @@ export function LeadersBand() {
         <LeadersViewer tiles={tiles} />
         {names.length > 0 && (
           <details className="m-also">
-            <summary>Also joining ({names.length})</summary>
+            <summary>Also Joining ({names.length})</summary>
             <p className="m-names">{names.join(', ')}.</p>
           </details>
         )}
@@ -177,8 +177,8 @@ export function TeamStrip() {
 /** Company traction, from data. Current numbers only; nothing here is a promise. */
 export function StatRow() {
   const stats = [
-    { n: String(confirmedLeaders.length), l: 'executives confirmed', href: '/leaders/' },
-    { n: String(livePartners.length), l: 'partners working with us', href: '/partners/directory/' },
+    { n: String(confirmedLeaders.length), l: 'Executives Confirmed', href: '/leaders/' },
+    { n: String(livePartners.length), l: 'Partners Working With Us', href: '/partners/directory/' },
   ];
   return (
     <section className="m-section m-statsec" aria-label="Meridian in numbers">
@@ -192,8 +192,8 @@ export function StatRow() {
           ))}
           {press.length > 0 && (
             <a className="m-stat" href={press[0].url} target="_blank" rel="noopener">
-              <span className="n n-text">In the press</span>
-              <span className="l">Read the recent media</span>
+              <span className="n n-text">In the Press</span>
+              <span className="l">Read the Recent Media</span>
             </a>
           )}
         </div>

@@ -46,7 +46,7 @@ export default function DirectoryPage() {
         </section>
         {groups.map((g) => {
           const rows = livePartners.filter((p) => p.group === g);
-          const kinds = (['Office or department', 'Student organization'] as const)
+          const kinds = (['Office or Department', 'Student Organization'] as const)
             .filter((k) => rows.some((r) => r.kind === k));
           return (
             <section className="m-section" id={slug(g)} key={g}>
