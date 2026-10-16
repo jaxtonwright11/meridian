@@ -25,7 +25,7 @@ export const faqs: Faq[] = [
   // TODO(jax): see the registration-eligibility decision.
   { audience: 'Students', question: 'I am under 18. Can I come?', answer: 'Students under 18 register with a parent or guardian’s contact information, and a parent or guardian signs them in at check-in.' },
 
-  { audience: 'Executives', question: 'I am an executive. What does the day ask of me?', answer: 'Nothing to prepare and nothing to carry. You get to know students and meet the other leaders in the room.' },
+  { audience: 'Executives', question: 'I am an executive. What does the day ask of me?', answer: 'Nothing to prepare and nothing to carry. You get to know students and meet the other executives in the room.' },
   { audience: 'Partners', question: 'I lead an organization. How do we work with Meridian?', answer: 'Start at the partners page. Write to us or book a call.' },
   { audience: 'Demo day', question: 'How do I apply to present at demo day?', answer: 'Register, then answer the demo day question on the form. We follow up with the people we pick.' },
 ];

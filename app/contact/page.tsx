@@ -34,7 +34,7 @@ export default function ContactPage() {
               </div>
               <div className="m-route">
                 <h3>Executives</h3>
-                <p>What the day asks of a leader, and who else is joining.</p>
+                <p>What the day asks of an executive, and who else is joining.</p>
                 <div className="m-actions"><a className="btn btn-tan" href="/speakers/">For executives</a></div>
               </div>
               <div className="m-route">

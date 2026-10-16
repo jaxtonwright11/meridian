@@ -23,7 +23,7 @@ export function LeaderSpotlight({ spots }: { spots: Spot[] }) {
   };
   const s = spots[i];
   return (
-    <div className="m-spot" role="region" aria-label="Featured leaders" onKeyDown={onKey}>
+    <div className="m-spot" role="region" aria-label="Featured executives" onKeyDown={onKey}>
       <div className={`m-spot-card m-slide-${dir}`} key={s.slug}>
         <img src={s.photo} alt={s.name} width={600} height={600} />
         <div>
@@ -38,7 +38,7 @@ export function LeaderSpotlight({ spots }: { spots: Spot[] }) {
         <span className="m-small" aria-live="polite">{i + 1} of {spots.length}</span>
         <button className="btn btn-tan" onClick={() => go(i + 1)} disabled={i === spots.length - 1}>Next</button>
       </div>
-      <div className="m-spot-names" role="group" aria-label="Jump to a leader">
+      <div className="m-spot-names" role="group" aria-label="Jump to an executive">
         {spots.map((x, n) => (
           <button key={x.slug} type="button" className={n === i ? 'on' : ''} aria-pressed={n === i} onClick={() => go(n)}>
             {x.name}

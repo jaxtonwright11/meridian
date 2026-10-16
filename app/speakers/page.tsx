@@ -9,7 +9,7 @@ import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
 export const metadata: Metadata = pageMeta(
   'For executives',
-  'What Meridian asks of the leaders in the room: nothing to prepare, nothing to carry afterward. Saturday, November 14, 2026 at UCLA.',
+  'What Meridian asks of the executives in the room: nothing to prepare, nothing to carry afterward. Saturday, November 14, 2026 at UCLA.',
   '/speakers/',
 );
 
@@ -49,8 +49,8 @@ export default function SpeakersPage() {
           <div className="m-wrap">
             <span className="m-eyebrow">Who else is in the room</span>
             <p className="m-lead" style={{ marginBottom: 18 }}>
-              {confirmedLeaders.length} leaders so far, including founders, executives, university
-              leaders, physicians, engineers, and civic leaders.
+              {confirmedLeaders.length} executives so far, including founders, physicians, engineers,
+              and university and civic figures.
             </p>
             <div className="m-list">
               {first.map((l) => (
@@ -68,7 +68,7 @@ export default function SpeakersPage() {
           <div className="m-wrap">
             <span className="m-eyebrow">What the day gives you</span>
             <p className="m-lead">
-              You meet the other leaders in the room. You represent your work to students and press
+              You meet the other executives in the room. You represent your work to students and press
               through who you are and what you care about, not through a logo or a slide.
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function SpeakersPage() {
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Work the room</h3><p>Get to know students in small groups.</p></div>
               <div><h3>Introductions</h3><p>Short introductions, if you would like them. A few minutes, no deck: who you are, what you built, and one thing a student can use on Monday. Guests who would rather spend the day in conversation do that instead.</p></div>
-              <div><h3>The engineering design lab</h3><p>A hands-on build led by NASA engineers, a natural home for technical leaders who want time with students at a table.</p></div>
+              <div><h3>The engineering design lab</h3><p>A hands-on build led by NASA engineers, a natural home for technical executives who want time with students at a table.</p></div>
               <div><h3>Demo day</h3><p>Student teams present what they are building. A natural stop for investors, founders, and anyone who wants to see student work up close.</p></div>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function SpeakersPage() {
           </div>
         </section>
       </main>
-      <Explore links={[['Conference', '/conference/'], ['Leaders', '/leaders/'], ['Contact', '/contact/']]} />
+      <Explore links={[['Conference', '/conference/'], ['Who is joining', '/leaders/'], ['Contact', '/contact/']]} />
       <Footer />
     </div>
   );

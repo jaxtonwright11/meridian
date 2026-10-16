@@ -3,7 +3,7 @@ import { CONTACT_EMAIL_PUBLIC, INSTAGRAM_URL, SITE_NAME } from '@/config';
 
 const cols = [
   { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/'], ['About', '/about/']] },
-  { h: 'Conference', links: [['Leaders', '/leaders/'], ['Demo day', '/demo-day/'], ['FAQ', '/faq/']] },
+  { h: 'Conference', links: [['Who is joining', '/leaders/'], ['Demo day', '/demo-day/'], ['FAQ', '/faq/']] },
   { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Past events', '/past/'], ['Press', PRESS_URL], ['Contact', '/contact/']] },
   { h: 'Legal', links: [['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
 ];

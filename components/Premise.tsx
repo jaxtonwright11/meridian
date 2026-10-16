@@ -3,7 +3,7 @@ export function Premise() {
   return (
     <p className="m-idea">
       The premise is <strong>reversing gatekeeping</strong>. College and networking were supposed
-      to open doors, and instead the goalposts keep moving further out. So leaders get to know
+      to open doors, and instead the goalposts keep moving further out. So executives get to know
       students, and each one is looking to help with opportunities they manage. There&apos;s also a
       Demo Day where student founders and researchers present to peers and executives on the
       floor, and an engineering design lab for students run by NASA engineers.

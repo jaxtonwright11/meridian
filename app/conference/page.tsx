@@ -42,7 +42,7 @@ export default function ConferencePage() {
       <div className="m-subnav" aria-label="On this page">
         <div className="m-subnav-in">
           <a href="#the-day">The day</a>
-          <a href="/leaders/">Leaders</a>
+          <a href="/leaders/">Who is joining</a>
           <a href="/demo-day/">Demo day</a>
           <a href="#schedule">Schedule</a>
           <a href="#getting-there">Getting there</a>
@@ -87,7 +87,7 @@ export default function ConferencePage() {
         {/* 5. Who will be in the room */}
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">{confirmedLeaders.length} leaders so far</span>
+            <span className="m-eyebrow">{confirmedLeaders.length} executives so far</span>
             <h2 className="m-display m-h2">Who will be in the room</h2>
             <div className="m-people m-twelve">
               {twelve.map((l) => (
@@ -143,7 +143,7 @@ export default function ConferencePage() {
           </div>
         </section>
       </main>
-      <Explore links={[['Students', '/students/'], ['Executives', '/speakers/'], ['Demo day', '/demo-day/'], ['Leaders', '/leaders/'], ['FAQ', '/faq/']]} />
+      <Explore links={[['Students', '/students/'], ['Executives', '/speakers/'], ['Demo day', '/demo-day/'], ['Who is joining', '/leaders/'], ['FAQ', '/faq/']]} />
       <Footer />
     </div>
   );

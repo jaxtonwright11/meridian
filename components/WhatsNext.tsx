@@ -7,7 +7,7 @@ const timeline = [
   {
     icon: '01',
     title: 'The 30-Second Favors',
-    desc: 'Leaders offer help in person: internship intros, mentorship, career guidance with follow-through.',
+    desc: 'Executives offer help in person: internship intros, mentorship, career guidance with follow-through.',
     featured: true,
   },
   {
@@ -19,13 +19,13 @@ const timeline = [
   {
     icon: '03',
     title: 'Keynote Conversations',
-    desc: 'Industry leaders share their path, then open the floor. No scripts. Direct access.',
+    desc: 'Industry executives share their path, then open the floor. No scripts. Direct access.',
     featured: false,
   },
   {
     icon: '04',
     title: 'Direct Access Sessions',
-    desc: 'Small-group conversations between students and leaders. The rooms where trajectories change.',
+    desc: 'Small-group conversations between students and executives. The rooms where trajectories change.',
     featured: false,
   },
   {

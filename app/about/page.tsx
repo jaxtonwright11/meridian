@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMeta(
 // Founder bio: brief section 15. TODO(jax): approve the wording.
 // Harvard appears here and nowhere else on the site (brief 10.1).
 const FOUNDER_BIO =
-  'Jaxton Wright is from Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025, he gave a speech at Harvard, and afterward he created Meridian, which brings executives and students together in person, by field. Meridian starts with a free conference on November 14, where leaders get to know students and each one is looking to help with opportunities they manage. The day includes a demo day for student founders and researchers and a design lab led by NASA engineers. Starting November 14, Meridian scales from one conference into a company that hosts in-person events by field, beginning with engineering, pre-med, and business. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.';
+  'Jaxton Wright is from Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025, he gave a speech at Harvard, and afterward he created Meridian, which brings executives and students together in person, by field. Meridian starts with a free conference on November 14, where executives get to know students and each one is looking to help with opportunities they manage. The day includes a demo day for student founders and researchers and a design lab led by NASA engineers. Starting November 14, Meridian creates hackathon-style events by field, beginning with engineering, pre-med, and business. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.';
 
 export default function AboutPage() {
   const george = leaders.find((l) => l.slug === 'george-leis')!;
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <h2 id="what-h" className="m-title">What is Meridian?</h2>
             <p className="m-whatp">
               Meridian brings executives and students together in person, by field. It begins with
-              the <a href="/conference/">November 14 conference</a>, where leaders from every field
+              the <a href="/conference/">November 14 conference</a>, where executives from every field
               come to meet students. After November 14, Meridian creates <a href="/partners/">hackathon-style
               events for executives and students</a>. We are building software that matches students
               with opportunities that fit them. Everyone who attends joins the Meridian network.
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <div className="m-path">
               <details className="m-step">
                 <summary><h3>The conference</h3></summary>
-                <p>November 14 at UCLA, free for every student. Leaders from every field come to meet you.</p>
+                <p>November 14 at UCLA, free for every student. Executives from every field come to meet you.</p>
               </details>
               <details className="m-step">
                 <summary><h3>Hackathon-style events</h3></summary>
@@ -80,13 +80,6 @@ export default function AboutPage() {
               students into the same room as the people in their field, in person, and make that an
               ongoing part of what we do.
             </p>
-          </div>
-        </section>
-
-        <section className="m-section">
-          <div className="m-wrap">
-            <span className="m-eyebrow">What we do</span>
-            <WhatMeridianDoes />
           </div>
         </section>
 

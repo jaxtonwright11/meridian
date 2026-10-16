@@ -10,7 +10,7 @@ import { REGISTRATION_CLOSES_LABEL } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'For students',
-  'A free day at UCLA where leaders from every field come to you. Nothing to prepare, nothing to bring. Saturday, November 14, 2026.',
+  'A free day at UCLA where executives from every field come to you. Nothing to prepare, nothing to bring. Saturday, November 14, 2026.',
   '/students/',
 );
 
@@ -25,10 +25,10 @@ export default function StudentsPage() {
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">For students</span>
-            <h1>A free day where leaders come to you.</h1>
+            <h1>A free day where executives come to you.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. The conference
-              is a free day at UCLA where leaders from every field come to you. Nothing to prepare.
+              is a free day at UCLA where executives from every field come to you. Nothing to prepare.
               Nothing to bring.
             </p>
             <div className="m-actions">
@@ -42,7 +42,7 @@ export default function StudentsPage() {
           <div className="m-wrap">
             <span className="m-eyebrow">What happens</span>
             <p className="m-idea">
-              You walk in, get a name tag, and the room is open. Leaders get to know students, each
+              You walk in, get a name tag, and the room is open. Executives get to know students, each
               looking to help with opportunities they manage. Talk to anyone. If that feels like a
               lot, find a host and they will make the introduction.
             </p>
@@ -65,7 +65,7 @@ export default function StudentsPage() {
         <section className="m-section m-alt">
           <div className="m-wrap">
             <span className="m-eyebrow">Who will be there</span>
-            <h2 className="m-title">Leaders joining you</h2>
+            <h2 className="m-title">Executives joining you</h2>
             <div className="m-people m-twelve">
               {twelve.map((l) => (
                 <div className="m-person" key={l.slug}>

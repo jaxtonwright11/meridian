@@ -7,8 +7,8 @@ import { Explore, RegisterButton } from '@/components/site/parts';
 import { confirmedLeaders } from '@/data/leaders';
 
 export const metadata: Metadata = pageMeta(
-  'Leaders',
-  'Leaders joining Meridian on November 14, 2026 at UCLA.',
+  'Executives joining',
+  'Executives joining Meridian on November 14, 2026 at UCLA.',
   '/leaders/',
 );
 
@@ -19,16 +19,16 @@ export default function LeadersPage() {
     .map((l) => ({ slug: l.slug, name: l.name, roles: l.roles, bio: l.bio as string, photo: l.photo as string, virtual: l.format === 'virtual' }));
   return (
     <div className="m-page">
-      <Nav trail={[{ label: 'Conference', href: '/conference/' }, { label: 'Leaders' }]} />
+      <Nav trail={[{ label: 'Conference', href: '/conference/' }, { label: 'Who is joining' }]} />
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">
             <h1>Who will be in the room</h1>
             <p className="m-lead" style={{ marginTop: 18 }}>
-              Leaders joining us on November 14. They get to know students, each one looking to help
+              Executives joining us on November 14. They get to know students, each one looking to help
               with opportunities they manage. More names are added as they confirm.
             </p>
-            <p className="m-role" style={{ marginTop: 14, fontSize: 18 }}>{confirmedLeaders.length} leaders so far.</p>
+            <p className="m-role" style={{ marginTop: 14, fontSize: 18 }}>{confirmedLeaders.length} executives so far.</p>
           </div>
         </section>
 
@@ -42,7 +42,7 @@ export default function LeadersPage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">Everyone joining</span>
-            <h2 className="m-title">All {confirmedLeaders.length} leaders</h2>
+            <h2 className="m-title">All {confirmedLeaders.length} executives</h2>
             <div className="m-roster">
               {confirmedLeaders.map((l) => (
                 <div className={`m-rrow ${l.photo && l.photoApproved ? 'has' : ''}`} key={l.slug}>

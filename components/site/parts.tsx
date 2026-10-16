@@ -42,8 +42,8 @@ export function MeridianLine() {
 
 export function Doors() {
   const doors = [
-    { h: 'Students', p: 'The conference is free, the leaders come to you, and nothing needs preparing. See how it works and register.', l: 'For students', href: '/students/' },
-    { h: 'Executives', p: 'Spend the day getting to know students, alongside the other leaders in the room. See what the day involves and who is joining.', l: 'For executives', href: '/speakers/' },
+    { h: 'Students', p: 'The conference is free, the executives come to you, and nothing needs preparing. See how it works and register.', l: 'For students', href: '/students/' },
+    { h: 'Executives', p: 'Spend the day getting to know students, alongside the other executives in the room. See what the day involves and who is joining.', l: 'For executives', href: '/speakers/' },
     { h: 'Partners', p: 'Companies, campus offices, and community organizations are working with Meridian on the conference and on what comes after it. See what that looks like.', l: 'For partners', href: '/partners/' },
   ];
   return (
@@ -68,7 +68,7 @@ export function WhatMeridianDoes() {
     <div className="m-three m-cards3">
       <div>
         <h3>The conference</h3>
-        <p>A free day at UCLA where leaders from every field come to students. November 14.</p>
+        <p>A free day at UCLA where executives from every field come to students. November 14.</p>
         <p style={{ marginTop: 12 }}><a className="m-link" href="/conference/">See the conference</a></p>
       </div>
       <div>
@@ -132,7 +132,7 @@ export function LeadersBand() {
   return (
     <section className="m-section m-alt" aria-labelledby="leaders-h">
       <div className="m-wrap">
-        <h2 id="leaders-h" className="m-title">Leaders joining us on {EVENT_DATE_SHORT}</h2>
+        <h2 id="leaders-h" className="m-title">Executives joining us on {EVENT_DATE_SHORT}</h2>
         <LeadersViewer tiles={tiles} />
         {names.length > 0 && (
           <details className="m-also">
@@ -177,7 +177,7 @@ export function TeamStrip() {
 /** Company traction, from data. Current numbers only; nothing here is a promise. */
 export function StatRow() {
   const stats = [
-    { n: String(confirmedLeaders.length), l: 'leaders confirmed', href: '/leaders/' },
+    { n: String(confirmedLeaders.length), l: 'executives confirmed', href: '/leaders/' },
     { n: String(livePartners.length), l: 'partners working with us', href: '/partners/directory/' },
   ];
   return (

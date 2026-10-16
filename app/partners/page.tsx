@@ -83,7 +83,7 @@ export default function PartnersPage() {
               {first.map((l) => `${l.name}${title(l) ? `, ${title(l)}` : ''}`).join('. ')}.
             </p>
             <p className="m-lead" style={{ marginTop: 12 }}>
-              {confirmedLeaders.length} leaders confirmed for November 14.{' '}
+              {confirmedLeaders.length} executives confirmed for November 14.{' '}
               {livePartners.length} partners are working with us.{' '}
               <a className="m-link" href="/partners/directory/">See the partner directory</a>
             </p>

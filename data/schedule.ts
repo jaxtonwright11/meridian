@@ -16,15 +16,15 @@ export const schedule: { approved: boolean; items: ScheduleItem[]; allDay: strin
   items: [
     { time: '10:30', title: 'Doors open', body: 'Check in, pick up your name tag, and settle in.', status: 'live' },
     { time: '11:00', title: 'Welcome', body: 'A short welcome and how the day works.', status: 'live' },
-    { time: '11:15', title: 'Roundtables', body: 'Small groups by field and goal, each with a leader or host. The first aerospace lab session and the demo day expo run at the same time.', status: 'live' },
-    { time: '12:05', title: 'Leader introductions', body: 'Each leader introduces themselves to the room in under a minute.', status: 'live' },
+    { time: '11:15', title: 'Roundtables', body: 'Small groups by field and goal, each with an executive or host. The first aerospace lab session and the demo day expo run at the same time.', status: 'live' },
+    { time: '12:05', title: 'Executive introductions', body: 'Each executive introduces themselves to the room in under a minute.', status: 'live' },
     { time: '12:35', title: 'Group photo', body: 'One photo of everyone in the room.', status: 'live' },
-    { time: '12:45', title: 'Lunch', body: 'Tables mix field, school, and year, with a leader or host at most of them.', status: 'live' },
+    { time: '12:45', title: 'Lunch', body: 'Tables mix field, school, and year, with an executive or host at most of them.', status: 'live' },
     {
       time: '1:20', title: 'Four things at once', body: 'Choose what fits you.', status: 'live',
       tracks: [
         { name: 'Demo day pitch session', line: 'Finalists pitch for three minutes each to executives, investors, and press.' },
-        { name: 'Workshops', line: 'Short sessions led by leaders.' },
+        { name: 'Workshops', line: 'Short sessions led by executives.' },
         { name: 'Crossover roundtables', line: 'Fields mixed on purpose, so you meet people whose work you are curious about.' },
         { name: 'Aerospace design lab', line: 'The second session, led by NASA engineers.' },
       ],
