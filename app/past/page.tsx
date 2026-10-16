@@ -7,7 +7,7 @@ import { Explore, RegisterButton } from '@/components/site/parts';
 import { principals, PRINCIPAL_LINE } from '@/data/principals';
 
 export const metadata: Metadata = pageMeta(
-  'Past events',
+  'Past Events',
   'The first Meridian, December 2025.',
   '/past/',
 );

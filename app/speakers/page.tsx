@@ -2,18 +2,21 @@ import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { Premise } from '@/components/Premise';
+import { FaqList } from '@/components/FaqList';
+import { faqs } from '@/data/faq';
 import { PersonContact } from '@/components/PersonContact';
 import { Explore, EVENTS_SENTENCE, StatRow } from '@/components/site/parts';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
 export const metadata: Metadata = pageMeta(
-  'For executives',
+  'For Executives',
   'What Meridian asks of the executives in the room: nothing to prepare, nothing to carry afterward. Saturday, November 14, 2026 at UCLA.',
   '/speakers/',
 );
 
 // Brief v2 section 6.5, with v3 wording. No schedule on this page, no ask for a time window.
+const execFaqs = faqs.filter((f) => f.audience === 'Executives');
+
 export default function SpeakersPage() {
   const first = photoLeaders.length ? confirmedLeaders.slice(0, 12) : [];
   return (
@@ -23,15 +26,12 @@ export default function SpeakersPage() {
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">For Executives</span>
-            <h1>One Day in the Room.</h1>
+            <h1>What&apos;s in It for You.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. Our conference
               on Saturday, November 14 at UCLA is where it starts: 400 university students from
               across Los Angeles and Ventura Counties, a number of them already building companies.
-            </p>
-            <p className="m-lead" style={{ marginTop: 16 }}>
-              After November 14, Meridian creates hackathon-style events for executives and students.
-              We are building software that matches students with opportunities that fit them.
+              Here is what an executive gets, on the day and after it.
             </p>
           </div>
         </section>
@@ -40,8 +40,15 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">The Format</span>
-            <Premise />
+            <h2 className="m-title">What You Get</h2>
+            <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+              <div><h3>Students Before Anyone Else Meets Them</h3><p>Get to know university students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, in a room built for conversation, years before they enter the job market.</p></div>
+              <div><h3>How the Next Generation Thinks</h3><p>Hear directly from the students you hire, serve, and sell to: what they are building, what they care about, and what they are looking for.</p></div>
+              <div><h3>A Way to Open Doors</h3><p>Offer the opportunities you manage, whether internships, mentorship, or introductions, to students in your field who would otherwise never know they exist.</p></div>
+              <div><h3>A Place in What Comes Next</h3><p>After November 14, Meridian creates hackathon-style events by field, with executives from that field taking part. Everyone who attends joins the Meridian network.</p></div>
+              <div><h3>Software That Matches</h3><p>We are building software that matches students with opportunities that fit them. The opportunities you open are the ones it is built to find students for.</p></div>
+              <div><h3>The Campuses, in One Room</h3><p>Meridian is built by students at UCLA, USC, and UC Berkeley, with ties to each campus&apos;s administration and student body, so students, administrators, and executives end up in the same room.</p></div>
+            </div>
           </div>
         </section>
 
@@ -66,18 +73,8 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What the Day Gives You</span>
-            <p className="m-lead">
-              You meet the other executives in the room. You represent your work to students and press
-              through who you are and what you care about, not through a logo or a slide.
-            </p>
-          </div>
-        </section>
-
-        <section className="m-section">
-          <div className="m-wrap">
             <span className="m-eyebrow">What You Do</span>
-            <div className="m-three" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+            <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Work the Room</h3><p>Get to know students in small groups.</p></div>
               <div><h3>Introductions</h3><p>Short introductions, if you would like them. A few minutes, no deck: who you are, what you built, and one thing a student can use on Monday. Guests who would rather spend the day in conversation do that instead.</p></div>
               <div><h3>The Engineering Design Lab</h3><p>A hands-on build led by NASA engineers, a natural home for technical executives who want time with students at a table.</p></div>
@@ -96,8 +93,8 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">Nothing to Prepare, Nothing to Carry</span>
-            <p className="m-lead">Nothing needs preparing, and nothing needs carrying afterward.</p>
+            <h2 className="m-title">Questions Executives Ask</h2>
+            <FaqList items={execFaqs} />
           </div>
         </section>
 

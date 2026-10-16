@@ -30,7 +30,7 @@ const splineMono = Spline_Sans_Mono({
 const DESCRIPTION =
   'Meridian brings executives and students together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, free for every student, then expands into in-person events by field.';
 
-const HOME_TITLE = 'Meridian | Students and executives, together in person, by field';
+const HOME_TITLE = 'Meridian | Executives and Students Together, in Person, by Field';
 
 // TODO(jax): the share image may still say "Meridian Conference". Not changed.
 const OG_IMAGE = {

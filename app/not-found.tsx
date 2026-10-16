@@ -1,7 +1,7 @@
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 
-export const metadata = { title: 'Page not found', robots: { index: false } };
+export const metadata = { title: 'Page Not Found', robots: { index: false } };
 
 export default function NotFound() {
   const links = [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/'], ['About', '/about/']];

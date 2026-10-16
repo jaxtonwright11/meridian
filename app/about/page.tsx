@@ -32,6 +32,31 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* What Meridian does, three parts. TODO(jax): approve wording. */}
+        <section className="m-section m-pathsec" aria-labelledby="path-h">
+          <div className="m-wrap">
+            <h2 id="path-h" className="m-title">Three Parts of Meridian</h2>
+            <div className="m-path">
+              <details className="m-step">
+                <summary><h3>The Conference</h3></summary>
+                <p>November 14 at UCLA, free for every student. Executives from every field come to get to know you.</p>
+              </details>
+              <details className="m-step">
+                <summary><h3>Hackathon-Style Events</h3></summary>
+                <p>Executives and students team up on a challenge in one field, then compete and present.</p>
+              </details>
+              <details className="m-step">
+                <summary><h3>Matching Software</h3></summary>
+                <p>Software that connects each student with opportunities nearby that fit their circumstances, values, and goals.</p>
+              </details>
+            </div>
+            <p className="m-whatp" style={{ marginTop: 24 }}>
+              Every event brings executives from one field together with students, and everyone who
+              attends joins the Meridian network. Each event adds to the next.
+            </p>
+          </div>
+        </section>
+
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">The Idea</span>

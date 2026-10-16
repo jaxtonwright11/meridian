@@ -7,9 +7,14 @@ import { Explore, RegisterButton, EVENTS_SENTENCE } from '@/components/site/part
 import { photoLeaders, title } from '@/data/leaders';
 import { faqs } from '@/data/faq';
 import { REGISTRATION_CLOSES_LABEL } from '@/config';
+import { schedule } from '@/data/schedule';
+import { livePartners } from '@/data/partners';
+
+const clock = (t: string) => `${t} ${Number(t.split(':')[0]) >= 10 && Number(t.split(':')[0]) < 12 ? 'AM' : 'PM'}`;
+const runOfShow = schedule.items.filter((i) => i.status === 'live' && i.title !== 'Close');
 
 export const metadata: Metadata = pageMeta(
-  'For students',
+  'For Students',
   'A free day at UCLA where executives from every field come to you. Nothing to prepare, nothing to bring. Saturday, November 14, 2026.',
   '/students/',
 );
@@ -40,24 +45,38 @@ export default function StudentsPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What Happens</span>
-            <p className="m-idea">
-              You walk in, get a name tag, and the room is open. Executives get to know students, each
-              looking to help with opportunities they manage. Talk to anyone. If that feels like a
-              lot, find a host and they will make the introduction.
-            </p>
+            <h2 className="m-title">How the Day Goes</h2>
+            <div className="m-run">
+              {runOfShow.map((i) => (
+                <div className="m-run-row" key={i.time}>
+                  <span className="m-run-time">{clock(i.time)}</span>
+                  <div>
+                    <h3>{i.title}</h3>
+                    {i.body && <p>{i.body}</p>}
+                    {i.tracks && (
+                      <ul>
+                        {i.tracks.map((k) => (<li key={k.name}><strong>{k.name}.</strong> {k.line}</li>))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="m-section">
+        <section className="m-section m-alt">
           <div className="m-wrap">
-            <span className="m-eyebrow">Besides Talking</span>
             <h2 className="m-title">What You Can Do</h2>
-            <div className="m-list" style={{ maxWidth: 760 }}>
-              <div className="m-row" style={{ gridTemplateColumns: '1fr' }}><span className="n">Join the aerospace design lab, led by NASA engineers.</span></div>
-              <div className="m-row" style={{ gridTemplateColumns: '1fr' }}><span className="n">Present at <a className="m-link" href="/demo-day/">demo day</a>.</span></div>
-              <div className="m-row" style={{ gridTemplateColumns: '1fr' }}><span className="n">Get a free professional headshot.</span></div>
-              <div className="m-row" style={{ gridTemplateColumns: '1fr' }}><span className="n">Visit the partner tables.</span></div>
+            <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+              <div><h3>Aerospace Design Lab</h3><p>A hands-on build led by NASA engineers, with two sessions during the day.</p></div>
+              <div><h3>Demo Day</h3><p>Student founders and researchers pitch to executives, investors, and press. <a className="m-link" href="/demo-day/">See how it works.</a></p></div>
+              <div><h3>Roundtables</h3><p>Small groups by field and goal, each with an executive or host. Crossover roundtables mix fields on purpose, so you meet people whose work you are curious about.</p></div>
+              <div><h3>Workshops</h3><p>Short sessions led by executives.</p></div>
+              <div><h3>Free Professional Headshots</h3><p>Photographers from Las Fotos Project shoot a headshot for every student.</p></div>
+              <div><h3>Partner Tables</h3><p>Companies, campus offices, and organizations, {livePartners.length} so far. <a className="m-link" href="/partners/directory/">See who is working with us.</a></p></div>
+              <div><h3>Lunch With Executives</h3><p>Tables mix field, school, and year, with an executive or host at most of them.</p></div>
+              <div><h3>Petersen Automotive Museum</h3><p>A 1955 Pontiac and a 1955 Bel Air on the floor, with museum staff.</p></div>
             </div>
           </div>
         </section>

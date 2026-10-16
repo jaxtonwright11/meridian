@@ -130,7 +130,7 @@ export function LeadersBand() {
   const photoSlugs = new Set(tiles.map((t) => t.slug));
   const names = confirmedLeaders.filter((l) => !photoSlugs.has(l.slug)).map((l) => l.name);
   return (
-    <section className="m-section m-alt" aria-labelledby="leaders-h">
+    <section className="m-section" aria-labelledby="leaders-h">
       <div className="m-wrap">
         <h2 id="leaders-h" className="m-title">Executives Joining Us on {EVENT_DATE_SHORT}</h2>
         <LeadersViewer tiles={tiles} />
@@ -162,7 +162,7 @@ export function TeamTile({ m }: { m: TeamMember }) {
 export function TeamStrip() {
   const all = [founder, ...team];
   return (
-    <section className="m-section" aria-labelledby="team-h">
+    <section className="m-section m-alt" aria-labelledby="team-h">
       <div className="m-wrap">
         <h2 id="team-h" className="m-title">A Team Across UCLA, USC, and UC Berkeley</h2>
         <div className="m-people m-team">

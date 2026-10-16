@@ -32,10 +32,8 @@ export default function Home() {
         </section>
 
         {/* 2. Leaders proof band */}
-        <LeadersBand />
-
         {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
-        <section className="m-section" id="what-is-meridian" aria-labelledby="what-h">
+        <section className="m-section m-alt" id="what-is-meridian" aria-labelledby="what-h">
           <div className="m-wrap">
             <h2 id="what-h" className="m-title">What Is Meridian?</h2>
             <p className="m-whatp">
@@ -48,30 +46,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* What Meridian does, three parts. TODO(jax): approve wording. */}
-        <section className="m-section m-alt m-pathsec" aria-labelledby="path-h">
-          <div className="m-wrap">
-            <h2 id="path-h" className="m-title">Three Parts of Meridian</h2>
-            <div className="m-path">
-              <details className="m-step">
-                <summary><h3>The Conference</h3></summary>
-                <p>November 14 at UCLA, free for every student. Executives from every field come to get to know you.</p>
-              </details>
-              <details className="m-step">
-                <summary><h3>Hackathon-Style Events</h3></summary>
-                <p>Executives and students team up on a challenge in one field, then compete and present.</p>
-              </details>
-              <details className="m-step">
-                <summary><h3>Matching Software</h3></summary>
-                <p>Software that connects each student with opportunities nearby that fit their circumstances, values, and goals.</p>
-              </details>
-            </div>
-            <p className="m-whatp" style={{ marginTop: 24 }}>
-              Every event brings executives from one field together with students, and everyone who
-              attends joins the Meridian network. Each event adds to the next.
-            </p>
-          </div>
-        </section>
+        <LeadersBand />
 
         <TeamStrip />
 

@@ -44,11 +44,12 @@ export default function PartnersPage() {
           <div className="m-wrap">
             <span className="m-eyebrow">What an Event Looks Like</span>
             <p className="m-idea">
-              An event is one field, in person, run as a hackathon. Take engineering: executives
-              from engineering companies join, students from across Los Angeles campuses arrive, and
-              student teams work the same challenge side by side. The winning team takes home a
-              prize. The format fits the field. In art, teams make a film together, then present and
-              compete.
+              An event is one field, in one room, run as a hackathon. Take pre-med: physicians and
+              healthcare executives join, and students from UCLA, USC, UC Berkeley, and other Los
+              Angeles campuses are placed on teams with people from schools they would not normally
+              meet. Each team gets one real problem from the field and a day to work on it, then
+              presents to the executives in the room. The winning team takes home a prize. The format
+              fits the field: in art, teams make a film together before they present and compete.
             </p>
             {PARTNER_NAMED_BY && (
               <p className="m-small" style={{ marginTop: 10 }}>
@@ -58,20 +59,30 @@ export default function PartnersPage() {
           </div>
         </section>
 
-        {/* 4. What is in it for you (brief v2 6.6) */}
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What Is in It for You</span>
-            <div className="m-three" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>Your Name, in the Room</h3><p>Partners run tables at the conference and are named in the room and in what we publish.</p></div>
-              <div><h3>Help Shape the Events</h3><p>After the conference, we create in-person events by field, like engineering, pre-med, or business. We are looking for organizations to plan each one with, so a partner helps shape it from the start.</p></div>
-              <div><h3>Executives From Your Field</h3><p>Each event has one or two executives from that field. Your people meet them too.</p></div>
-              <div><h3>Students and Press, Through Who You Are</h3><p>Students and press get to know a partner through its people and what it cares about, not a logo on a banner.</p></div>
+            <h2 className="m-title">Why Meridian Is Different</h2>
+            <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+              <div><h3>Cross-Campus by Design</h3><p>Teams mix students from different campuses on purpose, so students work with people from schools they would otherwise never meet.</p></div>
+              <div><h3>Built From the Inside</h3><p>Meridian is run by students at UCLA, USC, and UC Berkeley, with ties to each campus&apos;s administration and student body.</p></div>
+              <div><h3>From Los Angeles</h3><p>Founded by Jaxton Wright, from Oxnard, and built for students across Los Angeles and Ventura Counties.</p></div>
+              <div><h3>Executives in the Room</h3><p>Executives from the field are at every event, there to get to know students and open doors for them.</p></div>
             </div>
-            <p className="m-whatp" style={{ marginTop: 28 }}>
-              We are building software that matches students with opportunities that fit them, so
-              partners can reach the right students.
-            </p>
+          </div>
+        </section>
+
+        {/* 4. What is in it for you. Reasons companies partner with student groups: talent access, repeat presence, next-generation insight, a real problem in front of student teams. */}
+        <section className="m-section m-alt">
+          <div className="m-wrap">
+            <h2 className="m-title">What Is in It for You</h2>
+            <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+              <div><h3>Students in Your Field, Early</h3><p>Meet students in your field in a working setting, not across a career-fair table, before other employers do.</p></div>
+              <div><h3>Set the Challenge</h3><p>Bring a real problem from your field. Student teams work on it, you see how they think, and you hear how the next generation approaches it.</p></div>
+              <div><h3>Be Remembered</h3><p>After the conference, Meridian creates events by field, so students meet your team more than once. A partner is known by its people, not by a logo on a banner.</p></div>
+              <div><h3>Campus Access</h3><p>Meridian has ties to the administrations and student bodies of UCLA, USC, and UC Berkeley. Work with us to reach those campuses.</p></div>
+              <div><h3>Executives From Your Field</h3><p>Each event has executives from that field in the room, and your people meet them too.</p></div>
+              <div><h3>A Network That Lasts</h3><p>Everyone who attends joins the Meridian network. We are building software that matches students with opportunities that fit them, including yours.</p></div>
+            </div>
           </div>
         </section>
 
@@ -111,7 +122,7 @@ export default function PartnersPage() {
             <div className="m-three">
               <div><h3>1. Tell Us</h3><p>Tell us who you are and what you would like to do.</p></div>
               <div><h3>2. We Talk</h3><p>We talk and find the right fit.</p></div>
-              <div><h3>3. We Build It Together</h3><p>We build it together, starting with November 14 and continuing after.</p></div>
+              <div><h3>3. We Make It Happen</h3><p>We build it into November 14 or a field event, whichever fits what you want to do.</p></div>
             </div>
           </div>
         </section>

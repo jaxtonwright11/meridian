@@ -6,7 +6,7 @@ import { Explore } from '@/components/site/parts';
 import { GROUPS, livePartners, type Partner } from '@/data/partners';
 
 export const metadata: Metadata = pageMeta(
-  'Partner directory',
+  'Partner Directory',
   'The organizations working with Meridian on November 14.',
   '/partners/directory/',
 );

@@ -701,3 +701,16 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
   .m-hero-home .m-sub { margin-left: auto; margin-right: auto; }
 }
 .m-sub strong { font-weight: 700; }
+/* Run of show */
+.m-run { max-width: 820px; border-top: 1px solid var(--rule); }
+.m-run-row { display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.m-run-time { font-weight: 700; color: var(--heading); font-size: 17px; }
+.m-run-row h3 { font-size: 22px; margin-bottom: 4px; }
+.m-run-row p, .m-run-row li { font-size: 17px; line-height: 1.5; color: var(--ink); }
+.m-run-row ul { margin: 8px 0 0 18px; padding: 0; }
+@media (max-width: 600px) { .m-run-row { grid-template-columns: 64px 1fr; gap: 12px; } }
+/* Two-column card grids */
+.m-three.m-two { gap: 16px; border: 0; }
+.m-three.m-two > div, .m-three.m-two > div + div { background: #fff; border: 1px solid var(--tan-line); border-radius: 4px; padding: 22px 24px !important; }
+.m-alt .m-three.m-two > div, .m-alt .m-three.m-two > div + div { background: var(--paper); }
+.m-three.m-two h3 { font-size: 22px; margin-bottom: 8px; }

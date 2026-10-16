@@ -7,7 +7,7 @@ import { Explore, RegisterButton } from '@/components/site/parts';
 import { confirmedLeaders } from '@/data/leaders';
 
 export const metadata: Metadata = pageMeta(
-  'Executives joining',
+  'Executives Joining',
   'Executives joining Meridian on November 14, 2026 at UCLA.',
   '/leaders/',
 );

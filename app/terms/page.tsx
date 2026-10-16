@@ -6,7 +6,7 @@ import { EVENT_DATE, EVENT_VENUE, CONTACT_EMAIL_PUBLIC as CONTACT_EMAIL } from '
 import styles from './terms.module.css';
 
 export const metadata: Metadata = pageMeta(
-  'Event terms',
+  'Event Terms',
   'Meridian Conference event terms and code of conduct: registration, photo and video, sharing your ask, communications, attendees under 18, accessibility, and safety.',
   '/terms/',
 );
