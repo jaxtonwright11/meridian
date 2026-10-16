@@ -48,7 +48,7 @@ export function WhatsNext() {
         </AnimateIn>
         <AnimateIn delay={0.2}>
           <p className={styles.subtitle}>
-            400 students from Los Angeles and Ventura Counties. Hosted in Los Angeles County.
+            400 students from Los Angeles and Ventura Counties. Hosted at UCLA.
             A half-day conference built around direct access, real mentorship, and conversations
             that continue long after the event ends.
           </p>

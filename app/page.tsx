@@ -36,7 +36,7 @@ export default function Home() {
           <div className="m-wrap">
             <h2 id="what-h" className="m-title">What is Meridian?</h2>
             <p className="m-whatp">
-              Meridian brings students and executives together in person, by field. It begins with
+              Meridian brings executives and students together in person, by field. It begins with
               the <a href="/conference/">November 14 conference</a>, where leaders from every field
               come to meet students. After November 14, Meridian hosts <a href="/partners/">hackathon-style
               events for executives and students</a>. We are building software that matches students
