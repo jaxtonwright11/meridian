@@ -617,3 +617,4 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-whatp { font-size: 20px; line-height: 1.6; color: var(--ink); max-width: 62ch; }
 .m-whatp a { color: var(--heading); font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold-deep); text-decoration-thickness: 2px; text-underline-offset: 4px; }
 @media (max-width: 900px) { .m-section.m-pathsec .m-path { grid-template-columns: 1fr; } }
+.m-step .m-stepn, .m-route .m-link, .m-door .m-link, .m-pcard .m-link, .m-closing .m-link, .m-slim .m-link { color: var(--heading); }
