@@ -39,9 +39,9 @@ export default function Home() {
             <p className="m-whatp">
               Meridian brings students and executives together in person, by field. It begins with
               the <a href="/conference/">November 14 conference</a>, where leaders from every field
-              come to meet students. From there it moves into <a href="/partners/">in-person events
-              by field</a>, and into software that matches students with opportunities that fit them.
-              Everyone who attends joins the Meridian network.
+              come to meet students. Meridian also hosts <a href="/partners/">hackathon-style
+              events for executives and students</a> and builds software that matches students with
+              opportunities that fit them. Everyone who attends joins the Meridian network.
             </p>
           </div>
         </section>
