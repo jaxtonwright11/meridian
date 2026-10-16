@@ -23,7 +23,6 @@ export default function Home() {
               Meridian brings students, ideas, and executives together. We start with
               a conference in Los Angeles on November 14, free for every student.
             </p>
-            <p className="m-proof">Last time: <strong>150 students</strong>, <strong>23 executives</strong>, <strong>9 internships</strong>.</p>
             <div className="m-actions">
               <RegisterButton>Register for {EVENT_DATE_SHORT}</RegisterButton>
               <a className="btn btn-tan" href="/leaders/">See who is joining</a>
