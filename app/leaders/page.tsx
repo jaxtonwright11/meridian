@@ -23,7 +23,7 @@ export default function LeadersPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">
-            <h1>Who will be in the room</h1>
+            <h1>Who Will Be in the Room</h1>
             <p className="m-lead" style={{ marginTop: 18 }}>
               Executives joining us on November 14. They get to know students, each one looking to help
               with opportunities they manage. More names are added as they confirm.
@@ -42,7 +42,7 @@ export default function LeadersPage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">Everyone joining</span>
-            <h2 className="m-title">All {confirmedLeaders.length} executives</h2>
+            <h2 className="m-title">All {confirmedLeaders.length} Executives</h2>
             <div className="m-roster">
               {confirmedLeaders.map((l) => (
                 <div className={`m-rrow ${l.photo && l.photoApproved ? 'has' : ''}`} key={l.slug}>

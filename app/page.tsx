@@ -19,14 +19,13 @@ export default function Home() {
         <section className="m-hero m-hero-home">
           <MeridianLine />
           <div className="m-wrap">
-            <h1>CEOs come to you.</h1>
+            <h1>CEOs Come to You.</h1>
             <p className="m-sub">
               Meridian brings executives and students together. We start with
               a <a className="m-sublink" href="/conference/">conference</a> at UCLA on November 14, free for every student.
             </p>
             <div className="m-actions">
               <RegisterButton>Register for Nov. 14</RegisterButton>
-              <a className="btn btn-tan" href="/leaders/">Executives</a>
               <a className="btn btn-tan" href="#what-is-meridian">What is Meridian?</a>
             </div>
           </div>
@@ -38,7 +37,7 @@ export default function Home() {
         {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
         <section className="m-section" id="what-is-meridian" aria-labelledby="what-h">
           <div className="m-wrap">
-            <h2 id="what-h" className="m-title">What is Meridian?</h2>
+            <h2 id="what-h" className="m-title">What Is Meridian?</h2>
             <p className="m-whatp">
               Meridian brings executives and students together in person, by field. It begins with
               the <a href="/conference/">November 14 conference</a>, where executives from every field
@@ -52,7 +51,7 @@ export default function Home() {
         {/* What Meridian does, three parts. TODO(jax): approve wording. */}
         <section className="m-section m-alt m-pathsec" aria-labelledby="path-h">
           <div className="m-wrap">
-            <h2 id="path-h" className="m-title">Three parts of Meridian</h2>
+            <h2 id="path-h" className="m-title">Three Parts of Meridian</h2>
             <div className="m-path">
               <details className="m-step">
                 <summary><h3>The conference</h3></summary>
@@ -91,7 +90,7 @@ export default function Home() {
         {press.length > 0 && (
           <section className="m-section">
             <div className="m-wrap">
-              <h2 className="m-title">In the press</h2>
+              <h2 className="m-title">In the Press</h2>
               <PressLinks />
             </div>
           </section>

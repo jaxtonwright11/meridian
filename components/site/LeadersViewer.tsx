@@ -40,7 +40,7 @@ export function LeadersViewer({ tiles }: { tiles: Tile[] }) {
       <div className="m-vbar">
         <button className="btn btn-tan" onClick={() => go(-1)} disabled={start === 0} aria-label="Previous executives">Previous</button>
         <span className="m-count" aria-live="polite">
-          {start + 1} to {Math.min(start + PER, tiles.length)} of {tiles.length}
+          {start + 1} of {tiles.length}
         </span>
         <button className="btn btn-tan" onClick={() => go(1)} disabled={start >= last} aria-label="Next executives">Next</button>
       </div>

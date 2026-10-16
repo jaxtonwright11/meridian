@@ -23,7 +23,7 @@ export default function SpeakersPage() {
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">For executives</span>
-            <h1>One day in the room.</h1>
+            <h1>One Day in the Room.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. Our conference
               on Saturday, November 14 at UCLA is where it starts: 400 university students from

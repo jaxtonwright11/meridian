@@ -48,7 +48,7 @@ export function Doors() {
   ];
   return (
     <div className="m-wrap">
-      <h2 className="m-title">Where would you like to start?</h2>
+      <h2 className="m-title">Where Would You Like to Start?</h2>
       <div className="m-doors">
         {doors.map((d) => (
           <a className="m-door" key={d.h} href={d.href}>
@@ -132,7 +132,7 @@ export function LeadersBand() {
   return (
     <section className="m-section m-alt" aria-labelledby="leaders-h">
       <div className="m-wrap">
-        <h2 id="leaders-h" className="m-title">Executives joining us on {EVENT_DATE_SHORT}</h2>
+        <h2 id="leaders-h" className="m-title">Executives Joining Us on {EVENT_DATE_SHORT}</h2>
         <LeadersViewer tiles={tiles} />
         {names.length > 0 && (
           <details className="m-also">
@@ -164,7 +164,7 @@ export function TeamStrip() {
   return (
     <section className="m-section" aria-labelledby="team-h">
       <div className="m-wrap">
-        <h2 id="team-h" className="m-title">A team across UCLA, USC, and UC Berkeley</h2>
+        <h2 id="team-h" className="m-title">A Team Across UCLA, USC, and UC Berkeley</h2>
         <div className="m-people m-team">
           {all.map((m) => (<TeamTile m={m} key={m.slug} />))}
         </div>
@@ -208,7 +208,7 @@ export function PartnerList({ heading = true, home = false }: { heading?: boolea
     <div>
       {heading && (
         <>
-          <h2 className="m-title">Who is working with us</h2>
+          <h2 className="m-title">Who Is Working With Us</h2>
         </>
       )}
       <div className="m-pgrid">

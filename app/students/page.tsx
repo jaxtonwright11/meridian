@@ -25,7 +25,7 @@ export default function StudentsPage() {
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">For students</span>
-            <h1>A free day where executives come to you.</h1>
+            <h1>A Free Day Where Executives Come to You.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. The conference
               is a free day at UCLA where executives from every field come to you. Nothing to prepare.
@@ -52,7 +52,7 @@ export default function StudentsPage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">Besides talking</span>
-            <h2 className="m-title">What you can do</h2>
+            <h2 className="m-title">What You Can Do</h2>
             <div className="m-list" style={{ maxWidth: 760 }}>
               <div className="m-row" style={{ gridTemplateColumns: '1fr' }}><span className="n">Join the aerospace design lab, led by NASA engineers.</span></div>
               <div className="m-row" style={{ gridTemplateColumns: '1fr' }}><span className="n">Present at <a className="m-link" href="/demo-day/">demo day</a>.</span></div>
@@ -65,7 +65,7 @@ export default function StudentsPage() {
         <section className="m-section m-alt">
           <div className="m-wrap">
             <span className="m-eyebrow">Who will be there</span>
-            <h2 className="m-title">Executives joining you</h2>
+            <h2 className="m-title">Executives Joining You</h2>
             <div className="m-people m-twelve">
               {twelve.map((l) => (
                 <div className="m-person" key={l.slug}>
@@ -109,7 +109,7 @@ export default function StudentsPage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">Questions</span>
-            <h2 className="m-title">Student questions</h2>
+            <h2 className="m-title">Student Questions</h2>
             <FaqList items={studentFaqs} />
             <p style={{ marginTop: 20 }}><a className="m-link" href="/faq/">All questions</a></p>
           </div>

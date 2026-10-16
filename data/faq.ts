@@ -2,19 +2,19 @@
 // Answers keep the brief's wording (v2 6.11, v3 section 18).
 import { EVENTS_SENTENCE } from '@/lib/copy';
 
-export type FaqAudience = 'The day' | 'Students' | 'Executives' | 'Partners' | 'Demo day';
+export type FaqAudience = 'The Day' | 'Students' | 'Executives' | 'Partners' | 'Demo Day';
 export interface Faq { audience: FaqAudience; question: string; answer: string }
 
-export const FAQ_GROUPS: FaqAudience[] = ['The day', 'Students', 'Executives', 'Partners', 'Demo day'];
+export const FAQ_GROUPS: FaqAudience[] = ['The Day', 'Students', 'Executives', 'Partners', 'Demo Day'];
 
 export const faqs: Faq[] = [
-  { audience: 'The day', question: 'What is Meridian?', answer: 'Meridian brings executives and students together in person, by field. The first event is the conference on November 14.' },
-  { audience: 'The day', question: 'Is it free?', answer: 'Yes. The conference is free for every student, to register and to attend.' },
-  { audience: 'The day', question: 'Can I join online?', answer: 'Yes. There is a Zoom option when you register. In-person space is 400.' },
-  { audience: 'The day', question: 'When does registration close?', answer: 'Registration closes November 7.' },
-  { audience: 'The day', question: 'How do I get there?', answer: 'The day is at UCLA in Westwood. Parking and arrival details go to everyone registered and to @meridianconference on Instagram before the day.' },
-  { audience: 'The day', question: 'What happens after November 14?', answer: EVENTS_SENTENCE },
-  { audience: 'The day', question: 'Will I be photographed?', answer: 'Yes. Meridian photographs and films the day, and your image may appear in our recap film, on the website, and on social media. You agree to that when you register.' },
+  { audience: 'The Day', question: 'What is Meridian?', answer: 'Meridian brings executives and students together in person, by field. The first event is the conference on November 14.' },
+  { audience: 'The Day', question: 'Is it free?', answer: 'Yes. The conference is free for every student, to register and to attend.' },
+  { audience: 'The Day', question: 'Can I join online?', answer: 'Yes. There is a Zoom option when you register. In-person space is 400.' },
+  { audience: 'The Day', question: 'When does registration close?', answer: 'Registration closes November 7.' },
+  { audience: 'The Day', question: 'How do I get there?', answer: 'The day is at UCLA in Westwood. Parking and arrival details go to everyone registered and to @meridianconference on Instagram before the day.' },
+  { audience: 'The Day', question: 'What happens after November 14?', answer: EVENTS_SENTENCE },
+  { audience: 'The Day', question: 'Will I be photographed?', answer: 'Yes. Meridian photographs and films the day, and your image may appear in our recap film, on the website, and on social media. You agree to that when you register.' },
 
   // University students only; UCLA, USC, and UC Berkeley all stay (Jax, Oct 16).
   { audience: 'Students', question: 'Who can come?', answer: 'University students from across Los Angeles and Ventura Counties. UCLA, USC, and UC Berkeley students are all welcome.' },
@@ -27,5 +27,5 @@ export const faqs: Faq[] = [
 
   { audience: 'Executives', question: 'I am an executive. What does the day ask of me?', answer: 'Nothing to prepare and nothing to carry. You get to know students and meet the other executives in the room.' },
   { audience: 'Partners', question: 'I lead an organization. How do we work with Meridian?', answer: 'Start at the partners page. Write to us or book a call.' },
-  { audience: 'Demo day', question: 'How do I apply to present at demo day?', answer: 'Register, then answer the demo day question on the form. We follow up with the people we pick.' },
+  { audience: 'Demo Day', question: 'How do I apply to present at demo day?', answer: 'Register, then answer the demo day question on the form. We follow up with the people we pick.' },
 ];

@@ -27,7 +27,7 @@ export default function FaqPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 32 }}>
           <div className="m-wrap">
-            <h1>Frequently asked questions</h1>
+            <h1>Frequently Asked Questions</h1>
           </div>
         </section>
         {FAQ_GROUPS.map((g) => (

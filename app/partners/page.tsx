@@ -122,7 +122,7 @@ export default function PartnersPage() {
         <section className="m-section" id="inquiries">
           <div className="m-wrap">
             <span className="m-eyebrow">Write to us</span>
-            <h2 className="m-display m-h2">What would you like to do with Meridian?</h2>
+            <h2 className="m-display m-h2">What Would You Like to Do With Meridian?</h2>
             <ContactForm />
             <div style={{ marginTop: 48 }}><PersonContact /></div>
             <p className="m-small" style={{ marginTop: 28 }}>The General Atomics Sciences Education Foundation funds Meridian and the aerospace design lab.</p>

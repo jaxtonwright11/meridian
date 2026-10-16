@@ -12,7 +12,7 @@ export default function NotFound() {
         <section className="m-hero" style={{ paddingBottom: 56 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">404</span>
-            <h1>That page is not here.</h1>
+            <h1>That Page Is Not Here.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>It may have moved. Start from one of these.</p>
             <div className="m-actions">
               {links.map(([l, h]) => (<a key={h} className="btn btn-tan" href={h}>{l}</a>))}

@@ -18,7 +18,7 @@ export default function TeamPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 32 }}>
           <div className="m-wrap">
-            <h1>The team</h1>
+            <h1>The Team</h1>
             <p className="m-lead" style={{ marginTop: 16 }}>A team across UCLA, USC, and UC Berkeley.</p>
           </div>
         </section>

@@ -6,7 +6,7 @@ export function GettingThere() {
     <section className="m-section" id="getting-there">
       <div className="m-wrap">
         <span className="m-eyebrow">Getting there</span>
-        <h2 className="m-display m-h2">The day is at UCLA in Westwood.</h2>
+        <h2 className="m-display m-h2">The Day Is at UCLA in Westwood.</h2>
         <p className="m-lead">
           Parking and arrival details go to everyone registered, and to{' '}
           {INSTAGRAM_URL ? (

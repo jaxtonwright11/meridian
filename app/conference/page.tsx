@@ -88,7 +88,7 @@ export default function ConferencePage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">{confirmedLeaders.length} executives so far</span>
-            <h2 className="m-display m-h2">Who will be in the room</h2>
+            <h2 className="m-display m-h2">Who Will Be in the Room</h2>
             <div className="m-people m-twelve">
               {twelve.map((l) => (
                 <div className="m-person" key={l.slug}>
@@ -106,7 +106,7 @@ export default function ConferencePage() {
         <section className="m-dark">
           <div className="m-wrap m-narrow" style={{ margin: '0 auto' }}>
             <span className="m-eyebrow">Demo day</span>
-            <h2 className="m-display m-h2" style={{ color: '#F0E4D1' }}>Student founders and researchers present their work.</h2>
+            <h2 className="m-display m-h2" style={{ color: '#F0E4D1' }}>Student Founders and Researchers Present Their Work.</h2>
             <p className="m-lead" style={{ color: '#E4D6BF' }}>
               Three minutes each, with a screen, in front of peers and executives. Students who
               register with a project can show it at an expo table.

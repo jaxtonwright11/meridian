@@ -39,7 +39,7 @@ export default function DirectoryPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 32 }}>
           <div className="m-wrap">
-            <h1>Who is working with us</h1>
+            <h1>Who Is Working With Us</h1>
             <p className="m-lead" style={{ marginTop: 16 }}>
               The organizations working with Meridian on November 14. More are named here as they confirm.
             </p>

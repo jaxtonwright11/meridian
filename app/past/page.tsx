@@ -22,7 +22,7 @@ export default function PastPage() {
         <section className="m-section" id="principals">
           <div className="m-wrap">
             <span className="m-eyebrow">December 2025</span>
-            <h2 className="m-display m-h2">Who shared the first Meridian</h2>
+            <h2 className="m-display m-h2">Who Shared the First Meridian</h2>
             <p className="m-lead" style={{ marginBottom: 20 }}>
               Schools and educators who shared the first Meridian with their students in December 2025.
             </p>

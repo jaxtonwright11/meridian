@@ -26,7 +26,7 @@ export default function DemoDayPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">
-            <h1>Demo day</h1>
+            <h1>Demo Day</h1>
             <p className="m-lead" style={{ marginTop: 18 }}>
               Students present what they are building to the people who can help. Research,
               startups, and projects. Executives and investors on the floor, press in the room.
