@@ -46,23 +46,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* The path: where it starts and where it is going. TODO(jax): approve wording. */}
+        {/* What Meridian does, three parts. TODO(jax): approve wording. */}
         <section className="m-section m-pathsec" aria-labelledby="path-h">
           <div className="m-wrap">
-            <h2 id="path-h" className="m-title">Where Meridian is going</h2>
+            <h2 id="path-h" className="m-title">Three parts of Meridian</h2>
             <div className="m-path">
               <div className="m-step">
-                <span className="m-stepn">Now</span>
                 <h3>The conference</h3>
                 <p>November 14 at UCLA, free for every student. Leaders from every field come to meet you.</p>
               </div>
               <div className="m-step">
-                <span className="m-stepn">Next</span>
-                <h3>Events by field</h3>
-                <p>Hackathon-style events where students team up, compete, and present, with executives who are there to help them.</p>
+                <h3>Hackathon-style events</h3>
+                <p>Students team up, compete, and present, with executives who are there to help them.</p>
               </div>
               <div className="m-step">
-                <span className="m-stepn">In development</span>
                 <h3>Matching software</h3>
                 <p>Software that connects each student with opportunities nearby that fit their circumstances, values, and goals.</p>
               </div>

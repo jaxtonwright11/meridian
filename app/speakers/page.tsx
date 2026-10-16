@@ -29,6 +29,10 @@ export default function SpeakersPage() {
               on Saturday, November 14 at UCLA is where it starts: 400 university students from
               across Los Angeles and Ventura Counties, a number of them already building companies.
             </p>
+            <p className="m-lead" style={{ marginTop: 16 }}>
+              Meridian also hosts hackathon-style events for executives and students and builds
+              software that matches students with opportunities that fit them.
+            </p>
           </div>
         </section>
 
