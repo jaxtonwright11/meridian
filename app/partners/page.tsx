@@ -13,7 +13,7 @@ import { PARTNER_NAMED_BY } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'Partners',
-  'Meridian is scaling from one conference into a company that hosts in-person events by field. Companies, campus offices, and nonprofit partners work with us from the November 14 conference onward.',
+  'Meridian is scaling from one conference into a company that hosts in-person events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
   '/partners/',
 );
 
@@ -31,7 +31,7 @@ export default function PartnersPage() {
             <h1>Partner with Meridian.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian is scaling from one conference into a company that hosts in-person events
-              by field. Companies, campus offices, and nonprofit partners work with us from the
+              by field. Companies, campus offices, and community partners work with us from the
               November 14 conference onward.
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function PartnersPage() {
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
               <div><h3>Companies</h3><p>Companies working with us on tables and the day itself.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#companies">See the group</a></p></div>
               <div><h3>Campus offices and departments</h3><p>UCLA and USC departments and student organizations reaching their students.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#ucla">See the group</a></p></div>
-              <div><h3>Nonprofits and community organizations</h3><p>Programs that bring their students and alumni to the day.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#community-and-nonprofit">See the group</a></p></div>
+              <div><h3>Community organizations</h3><p>Programs that bring their students and alumni to the day.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#community-organizations">See the group</a></p></div>
             </div>
           </div>
         </section>

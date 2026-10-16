@@ -44,7 +44,7 @@ export function Doors() {
   const doors = [
     { h: 'Students', p: 'The conference is free, the leaders come to you, and nothing needs preparing. See how it works and register.', l: 'For students', href: '/students/' },
     { h: 'Executives', p: 'Spend the day getting to know students, alongside the other leaders in the room. See what the day involves and who is joining.', l: 'For executives', href: '/speakers/' },
-    { h: 'Partners', p: 'Companies, campus offices, and nonprofits are working with Meridian on the conference and on what comes after it. See what that looks like.', l: 'For partners', href: '/partners/' },
+    { h: 'Partners', p: 'Companies, campus offices, and community organizations are working with Meridian on the conference and on what comes after it. See what that looks like.', l: 'For partners', href: '/partners/' },
   ];
   return (
     <div className="m-wrap">

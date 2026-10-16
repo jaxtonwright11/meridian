@@ -39,7 +39,7 @@ export default function ContactPage() {
               </div>
               <div className="m-route">
                 <h3>Partners</h3>
-                <p>Companies, campus offices, and nonprofits working with Meridian.</p>
+                <p>Companies, campus offices, and community organizations working with Meridian.</p>
                 <div className="m-actions"><a className="btn btn-tan" href="/partners/">For partners</a></div>
               </div>
               <div className="m-route">

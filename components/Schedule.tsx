@@ -14,7 +14,7 @@ export function Schedule() {
         <h2 className="m-display m-h2" >
           The day {!schedule.approved && <span className="m-tag">Draft</span>}
         </h2>
-        <p className="m-small" style={{ marginBottom: 18 }}>A working schedule. Times may shift.</p>
+        <p className="m-small" style={{ marginBottom: 18 }}>The schedule for the day.</p>
         <div className="m-time">
           {items.map((i) => (
             <div className="m-trow" key={i.time + i.title}>

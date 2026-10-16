@@ -34,7 +34,7 @@ How to read it: each item says what you disliked, then what you asked for. The "
 ### Boxes, shapes and shine
 - Boxes at the top (header tabs) are jagged and cheap-looking. A very slight shine would help. (Oct 16)
 - Wants tan boxes around the header tab words, and around "Partner with Meridian", like the Register box but tan. (Oct 15)
-- There should be one box, like the one in the middle, not many at the top of the tab. (Oct 16)
+- "there should be one box, like the one in the middle not at the top of the tab." (exact words; an earlier draft of this file wrongly said "many") (Oct 16)
 - Animations are a little jagged, for example when switching between leaders. Wants smoother. (Oct 15)
 
 ### Type size and hierarchy

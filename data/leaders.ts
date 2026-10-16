@@ -145,8 +145,9 @@ export const leaders: Leader[] = [
   {
     slug: 'carlos-gonzales',
     name: 'Carlos Gonzales',
-    roles: ['Vice President of Manufacturing, The Peggs Company'],
-    bioApproved: false,
+    roles: ['Vice President of Manufacturing, The Peggs Company, Inc.'],
+    bio: 'Carlos Gonzales is the Vice President of Manufacturing at The Peggs Company, Inc., a role he starts in August 2026. He is an adjunct professor of business at Southern California State University and previously led operational transformations as a Business Excellence Leader at Flex. He holds an MBA and an MSML.',
+    bioApproved: true,
     photo: p('carlos-gonzales'),
     photoApproved: true,
     status: 'confirmed',

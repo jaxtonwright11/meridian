@@ -32,8 +32,7 @@ export default function TermsPage() {
               <div className={styles.body}>
                 <h2>1. The event</h2>
                 <p>
-                  Meridian Conference is run by Meridian Conference, a California
-                  501(c)(3) nonprofit organization. The event is free. There is no
+                  Meridian Conference is run by Meridian Conference. The event is free. There is no
                   ticket, no fee, and nothing sold. Attending, whether in person or on
                   Zoom, means you agree to these terms.
                 </p>

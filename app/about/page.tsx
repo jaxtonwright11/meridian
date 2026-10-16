@@ -44,17 +44,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="m-section" style={{ position: 'relative', overflow: 'hidden' }}>
-          <MeridianLine />
-          <div className="m-wrap" style={{ position: 'relative' }}>
-            <span className="m-eyebrow">The name</span>
-            <p className="m-idea m-name">
-              A meridian is the highest point in the arc and the line connecting where you are to
-              where you are going. The line runs through here.
-            </p>
-          </div>
-        </section>
-
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">What we do</span>

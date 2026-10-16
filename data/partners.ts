@@ -2,7 +2,7 @@
 // renders. `line` says what the partner is doing, never a status.
 // Internal notes from the brief are deliberately not in this file.
 
-export type PartnerGroup = 'UCLA' | 'USC' | 'Community and nonprofit' | 'Companies';
+export type PartnerGroup = 'UCLA' | 'USC' | 'Community organizations' | 'Companies';
 export type PartnerKind = 'Office or department' | 'Student organization';
 
 export interface Partner {
@@ -13,7 +13,7 @@ export interface Partner {
   line: string;
 }
 
-export const GROUPS: PartnerGroup[] = ['UCLA', 'USC', 'Community and nonprofit', 'Companies'];
+export const GROUPS: PartnerGroup[] = ['UCLA', 'USC', 'Community organizations', 'Companies'];
 
 export const partners: Partner[] = [
   { name: 'Undergraduate Students Association Council', group: 'UCLA', kind: 'Student organization', status: 'live', line: 'Student government sharing Meridian across UCLA.' },
@@ -36,19 +36,19 @@ export const partners: Partner[] = [
   { name: 'Trojan Marketing Group', group: 'USC', kind: 'Student organization', status: 'check', line: '' },
   { name: 'SHPE USC', group: 'USC', kind: 'Student organization', status: 'check', line: '' },
   { name: 'USC Campus Activities', group: 'USC', kind: 'Office or department', status: 'check', line: '' },
-  { name: '826LA', group: 'Community and nonprofit', status: 'live', line: 'Sent to a network of 4,000 students and alumni.' },
-  { name: 'LA Promise Fund', group: 'Community and nonprofit', status: 'live', line: 'Bringing students from two cohorts.' },
-  { name: 'I Have A Dream Foundation LA', group: 'Community and nonprofit', status: 'live', line: 'A block of Dreamer Scholars.' },
-  { name: 'Las Fotos Project', group: 'Community and nonprofit', status: 'live', line: 'Photographers shooting free headshots for every student.' },
-  { name: 'MANA de San Diego', group: 'Community and nonprofit', status: 'live', line: 'Students from their San Diego network.' },
-  { name: 'San Diego Diplomacy Council', group: 'Community and nonprofit', status: 'live', line: 'Student ambassadors, in person or by video.' },
-  { name: 'EnCorps', group: 'Community and nonprofit', status: 'check', line: 'STEM fellows working the aerospace lab alongside students.' },
-  { name: 'Project ECHO', group: 'Community and nonprofit', status: 'check', line: '' },
-  { name: 'HOPE', group: 'Community and nonprofit', status: 'check', line: '' },
-  { name: 'Youth Cinema Project', group: 'Community and nonprofit', status: 'check', line: '' },
+  { name: '826LA', group: 'Community organizations', status: 'live', line: 'Sent to a network of 4,000 students and alumni.' },
+  { name: 'LA Promise Fund', group: 'Community organizations', status: 'live', line: 'Bringing students from two cohorts.' },
+  { name: 'I Have A Dream Foundation LA', group: 'Community organizations', status: 'live', line: 'A block of Dreamer Scholars.' },
+  { name: 'Las Fotos Project', group: 'Community organizations', status: 'live', line: 'Photographers shooting free headshots for every student.' },
+  { name: 'MANA de San Diego', group: 'Community organizations', status: 'live', line: 'Students from their San Diego network.' },
+  { name: 'San Diego Diplomacy Council', group: 'Community organizations', status: 'live', line: 'Student ambassadors, in person or by video.' },
+  { name: 'EnCorps', group: 'Community organizations', status: 'check', line: 'STEM fellows working the aerospace lab alongside students.' },
+  { name: 'Project ECHO', group: 'Community organizations', status: 'check', line: '' },
+  { name: 'HOPE', group: 'Community organizations', status: 'check', line: '' },
+  { name: 'Youth Cinema Project', group: 'Community organizations', status: 'check', line: '' },
   { name: 'LA Clippers', group: 'Companies', status: 'live', line: 'Team gear and prizes for the room.' },
   { name: 'Petersen Automotive Museum', group: 'Companies', status: 'live', line: 'Bringing a 1955 Pontiac and a 1955 Bel Air to the floor, with staff, and sharing their summer internships with students.' },
-  { name: 'Campaign Zero', group: 'Community and nonprofit', status: 'check', line: '' },
+  { name: 'Campaign Zero', group: 'Community organizations', status: 'check', line: '' },
 ];
 
 export const livePartners = partners.filter((p) => p.status === 'live');

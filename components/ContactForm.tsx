@@ -47,7 +47,7 @@ export function ContactForm() {
         <option value="">Choose one</option>
         <option>Company or brand</option>
         <option>Campus office or department</option>
-        <option>Nonprofit or community organization</option>
+        <option>Community organization</option>
         <option>University</option>
         <option>Other</option>
       </select>
