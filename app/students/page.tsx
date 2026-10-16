@@ -27,7 +27,7 @@ export default function StudentsPage() {
             <span className="m-eyebrow">For students</span>
             <h1>A free day where leaders come to you.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
-              Meridian brings students and executives together in person, by field. The conference
+              Meridian brings students, ideas, and executives together. The conference
               is a free day at UCLA where leaders from every field come to you. Nothing to prepare.
               Nothing to bring.
             </p>

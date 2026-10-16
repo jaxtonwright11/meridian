@@ -11,14 +11,14 @@ import { leaders } from '@/data/leaders';
 
 export const metadata: Metadata = pageMeta(
   'About',
-  'Meridian is a company that brings students and executives together in person, by field. It starts with a conference at UCLA on November 14 and expands into in-person events by field.',
+  'Meridian is a company that brings students, ideas, and executives together. It starts with a conference at UCLA on November 14 and expands into in-person events by field.',
   '/about/',
 );
 
 // Founder bio: brief section 15. TODO(jax): approve the wording.
 // Harvard appears here and nowhere else on the site (brief 10.1).
 const FOUNDER_BIO =
-  'Jaxton Wright is from Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025, he gave a speech at Harvard, and afterward he created Meridian, a company that brings students and executives together in person, by field. Meridian starts with a free conference on November 14, where leaders get to know students and each one is looking to help with opportunities they manage. The day includes a demo day for student founders and researchers and a design lab led by NASA engineers. Starting November 14, Meridian scales from one conference into a company that hosts in-person events by field, beginning with engineering, pre-med, and business. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.';
+  'Jaxton Wright is from Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025, he gave a speech at Harvard, and afterward he created Meridian, a company that brings students, ideas, and executives together. Meridian starts with a free conference on November 14, where leaders get to know students and each one is looking to help with opportunities they manage. The day includes a demo day for student founders and researchers and a design lab led by NASA engineers. Starting November 14, Meridian scales from one conference into a company that hosts in-person events by field, beginning with engineering, pre-med, and business. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.';
 
 export default function AboutPage() {
   const george = leaders.find((l) => l.slug === 'george-leis')!;
@@ -28,7 +28,7 @@ export default function AboutPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">
-            <h1 className="m-h1-long">Meridian is a company that brings students and executives together in person, by field.</h1>
+            <h1 className="m-h1-long">Meridian is a company that brings students, ideas, and executives together.</h1>
           </div>
         </section>
 

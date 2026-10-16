@@ -28,7 +28,7 @@ const splineMono = Spline_Sans_Mono({
 
 // One canonical description everywhere (meta, og, twitter).
 const DESCRIPTION =
-  'Meridian brings students and executives together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, free for every student, then expands into in-person events by field.';
+  'Meridian brings students, ideas, and executives together. It starts with a conference at UCLA on Saturday, November 14, 2026, free for every student, then expands into in-person events by field.';
 
 const HOME_TITLE = 'Meridian | Students and executives, together in person, by field';
 
