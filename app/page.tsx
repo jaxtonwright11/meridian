@@ -2,7 +2,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import {
-  MeridianLine, StatRow, Doors, LeadersBand, TeamStrip, PartnerList,
+  MeridianLine, Doors, LeadersBand, TeamStrip, PartnerList,
   PressLinks, RegisterButton,
 } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
@@ -19,23 +19,23 @@ export default function Home() {
         <section className="m-hero m-hero-home">
           <MeridianLine />
           <div className="m-wrap">
+            <span className="m-eyebrow">Los Angeles</span>
             <h1>CEOs come to you.</h1>
             <p className="m-sub">
               Meridian brings executives, students, and ideas together. We start with
               a conference in Los Angeles on November 14, free for every student.
             </p>
             <div className="m-actions">
-              <RegisterButton>Register for {EVENT_DATE_SHORT}</RegisterButton>
-              <a className="btn btn-tan" href="/leaders/">See who is joining</a>
-              <a className="btn btn-tan" href="/partners/">Partner with Meridian</a>
+              <RegisterButton>Register for Nov. 14</RegisterButton>
+              <a className="btn btn-tan" href="/partners/">Partner with us</a>
             </div>
           </div>
         </section>
 
         {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
+        <div className="m-titleband"><div className="m-wrap"><h2 id="what-h" className="m-title">What is Meridian?</h2></div></div>
         <section className="m-section" aria-labelledby="what-h">
           <div className="m-wrap">
-            <h2 id="what-h" className="m-title">What is Meridian?</h2>
             <p className="m-whatp">
               Meridian brings students and executives together in person, by field. It begins with
               the <a href="/conference/">November 14 conference</a>, where leaders from every field
@@ -51,18 +51,18 @@ export default function Home() {
           <div className="m-wrap">
             <h2 id="path-h" className="m-title">Three parts of Meridian</h2>
             <div className="m-path">
-              <div className="m-step">
-                <h3>The conference</h3>
+              <details className="m-step">
+                <summary><h3>The conference</h3></summary>
                 <p>November 14 at UCLA, free for every student. Leaders from every field come to meet you.</p>
-              </div>
-              <div className="m-step">
-                <h3>Hackathon-style events</h3>
-                <p>Students team up, compete, and present, with executives who are there to help them.</p>
-              </div>
-              <div className="m-step">
-                <h3>Matching software</h3>
+              </details>
+              <details className="m-step">
+                <summary><h3>Hackathon-style events</h3></summary>
+                <p>Executives and students team up on a challenge in one field, then compete and present.</p>
+              </details>
+              <details className="m-step">
+                <summary><h3>Matching software</h3></summary>
                 <p>Software that connects each student with opportunities nearby that fit their circumstances, values, and goals.</p>
-              </div>
+              </details>
             </div>
             <p className="m-whatp" style={{ marginTop: 24 }}>
               Every event brings executives from one field together with students, and everyone who
@@ -70,8 +70,6 @@ export default function Home() {
             </p>
           </div>
         </section>
-
-        <StatRow />
 
         {/* 2. Leaders proof band */}
         <LeadersBand />
@@ -107,11 +105,9 @@ export default function Home() {
           <div className="m-wrap">
             <div className="m-closing">
               <h2 className="m-title" style={{ marginBottom: 8 }}>Questions?</h2>
-              <p className="m-lead">We reply personally.</p>
               <div className="m-actions">
                 <a className="btn btn-ink" href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>Write to us</a>
                 <a className="btn btn-tan" href="/faq/">Read the FAQ</a>
-                <a className="m-link" href={`mailto:${CONTACT_EMAIL_PUBLIC}?subject=Investor%20inquiry`}>Investors: write to us</a>
               </div>
             </div>
           </div>

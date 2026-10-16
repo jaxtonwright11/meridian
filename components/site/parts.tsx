@@ -135,7 +135,10 @@ export function LeadersBand() {
         <h2 id="leaders-h" className="m-title">Leaders joining us on {EVENT_DATE_SHORT}</h2>
         <LeadersViewer tiles={tiles} />
         {names.length > 0 && (
-          <p className="m-names"><strong>Also joining:</strong> {names.join(', ')}.</p>
+          <details className="m-also">
+            <summary>Also joining ({names.length})</summary>
+            <p className="m-names">{names.join(', ')}.</p>
+          </details>
         )}
         <p className="m-names"><a className="m-link" href="/leaders/">See everyone joining</a></p>
       </div>
