@@ -55,7 +55,7 @@ export default function ConferencePage() {
             <span className="m-eyebrow">{EVENT_DATE} at {EVENT_VENUE}. {EVENT_TIME}.</span>
             <h1>Meridian Conference</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
-              The conference is where Meridian starts. Meridian brings students and executives
+              The conference is where Meridian starts. Meridian brings executives and students
               together in person, by field.
             </p>
             <div className="m-actions">
