@@ -16,8 +16,7 @@ export const faqs: Faq[] = [
   { audience: 'The day', question: 'What happens after November 14?', answer: EVENTS_SENTENCE },
   { audience: 'The day', question: 'Will I be photographed?', answer: 'Yes. Meridian photographs and films the day, and your image may appear in our recap film, on the website, and on social media. You agree to that when you register.' },
 
-  // TODO(jax): the old answer said anyone could come, including high school students.
-  // This follows the /students wording. Confirm the eligibility decision.
+  // University students only; UCLA, USC, and UC Berkeley all stay (Jax, Oct 16).
   { audience: 'Students', question: 'Who can come?', answer: 'University students from across Los Angeles and Ventura Counties. UCLA, USC, and UC Berkeley students are all welcome.' },
   { audience: 'Students', question: 'Can I bring a friend?', answer: 'Yes, but they need their own registration. Seats are capped at 400.' },
   { audience: 'Students', question: 'What should I wear?', answer: 'Business casual is ideal. If that is not something you have, wear whatever you would wear to meet people you respect. Nobody is checking.' },

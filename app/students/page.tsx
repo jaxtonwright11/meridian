@@ -83,8 +83,7 @@ export default function StudentsPage() {
             <div className="m-three">
               <div>
                 <h3>Who can come</h3>
-                {/* TODO(jax): Oct 11 decision was to recruit no more high school students and only
-                    UCLA and USC going forward. Confirm this line stays as written. */}
+                {/* Jax, Oct 16: keep UCLA, USC, and UC Berkeley. */}
                 <p>University students from across Los Angeles and Ventura Counties. UCLA, USC, and UC Berkeley students are all welcome.</p>
               </div>
               <div>
