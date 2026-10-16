@@ -19,7 +19,6 @@ export default function Home() {
         <section className="m-hero m-hero-home">
           <MeridianLine />
           <div className="m-wrap">
-            <span className="m-eyebrow">Los Angeles</span>
             <h1>CEOs come to you.</h1>
             <p className="m-sub">
               Meridian brings executives, students, and ideas together. We start with
