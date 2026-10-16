@@ -13,7 +13,7 @@ import { PARTNER_NAMED_BY } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'Partners',
-  'Meridian is scaling from one conference into in-person events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
+  'Meridian starts with a conference and hosts hackathon-style events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
   '/partners/',
 );
 
@@ -30,7 +30,7 @@ export default function PartnersPage() {
           <div className="m-wrap">
             <h1>Partner with Meridian.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
-              Meridian is scaling from one conference into in-person events
+              Meridian starts with a conference and hosts hackathon-style events
               by field. Companies, campus offices, and community partners work with us from the
               November 14 conference onward.
             </p>
@@ -43,10 +43,12 @@ export default function PartnersPage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">What an event looks like</span>
-            <p className="m-display" style={{ maxWidth: '34ch', fontSize: 'clamp(24px, 3vw, 36px)' }}>
-              An event is one field, in person. Take engineering: executives from engineering
-              companies join, students from across Los Angeles campuses arrive, and student teams
-              work the same challenge side by side. The winning team takes home a prize.
+            <p className="m-idea">
+              An event is one field, in person, run as a hackathon. Take engineering: executives
+              from engineering companies join, students from across Los Angeles campuses arrive, and
+              student teams work the same challenge side by side. The winning team takes home a
+              prize. The format fits the field. In art, teams make a film together, then present and
+              compete.
             </p>
             {PARTNER_NAMED_BY && (
               <p className="m-small" style={{ marginTop: 10 }}>
