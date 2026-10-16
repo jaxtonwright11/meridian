@@ -19,7 +19,7 @@ export default function LeadersPage() {
     .map((l) => ({ slug: l.slug, name: l.name, roles: l.roles, bio: l.bio as string, photo: l.photo as string, virtual: l.format === 'virtual' }));
   return (
     <div className="m-page">
-      <Nav trail={[{ label: 'Conference', href: '/conference/' }, { label: 'Who is joining' }]} />
+      <Nav trail={[{ label: 'Conference', href: '/conference/' }, { label: 'Who Is Joining' }]} />
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">
@@ -41,7 +41,7 @@ export default function LeadersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">Everyone joining</span>
+            <span className="m-eyebrow">Everyone Joining</span>
             <h2 className="m-title">All {confirmedLeaders.length} Executives</h2>
             <div className="m-roster">
               {confirmedLeaders.map((l) => (

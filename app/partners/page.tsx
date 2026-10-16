@@ -42,7 +42,7 @@ export default function PartnersPage() {
         {/* 2. What an event looks like. No partner has hosted one yet, so nothing here says one has. */}
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What an event looks like</span>
+            <span className="m-eyebrow">What an Event Looks Like</span>
             <p className="m-idea">
               An event is one field, in person, run as a hackathon. Take engineering: executives
               from engineering companies join, students from across Los Angeles campuses arrive, and
@@ -61,12 +61,12 @@ export default function PartnersPage() {
         {/* 4. What is in it for you (brief v2 6.6) */}
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What is in it for you</span>
+            <span className="m-eyebrow">What Is in It for You</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>Your name, in the room</h3><p>Partners run tables at the conference and are named in the room and in what we publish.</p></div>
-              <div><h3>Help shape the events</h3><p>After the conference, we create in-person events by field, like engineering, pre-med, or business. We are looking for organizations to plan each one with, so a partner helps shape it from the start.</p></div>
-              <div><h3>Executives from your field</h3><p>Each event has one or two executives from that field. Your people meet them too.</p></div>
-              <div><h3>Students and press, through who you are</h3><p>Students and press get to know a partner through its people and what it cares about, not a logo on a banner.</p></div>
+              <div><h3>Your Name, in the Room</h3><p>Partners run tables at the conference and are named in the room and in what we publish.</p></div>
+              <div><h3>Help Shape the Events</h3><p>After the conference, we create in-person events by field, like engineering, pre-med, or business. We are looking for organizations to plan each one with, so a partner helps shape it from the start.</p></div>
+              <div><h3>Executives From Your Field</h3><p>Each event has one or two executives from that field. Your people meet them too.</p></div>
+              <div><h3>Students and Press, Through Who You Are</h3><p>Students and press get to know a partner through its people and what it cares about, not a logo on a banner.</p></div>
             </div>
             <p className="m-whatp" style={{ marginTop: 28 }}>
               We are building software that matches students with opportunities that fit them, so
@@ -87,7 +87,7 @@ export default function PartnersPage() {
               {livePartners.length} partners are working with us.{' '}
               <a className="m-link" href="/partners/directory/">See the partner directory</a>
             </p>
-            <p className="m-lead" style={{ marginTop: 12 }}>Backed by George Leis, Chairman, YMCA of the USA.</p>
+            <p className="m-lead" style={{ marginTop: 12 }}>Backed by George Leis, Chairman, YMCA of the USA, and President, CalPrivate Bank.</p>
             {press.length > 0 && <div style={{ marginTop: 12 }}><PressLinks showPage={false} /></div>}
           </div>
         </section>
@@ -95,11 +95,11 @@ export default function PartnersPage() {
         {/* Who we work with. The universities block stays off until a university says yes. */}
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">Who we work with</span>
+            <span className="m-eyebrow">Who We Work With</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
               <div><h3>Companies</h3><p>Companies working with us on tables and the day itself.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#companies">See the group</a></p></div>
-              <div><h3>Campus offices and departments</h3><p>UCLA and USC departments and student organizations reaching their students.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#ucla">See the group</a></p></div>
-              <div><h3>Community organizations</h3><p>Programs that bring their students and alumni to the day.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#community-organizations">See the group</a></p></div>
+              <div><h3>Campus Offices and Departments</h3><p>UCLA and USC departments and student organizations reaching their students.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#ucla">See the group</a></p></div>
+              <div><h3>Community Organizations</h3><p>Programs that bring their students and alumni to the day.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/partners/directory/#community-organizations">See the group</a></p></div>
             </div>
           </div>
         </section>
@@ -107,11 +107,11 @@ export default function PartnersPage() {
         {/* 6. How it works */}
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">How it works</span>
+            <span className="m-eyebrow">How It Works</span>
             <div className="m-three">
-              <div><h3>1. Tell us</h3><p>Tell us who you are and what you would like to do.</p></div>
-              <div><h3>2. We talk</h3><p>We talk and find the right fit.</p></div>
-              <div><h3>3. We build it together</h3><p>We build it together, starting with November 14 and continuing after.</p></div>
+              <div><h3>1. Tell Us</h3><p>Tell us who you are and what you would like to do.</p></div>
+              <div><h3>2. We Talk</h3><p>We talk and find the right fit.</p></div>
+              <div><h3>3. We Build It Together</h3><p>We build it together, starting with November 14 and continuing after.</p></div>
             </div>
           </div>
         </section>
@@ -121,7 +121,7 @@ export default function PartnersPage() {
         {/* 7. Form and contact */}
         <section className="m-section" id="inquiries">
           <div className="m-wrap">
-            <span className="m-eyebrow">Write to us</span>
+            <span className="m-eyebrow">Write to Us</span>
             <h2 className="m-display m-h2">What Would You Like to Do With Meridian?</h2>
             <ContactForm />
             <div style={{ marginTop: 48 }}><PersonContact /></div>

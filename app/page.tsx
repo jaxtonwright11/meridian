@@ -21,7 +21,7 @@ export default function Home() {
           <div className="m-wrap">
             <h1>CEOs Come to You.</h1>
             <p className="m-sub">
-              Meridian brings executives and students together. We start with
+              Meridian brings <strong>executives</strong> and <strong>students</strong> together. We start with
               a <a className="m-sublink" href="/conference/">conference</a> at UCLA on November 14, free for every student.
             </p>
             <div className="m-actions">
@@ -54,15 +54,15 @@ export default function Home() {
             <h2 id="path-h" className="m-title">Three Parts of Meridian</h2>
             <div className="m-path">
               <details className="m-step">
-                <summary><h3>The conference</h3></summary>
+                <summary><h3>The Conference</h3></summary>
                 <p>November 14 at UCLA, free for every student. Executives from every field come to get to know you.</p>
               </details>
               <details className="m-step">
-                <summary><h3>Hackathon-style events</h3></summary>
+                <summary><h3>Hackathon-Style Events</h3></summary>
                 <p>Executives and students team up on a challenge in one field, then compete and present.</p>
               </details>
               <details className="m-step">
-                <summary><h3>Matching software</h3></summary>
+                <summary><h3>Matching Software</h3></summary>
                 <p>Software that connects each student with opportunities nearby that fit their circumstances, values, and goals.</p>
               </details>
             </div>

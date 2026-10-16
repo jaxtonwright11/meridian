@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Explore, RegisterButton } from '@/components/site/parts';
 
 export const metadata: Metadata = pageMeta(
-  'Demo day',
+  'Demo Day',
   'Students present research, startups, and projects to executives, investors, and press at Meridian on November 14, 2026.',
   '/demo-day/',
 );
@@ -22,7 +22,7 @@ export default function DemoDayPage() {
   ];
   return (
     <div className="m-page">
-      <Nav trail={[{ label: 'Conference', href: '/conference/' }, { label: 'Demo day' }]} />
+      <Nav trail={[{ label: 'Conference', href: '/conference/' }, { label: 'Demo Day' }]} />
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">

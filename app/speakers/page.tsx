@@ -22,7 +22,7 @@ export default function SpeakersPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
-            <span className="m-eyebrow">For executives</span>
+            <span className="m-eyebrow">For Executives</span>
             <h1>One Day in the Room.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. Our conference
@@ -40,14 +40,14 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">The format</span>
+            <span className="m-eyebrow">The Format</span>
             <Premise />
           </div>
         </section>
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">Who else is in the room</span>
+            <span className="m-eyebrow">Who Else Is in the Room</span>
             <p className="m-lead" style={{ marginBottom: 18 }}>
               {confirmedLeaders.length} executives so far, including founders, physicians, engineers,
               and university and civic figures.
@@ -66,7 +66,7 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What the day gives you</span>
+            <span className="m-eyebrow">What the Day Gives You</span>
             <p className="m-lead">
               You meet the other executives in the room. You represent your work to students and press
               through who you are and what you care about, not through a logo or a slide.
@@ -76,12 +76,12 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What you do</span>
+            <span className="m-eyebrow">What You Do</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>Work the room</h3><p>Get to know students in small groups.</p></div>
+              <div><h3>Work the Room</h3><p>Get to know students in small groups.</p></div>
               <div><h3>Introductions</h3><p>Short introductions, if you would like them. A few minutes, no deck: who you are, what you built, and one thing a student can use on Monday. Guests who would rather spend the day in conversation do that instead.</p></div>
-              <div><h3>The engineering design lab</h3><p>A hands-on build led by NASA engineers, a natural home for technical executives who want time with students at a table.</p></div>
-              <div><h3>Demo day</h3><p>Student teams present what they are building. A natural stop for investors, founders, and anyone who wants to see student work up close.</p></div>
+              <div><h3>The Engineering Design Lab</h3><p>A hands-on build led by NASA engineers, a natural home for technical executives who want time with students at a table.</p></div>
+              <div><h3>Demo Day</h3><p>Student teams present what they are building. A natural stop for investors, founders, and anyone who wants to see student work up close.</p></div>
             </div>
           </div>
         </section>
@@ -96,14 +96,14 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">Nothing to prepare, nothing to carry</span>
+            <span className="m-eyebrow">Nothing to Prepare, Nothing to Carry</span>
             <p className="m-lead">Nothing needs preparing, and nothing needs carrying afterward.</p>
           </div>
         </section>
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">Say yes</span>
+            <span className="m-eyebrow">Say Yes</span>
             <PersonContact primary />
             <p className="m-lead" style={{ marginTop: 28 }}>
               If you know someone who would get a lot from connecting with other executives and
@@ -113,7 +113,7 @@ export default function SpeakersPage() {
           </div>
         </section>
       </main>
-      <Explore links={[['Conference', '/conference/'], ['Who is joining', '/leaders/'], ['Contact', '/contact/']]} />
+      <Explore links={[['Conference', '/conference/'], ['Who Is Joining', '/leaders/'], ['Contact', '/contact/']]} />
       <Footer />
     </div>
   );

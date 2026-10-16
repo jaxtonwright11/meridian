@@ -42,7 +42,7 @@ export default function ConferencePage() {
       <div className="m-subnav" aria-label="On this page">
         <div className="m-subnav-in">
           <a href="#the-day">The day</a>
-          <a href="/leaders/">Who is joining</a>
+          <a href="/leaders/">Who Is Joining</a>
           <a href="/demo-day/">Demo day</a>
           <a href="#schedule">Schedule</a>
           <a href="#getting-there">Getting there</a>
@@ -72,14 +72,14 @@ export default function ConferencePage() {
         {/* 4. What the day includes (brief v2 6.2) */}
         <section className="m-section" id="the-day">
           <div className="m-wrap">
-            <span className="m-eyebrow">What the day includes</span>
+            <span className="m-eyebrow">What the Day Includes</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-              <div><h3>Aerospace design lab</h3><p>Led by NASA engineers. You spend the day building something real instead of sitting through a talk about it.</p></div>
-              <div><h3>Demo day</h3><p>Students present research, startups, and projects to executives, investors, other students, and press.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/demo-day/">About demo day</a></p></div>
-              <div><h3>Free professional headshots</h3><p>Photographers from Las Fotos Project shoot you for free and the pictures are yours to keep.</p></div>
-              <div><h3>Partner tables</h3><p>The organizations that brought students run tables of their own. Walk up to any of them, no introduction needed.</p></div>
+              <div><h3>Aerospace Design Lab</h3><p>Led by NASA engineers. You spend the day building something real instead of sitting through a talk about it.</p></div>
+              <div><h3>Demo Day</h3><p>Students present research, startups, and projects to executives, investors, other students, and press.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/demo-day/">About demo day</a></p></div>
+              <div><h3>Free Professional Headshots</h3><p>Photographers from Las Fotos Project shoot you for free and the pictures are yours to keep.</p></div>
+              <div><h3>Partner Tables</h3><p>The organizations that brought students run tables of their own. Walk up to any of them, no introduction needed.</p></div>
               <div><h3>Petersen Automotive Museum</h3><p>The museum is bringing a 1955 Pontiac and a 1955 Bel Air to the floor, with staff.</p></div>
-              <div><h3>Someone to introduce you</h3><p>Hosts work the floor all day. If walking up to a stranger is not your thing, find one and they will make the introduction.</p></div>
+              <div><h3>Someone to Introduce You</h3><p>Hosts work the floor all day. If walking up to a stranger is not your thing, find one and they will make the introduction.</p></div>
             </div>
           </div>
         </section>
@@ -105,7 +105,7 @@ export default function ConferencePage() {
         {/* 6. Demo day: the one dark band */}
         <section className="m-dark">
           <div className="m-wrap m-narrow" style={{ margin: '0 auto' }}>
-            <span className="m-eyebrow">Demo day</span>
+            <span className="m-eyebrow">Demo Day</span>
             <h2 className="m-display m-h2" style={{ color: '#F0E4D1' }}>Student Founders and Researchers Present Their Work.</h2>
             <p className="m-lead" style={{ color: '#E4D6BF' }}>
               Three minutes each, with a screen, in front of peers and executives. Students who
@@ -143,7 +143,7 @@ export default function ConferencePage() {
           </div>
         </section>
       </main>
-      <Explore links={[['Students', '/students/'], ['Executives', '/speakers/'], ['Demo day', '/demo-day/'], ['Who is joining', '/leaders/'], ['FAQ', '/faq/']]} />
+      <Explore links={[['Students', '/students/'], ['Executives', '/speakers/'], ['Demo Day', '/demo-day/'], ['Who Is Joining', '/leaders/'], ['FAQ', '/faq/']]} />
       <Footer />
     </div>
   );

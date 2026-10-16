@@ -67,12 +67,12 @@ export function WhatMeridianDoes() {
   return (
     <div className="m-three m-cards3">
       <div>
-        <h3>The conference</h3>
+        <h3>The Conference</h3>
         <p>A free day at UCLA where executives from every field come to students. November 14.</p>
         <p style={{ marginTop: 12 }}><a className="m-link" href="/conference/">See the conference</a></p>
       </div>
       <div>
-        <h3>Events by field</h3>
+        <h3>Events by Field</h3>
         <p>
           In-person events, each in one field, beginning with {list(MEETUPS.firstFields)}.
           Each brings executives from that field together with students from across Los Angeles
@@ -80,7 +80,7 @@ export function WhatMeridianDoes() {
         </p>
       </div>
       <div>
-        <h3>The network</h3>
+        <h3>The Network</h3>
         <p>{NETWORK_SENTENCE}</p>
       </div>
     </div>
@@ -93,7 +93,7 @@ export function NameNote() {
     <section className="m-section" style={{ position: 'relative', overflow: 'hidden' }} aria-labelledby="name-h">
       <MeridianLine />
       <div className="m-wrap" style={{ position: 'relative' }}>
-        <span className="m-eyebrow" id="name-h">The name</span>
+        <span className="m-eyebrow" id="name-h">The Name</span>
         <p className="m-idea m-name">
           A meridian is the highest point in the arc and the line connecting where you are to where
           you are going. The line runs through here.

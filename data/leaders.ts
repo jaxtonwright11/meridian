@@ -50,7 +50,7 @@ export const leaders: Leader[] = [
   {
     slug: 'george-leis',
     name: 'George Leis',
-    roles: ['Chairman, YMCA of the USA', 'President, Cal Private Bank'],
+    roles: ['Chairman, YMCA of the USA, and President, CalPrivate Bank'],
     bio: 'George was the first person to believe in this conference and in the student building it. He put in the first $1,000, which is what made the first event possible at all.\n\nHe has never treated it as a donation and walked away. Every time Jaxton is in town they meet, without exception, and he was there at his high school graduation.',
     bioApproved: true,
     photo: p('george-leis'),

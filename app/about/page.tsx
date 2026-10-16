@@ -34,7 +34,7 @@ export default function AboutPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">The idea</span>
+            <span className="m-eyebrow">The Idea</span>
             <p className="m-idea">
               College and networking were supposed to open doors, and instead the goalposts keep
               moving further out. Meridian exists to <strong>reverse gatekeeping</strong>. We bring
@@ -46,7 +46,7 @@ export default function AboutPage() {
 
         <section className="m-section" id="founder">
           <div className="m-wrap">
-            <span className="m-eyebrow">The founder</span>
+            <span className="m-eyebrow">The Founder</span>
             <div className="m-person-block" style={{ gridTemplateColumns: 'minmax(0, 260px) 1fr', gap: 40 }}>
               <img src="/opt/unnamed__3_.webp" alt="Jaxton Wright, founder of Meridian" width={520} height={650}
                    style={{ width: '100%', height: 'auto', aspectRatio: '4 / 5', objectFit: 'cover', borderRadius: 0 }} />
@@ -65,7 +65,7 @@ export default function AboutPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">The team</span>
+            <span className="m-eyebrow">The Team</span>
             <p className="m-lead" style={{ marginBottom: 18 }}>A team across UCLA, USC, and UC Berkeley.</p>
             <div className="m-people m-team">
               {[founder, ...team].map((m) => (<TeamTile m={m} key={m.slug} />))}
@@ -76,7 +76,7 @@ export default function AboutPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">Who backs this</span>
+            <span className="m-eyebrow">Who Backs This</span>
             <div className="m-person-block" style={{ gridTemplateColumns: 'minmax(0, 160px) 1fr', gap: 32 }}>
               <img src={george.photo} alt={george.name} width={320} height={320} loading="lazy" style={{ width: '100%', height: 'auto', aspectRatio: '1', borderRadius: 0 }} />
               <div>

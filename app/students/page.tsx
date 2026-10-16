@@ -24,7 +24,7 @@ export default function StudentsPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
-            <span className="m-eyebrow">For students</span>
+            <span className="m-eyebrow">For Students</span>
             <h1>A Free Day Where Executives Come to You.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. The conference
@@ -40,7 +40,7 @@ export default function StudentsPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">What happens</span>
+            <span className="m-eyebrow">What Happens</span>
             <p className="m-idea">
               You walk in, get a name tag, and the room is open. Executives get to know students, each
               looking to help with opportunities they manage. Talk to anyone. If that feels like a
@@ -51,7 +51,7 @@ export default function StudentsPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <span className="m-eyebrow">Besides talking</span>
+            <span className="m-eyebrow">Besides Talking</span>
             <h2 className="m-title">What You Can Do</h2>
             <div className="m-list" style={{ maxWidth: 760 }}>
               <div className="m-row" style={{ gridTemplateColumns: '1fr' }}><span className="n">Join the aerospace design lab, led by NASA engineers.</span></div>
@@ -64,7 +64,7 @@ export default function StudentsPage() {
 
         <section className="m-section m-alt">
           <div className="m-wrap">
-            <span className="m-eyebrow">Who will be there</span>
+            <span className="m-eyebrow">Who Will Be There</span>
             <h2 className="m-title">Executives Joining You</h2>
             <div className="m-people m-twelve">
               {twelve.map((l) => (
@@ -83,16 +83,16 @@ export default function StudentsPage() {
           <div className="m-wrap">
             <div className="m-three">
               <div>
-                <h3>Who can come</h3>
+                <h3>Who Can Come</h3>
                 {/* Jax, Oct 16: keep UCLA, USC, and UC Berkeley. */}
                 <p>University students from across Los Angeles and Ventura Counties. UCLA, USC, and UC Berkeley students are all welcome.</p>
               </div>
               <div>
-                <h3>Nothing to pay</h3>
+                <h3>Nothing to Pay</h3>
                 <p>Nothing to pay at registration or at the door.</p>
               </div>
               <div>
-                <h3>Joining online</h3>
+                <h3>Joining Online</h3>
                 <p>There is a Zoom option when you register. In-person space is 400.</p>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function StudentsPage() {
           </div>
         </section>
       </main>
-      <Explore links={[['Conference', '/conference/'], ['Demo day', '/demo-day/'], ['FAQ', '/faq/']]} />
+      <Explore links={[['Conference', '/conference/'], ['Demo Day', '/demo-day/'], ['FAQ', '/faq/']]} />
       <Footer />
     </div>
   );
