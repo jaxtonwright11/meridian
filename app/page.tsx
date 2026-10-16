@@ -32,7 +32,7 @@ export default function Home() {
         </section>
 
         {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
-        <section className="m-section" aria-labelledby="what-h">
+        <section className="m-section m-alt" aria-labelledby="what-h">
           <div className="m-wrap">
             <h2 id="what-h" className="m-title">What is Meridian?</h2>
             <p className="m-whatp">
