@@ -543,3 +543,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* Short "what is Meridian" highlights */
 .m-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 .m-chips span { font-weight: 700; font-size: 16px; color: var(--ink); background: var(--tan-box); border: 1px solid var(--tan-line); border-radius: 999px; padding: 10px 18px; }
+
+/* Names link to LinkedIn */
+.m-namelink { text-decoration-line: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 5px; transition: color .25s var(--ease), text-decoration-color .25s var(--ease); }
+.m-namelink:hover { color: var(--gold-deep); text-decoration-color: var(--gold-deep); }
+.m-namelink::after { content: ' \2197'; font-size: .7em; color: var(--gold-deep); }

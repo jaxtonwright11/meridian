@@ -26,7 +26,7 @@ export default function TeamPage() {
               {[founder, ...team].map((m) => (
                 <article className="m-card" key={m.slug}>
                   <img src={m.photo} alt={m.name} width={400} height={400} loading="lazy" />
-                  <h3>{m.name}</h3>
+                  <h3>{m.linkedin ? <a className="m-namelink" href={m.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`}>{m.name}</a> : m.name}</h3>
                   <p className="m-role">{m.role}</p>
                   {detailLines(m).map((l) => (<p className="m-dl" key={l}>{l}</p>))}
                   {m.approved && m.bio && <p style={{ marginTop: 10, fontSize: 15 }}>{m.bio}</p>}
