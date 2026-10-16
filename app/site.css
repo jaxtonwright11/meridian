@@ -719,3 +719,6 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
 .m-pname:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
 .m-pcard { padding-top: 16px !important; padding-bottom: 16px !important; }
 .m-pcard h3 { margin: 0; font-size: 21px; }
+/* Home hero: half the space above the headline */
+.m-hero.m-hero-home { padding-top: 44px; }
+@media (max-width: 900px) { .m-hero.m-hero-home { padding-top: 28px; } }

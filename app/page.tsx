@@ -26,7 +26,7 @@ export default function Home() {
             </p>
             <div className="m-actions">
               <RegisterButton>Register for Nov. 14</RegisterButton>
-              <a className="btn btn-tan" href="#what-is-meridian">What is Meridian?</a>
+              <a className="btn btn-tan" href="/partners/">Partner With Us</a>
             </div>
           </div>
         </section>
