@@ -25,7 +25,7 @@ export default function SpeakersPage() {
             <span className="m-eyebrow">For executives</span>
             <h1>One day in the room.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
-              Meridian brings students, ideas, and executives together. Our conference
+              Meridian brings students and executives together in person, by field. Our conference
               on Saturday, November 14 at UCLA is where it starts: 400 university students from
               across Los Angeles and Ventura Counties, a number of them already building companies.
             </p>

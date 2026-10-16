@@ -11,7 +11,7 @@ import { EVENT_DATE, EVENT_NAME, EVENT_VENUE, EVENT_TIME, REGISTRATION_CLOSES_LA
 
 export const metadata: Metadata = pageMeta(
   'Meridian Conference',
-  `${EVENT_NAME}, ${EVENT_DATE} at ${EVENT_VENUE}. Free for every student. Meridian brings students, ideas, and executives together.`,
+  `${EVENT_NAME}, ${EVENT_DATE} at ${EVENT_VENUE}. Free for every student. Meridian brings students and executives together in person, by field.`,
   '/conference/',
   `${EVENT_NAME} | ${EVENT_DATE} at ${EVENT_VENUE}`,
 );

@@ -8,7 +8,7 @@ export interface Faq { audience: FaqAudience; question: string; answer: string }
 export const FAQ_GROUPS: FaqAudience[] = ['The day', 'Students', 'Executives', 'Partners', 'Demo day'];
 
 export const faqs: Faq[] = [
-  { audience: 'The day', question: 'What is Meridian?', answer: 'Meridian is a company that brings students, ideas, and executives together. The conference on November 14 is where it starts.' },
+  { audience: 'The day', question: 'What is Meridian?', answer: 'Meridian is a company that brings students and executives together in person, by field. The conference on November 14 is where it starts.' },
   { audience: 'The day', question: 'Is it free?', answer: 'Yes. The conference is free for every student, to register and to attend.' },
   { audience: 'The day', question: 'Can I join online?', answer: 'Yes. There is a Zoom option when you register. In-person space is 400.' },
   { audience: 'The day', question: 'When does registration close?', answer: 'Registration closes November 7.' },
