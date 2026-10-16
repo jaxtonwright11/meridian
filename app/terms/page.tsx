@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { EVENT_DATE, EVENT_VENUE, CONTACT_EMAIL_PUBLIC as CONTACT_EMAIL } from '@/config';
 import styles from './terms.module.css';
 
-export const metadata: Metadata = {
-  title: 'Event terms',
-  description:
-    'Meridian Conference event terms and code of conduct: registration, photo and video, sharing your ask, communications, attendees under 18, accessibility, and safety.',
-};
+export const metadata: Metadata = pageMeta(
+  'Event terms',
+  'Meridian Conference event terms and code of conduct: registration, photo and video, sharing your ask, communications, attendees under 18, accessibility, and safety.',
+  '/terms/',
+);
 
 // The registration form links here ("I agree to the Meridian event terms and
 // code of conduct"). Each numbered section matches a consent checkbox on the

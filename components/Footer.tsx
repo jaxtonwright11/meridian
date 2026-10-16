@@ -29,7 +29,7 @@ export function Footer() {
           </div>
           {cols.map((c) => (
             <div key={c.h}>
-              <h4>{c.h}</h4>
+              <h3>{c.h}</h3>
               <ul>
                 {c.links.map(([l, h]) => (<li key={h}><a href={h} {...(h.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}>{l}</a></li>))}
               </ul>

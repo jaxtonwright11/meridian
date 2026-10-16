@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Premise } from '@/components/Premise';
@@ -6,11 +7,11 @@ import { PersonContact } from '@/components/PersonContact';
 import { Explore, EVENTS_SENTENCE, StatRow } from '@/components/site/parts';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
-export const metadata: Metadata = {
-  title: 'For executives',
-  description:
-    'What Meridian asks of the leaders in the room: nothing to prepare, nothing to carry afterward. Saturday, November 14, 2026 at UCLA.',
-};
+export const metadata: Metadata = pageMeta(
+  'For executives',
+  'What Meridian asks of the leaders in the room: nothing to prepare, nothing to carry afterward. Saturday, November 14, 2026 at UCLA.',
+  '/speakers/',
+);
 
 // Brief v2 section 6.5, with v3 wording. No schedule on this page, no ask for a time window.
 export default function SpeakersPage() {

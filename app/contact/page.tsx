@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Explore } from '@/components/site/parts';
 import { CONTACT_EMAIL_PUBLIC } from '@/config';
 import { PRESS_URL } from '@/data/press';
 
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'How to reach Meridian: students, executives, partners, and press.',
-};
+export const metadata: Metadata = pageMeta(
+  'Contact',
+  'How to reach Meridian: students, executives, partners, and press.',
+  '/contact/',
+);
 
 export default function ContactPage() {
   const mail = `mailto:${CONTACT_EMAIL_PUBLIC}`;

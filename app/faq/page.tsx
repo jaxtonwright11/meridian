@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { FaqList } from '@/components/FaqList';
@@ -6,10 +7,11 @@ import { Explore } from '@/components/site/parts';
 import { faqs, FAQ_GROUPS } from '@/data/faq';
 import { CONTACT_EMAIL_PUBLIC } from '@/config';
 
-export const metadata: Metadata = {
-  title: 'FAQ',
-  description: 'Answers about Meridian, the November 14, 2026 conference, demo day, and working with us.',
-};
+export const metadata: Metadata = pageMeta(
+  'FAQ',
+  'Answers about Meridian, the November 14, 2026 conference, demo day, and working with us.',
+  '/faq/',
+);
 
 const JSONLD = {
   '@context': 'https://schema.org',

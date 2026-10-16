@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Explore, RegisterButton } from '@/components/site/parts';
 
-export const metadata: Metadata = {
-  title: 'Demo day',
-  description: 'Students present research, startups, and projects to executives, investors, and press at Meridian on November 14, 2026.',
-};
+export const metadata: Metadata = pageMeta(
+  'Demo day',
+  'Students present research, startups, and projects to executives, investors, and press at Meridian on November 14, 2026.',
+  '/demo-day/',
+);
 
 // Brief v2 6.7 with v3 sections 10.3 and 17. Names no team, investor or judge, and
 // promises no funding or outcome. TODO(jax): the 1:20 time depends on the venue decision.

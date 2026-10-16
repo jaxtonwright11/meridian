@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Explore, RegisterButton, WhatMeridianDoes, MeridianLine, TeamTile } from '@/components/site/parts';
@@ -8,11 +9,11 @@ import { PRESS_URL } from '@/data/press';
 import { INSTAGRAM_FOUNDER_URL, LINKEDIN_FOUNDER_URL } from '@/config';
 import { leaders } from '@/data/leaders';
 
-export const metadata: Metadata = {
-  title: 'About',
-  description:
-    'Meridian is a company that brings students and executives together in person, by field. It starts with a conference at UCLA on November 14 and expands into in-person events by field.',
-};
+export const metadata: Metadata = pageMeta(
+  'About',
+  'Meridian is a company that brings students and executives together in person, by field. It starts with a conference at UCLA on November 14 and expands into in-person events by field.',
+  '/about/',
+);
 
 // Founder bio: brief section 15. TODO(jax): approve the wording.
 // Harvard appears here and nowhere else on the site (brief 10.1).

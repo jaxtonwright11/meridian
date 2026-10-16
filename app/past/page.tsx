@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { FirstMeridian } from '@/components/FirstMeridian';
 import { Explore, RegisterButton } from '@/components/site/parts';
 import { principals, PRINCIPAL_LINE } from '@/data/principals';
 
-export const metadata: Metadata = {
-  title: 'Past events',
-  description: 'The first Meridian, December 2025.',
-};
+export const metadata: Metadata = pageMeta(
+  'Past events',
+  'The first Meridian, December 2025.',
+  '/past/',
+);
 
 export default function PastPage() {
   return (

@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { LeaderSpotlight, type Spot } from '@/components/site/LeaderSpotlight';
 import { Explore, RegisterButton } from '@/components/site/parts';
 import { confirmedLeaders } from '@/data/leaders';
 
-export const metadata: Metadata = {
-  title: 'Leaders',
-  description: 'Leaders joining Meridian on November 14, 2026 at UCLA.',
-};
+export const metadata: Metadata = pageMeta(
+  'Leaders',
+  'Leaders joining Meridian on November 14, 2026 at UCLA.',
+  '/leaders/',
+);
 
 export default function LeadersPage() {
   // Viewer: confirmed leaders with an approved photo and an approved bio, in roster order.

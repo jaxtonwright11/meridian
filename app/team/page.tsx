@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Explore, RegisterButton } from '@/components/site/parts';
 import { founder, team, detailLines } from '@/data/team';
 
-export const metadata: Metadata = {
-  title: 'Team',
-  description: 'The team behind Meridian, across UCLA, USC, and UC Berkeley.',
-};
+export const metadata: Metadata = pageMeta(
+  'Team',
+  'The team behind Meridian, across UCLA, USC, and UC Berkeley.',
+  '/team/',
+);
 
 export default function TeamPage() {
   return (

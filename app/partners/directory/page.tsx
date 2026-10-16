@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Explore } from '@/components/site/parts';
 import { GROUPS, livePartners, type Partner } from '@/data/partners';
 
-export const metadata: Metadata = {
-  title: 'Partner directory',
-  description: 'The organizations working with Meridian on November 14.',
-};
+export const metadata: Metadata = pageMeta(
+  'Partner directory',
+  'The organizations working with Meridian on November 14.',
+  '/partners/directory/',
+);
 
 const slug = (g: string) => g.toLowerCase().replace(/[^a-z]+/g, '-');
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Premise } from '@/components/Premise';
@@ -8,10 +9,12 @@ import { Explore, RegisterButton, EVENTS_SENTENCE } from '@/components/site/part
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 import { EVENT_DATE, EVENT_NAME, EVENT_VENUE, EVENT_TIME, REGISTRATION_CLOSES_LABEL } from '@/config';
 
-export const metadata: Metadata = {
-  title: { absolute: `${EVENT_NAME} | ${EVENT_DATE} at ${EVENT_VENUE}` },
-  description: `${EVENT_NAME}, ${EVENT_DATE} at ${EVENT_VENUE}. Free for every student. Meridian brings students and executives together in person, by field.`,
-};
+export const metadata: Metadata = pageMeta(
+  'Meridian Conference',
+  `${EVENT_NAME}, ${EVENT_DATE} at ${EVENT_VENUE}. Free for every student. Meridian brings students and executives together in person, by field.`,
+  '/conference/',
+  `${EVENT_NAME} | ${EVENT_DATE} at ${EVENT_VENUE}`,
+);
 
 const EVENT_JSONLD = {
   '@context': 'https://schema.org',

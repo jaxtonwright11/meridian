@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { FaqList } from '@/components/FaqList';
@@ -7,11 +8,11 @@ import { photoLeaders, title } from '@/data/leaders';
 import { faqs } from '@/data/faq';
 import { REGISTRATION_CLOSES_LABEL } from '@/config';
 
-export const metadata: Metadata = {
-  title: 'For students',
-  description:
-    'A free day at UCLA where leaders from every field come to you. Nothing to prepare, nothing to bring. Saturday, November 14, 2026.',
-};
+export const metadata: Metadata = pageMeta(
+  'For students',
+  'A free day at UCLA where leaders from every field come to you. Nothing to prepare, nothing to bring. Saturday, November 14, 2026.',
+  '/students/',
+);
 
 // Brief v2 6.3 with v3 wording.
 export default function StudentsPage() {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { ContactForm } from '@/components/ContactForm';
@@ -10,11 +11,11 @@ import { livePartners } from '@/data/partners';
 import { press } from '@/data/press';
 import { PARTNER_NAMED_BY } from '@/config';
 
-export const metadata: Metadata = {
-  title: 'Partners',
-  description:
-    'Meridian is scaling from one conference into a company that hosts in-person events by field. Companies, campus offices, and nonprofit partners work with us from the November 14 conference onward.',
-};
+export const metadata: Metadata = pageMeta(
+  'Partners',
+  'Meridian is scaling from one conference into a company that hosts in-person events by field. Companies, campus offices, and nonprofit partners work with us from the November 14 conference onward.',
+  '/partners/',
+);
 
 // Brief v2 6.6 with v3 19.2 order. The universities block is left off until a
 // university confirms (v2 6.6).
