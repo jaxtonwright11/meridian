@@ -33,9 +33,9 @@ export default function Home() {
         </section>
 
         {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
-        <div className="m-titleband"><div className="m-wrap"><h2 id="what-h" className="m-title">What is Meridian?</h2></div></div>
         <section className="m-section" aria-labelledby="what-h">
           <div className="m-wrap">
+            <h2 id="what-h" className="m-title">What is Meridian?</h2>
             <p className="m-whatp">
               Meridian brings students and executives together in person, by field. It begins with
               the <a href="/conference/">November 14 conference</a>, where leaders from every field

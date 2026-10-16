@@ -656,3 +656,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .m-vbar .btn { padding: 11px 12px; }
 }
 @media (max-width: 600px) { .m-people .m-tile, .m-people .m-tile + .m-tile, .m-people .m-tile:nth-child(n) { border: 0 !important; } .m-people { border-left: 0; border-right: 0; } }
+@media (max-width: 600px) {
+  .m-stats { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  .m-stat { padding: 16px 14px !important; align-items: center; text-align: center; gap: 4px; }
+  .m-stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .m-stat .n { font-size: 40px; }
+  .m-stat .l { font-size: 15px; }
+}
