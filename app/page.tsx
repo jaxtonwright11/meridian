@@ -26,6 +26,7 @@ export default function Home() {
             </p>
             <div className="m-actions">
               <RegisterButton>Register for Nov. 14</RegisterButton>
+              <a className="btn btn-tan" href="/leaders/">Executives</a>
             </div>
           </div>
         </section>
