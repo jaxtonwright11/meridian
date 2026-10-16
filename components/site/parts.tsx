@@ -130,7 +130,7 @@ export function LeadersBand() {
   const photoSlugs = new Set(tiles.map((t) => t.slug));
   const names = confirmedLeaders.filter((l) => !photoSlugs.has(l.slug)).map((l) => l.name);
   return (
-    <section className="m-section m-band-dark" aria-labelledby="leaders-h">
+    <section className="m-section m-alt" aria-labelledby="leaders-h">
       <div className="m-wrap">
         <h2 id="leaders-h" className="m-title">Leaders joining us on {EVENT_DATE_SHORT}</h2>
         <LeadersViewer tiles={tiles} />

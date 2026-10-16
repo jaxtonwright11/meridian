@@ -3,10 +3,11 @@ import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import {
   MeridianLine, StatRow, Doors, LeadersBand, TeamStrip, PartnerList,
-  RegisterButton,
+  PressLinks, RegisterButton,
 } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
 import { CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT } from '@/config';
+import { press } from '@/data/press';
 
 export default function Home() {
   return (
@@ -18,9 +19,9 @@ export default function Home() {
         <section className="m-hero m-hero-home">
           <MeridianLine />
           <div className="m-wrap">
-            <h1>Students meet the leaders in their field.</h1>
+            <h1>CEOs come to you.</h1>
             <p className="m-sub">
-              Meridian brings students, ideas, and executives together. We start with
+              Meridian brings executives, students, and ideas together. We start with
               a conference in Los Angeles on November 14, free for every student.
             </p>
             <div className="m-actions">
@@ -31,29 +32,40 @@ export default function Home() {
           </div>
         </section>
 
-        {/* What is Meridian: a short answer, early, with the unique parts called out. */}
-        <section className="m-section m-band-tan" aria-labelledby="what-h">
+        {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
+        <section className="m-section" aria-labelledby="what-h">
           <div className="m-wrap">
             <h2 id="what-h" className="m-title">What is Meridian?</h2>
-            <div className="m-whatcard">
-            <p className="m-lead" >
-              Meridian starts with a conference on November 14. Leaders from every field
-              come to you, each one looking to help with opportunities they manage. Student founders
-              and researchers present at demo day, and NASA engineers run a hands-on design lab.
-              After November 14, Meridian hosts in-person events by field, and everyone who attends
-              joins the Meridian network.
+            <p className="m-whatp">
+              Meridian brings students and executives together in person, by field. It begins with
+              the <a href="/conference/">November 14 conference</a>, where leaders from every field
+              come to meet students. From there it moves into <a href="/partners/">in-person events
+              by field</a>, and into software that matches students with opportunities that fit them.
+              Everyone who attends joins the Meridian network.
             </p>
-            <p className="m-lead" >
-              College and networking were supposed to open doors, and instead the goalposts keep
-              moving further out. Meridian exists to <strong>reverse gatekeeping</strong>: we bring
-              students into the same room as the people in their field, in person.
-            </p>
-            </div>
-            <div className="m-chips">
-              <span>Leaders come to you</span>
-              <span>Demo day for student founders</span>
-              <span>Design lab led by NASA engineers</span>
-              <span>A network by field</span>
+          </div>
+        </section>
+
+        {/* The path: where it starts and where it is going. TODO(jax): approve wording. */}
+        <section className="m-section m-pathsec" aria-labelledby="path-h">
+          <div className="m-wrap">
+            <h2 id="path-h" className="m-title">Where Meridian is going</h2>
+            <div className="m-path">
+              <div className="m-step">
+                <span className="m-stepn">Now</span>
+                <h3>The conference</h3>
+                <p>November 14 at UCLA, free for every student. Leaders from every field come to meet you.</p>
+              </div>
+              <div className="m-step">
+                <span className="m-stepn">Next</span>
+                <h3>Events by field</h3>
+                <p>Hackathon-style events where students team up, compete, and present, with executives who are there to help them.</p>
+              </div>
+              <div className="m-step">
+                <span className="m-stepn">In development</span>
+                <h3>Matching software</h3>
+                <p>Software that connects each student with opportunities nearby that fit their circumstances, values, and goals.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -76,13 +88,23 @@ export default function Home() {
           </div>
         </section>
 
+        {/* In the press */}
+        {press.length > 0 && (
+          <section className="m-section">
+            <div className="m-wrap">
+              <h2 className="m-title">In the press</h2>
+              <PressLinks />
+            </div>
+          </section>
+        )}
+
         {/* 10. The first Meridian */}
         <FirstMeridian />
 
         {/* 12. Closing band */}
         <section className="m-section">
           <div className="m-wrap">
-            <div className="m-closing m-closing-dark">
+            <div className="m-closing">
               <h2 className="m-title" style={{ marginBottom: 8 }}>Questions?</h2>
               <p className="m-lead">We reply personally.</p>
               <div className="m-actions">
