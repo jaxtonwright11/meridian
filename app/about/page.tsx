@@ -39,7 +39,7 @@ export default function AboutPage() {
             <p className="m-whatp">
               Meridian brings executives and students together in person, by field. It begins with
               the <a href="/conference/">November 14 conference</a>, where executives from every field
-              come to meet students. After November 14, Meridian creates <a href="/partners/">hackathon-style
+              come to get to know students. After November 14, Meridian creates <a href="/partners/">hackathon-style
               events for executives and students</a>. We are building software that matches students
               with opportunities that fit them. Everyone who attends joins the Meridian network.
             </p>
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <div className="m-path">
               <details className="m-step">
                 <summary><h3>The conference</h3></summary>
-                <p>November 14 at UCLA, free for every student. Executives from every field come to meet you.</p>
+                <p>November 14 at UCLA, free for every student. Executives from every field come to get to know you.</p>
               </details>
               <details className="m-step">
                 <summary><h3>Hackathon-style events</h3></summary>
