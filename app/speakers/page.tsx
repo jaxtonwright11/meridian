@@ -30,7 +30,7 @@ export default function SpeakersPage() {
               across Los Angeles and Ventura Counties, a number of them already building companies.
             </p>
             <p className="m-lead" style={{ marginTop: 16 }}>
-              After November 14, Meridian hosts hackathon-style events for executives and students.
+              After November 14, Meridian creates hackathon-style events for executives and students.
               We are building software that matches students with opportunities that fit them.
             </p>
           </div>

@@ -13,7 +13,7 @@ import { PARTNER_NAMED_BY } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'Partners',
-  'Meridian starts with a conference and hosts hackathon-style events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
+  'Meridian starts with a conference and creates hackathon-style events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
   '/partners/',
 );
 
@@ -30,7 +30,7 @@ export default function PartnersPage() {
           <div className="m-wrap">
             <h1>Partner with Meridian.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
-              Meridian starts with a conference and hosts hackathon-style events
+              Meridian starts with a conference and creates hackathon-style events
               by field. Companies, campus offices, and community partners work with us from the
               November 14 conference onward.
             </p>
@@ -64,7 +64,7 @@ export default function PartnersPage() {
             <span className="m-eyebrow">What is in it for you</span>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Your name, in the room</h3><p>Partners run tables at the conference and are named in the room and in what we publish.</p></div>
-              <div><h3>Help shape the events</h3><p>After the conference, we host in-person events by field, like engineering, pre-med, or business. We are looking for organizations to plan each one with, so a partner helps shape it from the start.</p></div>
+              <div><h3>Help shape the events</h3><p>After the conference, we create in-person events by field, like engineering, pre-med, or business. We are looking for organizations to plan each one with, so a partner helps shape it from the start.</p></div>
               <div><h3>Executives from your field</h3><p>Each event has one or two executives from that field. Your people meet them too.</p></div>
               <div><h3>Students and press, through who you are</h3><p>Students and press get to know a partner through its people and what it cares about, not a logo on a banner.</p></div>
             </div>

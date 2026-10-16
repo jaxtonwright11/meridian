@@ -27,46 +27,8 @@ export default function Home() {
             <div className="m-actions">
               <RegisterButton>Register for Nov. 14</RegisterButton>
               <a className="btn btn-tan" href="/leaders/">Executives</a>
+              <a className="btn btn-tan" href="/about/#what-is-meridian">What is Meridian?</a>
             </div>
-          </div>
-        </section>
-
-        {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
-        <section className="m-section m-alt" aria-labelledby="what-h">
-          <div className="m-wrap">
-            <h2 id="what-h" className="m-title">What is Meridian?</h2>
-            <p className="m-whatp">
-              Meridian brings executives and students together in person, by field. It begins with
-              the <a href="/conference/">November 14 conference</a>, where leaders from every field
-              come to meet students. After November 14, Meridian hosts <a href="/partners/">hackathon-style
-              events for executives and students</a>. We are building software that matches students
-              with opportunities that fit them. Everyone who attends joins the Meridian network.
-            </p>
-          </div>
-        </section>
-
-        {/* What Meridian does, three parts. TODO(jax): approve wording. */}
-        <section className="m-section m-pathsec" aria-labelledby="path-h">
-          <div className="m-wrap">
-            <h2 id="path-h" className="m-title">Three parts of Meridian</h2>
-            <div className="m-path">
-              <details className="m-step">
-                <summary><h3>The conference</h3></summary>
-                <p>November 14 at UCLA, free for every student. Leaders from every field come to meet you.</p>
-              </details>
-              <details className="m-step">
-                <summary><h3>Hackathon-style events</h3></summary>
-                <p>Executives and students team up on a challenge in one field, then compete and present.</p>
-              </details>
-              <details className="m-step">
-                <summary><h3>Matching software</h3></summary>
-                <p>Software that connects each student with opportunities nearby that fit their circumstances, values, and goals.</p>
-              </details>
-            </div>
-            <p className="m-whatp" style={{ marginTop: 24 }}>
-              Every event brings executives from one field together with students, and everyone who
-              attends joins the Meridian network. Each event adds to the next.
-            </p>
           </div>
         </section>
 
