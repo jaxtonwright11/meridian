@@ -74,7 +74,7 @@ export default function PartnersPage() {
         {/* 4. What is in it for you. Reasons companies partner with student groups: talent access, repeat presence, next-generation insight, a real problem in front of student teams. */}
         <section className="m-section m-alt">
           <div className="m-wrap">
-            <h2 className="m-title">What Is in It for You</h2>
+            <h2 className="m-title">Working With Meridian</h2>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Students in Your Field, Early</h3><p>Meet students in your field in a working setting, not across a career-fair table, before other employers do.</p></div>
               <div><h3>Set the Challenge</h3><p>Bring a real problem from your field. Student teams work on it, you see how they think, and you hear how the next generation approaches it.</p></div>

@@ -214,8 +214,7 @@ export function PartnerList({ heading = true, home = false }: { heading?: boolea
       <div className="m-pgrid">
         {rows.map((p) => (
           <div className="m-pcard" key={p.name}>
-            <h3>{p.name}</h3>
-            <p>{p.line}</p>
+            <h3>{p.url ? <a className="m-pname" href={p.url} target="_blank" rel="noopener noreferrer">{p.name}</a> : p.name}</h3>
           </div>
         ))}
       </div>

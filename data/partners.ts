@@ -11,6 +11,7 @@ export interface Partner {
   kind?: PartnerKind;
   status: 'live' | 'check';
   line: string;
+  url?: string;
 }
 
 export const GROUPS: PartnerGroup[] = ['UCLA', 'USC', 'Community organizations', 'Companies'];
@@ -27,10 +28,10 @@ export const partners: Partner[] = [
   { name: 'First To Go', group: 'UCLA', kind: 'Student organization', status: 'check', line: 'Sharing Meridian with its members.' },
   { name: 'UCLA Design Media Arts', group: 'UCLA', kind: 'Office or department', status: 'live', line: 'Carried to their students on campus.' },
   { name: 'UCLA Black Alumni Association', group: 'UCLA', kind: 'Student organization', status: 'live', line: 'Sharing Meridian with alumni.' },
-  { name: 'USC Neighborhood Academic Initiative', group: 'USC', kind: 'Office or department', status: 'live', line: 'Bringing 140 students and day-of volunteers.' },
+  { name: 'USC Iovine and Young Academy', group: 'USC', kind: 'Office or department', status: 'live', line: 'Promoting Meridian to students through newsletters and classes.' },
   { name: 'USC Educational Partnerships', group: 'USC', kind: 'Office or department', status: 'check', line: 'Supporting the Neighborhood Academic Initiative\u2019s students coming to the day.' },
   { name: 'USC Latino Alumni Association', group: 'USC', kind: 'Student organization', status: 'live', line: 'A reserved block of seats for their students.' },
-  { name: 'USC Iovine and Young Academy', group: 'USC', kind: 'Office or department', status: 'live', line: 'Promoting Meridian to students through newsletters and classes.' },
+  { name: 'USC Neighborhood Academic Initiative', group: 'USC', kind: 'Office or department', status: 'live', line: 'Bringing 140 students and day-of volunteers.' },
   { name: 'USC School of Cinematic Arts', group: 'USC', kind: 'Office or department', status: 'check', line: '' },
   { name: 'TRIO Scholars', group: 'USC', kind: 'Office or department', status: 'check', line: 'Sharing Meridian with its scholars.' },
   { name: 'Trojan Marketing Group', group: 'USC', kind: 'Student organization', status: 'check', line: '' },
@@ -46,17 +47,39 @@ export const partners: Partner[] = [
   { name: 'Project ECHO', group: 'Community organizations', status: 'check', line: '' },
   { name: 'HOPE', group: 'Community organizations', status: 'check', line: '' },
   { name: 'Youth Cinema Project', group: 'Community organizations', status: 'check', line: '' },
-  { name: 'LA Clippers', group: 'Companies', status: 'live', line: 'Team gear and prizes for the room.' },
+  { name: 'LA Clippers Foundation', group: 'Companies', status: 'live', line: 'Team gear and prizes for the room.' },
   { name: 'Petersen Automotive Museum', group: 'Companies', status: 'live', line: 'Bringing a 1955 Pontiac and a 1955 Bel Air to the floor, with staff, and sharing their summer internships with students.' },
   { name: 'Campaign Zero', group: 'Community organizations', status: 'check', line: '' },
 ];
+
+/** Main page for each partner. NAI has no confirmed main page yet, so its name is plain text. */
+const URLS: Record<string, string> = {
+  'Undergraduate Students Association Council': 'https://usac.ucla.edu',
+  'Student Organizations, Leadership & Engagement': 'https://sole.ucla.edu',
+  'Undergraduate Research Center': 'https://ugresearch.ucla.edu',
+  'Bruin Formula Racing': 'https://www.bruinformula.com',
+  'NSBE UCLA': 'https://nsbebruins.wixsite.com/nsbe',
+  'UCLA Design Media Arts': 'https://dma.ucla.edu',
+  'UCLA Black Alumni Association': 'https://www.uclablackalumni.org',
+  'USC Latino Alumni Association': 'https://alumni.usc.edu/laa/',
+  'USC Iovine and Young Academy': 'https://iovine-young.usc.edu',
+  '826LA': 'https://826la.org',
+  'LA Promise Fund': 'https://www.lapromisefund.org',
+  'I Have A Dream Foundation LA': 'https://www.ihadla.org',
+  'Las Fotos Project': 'https://lasfotosproject.org',
+  'MANA de San Diego': 'https://www.manasd.org',
+  'San Diego Diplomacy Council': 'https://www.sandiegodiplomacy.org',
+  'LA Clippers Foundation': 'https://www.clippers.com',
+  'Petersen Automotive Museum': 'https://www.petersen.org',
+};
+partners.forEach((p) => { p.url = URLS[p.name]; });
 
 export const livePartners = partners.filter((p) => p.status === 'live');
 
 /** The ten partners shown on the home page, in this order. */
 const HOME_FEATURED = [
-  'Petersen Automotive Museum', 'LA Clippers', 'USC Neighborhood Academic Initiative',
-  'USC Iovine and Young Academy', 'Undergraduate Students Association Council',
+  'Petersen Automotive Museum', 'LA Clippers Foundation', 'USC Iovine and Young Academy',
+  'USC Neighborhood Academic Initiative', 'Undergraduate Students Association Council',
   'Undergraduate Research Center', 'LA Promise Fund', 'I Have A Dream Foundation LA',
   'Las Fotos Project', '826LA',
 ];

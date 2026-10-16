@@ -714,3 +714,8 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
 .m-three.m-two > div, .m-three.m-two > div + div { background: #fff; border: 1px solid var(--tan-line); border-radius: 4px; padding: 22px 24px !important; }
 .m-alt .m-three.m-two > div, .m-alt .m-three.m-two > div + div { background: var(--paper); }
 .m-three.m-two h3 { font-size: 22px; margin-bottom: 8px; }
+.m-pname { color: inherit; text-decoration: underline; text-decoration-color: var(--gold-deep); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.m-pname:hover { text-decoration-color: var(--heading); }
+.m-pname:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
+.m-pcard { padding-top: 16px !important; padding-bottom: 16px !important; }
+.m-pcard h3 { margin: 0; font-size: 21px; }

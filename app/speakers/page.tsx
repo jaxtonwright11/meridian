@@ -26,12 +26,11 @@ export default function SpeakersPage() {
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">For Executives</span>
-            <h1>What&apos;s in It for You.</h1>
+            <h1>Meet the Next Generation.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. Our conference
               on Saturday, November 14 at UCLA is where it starts: 400 university students from
               across Los Angeles and Ventura Counties, a number of them already building companies.
-              Here is what an executive gets, on the day and after it.
             </p>
           </div>
         </section>
@@ -40,7 +39,7 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <h2 className="m-title">What You Get</h2>
+            <h2 className="m-title">On the Day and After</h2>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Students Before Anyone Else Meets Them</h3><p>Get to know university students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, in a room built for conversation, years before they enter the job market.</p></div>
               <div><h3>How the Next Generation Thinks</h3><p>Hear directly from the students you hire, serve, and sell to: what they are building, what they care about, and what they are looking for.</p></div>

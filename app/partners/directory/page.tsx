@@ -18,8 +18,7 @@ function Rows({ rows }: { rows: Partner[] }) {
     <div className="m-list">
       {rows.map((p) => (
         <div className="m-row" key={p.name}>
-          <span className="n">{p.name}</span>
-          <span className="r">{p.line}</span>
+          <span className="n">{p.url ? <a className="m-pname" href={p.url} target="_blank" rel="noopener noreferrer">{p.name}</a> : p.name}</span>
         </div>
       ))}
     </div>
