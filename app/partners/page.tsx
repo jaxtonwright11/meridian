@@ -61,7 +61,7 @@ export default function PartnersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <h2 className="m-title">Why Meridian Is Different</h2>
+            <h2 className="m-title">Who We Are</h2>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Cross-Campus by Design</h3><p>Teams mix students from different campuses on purpose, so students work with people from schools they would otherwise never meet.</p></div>
               <div><h3>Built From the Inside</h3><p>Meridian is run by students at UCLA, USC, and UC Berkeley, with ties to each campus&apos;s administration and student body.</p></div>
