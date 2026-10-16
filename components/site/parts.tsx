@@ -12,7 +12,7 @@ import { NETWORK_SENTENCE, numWord, list } from '@/lib/copy';
 
 export function RegisterButton({ children = `Register for ${EVENT_DATE_SHORT}` }: { children?: React.ReactNode }) {
   return (
-    <a className="btn btn-ink" href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
+    <a className="btn btn-ink btn-register" href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
       {children}
     </a>
   );
