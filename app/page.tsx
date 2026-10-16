@@ -20,7 +20,7 @@ export default function Home() {
           <div className="m-wrap">
             <h1>Students meet the leaders in their field.</h1>
             <p className="m-sub">
-              Meridian brings students and executives together in person, by field. We start with
+              Meridian brings students, ideas, and executives together. We start with
               a conference in Los Angeles on November 14, free for every student.
             </p>
             <p className="m-proof">Last time: <strong>150 students</strong>, <strong>23 executives</strong>, <strong>9 internships</strong>.</p>
