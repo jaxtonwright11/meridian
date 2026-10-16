@@ -21,8 +21,8 @@ export default function Home() {
           <div className="m-wrap">
             <h1>CEOs come to you.</h1>
             <p className="m-sub">
-              Meridian brings executives, students, and ideas together. We start with
-              a <a className="m-sublink" href="/conference/">conference</a> in Los Angeles on November 14, free for every student.
+              Meridian brings executives and students together. We start with
+              a <a className="m-sublink" href="/conference/">conference</a> at UCLA on November 14, free for every student.
             </p>
             <div className="m-actions">
               <RegisterButton>Register for Nov. 14</RegisterButton>
