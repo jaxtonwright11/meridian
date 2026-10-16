@@ -49,6 +49,7 @@ export function ContactForm() {
         <option>Campus office or department</option>
         <option>Community organization</option>
         <option>University</option>
+        <option>Investor</option>
         <option>Other</option>
       </select>
       <label style={label} htmlFor="f-msg">What would you like to do with Meridian?</label>

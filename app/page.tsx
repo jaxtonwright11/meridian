@@ -64,6 +64,10 @@ export default function Home() {
                 <p>Software that connects each student with opportunities nearby that fit their circumstances, values, and goals.</p>
               </div>
             </div>
+            <p className="m-whatp" style={{ marginTop: 24 }}>
+              Every event brings executives from one field together with students, and everyone who
+              attends joins the Meridian network. Each event adds to the next.
+            </p>
           </div>
         </section>
 
@@ -107,6 +111,7 @@ export default function Home() {
               <div className="m-actions">
                 <a className="btn btn-ink" href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>Write to us</a>
                 <a className="btn btn-tan" href="/faq/">Read the FAQ</a>
+                <a className="m-link" href={`mailto:${CONTACT_EMAIL_PUBLIC}?subject=Investor%20inquiry`}>Investors: write to us</a>
               </div>
             </div>
           </div>

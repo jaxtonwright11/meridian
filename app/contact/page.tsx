@@ -43,6 +43,11 @@ export default function ContactPage() {
                 <div className="m-actions"><a className="btn btn-tan" href="/partners/">For partners</a></div>
               </div>
               <div className="m-route">
+                <h3>Investors</h3>
+                <p>Interested in backing Meridian? Write to us.</p>
+                <div className="m-actions"><a className="btn btn-tan" href={`${mail}?subject=Investor%20inquiry`}>Write to us</a></div>
+              </div>
+              <div className="m-route">
                 <h3>Press</h3>
                 <p>Recent coverage, and a contact for press.</p>
                 <div className="m-actions"><a className="btn btn-tan" href={PRESS_URL} target="_blank" rel="noopener">Read the recent media</a><a className="m-link" href={`${mail}?subject=Press`}>{CONTACT_EMAIL_PUBLIC}</a></div>

@@ -68,6 +68,10 @@ export default function PartnersPage() {
               <div><h3>Executives from your field</h3><p>Each event has one or two executives from that field. Your people meet them too.</p></div>
               <div><h3>Students and press, through who you are</h3><p>Students and press get to know a partner through its people and what it cares about, not a logo on a banner.</p></div>
             </div>
+            <p className="m-whatp" style={{ marginTop: 28 }}>
+              We are building software that matches students with opportunities that fit them, so
+              partners can reach the right students.
+            </p>
           </div>
         </section>
 
