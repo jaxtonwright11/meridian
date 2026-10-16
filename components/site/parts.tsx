@@ -130,9 +130,8 @@ export function LeadersBand() {
   const photoSlugs = new Set(tiles.map((t) => t.slug));
   const names = confirmedLeaders.filter((l) => !photoSlugs.has(l.slug)).map((l) => l.name);
   return (
-    <section className="m-section m-alt" aria-labelledby="leaders-h">
+    <section className="m-section m-band-dark" aria-labelledby="leaders-h">
       <div className="m-wrap">
-        <span className="m-eyebrow">Leaders</span>
         <h2 id="leaders-h" className="m-title">Leaders joining us on {EVENT_DATE_SHORT}</h2>
         <LeadersViewer tiles={tiles} />
         {names.length > 0 && (
@@ -162,7 +161,6 @@ export function TeamStrip() {
   return (
     <section className="m-section" aria-labelledby="team-h">
       <div className="m-wrap">
-        <span className="m-eyebrow">The team</span>
         <h2 id="team-h" className="m-title">A team across UCLA, USC, and UC Berkeley</h2>
         <div className="m-people m-team">
           {all.map((m) => (<TeamTile m={m} key={m.slug} />))}
@@ -207,7 +205,6 @@ export function PartnerList({ heading = true, home = false }: { heading?: boolea
     <div>
       {heading && (
         <>
-          <span className="m-eyebrow">Partners</span>
           <h2 className="m-title">Who is working with us</h2>
         </>
       )}

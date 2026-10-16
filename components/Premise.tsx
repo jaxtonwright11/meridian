@@ -1,7 +1,7 @@
 /** The premise paragraph (revised wording, brief section 16). TODO(jax): approve. */
 export function Premise() {
   return (
-    <p className="m-display" style={{ maxWidth: '30ch' }}>
+    <p className="m-idea">
       The premise is <strong>reversing gatekeeping</strong>. College and networking were supposed
       to open doors, and instead the goalposts keep moving further out. So leaders get to know
       students, and each one is looking to help with opportunities they manage. There&apos;s also a

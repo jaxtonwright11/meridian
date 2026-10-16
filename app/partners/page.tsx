@@ -28,7 +28,6 @@ export default function PartnersPage() {
         {/* 1. Lead */}
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
-            <span className="m-eyebrow">Partners</span>
             <h1>Partner with Meridian.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian is scaling from one conference into a company that hosts in-person events

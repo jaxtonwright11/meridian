@@ -37,7 +37,7 @@ export const partners: Partner[] = [
   { name: 'SHPE USC', group: 'USC', kind: 'Student organization', status: 'check', line: '' },
   { name: 'USC Campus Activities', group: 'USC', kind: 'Office or department', status: 'check', line: '' },
   { name: '826LA', group: 'Community and nonprofit', status: 'live', line: 'Sent to a network of 4,000 students and alumni.' },
-  { name: 'LA Promise Fund', group: 'Community and nonprofit', status: 'live', line: 'Thirty to fifty students across two cohorts.' },
+  { name: 'LA Promise Fund', group: 'Community and nonprofit', status: 'live', line: 'Bringing students from two cohorts.' },
   { name: 'I Have A Dream Foundation LA', group: 'Community and nonprofit', status: 'live', line: 'A block of Dreamer Scholars.' },
   { name: 'Las Fotos Project', group: 'Community and nonprofit', status: 'live', line: 'Photographers shooting free headshots for every student.' },
   { name: 'MANA de San Diego', group: 'Community and nonprofit', status: 'live', line: 'Students from their San Diego network.' },

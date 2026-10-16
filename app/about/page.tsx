@@ -28,7 +28,6 @@ export default function AboutPage() {
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 40 }}>
           <div className="m-wrap">
-            <span className="m-eyebrow">About</span>
             <h1 className="m-h1-long">Meridian is a company that brings students and executives together in person, by field.</h1>
           </div>
         </section>

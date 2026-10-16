@@ -30,7 +30,7 @@ export function FirstMeridian({ detail = false }: { detail?: boolean }) {
             , Journalist and Host, The Adriel Show
           </footer>
         </blockquote>
-        {!detail && <p style={{ marginTop: 20 }}><a className="m-link" href="/past/">The first Meridian</a></p>}
+        {!detail && <p style={{ marginTop: 20 }}><a className="m-link" href="/past/">More from December 2025</a></p>}
       </div>
     </section>
   );
