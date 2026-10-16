@@ -177,24 +177,24 @@ export function TeamStrip() {
 /** Company traction, from data. Current numbers only; nothing here is a promise. */
 export function StatRow() {
   const stats = [
-    { n: String(confirmedLeaders.length), l: 'leaders confirmed' },
-    { n: String(livePartners.length), l: 'partners working with us' },
+    { n: String(confirmedLeaders.length), l: 'leaders confirmed', href: '/leaders/' },
+    { n: String(livePartners.length), l: 'partners working with us', href: '/partners/directory/' },
   ];
   return (
     <section className="m-section m-statsec" aria-label="Meridian in numbers">
       <div className="m-wrap">
         <div className="m-stats">
           {stats.map((x) => (
-            <div className="m-stat" key={x.l}>
+            <a className="m-stat" key={x.l} href={x.href}>
               <span className="n">{x.n}</span>
               <span className="l">{x.l}</span>
-            </div>
+            </a>
           ))}
           {press.length > 0 && (
-            <div className="m-stat">
+            <a className="m-stat" href={press[0].url} target="_blank" rel="noopener">
               <span className="n n-text">In the press</span>
-              <a className="l m-link" href={press[0].url} target="_blank" rel="noopener">Read the recent media</a>
-            </div>
+              <span className="l">Read the recent media</span>
+            </a>
           )}
         </div>
       </div>
