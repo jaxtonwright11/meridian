@@ -683,3 +683,4 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
 /* Register / primary buttons: deep brown, white text, brown outline */
 .btn-ink, .btn-gold, .btn-ink:hover, .btn-gold:hover { background: #3A2314; border: 1px solid #7A5A35; color: #FFFFFF; }
 .btn-ink:hover, .btn-gold:hover { background: #4A2C17; }
+.btn-ink, .btn-gold, .btn-ink:hover, .btn-gold:hover { border: 2px solid #000; }
