@@ -35,6 +35,7 @@ export default function DemoDayPage() {
         </section>
         <section className="m-section">
           <div className="m-wrap">
+            <h2 className="sr-only">How demo day works</h2>
             <div className="m-three m-cards3" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               {blocks.map((b) => (<div key={b.h}><h3>{b.h}</h3><p>{b.p}</p></div>))}
             </div>

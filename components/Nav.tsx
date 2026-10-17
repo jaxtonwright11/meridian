@@ -56,14 +56,14 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
         ))}
       </nav>
       {trail && (
-        <div className="m-trail" aria-label="Breadcrumb">
+        <nav className="m-trail" aria-label="Breadcrumb">
           {trail.map((t, i) => (
             <span key={t.label}>
               {i > 0 && ' / '}
               {t.href ? <a href={t.href}>{t.label}</a> : t.label}
             </span>
           ))}
-        </div>
+        </nav>
       )}
     </>
   );

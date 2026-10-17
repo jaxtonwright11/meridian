@@ -17,7 +17,7 @@ export default function PastPage() {
     <div className="m-page">
       <Nav trail={[{ label: 'About', href: '/about/' }, { label: 'Past events' }]} />
       <main id="main">
-        <FirstMeridian detail />
+        <FirstMeridian detail page />
 
         <section className="m-section" id="principals">
           <div className="m-wrap">

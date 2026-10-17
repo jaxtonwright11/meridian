@@ -24,6 +24,7 @@ export default function TeamPage() {
         </section>
         <section className="m-section">
           <div className="m-wrap">
+            <h2 className="sr-only">Team members</h2>
             <div className="m-cards">
               {[founder, ...team].map((m) => (
                 <article className="m-card" key={m.slug}>

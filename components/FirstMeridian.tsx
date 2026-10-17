@@ -1,10 +1,10 @@
 /** The first Meridian, December 2025. Past facts, two photos, one quote, no commentary. */
-export function FirstMeridian({ detail = false }: { detail?: boolean }) {
+export function FirstMeridian({ detail = false, page = false }: { detail?: boolean; page?: boolean }) {
   return (
     <section className="m-section" id="first-meridian">
       <div className="m-wrap">
         <span className="m-eyebrow">December 2025</span>
-        <h2 className="m-title">The First Meridian</h2>
+        {page ? <h1 className="m-title">The First Meridian</h1> : <h2 className="m-title">The First Meridian</h2>}
         <p className="m-lead">
           150 students met executives from Netflix, OpenAI, and Chase Bank. Not for a lecture.
           For conversations that turned into mentorships, internship introductions, and career

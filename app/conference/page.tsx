@@ -39,7 +39,7 @@ export default function ConferencePage() {
     <div className="m-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(EVENT_JSONLD) }} />
       <Nav />
-      <div className="m-subnav" aria-label="On this page">
+      <nav className="m-subnav" aria-label="On this page">
         <div className="m-subnav-in">
           <a href="#the-day">The Day</a>
           <a href="/leaders/">Who Is Joining</a>
@@ -47,7 +47,7 @@ export default function ConferencePage() {
           <a href="#schedule">Schedule</a>
           <a href="#getting-there">Getting There</a>
         </div>
-      </div>
+      </nav>
       <main id="main">
         {/* 1-2. Header, register */}
         <section className="m-hero" style={{ paddingBottom: 56 }}>
@@ -72,7 +72,7 @@ export default function ConferencePage() {
         {/* 4. What the day includes (brief v2 6.2) */}
         <section className="m-section" id="the-day">
           <div className="m-wrap">
-            <span className="m-eyebrow">What the Day Includes</span>
+            <h2 className="m-eyebrow">What the Day Includes</h2>
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
               <div><h3>Aerospace Design Lab</h3><p>Led by NASA engineers. You spend the day building something real instead of sitting through a talk about it.</p></div>
               <div><h3>Demo Day</h3><p>Students present research, startups, and projects to executives, investors, other students, and press.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/demo-day/">About demo day</a></p></div>

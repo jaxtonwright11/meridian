@@ -30,11 +30,11 @@ export default function DirectoryPage() {
   return (
     <div className="m-page">
       <Nav trail={[{ label: 'Partners', href: '/partners/' }, { label: 'Directory' }]} />
-      <div className="m-subnav" aria-label="Groups">
+      <nav className="m-subnav" aria-label="Groups">
         <div className="m-subnav-in">
           {groups.map((g) => (<a key={g} href={`#${slug(g)}`}>{g}</a>))}
         </div>
-      </div>
+      </nav>
       <main id="main">
         <section className="m-hero" style={{ paddingBottom: 32 }}>
           <div className="m-wrap">

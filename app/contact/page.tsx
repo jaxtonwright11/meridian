@@ -26,6 +26,7 @@ export default function ContactPage() {
         </section>
         <section className="m-section">
           <div className="m-wrap">
+            <h2 className="sr-only">Who to write to</h2>
             <div className="m-routes">
               <div className="m-route">
                 <h3>Students</h3>
