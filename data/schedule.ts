@@ -34,7 +34,7 @@ export const schedule: { approved: boolean; items: ScheduleItem[]; allDay: strin
     { time: '3:00', title: 'Close', body: '', status: 'live' },
   ],
   allDay: [
-    'Aerospace design lab, 11:15 to 11:55 and 1:15 to 2:30',
+    'Aerospace design lab, 11:15 to 11:55 and 1:20 to 2:30',
     'Demo day expo, 11:15 to 12:35 and 1:20 to 2:40',
     'Free professional headshots',
     'Partner tables',
