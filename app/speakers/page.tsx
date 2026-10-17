@@ -4,7 +4,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { FaqList } from '@/components/FaqList';
 import { faqs } from '@/data/faq';
-import { PersonContact } from '@/components/PersonContact';
+import { TeamContact } from '@/components/TeamContact';
 import { Explore, EVENTS_SENTENCE, StatRow } from '@/components/site/parts';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
@@ -100,7 +100,7 @@ export default function SpeakersPage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">Say Yes</span>
-            <PersonContact primary />
+            <TeamContact primary />
             <p className="m-lead" style={{ marginTop: 28 }}>
               If you know someone who would get a lot from connecting with other executives and
               student founders, please feel free to recommend them.

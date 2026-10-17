@@ -24,7 +24,7 @@ Nothing here is live. The post-event switch is `EVENT_STATE` in `config.ts` ('be
 
 The Menu button goes away.
 
-**Built (Oct 17).** Phones (900 px and under) show the logo and Register in the sticky top bar, with the five sections as a row of tabs right under it. The row is plain links in the page HTML, so it shows with JavaScript off. At 520 px and under each tab is 40% of the row (150 px at most), so two tabs show whole and the third is always cut off. The row starts scrolled to the current section's tab. Tabs are 44 px tall. Desktop is unchanged.
+**Built (Oct 17), revised.** Phones (900 px and under) show the logo and Register in the sticky top bar, with the five sections right under it as the same connected tan pill the desktop uses (current section white, Register stays separate and black). The row is plain links in the page HTML, so it shows with JavaScript off. At 520 px and under the pill runs wider than the screen, with each segment sized so two show whole and the third is always cut off. The row starts scrolled to the current section's tab. Tabs are 44 px tall. Desktop is unchanged.
 
 ## Part 2: Post-event copy (draft for approval)
 
@@ -42,7 +42,6 @@ Words in [brackets] are blanks for facts only you have.
 ### Home
 - Headline (unchanged): **CEOs Come to You.**
 - Subhead: Meridian brings **executives** and **students** together. Our first **conference** took place at UCLA on November 14.
-- Proof line: [N] executives joined us, including the Chairman of the YMCA of the USA, the CEO of Campaign Zero, and a senior scientist at NASA's Jet Propulsion Laboratory.
 - Buttons: **Follow on Instagram** and **Partner With Us**.
 - What Is Meridian?: Meridian brings executives and students together in person, by field. It began with the November 14 conference, where executives from every field came to get to know students. Meridian creates hackathon-style events for executives and students. We are building software that matches students with opportunities that fit them. Everyone who attended joins the Meridian network.
 - Executives section heading: **Executives Who Joined Us on November 14**

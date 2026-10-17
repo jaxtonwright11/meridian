@@ -3,7 +3,7 @@ import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { ContactForm } from '@/components/ContactForm';
-import { PersonContact } from '@/components/PersonContact';
+import { TeamContact } from '@/components/TeamContact';
 import { Explore, PressLinks, StatRow } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
 import { confirmedLeaders, title } from '@/data/leaders';
@@ -135,7 +135,7 @@ export default function PartnersPage() {
             <span className="m-eyebrow">Write to Us</span>
             <h2 className="m-display m-h2">What Would You Like to Do With Meridian?</h2>
             <ContactForm />
-            <div style={{ marginTop: 48 }}><PersonContact /></div>
+            <div style={{ marginTop: 40 }}><TeamContact /></div>
             <p className="m-small" style={{ marginTop: 28 }}>The General Atomics Sciences Education Foundation funds Meridian and the aerospace design lab.</p>
           </div>
         </section>

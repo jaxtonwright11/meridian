@@ -49,11 +49,13 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
         </div>
       </header>
       <nav ref={tabsRef} className="m-tabs" aria-label="Main">
-        {items.map((i) => (
-          <a key={i.href} className="m-tab" href={i.href} aria-current={isCurrent(i.match) ? 'page' : undefined}>
-            {i.label}
-          </a>
-        ))}
+        <div className="m-tabs-in">
+          {items.map((i) => (
+            <a key={i.href} className="m-tab" href={i.href} aria-current={isCurrent(i.match) ? 'page' : undefined}>
+              {i.label}
+            </a>
+          ))}
+        </div>
       </nav>
       {trail && (
         <nav className="m-trail" aria-label="Breadcrumb">
