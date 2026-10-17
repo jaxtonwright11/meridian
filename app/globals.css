@@ -159,10 +159,10 @@ section {
   max-width: var(--max-width-editorial);
   margin: 0 auto;
   background: var(--box);
-  border: 1px solid var(--box-line);
-  border-radius: 6px;
-  padding: 46px 52px;
-  box-shadow: 0 1px 2px rgba(40, 28, 16, 0.06), 0 20px 46px rgba(40, 28, 16, 0.10);
+  border: var(--chunk-border, 1px solid var(--box-line));
+  border-radius: var(--chunk-radius, 6px);
+  padding: var(--chunk-pad, 46px 52px);
+  box-shadow: var(--chunk-shadow, 0 1px 2px rgba(40, 28, 16, 0.06), 0 20px 46px rgba(40, 28, 16, 0.10));
   /* Darken hairlines so they read on the tan surface (text stays dark). */
   --line: #B0926B;
   --line-strong: #A2825A;
@@ -290,9 +290,9 @@ section {
   }
   section { padding: 16px 0; }
   .container, .container-narrow { padding: 0 16px; }
-  body { font-size: 15px; }
+  body { font-size: 16px; }
   .btn { width: 100%; }
-  .chunk { padding: 30px 22px; border-radius: 5px; }
+  .chunk { padding: var(--chunk-pad-mobile, 30px 22px); border-radius: var(--chunk-radius, 5px); }
   .panel { padding: 30px 24px; }
   .proof { flex-direction: column; }
   .proof .fig {

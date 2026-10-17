@@ -5,10 +5,10 @@ import { OptImg } from './OptImg';
 import styles from './EventPhotos.module.css';
 
 const photos = [
-  { desktop: '/opt/meridian2025speakeradrielmiramontes.webp', mobile: '/opt/meridian2025speakeradrielmiramontes-mobile.webp', alt: 'Adriel Miramontes speaking at Meridian Conference' },
-  { desktop: '/opt/meridian2025speakercamdencoley.webp', mobile: '/opt/meridian2025speakercamdencoley-mobile.webp', alt: 'Camden Coley at Meridian Conference' },
-  { desktop: '/opt/meridian2025speakersimeon.webp', mobile: '/opt/meridian2025speakersimeon-mobile.webp', alt: 'Simeon Johnson at Meridian Conference' },
-  { desktop: '/opt/meridian2025leadmarketerdanae.webp', mobile: '/opt/meridian2025leadmarketerdanae-mobile.webp', alt: 'Danae Venters, Lead Marketer at Meridian Conference' },
+  { desktop: '/opt/meridian2025speakeradrielmiramontes.webp', mobile: '/opt/meridian2025speakeradrielmiramontes-mobile.webp', alt: 'Adriel Miramontes speaking at Meridian' },
+  { desktop: '/opt/meridian2025speakercamdencoley.webp', mobile: '/opt/meridian2025speakercamdencoley-mobile.webp', alt: 'Camden Coley at Meridian' },
+  { desktop: '/opt/meridian2025speakersimeon.webp', mobile: '/opt/meridian2025speakersimeon-mobile.webp', alt: 'Simeon Johnson at Meridian' },
+  { desktop: '/opt/meridian2025leadmarketerdanae.webp', mobile: '/opt/meridian2025leadmarketerdanae-mobile.webp', alt: 'Danae Venters, Lead Marketer at Meridian' },
   { desktop: '/opt/georgeleisandjaxtonpicture.webp', mobile: '/opt/georgeleisandjaxtonpicture-mobile.webp', alt: 'George Leis and Jaxton Wright' },
 ];
 
