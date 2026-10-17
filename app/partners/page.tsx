@@ -13,7 +13,7 @@ import { PARTNER_NAMED_BY } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'Partners',
-  'Give student teams a real problem. Meridian starts with a conference and creates hackathon-style events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
+  'Build with students. Meet university students from across Los Angeles face to face at UCLA on November 14, then work with student teams at events by field.',
   '/partners/',
 );
 
@@ -28,11 +28,10 @@ export default function PartnersPage() {
         {/* 1. Lead */}
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
-            <h1>Give Student Teams a Real Problem.</h1>
+            <span className="m-eyebrow">For Partners</span>
+            <h1>Build With Students.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
-              Meridian starts with a conference and creates hackathon-style events
-              by field. Companies, campus offices, and community partners work with us from the
-              November 14 conference onward.
+              Up to 400 university students from UCLA, USC, UC Berkeley, and campuses across Los Angeles come to our conference at UCLA on November 14. You meet them face to face. Then Meridian creates hackathon-style events by field, where student teams take on a real challenge from your field.
             </p>
           </div>
         </section>
@@ -47,9 +46,8 @@ export default function PartnersPage() {
               An event is one field, in one room, run as a hackathon. Take pre-med: physicians and
               healthcare executives join, and students from UCLA, USC, UC Berkeley, and other Los
               Angeles campuses are placed on teams with people from schools they would not normally
-              meet. Each team gets one real problem from the field and a day to work on it, then
-              presents to the executives in the room. The winning team takes home a prize. The format
-              fits the field: in art, teams make a film together before they present and compete.
+              meet. Each team gets one real problem from the field, then
+              presents to the executives in the room. The winning team takes home a prize.
             </p>
             {PARTNER_NAMED_BY && (
               <p className="m-small" style={{ marginTop: 10 }}>
@@ -76,10 +74,10 @@ export default function PartnersPage() {
           <div className="m-wrap">
             <h2 className="m-title">Working With Meridian</h2>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>Meet Students in Person</h3><p>A table is a start. Your executives can also join roundtables, introduce themselves to the room, and get to know students one conversation at a time. The students you meet may be the ones you later work with, as interns, ambassadors, or collaborators.</p></div>
-              <div><h3>Set the Challenge</h3><p>Bring a real problem from your field. Student teams from different campuses work on it side by side, you see how they think, and you hear how students approach it.</p></div>
-              <div><h3>Work With Student Organizations</h3><p>Student organizations and campus offices at UCLA and USC bring their members to Meridian, and many run tables of their own. Meet the people who organize campus life in one room, not campus by campus.</p></div>
-              <div><h3>Be Known Beyond One Day</h3><p>After the conference, Meridian creates events by field, so students meet your team more than once. A partner is known by its people, not by a logo on a banner. Everyone who attends joins the Meridian network, and the software we are building matches students with opportunities that fit them, including yours.</p></div>
+              <div><h3>Meet Students in Person</h3><p>A table is a start. Your executives can join roundtables, introduce themselves to the room, and get to know students one conversation at a time.</p></div>
+              <div><h3>Set the Challenge</h3><p>Bring a real problem from your field. Student teams from different campuses work on it side by side, then pitch their answers to the executives in the room.</p></div>
+              <div><h3>Work With Student Organizations</h3><p>Student organizations and campus groups bring their members to Meridian and run tables of their own. Meet the people who organize campus life in one room, not campus by campus.</p></div>
+              <div><h3>Be Known Beyond One Day</h3><p>After the conference, Meridian creates events by field. Everyone who attends joins the Meridian network.</p></div>
             </div>
           </div>
         </section>
@@ -96,7 +94,6 @@ export default function PartnersPage() {
               {livePartners.length} partners are working with us.{' '}
               <a className="m-link" href="/partners/directory/">See the partner directory</a>
             </p>
-            <p className="m-lead" style={{ marginTop: 12 }}>Backed by George Leis, Chairman, YMCA of the USA, and President, CalPrivate Bank.</p>
             {press.length > 0 && <div style={{ marginTop: 12 }}><PressLinks showPage={false} /></div>}
           </div>
         </section>
@@ -120,7 +117,7 @@ export default function PartnersPage() {
             <div className="m-three">
               <div><h3>1. Tell Us</h3><p>Tell us who you are and what you would like to do.</p></div>
               <div><h3>2. We Talk</h3><p>We talk and find the right fit.</p></div>
-              <div><h3>3. We Make It Happen</h3><p>We build it into November 14 or a field event, whichever fits what you want to do.</p></div>
+              <div><h3>3. We Make It Happen</h3><p>We build it into November 14 or one of the events by field, whichever fits what you want to do.</p></div>
             </div>
           </div>
         </section>

@@ -27,7 +27,7 @@ export const faqs: Faq[] = [
 
   { audience: 'Executives', question: 'What do I get out of it?', answer: 'You get to know university students in your field in person, not through an ad or a campaign. After November 14, you can put a real problem to student teams at the hackathon-style events Meridian creates by field, and you join the Meridian network.' },
   { audience: 'Executives', question: 'Can my company have a table?', answer: 'Companies, campus offices, and community organizations run tables at the conference. Write to us or book a call and we will talk about what fits.' },
-  { audience: 'Executives', question: 'Do I have to commit beyond the day?', answer: 'No. If you would like to be involved beyond the day, tell us which field and we will talk about what fits.' },
+  { audience: 'Executives', question: 'Do I have to take part beyond the day?', answer: 'No. If you would like to be involved beyond the day, tell us which field and we will talk about what fits.' },
   { audience: 'Executives', question: 'I am an executive. What does the day ask of me?', answer: 'Nothing to prepare. You get to know students and meet the other executives in the room.' },
   { audience: 'Partners', question: 'I lead an organization. How do we work with Meridian?', answer: 'Start at the partners page. Write to us or book a call.' },
   { audience: 'Demo Day', question: 'How do I apply to present at demo day?', answer: 'Register, then answer the demo day question on the form. We follow up with the people we pick.' },

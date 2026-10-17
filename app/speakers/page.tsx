@@ -29,8 +29,8 @@ export default function SpeakersPage() {
             <h1>Get Back to Campus.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. Our conference
-              on Saturday, November 14 at UCLA is where it starts: 400 university students from
-              across Los Angeles and Ventura Counties, a number of them already building companies,
+              on Saturday, November 14 at UCLA is where it starts: room for 400 university
+              students from across Los Angeles and Ventura Counties, a number of them already building companies,
               and the executives who work in the fields they are headed into.
             </p>
           </div>
@@ -42,10 +42,10 @@ export default function SpeakersPage() {
           <div className="m-wrap">
             <h2 className="m-title">Why Executives Come</h2>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>Be There in Person</h3><p>Most people tune out ads. A day on campus is not one. You spend it in small groups, at roundtables and at lunch, getting to know students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, and letting them get to know you.</p></div>
+              <div><h3>Be There in Person</h3><p>Most consumers say they try to tune out ads. A day on campus is not one. You spend it in small groups, at roundtables and at lunch, getting to know students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, and letting them get to know you.</p></div>
               <div><h3>Put a Real Problem to Student Teams</h3><p>After November 14, Meridian creates hackathon-style events by field. Each team works a real challenge from the field and presents to the executives in the room.</p></div>
-              <div><h3>Meet the People Who Organize Campus Life</h3><p>Student organizations and campus offices at UCLA and USC bring their members and run tables of their own, so you meet the people who organize campus life in one day.</p></div>
-              <div><h3>Stay Known After the Day</h3><p>After November 14, Meridian creates events by field, so students meet you more than once. Everyone who attends joins the Meridian network, and the software we are building matches students with the opportunities you open.</p></div>
+              <div><h3>Meet the People Who Organize Campus Life</h3><p>Student organizations and campus groups bring their members and run tables of their own, so you meet the people who organize campus life in one day.</p></div>
+              <div><h3>Stay Known After the Day</h3><p>Everyone who attends joins the Meridian network, and the software we are building matches students with the opportunities you open.</p></div>
             </div>
           </div>
         </section>
