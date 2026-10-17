@@ -775,3 +775,12 @@ html { scroll-padding-top: 80px; }
 /* ---- Heading structure: hidden section titles and eyebrows that are real headings ---- */
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 h2.m-eyebrow { line-height: 1.6; }
+
+/* Desktop nav: the same underline tabs as phones (no pill). Register stays the black pill. */
+@media (min-width: 901px) {
+  .m-header .m-nav { background: none; border: 0; border-radius: 0; padding: 0; gap: 2em; }
+  .m-header .m-nav .m-navlink,
+  [data-palette="current"] .m-header .m-nav .m-navlink { background: none !important; box-shadow: none !important; transform: none; border-radius: 0; padding: .9em 0 .8em; color: var(--stone); border: 0 !important; border-bottom: 2px solid transparent !important; }
+  .m-header .m-nav .m-navlink:hover { color: var(--ink); background: none !important; }
+  .m-header .m-nav .m-navlink[aria-current="page"] { color: var(--ink); border-bottom-color: var(--heading) !important; background: none !important; }
+}
