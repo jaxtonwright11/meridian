@@ -733,3 +733,13 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
 @media (max-width: 900px) {
   .m-footer li a, .m-explore .m-link, .m-small .m-link, .m-three .m-link, .m-legal a { display: inline-block; padding: 10px 0; }
 }
+
+/* Audit round 2, second pass: scroll offset under the sticky header, focus on dark footer, 44px controls */
+html { scroll-padding-top: 80px; }
+.m-footer a:focus-visible { outline-color: #D8AE5E; }
+@media (max-width: 900px) {
+  .btn, .m-vbar .btn, .m-spot-names button, .m-also summary, .m-nav.open .m-navlink { min-height: 44px; }
+  .m-also summary { display: flex; align-items: center; }
+  .m-trail a { padding: 12px 0; }
+  p:has(> a.m-link:only-child) > a.m-link, .m-footer p a, .m-small > a.m-link { display: inline-block; padding: 10px 0; }
+}

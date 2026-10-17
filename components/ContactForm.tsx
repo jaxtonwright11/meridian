@@ -3,7 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { REGISTER_ENDPOINT, CONTACT_EMAIL_PUBLIC } from '@/config';
 
-const field = { display: 'block', width: '100%', padding: '12px 14px', border: '1px solid var(--line-strong)', background: 'var(--surface)', font: 'inherit', color: 'var(--ink)', borderRadius: 2 } as const;
+const field = { display: 'block', width: '100%', padding: '12px 14px', border: '1px solid var(--line-strong)', background: 'var(--surface)', font: 'inherit', fontSize: 16, color: 'var(--ink)', borderRadius: 2 } as const;
 const label = { display: 'block', fontFamily: 'var(--font-mono), monospace', fontSize: 12, letterSpacing: '.1em', textTransform: 'uppercase', margin: '18px 0 6px', color: 'var(--ink)' } as const;
 
 /**

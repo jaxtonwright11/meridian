@@ -121,7 +121,7 @@ export default function StudentsPage() {
         <section className="m-section">
           <div className="m-wrap">
             <span className="m-eyebrow">After November 14</span>
-            <p className="m-lead">{EVENTS_SENTENCE} You will hear about them once you have registered. Everyone who attends joins the Meridian network.</p>
+            <p className="m-lead">{EVENTS_SENTENCE} You will hear about them once you have registered.</p>
           </div>
         </section>
 

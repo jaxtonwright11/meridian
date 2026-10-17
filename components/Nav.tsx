@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { REGISTRATION_FORM_URL, SITE_NAME } from '@/config';
 
@@ -16,6 +16,19 @@ const items = [
 export function Nav({ trail }: { trail?: { label: string; href?: string }[]; home?: boolean }) {
   const path = (usePathname() || '/').replace(/\/$/, '') || '/';
   const [open, setOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
+
+  // Opened menu: move focus to its first link; Escape closes it and returns focus to the button.
+  useEffect(() => {
+    if (!open) return;
+    navRef.current?.querySelector<HTMLAnchorElement>('a')?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setOpen(false); btnRef.current?.focus(); }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open]);
 
   return (
     <>
@@ -28,7 +41,7 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
           <a className="btn btn-ink btn-register m-register" href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
             Register
           </a>
-          <nav className={`m-nav ${open ? 'open' : ''}`} aria-label="Main">
+          <nav ref={navRef} className={`m-nav ${open ? 'open' : ''}`} aria-label="Main">
             {items.map((i) => {
               const current = i.match.some((m) => path === m || path.startsWith(m + '/'));
               return (
@@ -38,7 +51,7 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
               );
             })}
           </nav>
-          <button className="m-menu" aria-expanded={open} aria-label="Menu" onClick={() => setOpen(!open)}>
+          <button ref={btnRef} className="m-menu" aria-expanded={open} aria-label="Menu" onClick={() => setOpen(!open)}>
             {open ? 'Close' : 'Menu'}
           </button>
         </div>
