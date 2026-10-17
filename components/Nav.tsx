@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { REGISTRATION_FORM_URL, SITE_NAME } from '@/config';
+import { REGISTRATION_FORM_URL, SITE_NAME, EVENT_OVER, INSTAGRAM_URL } from '@/config';
 
 // Header on every page: wordmark, five sections, Register.
 const items = [
@@ -38,8 +38,8 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
           <a className="m-logo" href="/" aria-label={`${SITE_NAME} home`}>
             {SITE_NAME}<span>.</span>
           </a>
-          <a className="btn btn-ink btn-register m-register" href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
-            Register
+          <a className="btn btn-ink btn-register m-register" href={EVENT_OVER && INSTAGRAM_URL ? INSTAGRAM_URL : REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
+            {EVENT_OVER ? 'Instagram' : 'Register'}
           </a>
           <nav ref={navRef} className={`m-nav ${open ? 'open' : ''}`} aria-label="Main">
             {items.map((i) => {

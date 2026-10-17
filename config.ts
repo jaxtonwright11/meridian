@@ -17,6 +17,14 @@ export const EVENT_DATE_SHORT = 'November 14';
 /** Venue. UCLA only: never a building, room or address (brief v2 section 2). */
 export const EVENT_VENUE = 'UCLA';
 
+/**
+ * Where the site is in the event. Flip to 'after' once the conference is over and redeploy:
+ * Register buttons become Instagram follows, and the pages that point at registration switch
+ * to a short recap. 'before' is the live state.
+ */
+export const EVENT_STATE: 'before' | 'after' = 'before';
+export const EVENT_OVER = (EVENT_STATE as string) === 'after';
+
 /** Event time window. */
 export const EVENT_TIME = '11 AM to 3 PM';
 

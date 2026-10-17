@@ -7,7 +7,7 @@ import { Schedule } from '@/components/Schedule';
 import { GettingThere } from '@/components/GettingThere';
 import { Explore, RegisterButton, EVENTS_SENTENCE } from '@/components/site/parts';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
-import { EVENT_DATE, EVENT_NAME, EVENT_VENUE, EVENT_TIME, REGISTRATION_CLOSES_LABEL } from '@/config';
+import { EVENT_DATE, EVENT_NAME, EVENT_VENUE, EVENT_TIME, REGISTRATION_CLOSES_LABEL, EVENT_OVER } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'Meridian Conference',
@@ -60,8 +60,8 @@ export default function ConferencePage() {
             </p>
             <div className="m-actions">
               <RegisterButton />
-              <span className="m-small">Registration closes {REGISTRATION_CLOSES_LABEL}</span>
-              <a className="m-link" href="/meridian-conference-2026.ics">Add to calendar</a>
+              {!EVENT_OVER && <span className="m-small">Registration closes {REGISTRATION_CLOSES_LABEL}</span>}
+              {!EVENT_OVER && <a className="m-link" href="/meridian-conference-2026.ics">Add to calendar</a>}
             </div>
           </div>
         </section>

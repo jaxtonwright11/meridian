@@ -30,7 +30,9 @@ const splineMono = Spline_Sans_Mono({
 const DESCRIPTION =
   'Meridian brings executives and students together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, free for every student, then expands into in-person events by field.';
 
-const HOME_TITLE = 'Meridian | Executives and Students Together, in Person, by Field';
+const HOME_TITLE = 'Meridian | Executives and Students, in Person';
+// Link previews already show the wordmark image, so their title is the short hook alone.
+const SHARE_TITLE = 'Executives and Students, in Person';
 
 // TODO(jax): the share image may still say "Meridian Conference". Not changed.
 const OG_IMAGE = {
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: HOME_TITLE,
+    title: SHARE_TITLE,
     description: DESCRIPTION,
     url: 'https://meridianventura.com',
     siteName: SITE_NAME,
@@ -63,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: HOME_TITLE,
+    title: SHARE_TITLE,
     description: DESCRIPTION,
     images: [OG_IMAGE],
   },

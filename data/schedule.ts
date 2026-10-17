@@ -1,4 +1,4 @@
-// The public run of show for /conference. Draft until Jax flips `approved`.
+// The public run of show for /conference. Approved by Jax, October 2026.
 // Only items with status "live" render. Every time is Pacific.
 // A production build hides the whole section while approved is false.
 
@@ -12,7 +12,7 @@ export interface ScheduleItem {
 }
 
 export const schedule: { approved: boolean; items: ScheduleItem[]; allDay: string[] } = {
-  approved: false,
+  approved: true,
   items: [
     { time: '10:30', title: 'Doors Open', body: 'Check in, pick up your name tag, and settle in.', status: 'live' },
     { time: '11:00', title: 'Welcome', body: 'A short welcome and how the day works.', status: 'live' },

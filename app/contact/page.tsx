@@ -42,7 +42,7 @@ export default function ContactPage() {
                 <p>Companies, campus offices, and community organizations working with Meridian.</p>
                 <div className="m-actions"><a className="btn btn-tan" href="/partners/">For partners</a></div>
               </div>
-              <div className="m-route">
+              <div className="m-route" id="investors">
                 <h3>Investors</h3>
                 <p>Interested in backing Meridian? Write to us.</p>
                 <div className="m-actions"><a className="btn btn-tan" href={`${mail}?subject=Investor%20inquiry`}>Write to us</a></div>

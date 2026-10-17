@@ -6,7 +6,7 @@ import { FaqList } from '@/components/FaqList';
 import { Explore, RegisterButton, EVENTS_SENTENCE } from '@/components/site/parts';
 import { photoLeaders, title } from '@/data/leaders';
 import { faqs } from '@/data/faq';
-import { REGISTRATION_CLOSES_LABEL } from '@/config';
+import { REGISTRATION_CLOSES_LABEL, EVENT_OVER } from '@/config';
 import { schedule } from '@/data/schedule';
 import { livePartners } from '@/data/partners';
 
@@ -38,7 +38,7 @@ export default function StudentsPage() {
             </p>
             <div className="m-actions">
               <RegisterButton />
-              <span className="m-small">Registration closes {REGISTRATION_CLOSES_LABEL}.</span>
+              {!EVENT_OVER && <span className="m-small">Registration closes {REGISTRATION_CLOSES_LABEL}.</span>}
             </div>
           </div>
         </section>
@@ -137,8 +137,8 @@ export default function StudentsPage() {
         <section className="m-section">
           <div className="m-wrap">
             <div className="m-closing">
-              <h2 className="m-title" style={{ marginBottom: 8 }}>Register for November 14</h2>
-              <p className="m-lead">Registration closes {REGISTRATION_CLOSES_LABEL}.</p>
+              <h2 className="m-title" style={{ marginBottom: 8 }}>{EVENT_OVER ? 'See What Comes Next' : 'Register for November 14'}</h2>
+              <p className="m-lead">{EVENT_OVER ? 'Follow Meridian on Instagram for the next event.' : `Registration closes ${REGISTRATION_CLOSES_LABEL}.`}</p>
               <div className="m-actions"><RegisterButton /></div>
             </div>
           </div>

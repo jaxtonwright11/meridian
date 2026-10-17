@@ -7,7 +7,8 @@ import {
   PressLinks, RegisterButton,
 } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
-import { CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT } from '@/config';
+import { CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT, EVENT_OVER } from '@/config';
+import { confirmedLeaders } from '@/data/leaders';
 import { press } from '@/data/press';
 
 export const metadata: Metadata = { alternates: { canonical: '/' } };
@@ -24,8 +25,14 @@ export default function Home() {
           <div className="m-wrap">
             <h1>CEOs Come to You.</h1>
             <p className="m-sub">
-              Meridian brings <strong>executives</strong> and <strong>students</strong> together. We start with
-              a <a className="m-sublink" href="/conference/">conference</a> at UCLA on November 14.
+              Meridian brings <strong>executives</strong> and <strong>students</strong> together.{' '}
+              {EVENT_OVER
+                ? <>Our first <a className="m-sublink" href="/conference/">conference</a> took place at UCLA on November 14.</>
+                : <>We start with a <a className="m-sublink" href="/conference/">conference</a> at UCLA on November 14.</>}
+            </p>
+            <p className="m-proof">
+              {confirmedLeaders.length} executives {EVENT_OVER ? 'joined, including' : 'confirmed, including'} the Chairman of the YMCA of the USA,
+              the CEO of Campaign Zero, and a senior scientist at NASA&apos;s Jet Propulsion Laboratory.
             </p>
             <div className="m-actions">
               <RegisterButton>Register for Nov. 14</RegisterButton>

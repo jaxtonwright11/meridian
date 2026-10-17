@@ -1,4 +1,4 @@
-import { REGISTRATION_FORM_URL, MEETUPS, EVENT_DATE_SHORT, EVENT_VENUE } from '@/config';
+import { REGISTRATION_FORM_URL, MEETUPS, EVENT_DATE_SHORT, EVENT_VENUE, EVENT_OVER, INSTAGRAM_URL } from '@/config';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 import { team, founder, detailLines, type TeamMember } from '@/data/team';
 import { livePartners, homePartners } from '@/data/partners';
@@ -11,6 +11,13 @@ export { EVENTS_SENTENCE, NETWORK_SENTENCE, numWord, list } from '@/lib/copy';
 import { NETWORK_SENTENCE, numWord, list } from '@/lib/copy';
 
 export function RegisterButton({ children = `Register for ${EVENT_DATE_SHORT}` }: { children?: React.ReactNode }) {
+  if (EVENT_OVER && INSTAGRAM_URL) {
+    return (
+      <a className="btn btn-ink btn-register" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+        Follow on Instagram
+      </a>
+    );
+  }
   return (
     <a className="btn btn-ink btn-register" href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
       {children}
