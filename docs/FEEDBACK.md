@@ -139,6 +139,13 @@ These came from the written briefs, not from conversation, and still apply:
 | Team details | Hidden on the home strip | Required for everyone |
 | Who can come | UCLA and USC going forward | Keep all three: UCLA, USC, UC Berkeley |
 
+## F2. Rules added Oct 17 (after the college-brand research)
+
+- The Partners page speaks to companies and brands only. Do not tailor it to campus offices or community groups; they see the value anyway.
+- "Free" marketing lines stay out ("free for every student", "Free Headshots", the "Nothing to Pay" card). An answer to a direct question (the FAQ "Is it free?") stays. "Nothing to prepare" is fine. "Nothing to bring" is not.
+- The Executives and Partners pages are written for college-facing consumer brands (Crumbl, Raising Cane's, Celsius, Kava/CAVA), not banks. "Hear from the students you hire, serve, and sell to" and "hear how the next generation thinks" were rejected as generic.
+- Phone navigation: underline tabs. Bubbles only in the header; square boxes below it. Pill, boxes and Menu button were tried and dropped.
+
 ---
 
 ## G. Open items Jax mentioned but I could not finish
