@@ -794,3 +794,10 @@ h2.m-eyebrow { line-height: 1.6; }
 .m-people.m-four .m-tile h3, .m-people.m-four .m-tile .m-role { padding: 0 16px; }
 .m-people.m-four .m-tile:hover img { transform: none; box-shadow: none; }
 @media (max-width: 900px) { .m-people.m-four { gap: 10px; } }
+
+/* Executive tiles: separate rounded boxes with a little air around each photo. */
+.m-people.m-four { gap: 16px; border: 0; }
+.m-people.m-four .m-tile, .m-people.m-four .m-tile + .m-tile { padding: 10px 10px 16px !important; border: 1px solid var(--tan-line) !important; border-radius: 16px; background: var(--paper); overflow: hidden; }
+.m-people.m-four .m-tile:hover, .m-people.m-four .m-tile.on { background: var(--tan-box); }
+.m-people.m-four .m-tile img { border-radius: 10px; margin-bottom: 12px; }
+.m-people.m-four .m-tile h3, .m-people.m-four .m-tile .m-role { padding: 0 6px; }
