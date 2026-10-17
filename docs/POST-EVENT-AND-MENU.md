@@ -22,7 +22,9 @@ Nothing here is live. The post-event switch is `EVENT_STATE` in `config.ts` ('be
 - Make only the top bar (logo, Register) sticky; the tab row scrolls away. That keeps the sticky header at 65 px instead of 110 px, which would eat about 13% of a phone screen.
 - Trade-off: a first-time visitor sees tabs on landing; someone mid-page scrolls up or uses footer links (the footer already lists every page).
 
-The Menu button goes away. Say the word and I'll build it.
+The Menu button goes away.
+
+**Built (Oct 17).** Phones (900 px and under) show the logo and Register in the sticky top bar, with the five sections as a row of tabs right under it. The row is plain links in the page HTML, so it shows with JavaScript off. At 520 px and under each tab is 40% of the row (150 px at most), so two tabs show whole and the third is always cut off. The row starts scrolled to the current section's tab. Tabs are 44 px tall. Desktop is unchanged.
 
 ## Part 2: Post-event copy (draft for approval)
 

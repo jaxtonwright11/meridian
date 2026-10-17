@@ -1,10 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { REGISTRATION_FORM_URL, SITE_NAME, EVENT_OVER, INSTAGRAM_URL } from '@/config';
 
 // Header on every page: wordmark, five sections, Register.
+// Desktop: the five sections sit in the header. Phones: the header keeps only the
+// wordmark and Register, and the five sections show as a row of tabs under it.
 const items = [
   { href: '/conference/', label: 'Conference', match: ['/conference', '/leaders', '/demo-day'] },
   { href: '/students/', label: 'Students', match: ['/students'] },
@@ -15,20 +17,16 @@ const items = [
 
 export function Nav({ trail }: { trail?: { label: string; href?: string }[]; home?: boolean }) {
   const path = (usePathname() || '/').replace(/\/$/, '') || '/';
-  const [open, setOpen] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
-  const btnRef = useRef<HTMLButtonElement>(null);
+  const tabsRef = useRef<HTMLElement>(null);
+  const isCurrent = (match: string[]) => match.some((m) => path === m || path.startsWith(m + '/'));
 
-  // Opened menu: move focus to its first link; Escape closes it and returns focus to the button.
+  // Center the current section's tab in the row. Sets the row's own scroll, never the page's.
   useEffect(() => {
-    if (!open) return;
-    navRef.current?.querySelector<HTMLAnchorElement>('a')?.focus();
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') { setOpen(false); btnRef.current?.focus(); }
-    };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, [open]);
+    const row = tabsRef.current;
+    const tab = row?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (!row || !tab) return;
+    row.scrollLeft = Math.max(0, tab.offsetLeft - (row.clientWidth - tab.offsetWidth) / 2);
+  }, [path]);
 
   return (
     <>
@@ -41,21 +39,22 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
           <a className="btn btn-ink btn-register m-register" href={EVENT_OVER && INSTAGRAM_URL ? INSTAGRAM_URL : REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
             {EVENT_OVER && INSTAGRAM_URL ? 'Instagram' : 'Register'}
           </a>
-          <nav ref={navRef} className={`m-nav ${open ? 'open' : ''}`} aria-label="Main">
-            {items.map((i) => {
-              const current = i.match.some((m) => path === m || path.startsWith(m + '/'));
-              return (
-                <a key={i.href} className="m-navlink" href={i.href} aria-current={current ? 'page' : undefined}>
-                  {i.label}
-                </a>
-              );
-            })}
+          <nav className="m-nav" aria-label="Main">
+            {items.map((i) => (
+              <a key={i.href} className="m-navlink" href={i.href} aria-current={isCurrent(i.match) ? 'page' : undefined}>
+                {i.label}
+              </a>
+            ))}
           </nav>
-          <button ref={btnRef} className="m-menu" aria-expanded={open} aria-label="Menu" onClick={() => setOpen(!open)}>
-            {open ? 'Close' : 'Menu'}
-          </button>
         </div>
       </header>
+      <nav ref={tabsRef} className="m-tabs" aria-label="Main">
+        {items.map((i) => (
+          <a key={i.href} className="m-tab" href={i.href} aria-current={isCurrent(i.match) ? 'page' : undefined}>
+            {i.label}
+          </a>
+        ))}
+      </nav>
       {trail && (
         <div className="m-trail" aria-label="Breadcrumb">
           {trail.map((t, i) => (
