@@ -50,8 +50,8 @@ export function MeridianLine() {
 export function Doors() {
   const doors = [
     { h: 'Students', p: 'The executives come to you, and nothing needs preparing. See how it works and register.', l: 'For students', href: '/students/' },
-    { h: 'Executives', p: 'Get back to campus for a day, alongside the other executives in the room. See what the day involves and who is joining.', l: 'For executives', href: '/speakers/' },
-    { h: 'Partners', p: 'Companies, campus offices, and community organizations are working with Meridian on the conference and on what comes after it. See what that looks like.', l: 'For partners', href: '/partners/' },
+    { h: 'Executives', p: 'Get back to campus for a day and spend it with students, in small groups, by field. Nothing to prepare. See who is joining.', l: 'For executives', href: '/speakers/' },
+    { h: 'Partners', p: 'Meet students face to face at the conference, then work with student teams at events by field. See what working with Meridian looks like.', l: 'For partners', href: '/partners/' },
   ];
   return (
     <div className="m-wrap">

@@ -9,7 +9,7 @@ import { FirstMeridian } from '@/components/FirstMeridian';
 import { confirmedLeaders, title } from '@/data/leaders';
 import { livePartners } from '@/data/partners';
 import { press } from '@/data/press';
-import { PARTNER_NAMED_BY } from '@/config';
+import { PARTNER_NAMED_BY, CONTACT_EMAIL_PUBLIC, CALENDLY_URL } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'Partners',
@@ -33,6 +33,10 @@ export default function PartnersPage() {
             <p className="m-lead" style={{ marginTop: 20 }}>
               Up to 400 university students from UCLA, USC, UC Berkeley, and campuses across Los Angeles come to our conference at UCLA on November 14. You meet them face to face. Then Meridian creates hackathon-style events by field, where student teams take on a real challenge from your field.
             </p>
+            <div className="m-actions">
+              <a className="btn btn-ink" href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>Write to Us</a>
+              <a className="m-link" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Call</a>
+            </div>
           </div>
         </section>
 

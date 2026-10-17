@@ -25,7 +25,10 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
     const row = tabsRef.current;
     const tab = row?.querySelector<HTMLElement>('[aria-current="page"]');
     if (!row || !tab) return;
-    row.scrollLeft = Math.max(0, tab.offsetLeft - (row.clientWidth - tab.offsetWidth) / 2);
+    // Keep a sliver of the first tab visible so the row still reads as scrollable.
+    const first = row.querySelector<HTMLElement>('.m-tab');
+    const cap = first ? first.offsetLeft + first.offsetWidth - 28 : Infinity;
+    row.scrollLeft = Math.min(cap, Math.max(0, tab.offsetLeft - (row.clientWidth - tab.offsetWidth) / 2));
   }, [path]);
 
   return (

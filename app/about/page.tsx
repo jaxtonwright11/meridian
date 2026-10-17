@@ -43,7 +43,7 @@ export default function AboutPage() {
               </details>
               <details className="m-step">
                 <summary><h3>Hackathon-Style Events</h3></summary>
-                <p>Executives and students team up on a challenge in one field, then compete and present.</p>
+                <p>Executives from one field and student teams working the same challenge side by side.</p>
               </details>
               <details className="m-step">
                 <summary><h3>Matching Software</h3></summary>

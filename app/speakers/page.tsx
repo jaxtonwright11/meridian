@@ -6,6 +6,7 @@ import { FaqList } from '@/components/FaqList';
 import { faqs } from '@/data/faq';
 import { TeamContact } from '@/components/TeamContact';
 import { Explore, EVENTS_SENTENCE, StatRow } from '@/components/site/parts';
+import { CONTACT_EMAIL_PUBLIC, CALENDLY_URL } from '@/config';
 import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
 export const metadata: Metadata = pageMeta(
@@ -33,6 +34,10 @@ export default function SpeakersPage() {
               students from across Los Angeles and Ventura Counties, a number of them already building companies,
               and the executives who work in the fields they are headed into.
             </p>
+            <div className="m-actions">
+              <a className="btn btn-ink" href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>Write to Us</a>
+              <a className="m-link" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Call</a>
+            </div>
           </div>
         </section>
 
