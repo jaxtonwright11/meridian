@@ -7,10 +7,9 @@ import { Explore, RegisterButton, EVENTS_SENTENCE } from '@/components/site/part
 import { photoLeaders, title } from '@/data/leaders';
 import { faqs } from '@/data/faq';
 import { REGISTRATION_CLOSES_LABEL, EVENT_OVER } from '@/config';
-import { schedule } from '@/data/schedule';
+import { schedule, clock } from '@/data/schedule';
 import { livePartners } from '@/data/partners';
 
-const clock = (t: string) => `${t} ${Number(t.split(':')[0]) >= 10 && Number(t.split(':')[0]) < 12 ? 'AM' : 'PM'}`;
 const runOfShow = schedule.items.filter((i) => i.status === 'live' && i.title !== 'Close');
 
 export const metadata: Metadata = pageMeta(

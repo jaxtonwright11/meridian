@@ -744,5 +744,5 @@ html { scroll-padding-top: 80px; }
   p:has(> a.m-link:only-child) > a.m-link, .m-footer p a, .m-small > a.m-link { display: inline-block; padding: 10px 0; }
 }
 /* Home hero proof line */
-.m-proof { margin-top: 18px; font-size: 17px; line-height: 1.5; color: var(--ink); max-width: 62ch; }
+.m-proof { position: relative; z-index: 1; margin-top: 18px; font-size: 17px; line-height: 1.5; color: var(--ink); max-width: 62ch; }
 @media (max-width: 600px) { .m-hero-home .m-proof { margin-left: auto; margin-right: auto; font-size: 16px; } }

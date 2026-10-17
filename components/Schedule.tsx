@@ -1,4 +1,4 @@
-import { schedule } from '@/data/schedule';
+import { schedule, clock } from '@/data/schedule';
 
 // Production hides the whole section while approved is false. Previews show it
 // with a visible Draft tag.
@@ -6,7 +6,7 @@ const IS_PROD = process.env.VERCEL_ENV === 'production';
 
 export function Schedule() {
   if (!schedule.approved && IS_PROD) return null;
-  const items = schedule.items.filter((i) => i.status === 'live');
+  const items = schedule.items.filter((i) => i.status === 'live' && i.title !== 'Close');
   return (
     <section className="m-section" id="schedule">
       <div className="m-wrap">
@@ -18,7 +18,7 @@ export function Schedule() {
         <div className="m-time">
           {items.map((i) => (
             <div className="m-trow" key={i.time + i.title}>
-              <span className="t">{i.time}</span>
+              <span className="t">{clock(i.time)}</span>
               <div>
                 <h3>{i.title}</h3>
                 {i.body && <p>{i.body}</p>}

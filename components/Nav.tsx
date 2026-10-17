@@ -39,7 +39,7 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
             {SITE_NAME}<span>.</span>
           </a>
           <a className="btn btn-ink btn-register m-register" href={EVENT_OVER && INSTAGRAM_URL ? INSTAGRAM_URL : REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
-            {EVENT_OVER ? 'Instagram' : 'Register'}
+            {EVENT_OVER && INSTAGRAM_URL ? 'Instagram' : 'Register'}
           </a>
           <nav ref={navRef} className={`m-nav ${open ? 'open' : ''}`} aria-label="Main">
             {items.map((i) => {

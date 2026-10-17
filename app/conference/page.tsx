@@ -29,7 +29,7 @@ const EVENT_JSONLD = {
     address: { '@type': 'PostalAddress', addressLocality: 'Los Angeles', addressRegion: 'CA' },
   },
   isAccessibleForFree: true,
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: 'https://forms.gle/Q9khivMSRpyesMNu8', availability: 'https://schema.org/InStock' },
+  ...(EVENT_OVER ? {} : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: 'https://forms.gle/Q9khivMSRpyesMNu8', availability: 'https://schema.org/InStock' } }),
   organizer: { '@type': 'Organization', name: 'Meridian', url: 'https://meridianventura.com' },
 };
 
@@ -41,11 +41,11 @@ export default function ConferencePage() {
       <Nav />
       <div className="m-subnav" aria-label="On this page">
         <div className="m-subnav-in">
-          <a href="#the-day">The day</a>
+          <a href="#the-day">The Day</a>
           <a href="/leaders/">Who Is Joining</a>
-          <a href="/demo-day/">Demo day</a>
+          <a href="/demo-day/">Demo Day</a>
           <a href="#schedule">Schedule</a>
-          <a href="#getting-there">Getting there</a>
+          <a href="#getting-there">Getting There</a>
         </div>
       </div>
       <main id="main">

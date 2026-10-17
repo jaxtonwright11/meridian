@@ -11,6 +11,12 @@ export interface ScheduleItem {
   tracks?: Track[];
 }
 
+/** '10:30' -> '10:30 AM', '1:20' -> '1:20 PM'. Event hours run 10:30 to 3:00. */
+export const clock = (t: string) => {
+  const h = Number(t.split(':')[0]);
+  return `${t} ${h >= 10 && h < 12 ? 'AM' : 'PM'}`;
+};
+
 export const schedule: { approved: boolean; items: ScheduleItem[]; allDay: string[] } = {
   approved: true,
   items: [
@@ -34,8 +40,8 @@ export const schedule: { approved: boolean; items: ScheduleItem[]; allDay: strin
     { time: '3:00', title: 'Close', body: '', status: 'live' },
   ],
   allDay: [
-    'Aerospace design lab, 11:15 to 11:55 and 1:20 to 2:30',
-    'Demo day expo, 11:15 to 12:35 and 1:20 to 2:40',
+    'Aerospace design lab, 11:15 AM to 11:55 AM and 1:20 PM to 2:30 PM',
+    'Demo day expo, 11:15 AM to 12:35 PM and 1:20 PM to 2:40 PM',
     'Free professional headshots',
     'Partner tables',
     'Vehicles from the Petersen Automotive Museum',
