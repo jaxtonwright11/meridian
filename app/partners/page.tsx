@@ -79,8 +79,6 @@ export default function PartnersPage() {
               <div><h3>Students in Your Field, Early</h3><p>Meet students in your field in a working setting, not across a career-fair table, before other employers do.</p></div>
               <div><h3>Set the Challenge</h3><p>Bring a real problem from your field. Student teams work on it, you see how they think, and you hear how the next generation approaches it.</p></div>
               <div><h3>Be Remembered</h3><p>After the conference, Meridian creates events by field, so students meet your team more than once. A partner is known by its people, not by a logo on a banner.</p></div>
-              <div><h3>Campus Access</h3><p>Meridian has ties to the administrations and student bodies of UCLA, USC, and UC Berkeley. Work with us to reach those campuses.</p></div>
-              <div><h3>Executives From Your Field</h3><p>Each event has executives from that field in the room, and your people meet them too.</p></div>
               <div><h3>A Network That Lasts</h3><p>Everyone who attends joins the Meridian network. We are building software that matches students with opportunities that fit them, including yours.</p></div>
             </div>
           </div>

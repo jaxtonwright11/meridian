@@ -149,7 +149,8 @@ a:hover { color: var(--gold-deep); }
 /* Header */
 .m-header { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--rule); }
 [data-palette="current"] .m-header { background: var(--page-a); border-bottom-color: #5A3A26; }
-[data-palette="current"] .m-header .m-logo { color: #F0E4D1; }
+[data-palette="current"] .m-header .m-logo,
+[data-palette="current"] .m-menu { color: #F0E4D1; }
 .m-header-in { display: flex; align-items: center; gap: 28px; min-height: 64px; max-width: 1120px; margin: 0 auto; padding: 0 40px; }
 .m-logo { font-family: var(--font-fraunces), Georgia, serif; font-weight: 600; font-size: 24px; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; margin-right: auto; }
 .m-logo span { color: var(--gold); }
@@ -162,6 +163,7 @@ a:hover { color: var(--gold-deep); }
 [data-palette="current"] .m-navlink[aria-current="page"] { border-bottom-color: #D8AE5E; }
 .m-navlink:hover { color: var(--gold-deep); }
 .m-register { padding: 10px 18px; font-size: 11px; width: auto; }
+.m-menu { display: none; background: none; border: 1px solid var(--line-strong); color: var(--ink); font: 500 12px var(--font-mono), monospace; letter-spacing: .1em; text-transform: uppercase; padding: 8px 12px; cursor: pointer; }
 .m-trail { max-width: 1120px; margin: 0 auto; padding: 14px 40px 0; font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); }
 .m-trail a { color: var(--stone); }
 .m-subnav { position: sticky; top: 64px; z-index: 40; background: var(--paper); border-bottom: 1px solid var(--rule); }
@@ -265,6 +267,10 @@ a:hover { color: var(--gold-deep); }
 @media (max-width: 900px) {
   .m-wrap, .m-header-in, .m-trail, .m-subnav-in, .m-slim-in { padding-left: 16px; padding-right: 16px; }
   .m-nav { display: none; }
+  .m-menu { display: inline-block; }
+  .m-nav.open { display: flex; flex-direction: column; align-items: stretch; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 8px 16px 16px; }
+  [data-palette="current"] .m-nav.open { background: var(--page-a); }
+  .m-nav.open .m-navlink { padding: 14px 0; border-bottom: 1px solid var(--rule); }
   .m-doors, .m-three { grid-template-columns: 1fr; }
   .m-door, .m-door + .m-door { padding: 24px 0; border-right: none; border-bottom: 1px solid var(--rule); }
   .m-door:last-child { border-bottom: none; }
@@ -372,6 +378,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .m-door, .m-door + .m-door { padding: 24px 22px; border-bottom: 1px solid var(--tan-line); }
   .m-vpanel { grid-template-columns: 96px 1fr; }
   .m-vpanel img { width: 96px; height: 96px; }
+  .m-nav.open .m-navlink { padding: 14px 16px; margin-bottom: 8px; }
   .m-tile { border-right: 0; }
 }
 @media (max-width: 560px) { .m-pgrid { grid-template-columns: 1fr; } .m-slim p { font-size: 20px; } }
@@ -553,10 +560,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-faq { border-top: 0; }
 .m-faq details { background: #fff; border: 1px solid var(--tan-line); border-radius: 12px; margin-bottom: 12px; padding: 0 20px; box-shadow: var(--shadow-soft); }
 .m-faq details p { padding-right: 0; }
+@media (max-width: 900px) { .m-nav.open { border-radius: 14px; } .m-navlink { border-radius: 10px; } }
 .m-hero-home h1 { font-size: clamp(38px, 5.6vw, 76px); max-width: 16ch; line-height: 1.02; }
 
 /* Smoother type in buttons, tabs and labels: plain sans, normal case, no wide tracking */
-.btn, .m-navlink, .m-eyebrow, .m-tag {
+.btn, .m-navlink, .m-menu, .m-eyebrow, .m-tag {
   font-family: var(--font-hanken), system-ui, sans-serif !important;
   text-transform: none !important; letter-spacing: 0 !important; font-weight: 600;
 }
@@ -598,7 +606,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .m-route .m-link, .m-door .m-link, .m-pcard .m-link, .m-closing .m-link, .m-slim .m-link { color: var(--heading); }
 
 /* ---- Mobile round: caps buttons with outlines, black Register, titleband, controls ---- */
-.btn, .m-navlink { text-transform: uppercase !important; letter-spacing: .05em !important; font-weight: 700; }
+.btn, .m-navlink, .m-menu { text-transform: uppercase !important; letter-spacing: .05em !important; font-weight: 700; }
 .btn { font-size: 13.5px; padding: 13px 22px; width: auto; }
 .btn-ink, .btn-gold, .btn-ink:hover, .btn-gold:hover { background: #111; border: 1px solid #6B5A45; color: var(--gold-bright); }
 .btn-ink:hover { background: #2A2118; }
@@ -700,10 +708,11 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
   .m-header-in { gap: 8px; }
   .m-logo { font-size: 21px; }
   .m-register { padding: 9px 12px; }
+  .m-menu { padding: 8px 10px; }
 }
 /* Tap targets */
 @media (max-width: 900px) {
-  .m-register { min-height: 44px; }
+  .m-register, .m-menu { min-height: 44px; }
   .m-logo { display: inline-flex; align-items: center; min-height: 44px; }
 }
 .m-trail a { display: inline-block; padding: 5px 0; }
@@ -729,40 +738,11 @@ a.m-stat:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2p
 html { scroll-padding-top: 80px; }
 .m-footer a:focus-visible { outline-color: #D8AE5E; }
 @media (max-width: 900px) {
-  .btn, .m-vbar .btn, .m-spot-names button, .m-also summary { min-height: 44px; }
+  .btn, .m-vbar .btn, .m-spot-names button, .m-also summary, .m-nav.open .m-navlink { min-height: 44px; }
   .m-also summary { display: flex; align-items: center; }
   .m-trail a { padding: 12px 0; }
   p:has(> a.m-link:only-child) > a.m-link, .m-footer p a, .m-small > a.m-link { display: inline-block; padding: 10px 0; }
 }
-
-/* ---- Phone navigation: the desktop pill, in a row under the header, no Menu button ----
-   Same look as the desktop nav: one tan pill, the five sections as segments joined inside it,
-   the current one white. Register stays separate and black in the top bar.
-   The top bar is sticky; this row scrolls away with the page. On phones the pill is wider than
-   the screen and runs off the right edge on purpose: that is the signal to swipe. The segment
-   padding (--tp) is tuned per screen width so the edge always lands in the middle of a segment
-   (3.5 segments show on narrow phones, 4.5 on wider ones) instead of just missing a boundary. */
-.m-tabs { display: none; --tp: 12px; }
-.m-tabs-in { display: flex; width: max-content; gap: 2px; padding: 3px; background: var(--tan-box); border: 1px solid var(--tan-line); border-radius: 999px; }
-.m-tab {
-  position: relative; flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 22px; padding: 0 var(--tp);
-  background: transparent; color: var(--ink); border: 0; border-radius: 999px;
-  font: 700 12px/1 var(--font-hanken), system-ui, sans-serif; text-transform: uppercase; letter-spacing: .05em;
-  text-decoration: none; white-space: nowrap;
-}
-.m-tab::after { content: ''; position: absolute; inset: -8px 0; } /* 38px tap area around a 22px segment */
-.m-tab:hover { background: rgba(255,255,255,.45); }
-.m-tab[aria-current="page"] { background: #fff; box-shadow: 0 1px 3px rgba(43,28,15,.2); }
-@media (max-width: 900px) {
-  .m-tabs {
-    display: block; position: relative; padding: 8px 16px; overflow-x: auto; scroll-padding: 0 16px;
-    scrollbar-width: none; -webkit-overflow-scrolling: touch;
-    background: var(--paper); border-bottom: 1px solid var(--rule);
-  }
-  .m-tabs::-webkit-scrollbar { display: none; }
-}
-@media (max-width: 399px) { .m-tabs { --tp: max(5px, calc((100vw - 280px) / 7)); } }
-@media (min-width: 400px) and (max-width: 519px) { .m-tabs { --tp: calc((100vw - 334px) / 9); } }
 
 /* Desktop: the pill and Register grow with the screen, from today's size at 1000px to about 25% larger
    at 1280px, filling in the space above and below them. Everything inside is sized in em so the text

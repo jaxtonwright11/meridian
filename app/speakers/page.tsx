@@ -44,9 +44,7 @@ export default function SpeakersPage() {
               <div><h3>A Room Built for Conversation</h3><p>Get to know university students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, in a room built for conversation, years before they enter the job market.</p></div>
               <div><h3>How the Next Generation Thinks</h3><p>Hear directly from the students you hire, serve, and sell to: what they are building, what they care about, and what they are looking for.</p></div>
               <div><h3>A Way to Open Doors</h3><p>Offer the opportunities you manage, whether internships, mentorship, or introductions, to students in your field who would otherwise never know they exist.</p></div>
-              <div><h3>A Place in What Comes Next</h3><p>After November 14, Meridian creates hackathon-style events by field, with executives from that field taking part. Everyone who attends joins the Meridian network.</p></div>
-              <div><h3>Software That Matches</h3><p>We are building software that matches students with opportunities that fit them. The opportunities you open are the ones it is built to find students for.</p></div>
-              <div><h3>The Campuses, in One Room</h3><p>Meridian is built by students at UCLA, USC, and UC Berkeley, with ties to each campus&apos;s administration and student body, so students, administrators, and executives end up in the same room.</p></div>
+              <div><h3>A Place in What Comes Next</h3><p>After November 14, Meridian creates hackathon-style events by field, with executives from that field taking part. Everyone who attends joins the Meridian network, and the software we are building matches students with the opportunities you open.</p></div>
             </div>
           </div>
         </section>
