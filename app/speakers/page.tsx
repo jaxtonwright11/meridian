@@ -10,7 +10,7 @@ import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
 export const metadata: Metadata = pageMeta(
   'For Executives',
-  'What Meridian asks of the executives in the room: nothing to prepare. Saturday, November 14, 2026 at UCLA.',
+  'Get back to campus on Saturday, November 14, 2026 at UCLA. Meet students from across Los Angeles in small groups, by field. Nothing to prepare.',
   '/speakers/',
 );
 
@@ -26,11 +26,12 @@ export default function SpeakersPage() {
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">For Executives</span>
-            <h1>Meet Students Before Anyone Else Does.</h1>
+            <h1>Get Back to Campus.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. Our conference
               on Saturday, November 14 at UCLA is where it starts: 400 university students from
-              across Los Angeles and Ventura Counties, a number of them already building companies.
+              across Los Angeles and Ventura Counties, a number of them already building companies,
+              and the executives who work in the fields they are headed into.
             </p>
           </div>
         </section>
@@ -39,12 +40,12 @@ export default function SpeakersPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <h2 className="m-title">On the Day and After</h2>
+            <h2 className="m-title">Why Executives Come</h2>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>A Room Built for Conversation</h3><p>Get to know university students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, in a room built for conversation, years before they enter the job market.</p></div>
-              <div><h3>How the Next Generation Thinks</h3><p>Hear directly from the students you hire, serve, and sell to: what they are building, what they care about, and what they are looking for.</p></div>
-              <div><h3>A Way to Open Doors</h3><p>Offer the opportunities you manage, whether internships, mentorship, or introductions, to students in your field who would otherwise never know they exist.</p></div>
-              <div><h3>A Place in What Comes Next</h3><p>After November 14, Meridian creates hackathon-style events by field, with executives from that field taking part. Everyone who attends joins the Meridian network, and the software we are building matches students with the opportunities you open.</p></div>
+              <div><h3>Be There in Person</h3><p>Most people tune out ads. A day on campus is not one. You spend it in small groups, at roundtables and at lunch, getting to know students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, and letting them get to know you.</p></div>
+              <div><h3>Put a Real Problem to Student Teams</h3><p>After November 14, Meridian creates hackathon-style events by field. Each team works a real challenge from the field and presents to the executives in the room.</p></div>
+              <div><h3>Meet the People Who Organize Campus Life</h3><p>Student organizations and campus offices at UCLA and USC bring their members and run tables of their own, so you meet the people who organize campus life in one day.</p></div>
+              <div><h3>Stay Known After the Day</h3><p>After November 14, Meridian creates events by field, so students meet you more than once. Everyone who attends joins the Meridian network, and the software we are building matches students with the opportunities you open.</p></div>
             </div>
           </div>
         </section>
@@ -74,8 +75,8 @@ export default function SpeakersPage() {
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div><h3>Work the Room</h3><p>Get to know students in small groups.</p></div>
               <div><h3>Introductions</h3><p>Short introductions, if you would like them. Under a minute each, no deck: who you are, what you built, and one thing a student can use on Monday. Guests who would rather spend the day in conversation do that instead.</p></div>
-              <div><h3>The Engineering Design Lab</h3><p>A hands-on build led by NASA engineers, a natural home for technical executives who want time with students at a table.</p></div>
-              <div><h3>Demo Day</h3><p>Student teams present what they are building. A natural stop for investors, founders, and anyone who wants to see student work up close.</p></div>
+              <div><h3>The Aerospace Design Lab</h3><p>A hands-on build led by NASA engineers, a natural home for technical executives who want time with students at a table.</p></div>
+              <div><h3>Demo Day</h3><p>Student founders and researchers pitch for three minutes to executives, investors, and press, and others show their work at expo tables. A natural stop for anyone who wants to see what students are building.</p></div>
             </div>
           </div>
         </section>

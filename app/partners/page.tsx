@@ -13,7 +13,7 @@ import { PARTNER_NAMED_BY } from '@/config';
 
 export const metadata: Metadata = pageMeta(
   'Partners',
-  'Meridian starts with a conference and creates hackathon-style events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
+  'Give student teams a real problem. Meridian starts with a conference and creates hackathon-style events by field. Companies, campus offices, and community partners work with us from the November 14 conference onward.',
   '/partners/',
 );
 
@@ -28,7 +28,7 @@ export default function PartnersPage() {
         {/* 1. Lead */}
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
-            <h1>Partner With Meridian.</h1>
+            <h1>Give Student Teams a Real Problem.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian starts with a conference and creates hackathon-style events
               by field. Companies, campus offices, and community partners work with us from the
@@ -71,15 +71,15 @@ export default function PartnersPage() {
           </div>
         </section>
 
-        {/* 4. What is in it for you. Reasons companies partner with student groups: talent access, repeat presence, next-generation insight, a real problem in front of student teams. */}
+        {/* 4. What is in it for you. From the research on college-facing consumer brands (Celsius, Raising Cane's, Crumbl, Nestle, Donato's, PepsiCo): in-person presence, a real problem for student teams, student organizations as partners, repeat presence. */}
         <section className="m-section m-alt">
           <div className="m-wrap">
             <h2 className="m-title">Working With Meridian</h2>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>Students in Your Field, Early</h3><p>Meet students in your field in a working setting, not across a career-fair table, before other employers do.</p></div>
-              <div><h3>Set the Challenge</h3><p>Bring a real problem from your field. Student teams work on it, you see how they think, and you hear how the next generation approaches it.</p></div>
-              <div><h3>Be Remembered</h3><p>After the conference, Meridian creates events by field, so students meet your team more than once. A partner is known by its people, not by a logo on a banner.</p></div>
-              <div><h3>A Network That Lasts</h3><p>Everyone who attends joins the Meridian network. We are building software that matches students with opportunities that fit them, including yours.</p></div>
+              <div><h3>Meet Students in Person</h3><p>A table is a start. Your executives can also join roundtables, introduce themselves to the room, and get to know students one conversation at a time. The students you meet may be the ones you later work with, as interns, ambassadors, or collaborators.</p></div>
+              <div><h3>Set the Challenge</h3><p>Bring a real problem from your field. Student teams from different campuses work on it side by side, you see how they think, and you hear how students approach it.</p></div>
+              <div><h3>Work With Student Organizations</h3><p>Student organizations and campus offices at UCLA and USC bring their members to Meridian, and many run tables of their own. Meet the people who organize campus life in one room, not campus by campus.</p></div>
+              <div><h3>Be Known Beyond One Day</h3><p>After the conference, Meridian creates events by field, so students meet your team more than once. A partner is known by its people, not by a logo on a banner. Everyone who attends joins the Meridian network, and the software we are building matches students with opportunities that fit them, including yours.</p></div>
             </div>
           </div>
         </section>
