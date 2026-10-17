@@ -14,7 +14,7 @@ const runOfShow = schedule.items.filter((i) => i.status === 'live' && i.title !=
 
 export const metadata: Metadata = pageMeta(
   'For Students',
-  'A day at UCLA where executives from every field come to you. Nothing to prepare. Saturday, November 14, 2026.',
+  'A day at UCLA where executives from every field come to you. Saturday, November 14, 2026.',
   '/students/',
 );
 
@@ -32,7 +32,7 @@ export default function StudentsPage() {
             <h1>A Day Where Executives Come to You.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. The conference
-              is a day at UCLA where executives from every field come to you. Nothing to prepare.
+              is a day at UCLA where executives from every field come to you.
             </p>
             <div className="m-actions">
               <RegisterButton />

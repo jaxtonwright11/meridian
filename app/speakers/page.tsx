@@ -10,7 +10,7 @@ import { confirmedLeaders, photoLeaders, title } from '@/data/leaders';
 
 export const metadata: Metadata = pageMeta(
   'For Executives',
-  'What Meridian asks of the executives in the room: nothing to prepare, nothing to carry afterward. Saturday, November 14, 2026 at UCLA.',
+  'What the day involves for executives: getting to know students and meeting the other executives in the room. Saturday, November 14, 2026 at UCLA.',
   '/speakers/',
 );
 

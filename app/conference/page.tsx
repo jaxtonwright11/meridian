@@ -28,8 +28,7 @@ const EVENT_JSONLD = {
     name: EVENT_VENUE,
     address: { '@type': 'PostalAddress', addressLocality: 'Los Angeles', addressRegion: 'CA' },
   },
-  isAccessibleForFree: true,
-  ...(EVENT_OVER ? {} : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: 'https://forms.gle/Q9khivMSRpyesMNu8', availability: 'https://schema.org/InStock' } }),
+  ...(EVENT_OVER ? {} : { offers: { '@type': 'Offer', url: 'https://forms.gle/Q9khivMSRpyesMNu8', availability: 'https://schema.org/InStock' } }),
   organizer: { '@type': 'Organization', name: 'Meridian', url: 'https://meridianventura.com' },
 };
 
