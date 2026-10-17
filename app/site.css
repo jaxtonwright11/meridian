@@ -784,3 +784,13 @@ h2.m-eyebrow { line-height: 1.6; }
   .m-header .m-nav .m-navlink:hover { color: var(--ink); background: none !important; }
   .m-header .m-nav .m-navlink[aria-current="page"] { color: var(--ink); border-bottom-color: var(--heading) !important; background: none !important; }
 }
+
+/* Previous and Next: plain underlined text, like the tabs. Photos fill their cell edge to edge. */
+.m-vbar .btn.btn-tan { background: none !important; border: 0 !important; border-bottom: 2px solid var(--heading) !important; border-radius: 0 !important; box-shadow: none !important; padding: 10px 2px !important; color: var(--ink); }
+.m-vbar .btn.btn-tan:hover:not(:disabled) { color: var(--gold-deep); border-bottom-color: var(--gold-deep) !important; }
+.m-vbar .btn.btn-tan:disabled { opacity: .35; border-bottom-color: transparent !important; }
+.m-people.m-four .m-tile, .m-people.m-four .m-tile + .m-tile { padding: 0 0 16px !important; }
+.m-people.m-four .m-tile img { border-radius: 0; margin-bottom: 14px; }
+.m-people.m-four .m-tile h3, .m-people.m-four .m-tile .m-role { padding: 0 16px; }
+.m-people.m-four .m-tile:hover img { transform: none; box-shadow: none; }
+@media (max-width: 900px) { .m-people.m-four { gap: 10px; } }

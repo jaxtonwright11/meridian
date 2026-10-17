@@ -38,11 +38,11 @@ export function LeadersViewer({ tiles }: { tiles: Tile[] }) {
   return (
     <div role="region" aria-label="Executives joining on November 14" onKeyDown={onKey}>
       <div className="m-vbar">
-        <button className="btn btn-tan" onClick={() => go(-1)} disabled={start === 0} aria-label="Previous executives">Previous</button>
+        <button className="btn btn-tan" onClick={() => go(-1)} disabled={start === 0} aria-label="Previous executives">&larr; Previous</button>
         <span className="m-count" aria-live="polite">
           {start + 1} of {tiles.length}
         </span>
-        <button className="btn btn-tan" onClick={() => go(1)} disabled={start >= last} aria-label="Next executives">Next</button>
+        <button className="btn btn-tan" onClick={() => go(1)} disabled={start >= last} aria-label="Next executives">Next &rarr;</button>
       </div>
       <div className={`m-people m-four m-slide-${dir}`} key={start}>
         {page.map((t) => (
