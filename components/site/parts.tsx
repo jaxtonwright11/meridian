@@ -49,7 +49,7 @@ export function MeridianLine() {
 
 export function Doors() {
   const doors = [
-    { h: 'Students', p: 'The conference is free, the executives come to you, and nothing needs preparing. See how it works and register.', l: 'For students', href: '/students/' },
+    { h: 'Students', p: 'Executives from every field come to you at the conference. See how it works and register.', l: 'For students', href: '/students/' },
     { h: 'Executives', p: 'Spend the day getting to know students, alongside the other executives in the room. See what the day involves and who is joining.', l: 'For executives', href: '/speakers/' },
     { h: 'Partners', p: 'Companies, campus offices, and community organizations are working with Meridian on the conference and on what comes after it. See what that looks like.', l: 'For partners', href: '/partners/' },
   ];
@@ -75,7 +75,7 @@ export function WhatMeridianDoes() {
     <div className="m-three m-cards3">
       <div>
         <h3>The Conference</h3>
-        <p>A free day at UCLA where executives from every field come to students. November 14.</p>
+        <p>A day at UCLA where executives from every field come to students. November 14.</p>
         <p style={{ marginTop: 12 }}><a className="m-link" href="/conference/">See the conference</a></p>
       </div>
       <div>
@@ -114,7 +114,7 @@ export function SlimConferenceBand() {
   return (
     <div className="m-wrap">
       <div className="m-slim">
-        <p>The first Meridian conference is Saturday, {EVENT_DATE_SHORT} at {EVENT_VENUE}. Free for every student.</p>
+        <p>The first Meridian conference is Saturday, {EVENT_DATE_SHORT} at {EVENT_VENUE}.</p>
         <div className="m-actions">
           <RegisterButton>Register</RegisterButton>
           <a className="btn btn-tan" href="/conference/">Everything about the day</a>

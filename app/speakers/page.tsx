@@ -26,7 +26,7 @@ export default function SpeakersPage() {
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">For Executives</span>
-            <h1>Meet the Next Generation.</h1>
+            <h1>Meet Students Before Anyone Else Does.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. Our conference
               on Saturday, November 14 at UCLA is where it starts: 400 university students from
@@ -41,7 +41,7 @@ export default function SpeakersPage() {
           <div className="m-wrap">
             <h2 className="m-title">On the Day and After</h2>
             <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-              <div><h3>Students Before Anyone Else Meets Them</h3><p>Get to know university students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, in a room built for conversation, years before they enter the job market.</p></div>
+              <div><h3>A Room Built for Conversation</h3><p>Get to know university students from UCLA, USC, UC Berkeley, and campuses across Los Angeles, in a room built for conversation, years before they enter the job market.</p></div>
               <div><h3>How the Next Generation Thinks</h3><p>Hear directly from the students you hire, serve, and sell to: what they are building, what they care about, and what they are looking for.</p></div>
               <div><h3>A Way to Open Doors</h3><p>Offer the opportunities you manage, whether internships, mentorship, or introductions, to students in your field who would otherwise never know they exist.</p></div>
               <div><h3>A Place in What Comes Next</h3><p>After November 14, Meridian creates hackathon-style events by field, with executives from that field taking part. Everyone who attends joins the Meridian network.</p></div>
@@ -103,7 +103,7 @@ export default function SpeakersPage() {
             <TeamContact primary />
             <p className="m-lead" style={{ marginTop: 28 }}>
               If you know someone who would get a lot from connecting with other executives and
-              student founders, please feel free to recommend them.
+              student founders, please recommend them.
             </p>
             <p className="m-small" style={{ marginTop: 14 }}>Founded by Jaxton Wright.</p>
           </div>

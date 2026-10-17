@@ -42,7 +42,7 @@ export const schedule: { approved: boolean; items: ScheduleItem[]; allDay: strin
   allDay: [
     'Aerospace design lab, 11:15 AM to 11:55 AM and 1:20 PM to 2:30 PM',
     'Demo day expo, 11:15 AM to 12:35 PM and 1:20 PM to 2:40 PM',
-    'Free professional headshots',
+    'Professional headshots',
     'Partner tables',
     'Vehicles from the Petersen Automotive Museum',
   ],

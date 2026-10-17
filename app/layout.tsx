@@ -28,7 +28,7 @@ const splineMono = Spline_Sans_Mono({
 
 // One canonical description everywhere (meta, og, twitter).
 const DESCRIPTION =
-  'Meridian brings executives and students together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, free for every student, then expands into in-person events by field.';
+  'Meridian brings executives and students together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, then expands into in-person events by field.';
 
 const HOME_TITLE = 'Meridian | Executives and Students, in Person';
 // Link previews already show the wordmark image, so their title is the short hook alone.

@@ -1,6 +1,6 @@
 # Post-event copy (draft) and phone menu recommendation
 
-Nothing here is live. The post-event switch is `EVENT_STATE` in `config.ts` ('before' now). The reminder to flip it is set for November 14, 3 PM Pacific.
+Nothing here is live. The post-event switch is `EVENT_STATE` in `config.ts` ('before' now). The reminder to flip it is set for November 15, 3 PM Pacific (the day after the conference).
 
 ## Part 1: What the research says about the phone menu
 
@@ -60,8 +60,8 @@ Words in [brackets] are blanks for facts only you have.
 - Remove the Event markup's open-registration offer (already done in the code).
 
 ### Executives
-- Headline: **Meet the Next Generation.** (unchanged)
-- First card: **Students Before Anyone Else Meets Them** (unchanged).
+- Headline: **Meet Students Before Anyone Else Does.** (unchanged)
+- First card: **A Room Built for Conversation** (unchanged).
 - Add near the top: Executives who joined on November 14 are part of the Meridian network. To take part in the next hackathon-style event in your field, write to us.
 
 ### Executives Joining (/leaders/)

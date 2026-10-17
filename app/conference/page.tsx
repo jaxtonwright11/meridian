@@ -11,7 +11,7 @@ import { EVENT_DATE, EVENT_NAME, EVENT_VENUE, EVENT_TIME, REGISTRATION_CLOSES_LA
 
 export const metadata: Metadata = pageMeta(
   'Meridian Conference',
-  `${EVENT_NAME}, ${EVENT_DATE} at ${EVENT_VENUE}. Free for every student. Meridian brings executives and students together in person, by field.`,
+  `${EVENT_NAME}, ${EVENT_DATE} at ${EVENT_VENUE}. Meridian brings executives and students together in person, by field.`,
   '/conference/',
   `${EVENT_NAME} | ${EVENT_DATE} at ${EVENT_VENUE}`,
 );
@@ -76,7 +76,7 @@ export default function ConferencePage() {
             <div className="m-three" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
               <div><h3>Aerospace Design Lab</h3><p>Led by NASA engineers. You spend the day building something real instead of sitting through a talk about it.</p></div>
               <div><h3>Demo Day</h3><p>Students present research, startups, and projects to executives, investors, other students, and press.</p><p style={{ marginTop: 10 }}><a className="m-link" href="/demo-day/">About demo day</a></p></div>
-              <div><h3>Free Professional Headshots</h3><p>Photographers from Las Fotos Project shoot you for free and the pictures are yours to keep.</p></div>
+              <div><h3>Professional Headshots</h3><p>Photographers from Las Fotos Project shoot your headshot, and the pictures are yours to keep.</p></div>
               <div><h3>Partner Tables</h3><p>The organizations that brought students run tables of their own. Walk up to any of them, no introduction needed.</p></div>
               <div><h3>Petersen Automotive Museum</h3><p>The museum is bringing a 1955 Pontiac and a 1955 Bel Air to the floor, with staff.</p></div>
               <div><h3>Someone to Introduce You</h3><p>Hosts work the floor all day. If walking up to a stranger is not your thing, find one and they will make the introduction.</p></div>

@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMeta(
 // Founder bio: brief section 15. TODO(jax): approve the wording.
 // Harvard appears here and nowhere else on the site (brief 10.1).
 const FOUNDER_BIO =
-  'Jaxton Wright is from Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025, he gave a speech at Harvard, and afterward he created Meridian, which brings executives and students together in person, by field. Meridian starts with a free conference on November 14, where executives get to know students and each one is looking to help with opportunities they manage. The day includes a demo day for student founders and researchers and a design lab led by NASA engineers. Starting November 14, Meridian creates hackathon-style events by field, beginning with engineering, pre-med, and business. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.';
+  'Jaxton Wright is from Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025, he gave a speech at Harvard, and afterward he created Meridian, which brings executives and students together in person, by field. Meridian starts with a conference on November 14, where executives get to know students and each one is looking to help with opportunities they manage. The day includes a demo day for student founders and researchers and a design lab led by NASA engineers. Starting November 14, Meridian creates hackathon-style events by field, beginning with engineering, pre-med, and business. Each brings executives from that field together with students from across Los Angeles campuses, with student teams working the same challenge side by side, and everyone who attends joins the Meridian network.';
 
 export default function AboutPage() {
   const george = leaders.find((l) => l.slug === 'george-leis')!;
@@ -39,7 +39,7 @@ export default function AboutPage() {
             <div className="m-path">
               <details className="m-step">
                 <summary><h3>The Conference</h3></summary>
-                <p>November 14 at UCLA, free for every student. Executives from every field come to get to know you.</p>
+                <p>November 14 at UCLA. Executives from every field come to get to know you.</p>
               </details>
               <details className="m-step">
                 <summary><h3>Hackathon-Style Events</h3></summary>

@@ -14,7 +14,7 @@ const runOfShow = schedule.items.filter((i) => i.status === 'live' && i.title !=
 
 export const metadata: Metadata = pageMeta(
   'For Students',
-  'A free day at UCLA where executives from every field come to you. Nothing to prepare, nothing to bring. Saturday, November 14, 2026.',
+  'A day at UCLA where executives from every field come to you. Nothing to prepare. Saturday, November 14, 2026.',
   '/students/',
 );
 
@@ -29,11 +29,10 @@ export default function StudentsPage() {
         <section className="m-hero" style={{ paddingBottom: 48 }}>
           <div className="m-wrap">
             <span className="m-eyebrow">For Students</span>
-            <h1>A Free Day Where Executives Come to You.</h1>
+            <h1>A Day Where Executives Come to You.</h1>
             <p className="m-lead" style={{ marginTop: 20 }}>
               Meridian brings executives and students together in person, by field. The conference
-              is a free day at UCLA where executives from every field come to you. Nothing to prepare.
-              Nothing to bring.
+              is a day at UCLA where executives from every field come to you. Nothing to prepare.
             </p>
             <div className="m-actions">
               <RegisterButton />
@@ -72,7 +71,7 @@ export default function StudentsPage() {
               <div><h3>Demo Day</h3><p>Student founders and researchers pitch to executives, investors, and press. <a className="m-link" href="/demo-day/">See how it works.</a></p></div>
               <div><h3>Roundtables</h3><p>Small groups by field and goal, each with an executive or host. Crossover roundtables mix fields on purpose, so you meet people whose work you are curious about.</p></div>
               <div><h3>Workshops</h3><p>Short sessions led by executives.</p></div>
-              <div><h3>Free Professional Headshots</h3><p>Photographers from Las Fotos Project shoot a headshot for every student.</p></div>
+              <div><h3>Professional Headshots</h3><p>Photographers from Las Fotos Project shoot a headshot for every student.</p></div>
               <div><h3>Partner Tables</h3><p>Companies, campus offices, and organizations, {livePartners.length} so far. <a className="m-link" href="/partners/directory/">See who is working with us.</a></p></div>
               <div><h3>Lunch With Executives</h3><p>Tables mix field, school, and year, with an executive or host at most of them.</p></div>
               <div><h3>Petersen Automotive Museum</h3><p>A 1955 Pontiac and a 1955 Bel Air on the floor, with museum staff.</p></div>
@@ -99,15 +98,11 @@ export default function StudentsPage() {
 
         <section className="m-section">
           <div className="m-wrap">
-            <div className="m-three">
+            <div className="m-three m-two" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
               <div>
                 <h3>Who Can Come</h3>
                 {/* Jax, Oct 16: keep UCLA, USC, and UC Berkeley. */}
                 <p>University students from across Los Angeles and Ventura Counties. UCLA, USC, and UC Berkeley students are all welcome.</p>
-              </div>
-              <div>
-                <h3>Nothing to Pay</h3>
-                <p>Nothing to pay at registration or at the door.</p>
               </div>
               <div>
                 <h3>Joining Online</h3>

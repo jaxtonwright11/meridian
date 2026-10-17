@@ -40,7 +40,7 @@ export const partners: Partner[] = [
   { name: '826LA', group: 'Community Organizations', status: 'live', line: 'Sent to a network of 4,000 students and alumni.' },
   { name: 'LA Promise Fund', group: 'Community Organizations', status: 'live', line: 'Bringing students from two cohorts.' },
   { name: 'I Have A Dream Foundation LA', group: 'Community Organizations', status: 'live', line: 'A block of Dreamer Scholars.' },
-  { name: 'Las Fotos Project', group: 'Community Organizations', status: 'live', line: 'Photographers shooting free headshots for every student.' },
+  { name: 'Las Fotos Project', group: 'Community Organizations', status: 'live', line: 'Photographers shooting headshots for every student.' },
   { name: 'MANA de San Diego', group: 'Community Organizations', status: 'live', line: 'Students from their San Diego network.' },
   { name: 'San Diego Diplomacy Council', group: 'Community Organizations', status: 'live', line: 'Student ambassadors, in person or by video.' },
   { name: 'EnCorps', group: 'Community Organizations', status: 'check', line: 'STEM fellows working the aerospace lab alongside students.' },

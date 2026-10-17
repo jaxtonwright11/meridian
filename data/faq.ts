@@ -9,7 +9,6 @@ export const FAQ_GROUPS: FaqAudience[] = ['The Day', 'Students', 'Executives', '
 
 export const faqs: Faq[] = [
   { audience: 'The Day', question: 'What is Meridian?', answer: 'Meridian brings executives and students together in person, by field. The first event is the conference on November 14.' },
-  { audience: 'The Day', question: 'Is it free?', answer: 'Yes. The conference is free for every student, to register and to attend.' },
   { audience: 'The Day', question: 'Can I join online?', answer: 'Yes. There is a Zoom option when you register. In-person space is 400.' },
   { audience: 'The Day', question: 'When does registration close?', answer: 'Registration closes November 7.' },
   { audience: 'The Day', question: 'How do I get there?', answer: 'The day is at UCLA in Westwood. Parking and arrival details go to everyone registered and to @meridianconference on Instagram before the day.' },

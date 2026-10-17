@@ -738,16 +738,19 @@ html { scroll-padding-top: 80px; }
 /* ---- Phone navigation: the desktop pill, in a row under the header, no Menu button ----
    Same look as the desktop nav: one tan pill, the five sections as segments joined inside it,
    the current one white. Register stays separate and black in the top bar.
-   The top bar is sticky; this row scrolls away with the page. On narrow phones the pill is wider
-   than the screen and runs off the right edge on purpose: that is the signal to swipe. */
-.m-tabs { display: none; }
+   The top bar is sticky; this row scrolls away with the page. On phones the pill is wider than
+   the screen and runs off the right edge on purpose: that is the signal to swipe. The segment
+   padding (--tp) is tuned per screen width so the edge always lands in the middle of a segment
+   (3.5 segments show on narrow phones, 4.5 on wider ones) instead of just missing a boundary. */
+.m-tabs { display: none; --tp: 12px; }
 .m-tabs-in { display: flex; width: max-content; gap: 2px; padding: 3px; background: var(--tan-box); border: 1px solid var(--tan-line); border-radius: 999px; }
 .m-tab {
-  flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 16px;
+  position: relative; flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 34px; padding: 0 var(--tp);
   background: transparent; color: var(--ink); border: 0; border-radius: 999px;
-  font: 700 12.5px/1 var(--font-hanken), system-ui, sans-serif; text-transform: uppercase; letter-spacing: .05em;
+  font: 700 12px/1 var(--font-hanken), system-ui, sans-serif; text-transform: uppercase; letter-spacing: .05em;
   text-decoration: none; white-space: nowrap;
 }
+.m-tab::after { content: ''; position: absolute; inset: -5px 0; } /* 44px tap area around a 34px segment */
 .m-tab:hover { background: rgba(255,255,255,.45); }
 .m-tab[aria-current="page"] { background: #fff; box-shadow: 0 1px 3px rgba(43,28,15,.2); }
 @media (max-width: 900px) {
@@ -758,9 +761,17 @@ html { scroll-padding-top: 80px; }
   }
   .m-tabs::-webkit-scrollbar { display: none; }
 }
-/* Narrow phones: each segment is sized so two show whole and the third is always cut off. */
-@media (max-width: 520px) {
-  .m-tab { width: min(150px, calc((100vw - 24px) / 2.5)); padding: 0 6px; }
+@media (max-width: 399px) { .m-tabs { --tp: max(5px, calc((100vw - 280px) / 7)); } }
+@media (min-width: 400px) and (max-width: 519px) { .m-tabs { --tp: calc((100vw - 334px) / 9); } }
+
+/* Desktop: the pill and Register grow with the screen, from today's size at 1000px to about 25% larger
+   at 1280px, filling in the space above and below them. Everything inside is sized in em so the text
+   grows with the box. Pill and Register end up the same height. */
+@media (min-width: 901px) {
+  .m-header-in { --hs: clamp(12.5px, calc(12.5px + (100vw - 1000px) * 0.01036), 15.4px); }
+  .m-header .m-nav { gap: .16em; padding: .32em; font-size: var(--hs); }
+  .m-header .m-nav .m-navlink { font-size: 1em; padding: .8em 1.28em; }
+  .m-header .m-register { font-size: var(--hs); line-height: 1.2; padding: calc(1.02em - 1px) 1.7em; }
 }
 
 /* ---- Heading structure: hidden section titles and eyebrows that are real headings ---- */
