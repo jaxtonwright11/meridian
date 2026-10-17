@@ -745,17 +745,17 @@ html { scroll-padding-top: 80px; }
 .m-tabs { display: none; --tp: 12px; }
 .m-tabs-in { display: flex; width: max-content; gap: 2px; padding: 3px; background: var(--tan-box); border: 1px solid var(--tan-line); border-radius: 999px; }
 .m-tab {
-  position: relative; flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 34px; padding: 0 var(--tp);
+  position: relative; flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 22px; padding: 0 var(--tp);
   background: transparent; color: var(--ink); border: 0; border-radius: 999px;
   font: 700 12px/1 var(--font-hanken), system-ui, sans-serif; text-transform: uppercase; letter-spacing: .05em;
   text-decoration: none; white-space: nowrap;
 }
-.m-tab::after { content: ''; position: absolute; inset: -5px 0; } /* 44px tap area around a 34px segment */
+.m-tab::after { content: ''; position: absolute; inset: -8px 0; } /* 38px tap area around a 22px segment */
 .m-tab:hover { background: rgba(255,255,255,.45); }
 .m-tab[aria-current="page"] { background: #fff; box-shadow: 0 1px 3px rgba(43,28,15,.2); }
 @media (max-width: 900px) {
   .m-tabs {
-    display: block; position: relative; padding: 6px 16px; overflow-x: auto; scroll-padding: 0 16px;
+    display: block; position: relative; padding: 8px 16px; overflow-x: auto; scroll-padding: 0 16px;
     scrollbar-width: none; -webkit-overflow-scrolling: touch;
     background: var(--paper); border-bottom: 1px solid var(--rule);
   }

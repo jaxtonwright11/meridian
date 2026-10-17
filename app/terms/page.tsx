@@ -32,7 +32,7 @@ export default function TermsPage() {
               <div className={styles.body}>
                 <h2>1. The Event</h2>
                 <p>
-                  Meridian Conference is run by Meridian Conference. There is no
+                  Meridian Conference is run by Meridian Conference. The event is free. There is no
                   ticket, no fee, and nothing sold. Attending, whether in person or on
                   Zoom, means you agree to these terms.
                 </p>
@@ -120,7 +120,7 @@ export default function TermsPage() {
                 <p>
                   The schedule, speakers, and venue details may change. If the event is
                   postponed or canceled, everyone registered is notified by email as
-                  early as possible. Because there is no fee, there are no refunds to
+                  early as possible. Because the event is free, there are no refunds to
                   process.
                 </p>
 

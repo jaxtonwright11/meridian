@@ -23,12 +23,13 @@ const EVENT_JSONLD = {
   startDate: '2026-11-14T11:00:00-08:00',
   endDate: '2026-11-14T15:00:00-08:00',
   eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+  isAccessibleForFree: true,
   location: {
     '@type': 'Place',
     name: EVENT_VENUE,
     address: { '@type': 'PostalAddress', addressLocality: 'Los Angeles', addressRegion: 'CA' },
   },
-  ...(EVENT_OVER ? {} : { offers: { '@type': 'Offer', url: 'https://forms.gle/Q9khivMSRpyesMNu8', availability: 'https://schema.org/InStock' } }),
+  ...(EVENT_OVER ? {} : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', url: 'https://forms.gle/Q9khivMSRpyesMNu8', availability: 'https://schema.org/InStock' } }),
   organizer: { '@type': 'Organization', name: 'Meridian', url: 'https://meridianventura.com' },
 };
 

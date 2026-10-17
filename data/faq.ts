@@ -9,6 +9,7 @@ export const FAQ_GROUPS: FaqAudience[] = ['The Day', 'Students', 'Executives', '
 
 export const faqs: Faq[] = [
   { audience: 'The Day', question: 'What is Meridian?', answer: 'Meridian brings executives and students together in person, by field. The first event is the conference on November 14.' },
+  { audience: 'The Day', question: 'Is it free?', answer: 'Yes. The conference is free for every student, to register and to attend.' },
   { audience: 'The Day', question: 'Can I join online?', answer: 'Yes. There is a Zoom option when you register. In-person space is 400.' },
   { audience: 'The Day', question: 'When does registration close?', answer: 'Registration closes November 7.' },
   { audience: 'The Day', question: 'How do I get there?', answer: 'The day is at UCLA in Westwood. Parking and arrival details go to everyone registered and to @meridianconference on Instagram before the day.' },
@@ -26,7 +27,7 @@ export const faqs: Faq[] = [
 
   { audience: 'Executives', question: 'What do I get out of it?', answer: 'You get to know university students in your field, hear how the next generation thinks, and have a way to open doors with the opportunities you manage. After November 14, you can take part in the hackathon-style events Meridian creates by field, and you join the Meridian network.' },
   { audience: 'Executives', question: 'Do I have to commit beyond the day?', answer: 'No. If you would like to be involved beyond the day, tell us which field and we will talk about what fits.' },
-  { audience: 'Executives', question: 'I am an executive. What does the day ask of me?', answer: 'You get to know students and meet the other executives in the room.' },
+  { audience: 'Executives', question: 'I am an executive. What does the day ask of me?', answer: 'Nothing to prepare. You get to know students and meet the other executives in the room.' },
   { audience: 'Partners', question: 'I lead an organization. How do we work with Meridian?', answer: 'Start at the partners page. Write to us or book a call.' },
   { audience: 'Demo Day', question: 'How do I apply to present at demo day?', answer: 'Register, then answer the demo day question on the form. We follow up with the people we pick.' },
 ];
