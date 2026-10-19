@@ -3,7 +3,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import {
-  MeridianLine, Doors, LeadersBand, TeamStrip, PartnerList,
+  Doors, LeadersBand, TeamStrip, PartnerList,
   PressLinks, RegisterButton,
 } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
@@ -20,7 +20,6 @@ export default function Home() {
       <main id="main">
         {/* 1. Hero */}
         <section className="m-hero m-hero-home">
-          <MeridianLine />
           <div className="m-wrap">
             <h1>CEOs Come to You.</h1>
             <p className="m-sub">
