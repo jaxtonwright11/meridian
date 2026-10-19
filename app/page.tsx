@@ -39,7 +39,6 @@ export default function Home() {
         {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
         <section className="m-section m-alt" id="what-is-meridian" aria-labelledby="what-h">
           <div className="m-wrap m-what">
-            <div>
             <h2 id="what-h" className="m-title">What Is Meridian?</h2>
             <p className="m-whatp">
               Meridian brings executives and students together in person, by field. It begins with
@@ -48,7 +47,6 @@ export default function Home() {
               events for executives and students</a>. We are building software that matches students
               with opportunities that fit them. Everyone who attends joins the Meridian network.
             </p>
-            </div>
             <Spotlight />
           </div>
         </section>
