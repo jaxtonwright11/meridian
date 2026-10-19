@@ -3,7 +3,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import {
-  Doors, LeadersBand, TeamStrip, PartnerList,
+  Doors, Spotlight, LeadersBand, TeamStrip, PartnerList,
   PressLinks, RegisterButton,
 } from '@/components/site/parts';
 import { FirstMeridian } from '@/components/FirstMeridian';
@@ -38,7 +38,8 @@ export default function Home() {
         {/* 2. Leaders proof band */}
         {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
         <section className="m-section m-alt" id="what-is-meridian" aria-labelledby="what-h">
-          <div className="m-wrap">
+          <div className="m-wrap m-what">
+            <div>
             <h2 id="what-h" className="m-title">What Is Meridian?</h2>
             <p className="m-whatp">
               Meridian brings executives and students together in person, by field. It begins with
@@ -47,6 +48,8 @@ export default function Home() {
               events for executives and students</a>. We are building software that matches students
               with opportunities that fit them. Everyone who attends joins the Meridian network.
             </p>
+            </div>
+            <Spotlight />
           </div>
         </section>
 

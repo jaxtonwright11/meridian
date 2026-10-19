@@ -4,6 +4,7 @@ import { team, founder, detailLines, type TeamMember } from '@/data/team';
 import { livePartners, homePartners } from '@/data/partners';
 import { press } from '@/data/press';
 import { LeadersViewer, type Tile } from './LeadersViewer';
+import { ExecRotator } from './ExecRotator';
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
@@ -125,15 +126,22 @@ export function SlimConferenceBand() {
 }
 
 /** Leaders proof band. Pages through every leader with an approved photo. */
+const leaderTiles = (): Tile[] => photoLeaders.map((l) => ({
+  slug: l.slug,
+  name: l.name,
+  title: title(l),
+  photo: l.photo as string,
+  bio: l.bioApproved ? l.bio : undefined,
+  virtual: l.format === 'virtual',
+}));
+
+/** One executive at a time, changing every two seconds. */
+export function Spotlight() {
+  return <ExecRotator tiles={leaderTiles()} />;
+}
+
 export function LeadersBand() {
-  const tiles: Tile[] = photoLeaders.map((l) => ({
-    slug: l.slug,
-    name: l.name,
-    title: title(l),
-    photo: l.photo as string,
-    bio: l.bioApproved ? l.bio : undefined,
-    virtual: l.format === 'virtual',
-  }));
+  const tiles = leaderTiles();
   const photoSlugs = new Set(tiles.map((t) => t.slug));
   const names = confirmedLeaders.filter((l) => !photoSlugs.has(l.slug)).map((l) => l.name);
   return (

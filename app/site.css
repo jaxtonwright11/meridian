@@ -791,3 +791,24 @@ h2.m-eyebrow { line-height: 1.6; }
 .m-vbar .btn.btn-tan:disabled { opacity: .35; border-bottom-color: transparent !important; }
 /* Executive tiles: photos stay rounded, inset from the cell, cells joined by the thin brown dividers. */
 .m-people.m-four .m-tile img { border-radius: 12px; }
+
+/* Header band and tab row: tan, with the section links in dark gold. */
+.m-header, [data-palette="current"] .m-header { background: #E8D8BC; border-bottom: 1px solid var(--tan-line); }
+.m-tabs { background: #E8D8BC !important; box-shadow: inset 0 -1px 0 var(--tan-line) !important; }
+.m-tab, .m-header .m-nav .m-navlink, [data-palette="current"] .m-header .m-nav .m-navlink { color: #7A5A12; }
+.m-tab:hover, .m-header .m-nav .m-navlink:hover { color: var(--ink); }
+.m-tab[aria-current="page"], .m-header .m-nav .m-navlink[aria-current="page"] { color: var(--ink); border-bottom-color: var(--gold) !important; }
+.m-tab[aria-current="page"] { border-bottom-color: var(--gold); }
+
+/* Home "What Is Meridian?": text on the left, one executive at a time on the right. */
+.m-what { display: grid; grid-template-columns: minmax(0, 1fr) 232px; gap: 64px; align-items: center; }
+.m-rot { margin: 0; justify-self: end; width: 100%; max-width: 232px; }
+.m-rot-card { display: block; padding: 16px; background: var(--paper); border: 1px solid var(--rule); border-radius: 16px; color: inherit; text-decoration: none; animation: m-pop .45s var(--ease) both; }
+.m-rot-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; }
+.m-rot-card h3 { font-size: 22px; margin-top: 10px; }
+.m-rot-card .m-role { margin-top: 2px; }
+.m-rot-card:hover { background: var(--tan-box); }
+.m-rot-card:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
+.m-rot-cap { margin-top: 12px; text-align: center; font: 700 12px/1 var(--font-hanken), system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); }
+@media (max-width: 900px) { .m-what { grid-template-columns: 1fr; } .m-rot { display: none; } }
+@media (prefers-reduced-motion: reduce) { .m-rot-card { animation: none; } }
