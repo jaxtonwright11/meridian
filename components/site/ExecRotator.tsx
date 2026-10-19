@@ -3,12 +3,13 @@
 import { useEffect, useState } from 'react';
 import type { Tile } from './LeadersViewer';
 
-const EVERY_MS = 2000;
+const EVERY_MS = 4000;
 
 /**
  * One executive at a time, in the same card as the grid further down the page,
- * changing every two seconds. Holds still while hovered or focused, and for
- * anyone who asks for reduced motion. Without JavaScript it shows the first one.
+ * changing every four seconds. Holds still while hovered or focused, and for
+ * anyone who asks for reduced motion. Starts on a random card once the page
+ * loads; without JavaScript it shows the first one.
  */
 export function ExecRotator({ tiles }: { tiles: Tile[] }) {
   const [i, setI] = useState(0);
@@ -16,12 +17,19 @@ export function ExecRotator({ tiles }: { tiles: Tile[] }) {
   const [still, setStill] = useState(false);
 
   useEffect(() => {
+    setI(Math.floor(Math.random() * tiles.length));
     const q = window.matchMedia('(prefers-reduced-motion: reduce)');
     setStill(q.matches);
     const on = () => setStill(q.matches);
     q.addEventListener('change', on);
     return () => q.removeEventListener('change', on);
-  }, []);
+  }, [tiles.length]);
+
+  // Load the next photo ahead of time so the swap never shows an empty frame.
+  useEffect(() => {
+    const next = tiles[(i + 1) % tiles.length];
+    if (next) new Image().src = next.photo;
+  }, [i, tiles]);
 
   useEffect(() => {
     if (held || still || tiles.length < 2) return;
@@ -47,7 +55,9 @@ export function ExecRotator({ tiles }: { tiles: Tile[] }) {
         <h3>{t.name}</h3>
         {t.title && <p className="m-role">{t.title}</p>}
       </a>
-      <figcaption className="m-rot-cap">Executives</figcaption>
+      <figcaption className="m-rot-cap">
+        Executives <span aria-hidden="true">·</span> <a href="/leaders/">See all</a>
+      </figcaption>
     </figure>
   );
 }

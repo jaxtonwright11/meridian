@@ -798,13 +798,15 @@ h2.m-eyebrow { line-height: 1.6; }
 
 /* Home "What Is Meridian?": one executive at a time, in the empty space to the right of the text. Desktop only. */
 .m-what { position: relative; }
-.m-rot { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); margin: 0; width: 200px; }
-.m-rot-card { display: block; padding: 10px; background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; color: inherit; text-decoration: none; animation: m-pop .45s var(--ease) both; }
+.m-rot { position: absolute; right: 40px; top: 50%; transform: translateY(-50%); margin: 0; width: 216px; }
+.m-rot-card { display: block; padding: 10px; background: var(--paper); border: 1px solid var(--rule); border-radius: 14px; color: inherit; text-decoration: none; animation: m-rot-fade .6s ease both; }
 .m-rot-card img { display: block; width: 100%; height: auto !important; aspect-ratio: 1 / 1 !important; object-fit: cover; border-radius: 10px; }
 .m-rot-card h3 { font-size: 18px; margin-top: 8px; }
 .m-rot-card .m-role { margin-top: 2px; font-size: 13px; line-height: 1.3; }
 .m-rot-card:hover { background: var(--tan-box); }
 .m-rot-card:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
+.m-rot-cap a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .m-rot-cap { margin-top: 8px; text-align: center; font: 700 11px/1 var(--font-hanken), system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); }
+@keyframes m-rot-fade { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 900px) { .m-rot { display: none; } }
 @media (prefers-reduced-motion: reduce) { .m-rot-card { animation: none; } }

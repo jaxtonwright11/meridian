@@ -135,9 +135,12 @@ const leaderTiles = (): Tile[] => photoLeaders.map((l) => ({
   virtual: l.format === 'virtual',
 }));
 
-/** One executive at a time, changing every two seconds. */
+/** A handful of executives, one at a time, changing every four seconds. */
+const FEATURED = ['alex-mcdowell', 'deray-mckesson', 'chris-swain', 'rosaly-lopes', 'george-leis', 'paul-rusnak', 'david-lash', 'troy-palmquist'];
 export function Spotlight() {
-  return <ExecRotator tiles={leaderTiles()} />;
+  const all = leaderTiles();
+  const tiles = FEATURED.map((s) => all.find((t) => t.slug === s)).filter((t): t is Tile => !!t);
+  return <ExecRotator tiles={tiles} />;
 }
 
 export function LeadersBand() {
