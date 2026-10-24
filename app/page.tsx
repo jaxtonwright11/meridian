@@ -36,6 +36,10 @@ export default function Home() {
         </section>
 
         {/* 2. Leaders proof band */}
+        <LeadersBand />
+
+        <TeamStrip />
+
         {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
         <section className="m-section m-alt" id="what-is-meridian" aria-labelledby="what-h">
           <div className="m-wrap m-what">
@@ -50,10 +54,6 @@ export default function Home() {
             <Spotlight />
           </div>
         </section>
-
-        <LeadersBand />
-
-        <TeamStrip />
 
         {/* 3. Three doors */}
         <section className="m-section"><Doors /></section>
