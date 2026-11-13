@@ -1,5 +1,5 @@
 {
   "routes": [
-    { "src": "^/nov14$", "dest": "/nov14.html" }
+    { "src": "^/nov14(\\.html)?$", "dest": "/nov14.html" }
   ]
 }
