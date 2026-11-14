@@ -136,7 +136,7 @@ const leaderTiles = (): Tile[] => photoLeaders.map((l) => ({
 }));
 
 /** A handful of executives, one at a time, changing every four seconds. */
-const FEATURED = ['alex-mcdowell', 'deray-mckesson', 'chris-swain', 'rosaly-lopes', 'george-leis', 'paul-rusnak', 'david-lash', 'troy-palmquist'];
+const FEATURED = ['alex-mcdowell', 'chris-swain', 'rosaly-lopes', 'paul-rusnak', 'david-lash', 'troy-palmquist'];
 export function Spotlight() {
   const all = leaderTiles();
   const tiles = FEATURED.map((s) => all.find((t) => t.slug === s)).filter((t): t is Tile => !!t);
