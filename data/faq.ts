@@ -1,0 +1,34 @@
+// One source for /faq, the /students excerpt and the FAQPage structured data.
+// Answers keep the brief's wording (v2 6.11, v3 section 18).
+import { EVENTS_SENTENCE } from '@/lib/copy';
+
+export type FaqAudience = 'The Day' | 'Students' | 'Executives' | 'Partners' | 'Demo Day';
+export interface Faq { audience: FaqAudience; question: string; answer: string }
+
+export const FAQ_GROUPS: FaqAudience[] = ['The Day', 'Students', 'Executives', 'Partners', 'Demo Day'];
+
+export const faqs: Faq[] = [
+  { audience: 'The Day', question: 'What is Meridian?', answer: 'Meridian brings executives and students together in person, by field. The first event is the conference on November 14.' },
+  { audience: 'The Day', question: 'Is it free?', answer: 'Yes. The conference is free for every student, to register and to attend.' },
+  { audience: 'The Day', question: 'Can I join online?', answer: 'Yes. There is a Zoom option when you register. In-person space is 400.' },
+  { audience: 'The Day', question: 'When does registration close?', answer: 'Registration closes November 7.' },
+  { audience: 'The Day', question: 'How do I get there?', answer: 'The day is at UCLA in Westwood. Parking and arrival details go to everyone registered and to @meridianconference on Instagram before the day.' },
+  { audience: 'The Day', question: 'What happens after November 14?', answer: EVENTS_SENTENCE },
+  { audience: 'The Day', question: 'Will I be photographed?', answer: 'Yes. Meridian photographs and films the day, and your image may appear in our recap film, on the website, and on social media. You agree to that when you register.' },
+
+  // University students only; UCLA, USC, and UC Berkeley all stay (Jax, Oct 16).
+  { audience: 'Students', question: 'Who can come?', answer: 'University students from across Los Angeles and Ventura Counties. UCLA, USC, and UC Berkeley students are all welcome.' },
+  { audience: 'Students', question: 'Can I bring a friend?', answer: 'Yes, but they need their own registration. Seats are capped at 400.' },
+  { audience: 'Students', question: 'What should I wear?', answer: 'Business casual is ideal. If that is not something you have, wear whatever you would wear to meet people you respect. Nobody is checking.' },
+  { audience: 'Students', question: 'Do I have to stay the whole time?', answer: 'Stay the whole time. The best conversations happen late in the day, after people have loosened up and the room knows who you are. The students who arrive first and leave last get the most out of it.' },
+  { audience: 'Students', question: 'What if I have never done anything like this?', answer: 'Many people there have not. You introduce yourself, they introduce themselves, and it goes from there. Hosts work the floor all day and will make the introduction.' },
+  // TODO(jax): see the registration-eligibility decision.
+  { audience: 'Students', question: 'I am under 18. Can I come?', answer: 'Students under 18 register with a parent or guardian’s contact information, and a parent or guardian signs them in at check-in.' },
+
+  { audience: 'Executives', question: 'What do I get out of it?', answer: 'You get to know university students in your field in person, not through an ad or a campaign. After November 14, you can put a real problem to student teams at the hackathon-style events Meridian creates by field, and you join the Meridian network.' },
+  { audience: 'Executives', question: 'Can my company have a table?', answer: 'Companies, campus offices, and community organizations run tables at the conference. Write to us or book a call and we will talk about what fits.' },
+  { audience: 'Executives', question: 'Do I have to take part beyond the day?', answer: 'No. If you would like to be involved beyond the day, tell us which field and we will talk about what fits.' },
+  { audience: 'Executives', question: 'I am an executive. What does the day ask of me?', answer: 'Nothing to prepare. You get to know students and meet the other executives in the room.' },
+  { audience: 'Partners', question: 'I lead an organization. How do we work with Meridian?', answer: 'Start at the partners page. Write to us or book a call.' },
+  { audience: 'Demo Day', question: 'How do I apply to present at demo day?', answer: 'Register, then answer the demo day question on the form. We follow up with the people we pick.' },
+];

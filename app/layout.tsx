@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Fraunces, Hanken_Grotesk, Spline_Sans_Mono } from 'next/font/google';
 import './globals.css';
+import './site.css';
+import { SITE_NAME } from '@/config';
+import { RevealOnScroll } from '@/components/RevealOnScroll';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -23,24 +26,27 @@ const splineMono = Spline_Sans_Mono({
   display: 'swap',
 });
 
-// One canonical description everywhere (meta, og, twitter): free, seat-capped,
-// UCLA, and the inverted format, in one breath.
+// One canonical description everywhere (meta, og, twitter).
 const DESCRIPTION =
-  'A free conference on Saturday, November 14, 2026 at UCLA. 400 university students meet founders, executives, and senior leaders who work the room and come to them. Registration open.';
+  'Meridian brings executives and students together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, then expands into in-person events by field.';
 
-// Cache-busted OG image (v2, the wordmark) so existing shares refresh.
+const HOME_TITLE = 'Meridian | Executives and Students, in Person';
+// Link previews already show the wordmark image, so their title is the short hook alone.
+const SHARE_TITLE = 'Executives and Students, in Person';
+
+// TODO(jax): the share image may still say "Meridian Conference". Not changed.
 const OG_IMAGE = {
   url: '/og-image-v2.jpg',
   width: 1200,
   height: 630,
-  alt: 'Meridian Conference, Saturday, November 14, 2026 at UCLA',
+  alt: 'Meridian',
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://meridianventura.com'),
-  title: 'Meridian Conference',
+  title: { default: HOME_TITLE, template: '%s | Meridian' },
   description: DESCRIPTION,
-  keywords: ['Meridian Conference', 'student access', 'UCLA', 'Los Angeles', 'founders', 'executives', 'conference 2026'],
+  keywords: ['Meridian', 'students', 'executives', 'Los Angeles', 'events by field', 'UCLA'],
   authors: [{ name: 'Jaxton Wright' }],
   icons: {
     icon: [
@@ -50,20 +56,30 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'Meridian Conference',
+    title: SHARE_TITLE,
     description: DESCRIPTION,
     url: 'https://meridianventura.com',
-    siteName: 'Meridian Conference',
+    siteName: SITE_NAME,
     type: 'website',
     images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Meridian Conference',
+    title: SHARE_TITLE,
     description: DESCRIPTION,
     images: [OG_IMAGE],
   },
   robots: { index: true, follow: true },
+};
+
+const ORG_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: 'https://meridianventura.com',
+  description: DESCRIPTION,
+  founder: { '@type': 'Person', name: 'Jaxton Wright' },
+  sameAs: ['https://www.instagram.com/meridianconference/'],
 };
 
 export default function RootLayout({
@@ -72,15 +88,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
+    <html suppressHydrationWarning
       lang="en"
       className={`${fraunces.variable} ${hanken.variable} ${splineMono.variable}`}
     >
       <head>
         {/* POSTHOG SNIPPET - JAX TO ADD KEY HERE */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_JSONLD) }} />
         {children}
+        <RevealOnScroll />
       </body>
     </html>
   );

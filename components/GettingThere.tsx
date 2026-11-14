@@ -1,68 +1,19 @@
-'use client';
+import { INSTAGRAM_URL } from '@/config';
 
-import { AnimateIn } from './AnimateIn';
-import { RegisterCta } from './RegisterCta';
-import { EVENT_VENUE, EVENT_DATE, EVENT_TIME, VENUE_DETAILS, INSTAGRAM_URL } from '@/config';
-import styles from './GettingThere.module.css';
-
-const rows = [
-  { label: 'Building', value: VENUE_DETAILS.building },
-  { label: 'Address', value: VENUE_DETAILS.address },
-  { label: 'Date', value: `${EVENT_DATE}, ${EVENT_TIME}` },
-];
-
+/** Brief v2 section 6.2: UCLA in Westwood only. Never a building, room or address. */
 export function GettingThere() {
   return (
-    <section id="getting-there" className={styles.section}>
-      <div className="container">
-        <div className="chunk">
-          <AnimateIn>
-            <p className="eyebrow">Getting there</p>
-          </AnimateIn>
-          <AnimateIn delay={0.1}>
-            <h2>
-              {VENUE_DETAILS.building} at {EVENT_VENUE}
-            </h2>
-          </AnimateIn>
-
-          <AnimateIn delay={0.15}>
-            <p className={styles.lead}>
-              We are at {VENUE_DETAILS.building}, {VENUE_DETAILS.address}. Put that
-              address into your maps app and it will take you to the door.
-            </p>
-          </AnimateIn>
-
-          <AnimateIn delay={0.2}>
-            <dl className={styles.details}>
-              {rows.map((r) => (
-                <div key={r.label} className={styles.row}>
-                  <dt>{r.label}</dt>
-                  <dd>{r.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </AnimateIn>
-
-          <AnimateIn delay={0.25}>
-            <p className={styles.updates}>
-              {INSTAGRAM_URL ? (
-                <>
-                  Follow{' '}
-                  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-                    Meridian on Instagram
-                  </a>{' '}
-                  for parking and day-of updates.
-                </>
-              ) : (
-                <>Follow Meridian on Instagram for parking and day-of updates.</>
-              )}
-            </p>
-          </AnimateIn>
-
-          <AnimateIn delay={0.3}>
-            <RegisterCta />
-          </AnimateIn>
-        </div>
+    <section className="m-section" id="getting-there">
+      <div className="m-wrap">
+        <span className="m-eyebrow">Getting There</span>
+        <h2 className="m-display m-h2">The Day Is at UCLA in Westwood.</h2>
+        <p className="m-lead">
+          Parking and arrival details go to everyone registered, and to{' '}
+          {INSTAGRAM_URL ? (
+            <a className="m-link" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">@meridianconference</a>
+          ) : '@meridianconference'}{' '}
+          on Instagram before the day.
+        </p>
       </div>
     </section>
   );

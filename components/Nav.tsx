@@ -1,95 +1,75 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { REGISTRATION_FORM_URL } from '@/config';
-import styles from './Nav.module.css';
+import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
+import { REGISTRATION_FORM_URL, SITE_NAME, EVENT_OVER, INSTAGRAM_URL } from '@/config';
 
-// Three items only. Everything else still exists at its anchor (or on
-// /partners and /speakers, linked from the footer); it just is not surfaced
-// here. Students get one path: understand the day, see the room, register.
-// Anchors on the home page.
-const links = [
-  { id: 'the-day', label: 'The day' },
-  { id: 'faq', label: 'FAQ' },
+// Header on every page: wordmark, five sections, Register.
+// Desktop: the five sections sit in the header. Phones: the header keeps only the
+// wordmark and Register, and the five sections show as a row of tabs under it.
+const items = [
+  { href: '/conference/', label: 'Conference', match: ['/conference', '/leaders', '/demo-day'] },
+  { href: '/students/', label: 'Students', match: ['/students'] },
+  { href: '/speakers/', label: 'Executives', match: ['/speakers'] },
+  { href: '/partners/', label: 'Partners', match: ['/partners'] },
+  { href: '/about/', label: 'About', match: ['/about', '/team', '/past', '/press'] },
 ];
 
-// Separate routes, surfaced in the top nav alongside the anchors.
-const pages = [
-  { href: '/partners/', label: 'Partners' },
-  { href: '/speakers/', label: 'For speakers' },
-  { href: '/terms/', label: 'Terms' },
-];
+export function Nav({ trail }: { trail?: { label: string; href?: string }[]; home?: boolean }) {
+  const path = (usePathname() || '/').replace(/\/$/, '') || '/';
+  const tabsRef = useRef<HTMLElement>(null);
+  const isCurrent = (match: string[]) => match.some((m) => path === m || path.startsWith(m + '/'));
 
-function scrollToId(id: string) {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const lenis = (window as unknown as { lenis?: { scrollTo: (t: Element, o?: object) => void } }).lenis;
-  if (lenis?.scrollTo) {
-    lenis.scrollTo(el, { offset: -72, duration: 1.1 });
-  } else {
-    el.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-interface NavProps {
-  /** False on /partners, /speakers, /terms: anchors then link back to /#… */
-  home?: boolean;
-}
-
-export function Nav({ home = true }: NavProps) {
-  const [scrolled, setScrolled] = useState(false);
-
+  // Center the current section's tab in the row. Sets the row's own scroll, never the page's.
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 120);
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const row = tabsRef.current;
+    const tab = row?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (!row || !tab) return;
+    // Keep a sliver of the first tab visible so the row still reads as scrollable.
+    const first = row.querySelector<HTMLElement>('.m-tab');
+    const cap = first ? first.offsetLeft + first.offsetWidth - 28 : Infinity;
+    row.scrollLeft = Math.min(cap, Math.max(0, tab.offsetLeft - (row.clientWidth - tab.offsetWidth) / 2));
+  }, [path]);
 
   return (
-    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={styles.inner}>
-        {home ? (
-          <button className={styles.logo} onClick={() => scrollToId('hero')} aria-label="Back to top">
-            Meridian<span>.</span>
-          </button>
-        ) : (
-          <a className={styles.logo} href="/" aria-label="Meridian home">
-            Meridian<span>.</span>
+    <>
+      <a className="m-skip" href="#main">Skip to content</a>
+      <header className="m-header">
+        <div className="m-header-in">
+          <a className="m-logo" href="/" aria-label={`${SITE_NAME} home`}>
+            {SITE_NAME}<span>.</span>
           </a>
-        )}
-
-        <div className={styles.scroller}>
-          <div className={styles.pills}>
-            {links.map((l) =>
-              home ? (
-                <button key={l.id} className={styles.pill} onClick={() => scrollToId(l.id)}>
-                  {l.label}
-                </button>
-              ) : (
-                <a key={l.id} className={styles.pill} href={`/#${l.id}`}>
-                  {l.label}
-                </a>
-              ),
-            )}
-            {pages.map((p) => (
-              <a key={p.href} className={styles.pill} href={p.href}>
-                {p.label}
+          <a className="btn btn-ink btn-register m-register" href={EVENT_OVER && INSTAGRAM_URL ? INSTAGRAM_URL : REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
+            {EVENT_OVER && INSTAGRAM_URL ? 'Instagram' : 'Register'}
+          </a>
+          <nav className="m-nav" aria-label="Main">
+            {items.map((i) => (
+              <a key={i.href} className="m-navlink" href={i.href} aria-current={isCurrent(i.match) ? 'page' : undefined}>
+                {i.label}
               </a>
             ))}
-          </div>
+          </nav>
         </div>
-
-        {/* Outside the scroller so Register never scrolls out of reach. */}
-        <a
-          className={`${styles.pill} ${styles.cta}`}
-          href={REGISTRATION_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Register
-        </a>
-      </div>
-    </nav>
+      </header>
+      <nav ref={tabsRef} className="m-tabs" aria-label="Main">
+        <div className="m-tabs-in">
+          {items.map((i) => (
+            <a key={i.href} className="m-tab" href={i.href} aria-current={isCurrent(i.match) ? 'page' : undefined}>
+              {i.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+      {trail && (
+        <nav className="m-trail" aria-label="Breadcrumb">
+          {trail.map((t, i) => (
+            <span key={t.label}>
+              {i > 0 && ' / '}
+              {t.href ? <a href={t.href}>{t.label}</a> : t.label}
+            </span>
+          ))}
+        </nav>
+      )}
+    </>
   );
 }
