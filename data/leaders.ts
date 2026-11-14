@@ -76,16 +76,6 @@ export const leaders: Leader[] = [
     status: 'confirmed',
   },
   {
-    slug: 'deray-mckesson',
-    name: 'DeRay Mckesson',
-    roles: ['CEO, Campaign Zero'],
-    bio: 'DeRay Mckesson is a co-founder of Campaign Zero, a policy platform focused on reducing police violence, and a longtime organizer from Baltimore. He hosts the podcast Pod Save the People, wrote the book On the Other Side of Freedom, and is a graduate of Bowdoin College.',
-    bioApproved: true,
-    photo: p('deray-mckesson'),
-    photoApproved: true,
-    status: 'confirmed',
-  },
-  {
     slug: 'rosaly-lopes',
     name: 'Dr. Rosaly Lopes',
     roles: ['Senior Research Scientist, NASA Jet Propulsion Laboratory'],
@@ -250,16 +240,6 @@ export const leaders: Leader[] = [
     status: 'confirmed',
   },
   {
-    slug: 'tama-hasson',
-    name: 'Dr. Tama Hasson',
-    roles: ['Assistant Vice Provost of Undergraduate Research Centers, UCLA', 'Director, Undergraduate Research Center, Sciences'],
-    bio: 'Dr. Tama Hasson is Assistant Vice Provost of Undergraduate Research Centers at UCLA and Director of the Undergraduate Research Center, Sciences. She leads the center that connects UCLA undergraduates with research opportunities.',
-    bioApproved: true,
-    photo: p('tama-hasson'),
-    photoApproved: true,
-    status: 'confirmed',
-  },
-  {
     slug: 'julie-sina',
     name: 'Julie Sina',
     roles: ['Chief of Staff to the Chancellor, UCLA'],
@@ -359,7 +339,10 @@ export const leaders: Leader[] = [
   },
 ];
 
-export const confirmedLeaders = leaders.filter((l) => l.status === 'confirmed');
+/** Not attending Nov 14; kept in the roster for the About page story only. */
+const NOT_LISTED = ['george-leis'];
+
+export const confirmedLeaders = leaders.filter((l) => l.status === 'confirmed' && !NOT_LISTED.includes(l.slug));
 
 /** Confirmed leaders with an approved photo and a file, in roster order. */
 export const photoLeaders = confirmedLeaders.filter((l) => l.photo && l.photoApproved);
