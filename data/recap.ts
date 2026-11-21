@@ -56,14 +56,15 @@ export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Chris Swain', title: 'Co-founder, EA Game Innovation Lab · USC Iovine and Young' },
   { name: 'Julian Lewis', title: 'Board Member, EnCorps' },
   { name: 'Dr. Ellen Junn', title: 'President Emerita, California State University, Stanislaus' },
-  // TODO(jax): his title. His Nov 14 tag says only "Ardelyx".
+  // TODO(jax): his title. His Nov 14 tag says only "Ardelyx". Research suggests
+  // "Associate Director, Talent Acquisition" (unconfirmed).
   { name: 'Jamin Wright', title: 'Ardelyx' },
   { name: 'Dr. Yan Searcy', title: 'Dean, California State University, Northridge' },
   { name: 'Darren Prince', title: 'Founder and CEO, Prince Marketing Group · Sports and celebrity agent' },
   { name: 'Paul C. Pereira, JD', title: 'SVP, Patient Advocacy and Government Affairs, Ardelyx', zoom: true },
   { name: 'Dr. Naveen Vetcha', title: 'NASA Marshall Space Flight Center', zoom: true },
-  // TODO(jax): "Head Judge, Elevator Pitch" is the only title on the site for him. Confirm or replace.
-  { name: 'David Meltzer', title: 'Head Judge, Elevator Pitch', zoom: true },
+  // From research (Sports 1 Marketing, Entrepreneur Elevator Pitch). TODO(jax): confirm.
+  { name: 'David Meltzer', title: 'Co-founder and CEO, Sports 1 Marketing · Co-creator, Entrepreneur Elevator Pitch', zoom: true },
 ];
 
 /**
