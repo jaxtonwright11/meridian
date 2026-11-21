@@ -1,10 +1,9 @@
-import { PRESS_URL } from '@/data/press';
-import { CONTACT_EMAIL_PUBLIC, INSTAGRAM_URL, SITE_NAME } from '@/config';
+import { SITE_NAME } from '@/config';
+import { COMPANY_LINE, EMAIL, INSTAGRAM, LINKEDIN } from '@/data/recap';
 
 const cols = [
-  { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/'], ['About', '/about/']] },
-  { h: 'Conference', links: [['Who Is Joining', '/leaders/'], ['Demo Day', '/demo-day/'], ['FAQ', '/faq/']] },
-  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Past Events', '/past/'], ['Press', PRESS_URL], ['Investors', '/contact/#investors'], ['Contact', '/contact/']] },
+  { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/']] },
+  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Contact', '/contact/']] },
   { h: 'Legal', links: [['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
 ];
 
@@ -15,23 +14,22 @@ export function Footer() {
         <div className="m-fgrid">
           <div>
             <a className="m-logo" href="/">{SITE_NAME}<span>.</span></a>
-            <p style={{ marginTop: 12, color: '#C9B79C', fontSize: 15 }}>
-              Students and executives, together in person, by field.
-            </p>
+            <p style={{ marginTop: 12, color: '#C9B79C', fontSize: 15 }}>{COMPANY_LINE}</p>
             <p style={{ marginTop: 14, fontSize: 15 }}>
-              <a href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>{CONTACT_EMAIL_PUBLIC}</a>
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             </p>
-            {INSTAGRAM_URL && (
-              <p style={{ marginTop: 6, fontSize: 15 }}>
-                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">@meridianconference</a>
-              </p>
-            )}
+            <p style={{ marginTop: 6, fontSize: 15 }}>
+              <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {INSTAGRAM.handle}</a>
+            </p>
+            <p style={{ marginTop: 6, fontSize: 15 }}>
+              <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </p>
           </div>
           {cols.map((c) => (
             <div key={c.h}>
               <h3>{c.h}</h3>
               <ul>
-                {c.links.map(([l, h]) => (<li key={h}><a href={h} {...(h.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}>{l}</a></li>))}
+                {c.links.map(([l, h]) => (<li key={h}><a href={h}>{l}</a></li>))}
               </ul>
             </div>
           ))}

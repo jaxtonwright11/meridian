@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 
 const BASE = 'https://meridianventura.com';
-const OG_IMAGE = { url: '/og-image-v2.jpg', width: 1200, height: 630, alt: 'Meridian' };
+/**
+ * Link preview image. TODO(jax): switch to the full-room photo from November 14 once the
+ * file is in the project (public/og-room.jpg, 1200 by 630). Until then the old card shows.
+ */
+export const OG_IMAGE = { url: '/og-image-v2.jpg', width: 1200, height: 630, alt: 'Meridian' };
 
 /**
  * Per-page metadata with its own share preview. Without this, pages inherit the

@@ -2,17 +2,18 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { REGISTRATION_FORM_URL, SITE_NAME, EVENT_OVER, INSTAGRAM_URL } from '@/config';
+import { SITE_NAME } from '@/config';
+import { PARTNER_MAILTO } from '@/data/recap';
 
-// Header on every page: wordmark, five sections, Register.
+// Header on every page: wordmark, five sections, Partner With Us.
 // Desktop: the five sections sit in the header. Phones: the header keeps only the
-// wordmark and Register, and the five sections show as a row of tabs under it.
+// wordmark and Partner With Us, and the five sections show as a row of tabs under it.
 const items = [
-  { href: '/conference/', label: 'Conference', match: ['/conference', '/leaders', '/demo-day'] },
+  { href: '/conference/', label: 'Conference', match: ['/conference'] },
   { href: '/students/', label: 'Students', match: ['/students'] },
   { href: '/speakers/', label: 'Executives', match: ['/speakers'] },
   { href: '/partners/', label: 'Partners', match: ['/partners'] },
-  { href: '/about/', label: 'About', match: ['/about', '/team', '/past', '/press'] },
+  { href: '/about/', label: 'About', match: ['/about', '/team', '/contact'] },
 ];
 
 export function Nav({ trail }: { trail?: { label: string; href?: string }[]; home?: boolean }) {
@@ -39,8 +40,8 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
           <a className="m-logo" href="/" aria-label={`${SITE_NAME} home`}>
             {SITE_NAME}<span>.</span>
           </a>
-          <a className="btn btn-ink btn-register m-register" href={EVENT_OVER && INSTAGRAM_URL ? INSTAGRAM_URL : REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer">
-            {EVENT_OVER && INSTAGRAM_URL ? 'Instagram' : 'Register'}
+          <a className="btn btn-ink btn-register m-register" href={PARTNER_MAILTO}>
+            Partner With Us
           </a>
           <nav className="m-nav" aria-label="Main">
             {items.map((i) => (

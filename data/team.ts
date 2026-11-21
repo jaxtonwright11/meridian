@@ -31,7 +31,7 @@ export const founder: TeamMember = {
   role: 'Founder',
   school: 'UC Berkeley',
   year: 'Junior',
-  major: 'Honors Economics',
+  major: 'Honors Economics and Political Science',
   approved: true,
   photo: p('jaxton-wright'),
 };

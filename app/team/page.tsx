@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { Explore, RegisterButton } from '@/components/site/parts';
+import { JOIN_TEAM_MAILTO } from '@/data/recap';
 import { founder, team, detailLines } from '@/data/team';
 
 export const metadata: Metadata = pageMeta(
@@ -39,11 +39,14 @@ export default function TeamPage() {
             </div>
           </div>
         </section>
-        <section className="m-section">
-          <div className="m-wrap"><div className="m-actions" style={{ marginTop: 0 }}><RegisterButton /></div></div>
+        <section className="m-section m-alt" aria-labelledby="join-h">
+          <div className="m-wrap">
+            <h2 id="join-h" className="m-title">Join the Team</h2>
+            <p className="m-lead">Meridian is growing from here. Write to us about joining the team.</p>
+            <div className="m-actions"><a className="btn btn-ink" href={JOIN_TEAM_MAILTO}>Join the team</a></div>
+          </div>
         </section>
       </main>
-      <Explore links={[['About', '/about/'], ['Conference', '/conference/']]} />
       <Footer />
     </div>
   );

@@ -5,15 +5,14 @@ import { useEffect } from 'react';
 // Sections that used to live on the home page. Previously shared deep links
 // (for example meridianventura.com/#founder) must still resolve.
 const MOVED: Record<string, string> = {
-  recap: '/past/',
   mission: '/about/',
   founder: '/about/#founder',
-  beyond: '/past/',
-  'the-day': '/conference/#the-day',
-  faq: '/faq/',
-  'getting-there': '/conference/#getting-there',
+  beyond: '/conference/',
+  'the-day': '/conference/',
+  faq: '/contact/',
+  'getting-there': '/conference/',
   partners: '/partners/',
-  speakers: '/leaders/',
+  speakers: '/conference/#executives',
 };
 
 export function MovedAnchors() {

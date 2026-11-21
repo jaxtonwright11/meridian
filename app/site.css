@@ -810,3 +810,27 @@ h2.m-eyebrow { line-height: 1.6; }
 @keyframes m-rot-fade { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 900px) { .m-rot { display: none; } }
 @media (prefers-reduced-motion: reduce) { .m-rot-card { animation: none; } }
+
+/* ---- Post-event (Nov 2026): recap, gallery, executives in the room, partners ---- */
+.m-hero-home h1.m-h1-line { font-size: clamp(34px, 4.6vw, 62px); max-width: 20ch; line-height: 1.06; }
+.m-recap { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 10px; max-width: 62ch; }
+.m-recap li { position: relative; padding-left: 22px; font-size: 19px; line-height: 1.5; color: var(--ink); }
+.m-recap li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 10px; height: 2px; background: var(--gold); }
+.m-gallery-wrap { margin: 32px 0 0; }
+.m-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.m-gallery img, .m-gallery-todo { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; display: block; }
+.m-gallery-todo { display: grid; place-items: center; border: 1px dashed var(--rule); color: var(--stone); font: 600 12px/1 var(--font-mono), monospace; letter-spacing: .1em; text-transform: uppercase; }
+.m-credit { margin-top: 12px; font-size: 14px; color: var(--stone); }
+.m-execs { list-style: none; padding: 0; margin: 20px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; }
+.m-execs li { padding: 14px 0; border-top: 1px solid var(--rule); }
+.m-execs .n { display: block; font-family: var(--font-fraunces), Georgia, serif; font-size: 20px; font-weight: 500; color: var(--heading); }
+.m-execs .t { display: block; margin-top: 4px; font-size: 15px; line-height: 1.4; color: var(--stone); }
+.m-execs-h { margin-top: 36px; font: 600 12px/1 var(--font-mono), monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-deep); }
+.m-partners { list-style: none; padding: 0; margin: 20px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+.m-partners li { padding: 16px 0; border-top: 1px solid var(--rule); font-family: var(--font-fraunces), Georgia, serif; font-size: 22px; color: var(--heading); }
+@media (max-width: 900px) { .m-execs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .m-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .m-execs, .m-partners { grid-template-columns: 1fr; }
+  .m-recap li { font-size: 17px; }
+}
