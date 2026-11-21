@@ -3,7 +3,7 @@ import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Gallery } from '@/components/site/recap';
-import { COMPANY_LINE, STUDENTS, EXECUTIVES, STARTUPS, NETWORK_FORM_URL } from '@/data/recap';
+import { COMPANY_LINE, STUDENTS, EXECUTIVES, STARTUPS_WORD, NETWORK_FORM_URL } from '@/data/recap';
 
 export const metadata: Metadata = pageMeta(
   'For Students',
@@ -36,15 +36,15 @@ export default function StudentsPage() {
             <div className="m-three m-cards3">
               <div>
                 <h3>By Field</h3>
-                <p>Executives got to know students by field, in the work students are headed into.</p>
+                <p>Executives got to know students by field.</p>
               </div>
               <div>
                 <h3>Who You Are</h3>
-                <p>Executives got to know students for who they are, not their resume.</p>
+                <p>Executives got to know students for who they are, not their resumes.</p>
               </div>
               <div>
                 <h3>The Room, Reversed</h3>
-                <p>The executives worked the room, not the students. {STARTUPS} student startups pitched at Demo Day.</p>
+                <p>The executives worked the room, not the students. {STARTUPS_WORD} student startups pitched at Demo Day.</p>
               </div>
             </div>
           </div>

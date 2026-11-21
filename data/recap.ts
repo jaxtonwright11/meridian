@@ -7,6 +7,8 @@ export const COMPANY_LINE = 'Meridian is a company that connects executives with
 export const STUDENTS = 'close to 400';
 export const EXECUTIVES = 22;
 export const STARTUPS = 10;
+/** For the start of a sentence. */
+export const STARTUPS_WORD = 'Ten';
 export const PROOF_LINE = `Our first conference: ${STUDENTS} students and ${EXECUTIVES} executives at UCLA, in collaboration with USC.`;
 export const CONFERENCE_DATE = 'Saturday, November 14, 2026';
 

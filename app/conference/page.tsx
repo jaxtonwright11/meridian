@@ -3,7 +3,7 @@ import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { RecapLines, Gallery, ExecsInRoom, PartnerNames, NextSteps } from '@/components/site/recap';
-import { CONFERENCE_DATE, STUDENTS, EXECUTIVES, STARTUPS } from '@/data/recap';
+import { CONFERENCE_DATE, STUDENTS, EXECUTIVES, STARTUPS_WORD } from '@/data/recap';
 
 export const metadata: Metadata = pageMeta(
   'Our First Conference',
@@ -41,7 +41,7 @@ export default function ConferencePage() {
         <section className="m-section m-alt" id="demo-day" aria-labelledby="demo-h">
           <div className="m-wrap">
             <h2 id="demo-h" className="m-title">Demo Day</h2>
-            <p className="m-lead">{STARTUPS} student startups pitched at Demo Day.</p>
+            <p className="m-lead">{STARTUPS_WORD} student startups pitched at Demo Day.</p>
           </div>
         </section>
 

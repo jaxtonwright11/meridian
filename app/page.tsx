@@ -4,7 +4,7 @@ import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import { TeamStrip } from '@/components/site/parts';
 import { RecapLines, Gallery, ExecsInRoom, PartnerNames, NextSteps } from '@/components/site/recap';
-import { COMPANY_LINE, PROOF_LINE, PARTNER_MAILTO, NETWORK_FORM_URL, STARTUPS } from '@/data/recap';
+import { COMPANY_LINE, PROOF_LINE, PARTNER_MAILTO, NETWORK_FORM_URL, STARTUPS_WORD } from '@/data/recap';
 
 export const metadata: Metadata = { alternates: { canonical: '/' } };
 
@@ -52,7 +52,7 @@ export default function Home() {
         <section className="m-section" aria-labelledby="demo-h">
           <div className="m-wrap">
             <h2 id="demo-h" className="m-title">Demo Day</h2>
-            <p className="m-lead">{STARTUPS} student startups pitched at Demo Day.</p>
+            <p className="m-lead">{STARTUPS_WORD} student startups pitched at Demo Day.</p>
           </div>
         </section>
 

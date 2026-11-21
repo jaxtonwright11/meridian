@@ -33,15 +33,15 @@ export default function ExecutivesPage() {
 
         <section className="m-section m-alt" aria-labelledby="why-h">
           <div className="m-wrap">
-            <h2 id="why-h" className="m-title">What Executives Got</h2>
+            <h2 id="why-h" className="m-title">What Executives Get</h2>
             <div className="m-three m-cards3">
               <div>
                 <h3>Students in Your Field</h3>
-                <p>Executives met students by field, so each conversation opened on work they know.</p>
+                <p>At our first conference, executives got to know students by field.</p>
               </div>
               <div>
                 <h3>People, Not Resumes</h3>
-                <p>Executives got to know students for who they are, before a resume came into it.</p>
+                <p>Executives got to know students for who they are, not their resumes.</p>
               </div>
               <div>
                 <h3>You Work the Room</h3>
@@ -53,10 +53,10 @@ export default function ExecutivesPage() {
 
         <section className="m-section" aria-labelledby="format-h">
           <div className="m-wrap">
-            <h2 id="format-h" className="m-title">One Format, Any Field</h2>
+            <h2 id="format-h" className="m-title">A Format That Repeats</h2>
             <p className="m-lead">
-              Executives and students in one room, by field, face to face. The same format works in any
-              field and on any campus. Meridian is growing from here.
+              Executives and students meet by field, face to face, and the executives work the room.
+              Meridian is growing from here.
             </p>
           </div>
         </section>

@@ -32,19 +32,19 @@ export default function PartnersPage() {
 
         <section className="m-section m-alt" aria-labelledby="why-h">
           <div className="m-wrap">
-            <h2 id="why-h" className="m-title">Why Companies Partner</h2>
+            <h2 id="why-h" className="m-title">Why Partner With Meridian</h2>
             <div className="m-three m-cards3">
               <div>
                 <h3>Talent by Field</h3>
-                <p>Your executives meet students in the fields you hire for, in person.</p>
+                <p>At our first conference, executives got to know students by field, in person.</p>
               </div>
               <div>
                 <h3>Executives Work the Room</h3>
-                <p>Your people choose the conversations and get to know students for who they are, not their resume.</p>
+                <p>Executives worked the room and got to know students for who they are, not their resumes.</p>
               </div>
               <div>
-                <h3>A Format That Scales</h3>
-                <p>The same format runs in any field and on any campus, so a partnership grows with Meridian.</p>
+                <h3>Growing From Here</h3>
+                <p>Meridian is growing from here, and we are looking for companies to partner with.</p>
               </div>
             </div>
           </div>

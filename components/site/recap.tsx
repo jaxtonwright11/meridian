@@ -6,8 +6,8 @@ import {
 /** What happened on November 14, in a few short lines. */
 export const RECAP_LINES = [
   `On ${CONFERENCE_DATE}, ${STUDENTS} students and ${EXECUTIVES} executives met at UCLA, in collaboration with USC.`,
-  'Executives got to know students by field, for who they are and not their resume.',
-  'We reversed the conference: the executives worked the room, not the students.',
+  'Executives got to know students by field, for who they are and not their resumes.',
+  'We reversed the usual conference: the executives worked the room, not the students.',
 ];
 
 export function RecapLines() {
@@ -67,7 +67,7 @@ export function PartnerNames() {
 /** The three next steps, one per audience. */
 export function NextSteps() {
   const steps = [
-    { h: 'Companies and Executives', p: 'Meet students in your field, in person, through Meridian.', l: 'Partner with Meridian', href: PARTNER_MAILTO },
+    { h: 'Companies and Executives', p: 'Partner with Meridian to connect with the next generation of talent.', l: 'Partner with Meridian', href: PARTNER_MAILTO },
     { h: 'Students', p: 'Join the Meridian Network to hear from Meridian as it grows.', l: 'Join the Meridian Network', href: NETWORK_FORM_URL, ext: true },
     { h: 'The Team', p: 'Meridian is growing from here. Write to us about joining the team.', l: 'Join the team', href: JOIN_TEAM_MAILTO },
   ];
