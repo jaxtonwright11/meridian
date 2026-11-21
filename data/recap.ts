@@ -69,7 +69,7 @@ export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Kheris Rogers', title: "Founder, Flexin' In My Complexion", photo: ex('kheris-rogers'), alt: 'Kheris Rogers at the conference' },
   { name: 'Paul C. Pereira, JD', title: 'SVP, Patient Advocacy and Government Affairs, Ardelyx', zoom: true, photo: ex('paul-pereira'), alt: 'Paul C. Pereira on the screen, joining by Zoom' },
   { name: 'Dr. Naveen Vetcha', title: 'NASA Marshall Space Flight Center', zoom: true, photo: ex('naveen-vetcha'), alt: 'Dr. Naveen Vetcha on the screen, joining by Zoom, with the room watching' },
-  { name: 'David Meltzer', title: 'Co-founder and CEO, Sports 1 Marketing · Co-creator, Entrepreneur Elevator Pitch', zoom: true },
+  { name: 'David Meltzer', title: 'Co-founder and CEO, Sports 1 Marketing · Co-creator, Entrepreneur Elevator Pitch', zoom: true, photo: ex('david-meltzer'), alt: 'David Meltzer on the screen, joining by Zoom' },
 ];
 
 export interface Photo { src: string; alt: string }
