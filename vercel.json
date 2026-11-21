@@ -22,13 +22,6 @@
       }
     },
     {
-      "src": "^/past/?$",
-      "status": 307,
-      "headers": {
-        "Location": "/conference/"
-      }
-    },
-    {
       "src": "^/partners/directory/?$",
       "status": 307,
       "headers": {

@@ -3,7 +3,7 @@ import { COMPANY_LINE, EMAIL, INSTAGRAM, LINKEDIN } from '@/data/recap';
 
 const cols = [
   { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/']] },
-  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Contact', '/contact/']] },
+  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Before Meridian', '/past/'], ['Contact', '/contact/']] },
   { h: 'Legal', links: [['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
 ];
 

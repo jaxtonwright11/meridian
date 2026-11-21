@@ -13,7 +13,7 @@ const items = [
   { href: '/students/', label: 'Students', match: ['/students'] },
   { href: '/speakers/', label: 'Executives', match: ['/speakers'] },
   { href: '/partners/', label: 'Partners', match: ['/partners'] },
-  { href: '/about/', label: 'About', match: ['/about', '/team', '/contact'] },
+  { href: '/about/', label: 'About', match: ['/about', '/team', '/contact', '/past'] },
 ];
 
 export function Nav({ trail }: { trail?: { label: string; href?: string }[]; home?: boolean }) {

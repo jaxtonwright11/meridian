@@ -5,7 +5,7 @@ export const COMPANY_LINE = 'Meridian is a company that connects executives with
 
 /** The proof, in the one wording used everywhere. Always "close to 400". */
 export const STUDENTS = 'close to 400';
-export const EXECUTIVES = 22;
+export const EXECUTIVES = 20;
 export const STARTUPS = 10;
 /** For the start of a sentence. */
 export const STARTUPS_WORD = 'Ten';
@@ -24,12 +24,13 @@ export const JOIN_TEAM_MAILTO = mail('Join the Meridian team');
 export const EXECUTIVE_MAILTO = mail('Executive inquiry');
 export const NETWORK_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfMuxN5v5W0OFyd-kYbGzL34mjgU86VbuUHooODWJRyLFgK6Q/viewform';
 
-/** Partners. Names only, no logos. Ask Jax before adding the UCLA Career Center or the UCLA Black Alumni Association. */
+/** Partners. Names only, no logos. Never list the UCLA Black Alumni Association. */
 export const PARTNERS = [
   'USC Career Center',
   'USC Latino Alumni Association',
   'USC Neighborhood Academic Initiative',
   'USC Iovine and Young Academy',
+  'UCLA Career Center',
 ];
 
 export interface ExecInRoom { name: string; title: string; zoom?: boolean }
@@ -38,7 +39,6 @@ export interface ExecInRoom { name: string; title: string; zoom?: boolean }
  * Executives in the room on November 14. TODO(jax): confirm every name before this deploys.
  * Titles are reused from the site (the /nov14 page and data/leaders.ts). Never invent one:
  * an empty title is a TODO and renders as the name alone.
- * Jax's count is 22 executives; this list has 20 names. TODO(jax): the other two.
  */
 export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Tony Hsieh', title: 'Founder, Shriller Creates · Comedian and TEDx Speaker' },
@@ -51,12 +51,13 @@ export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Kheris Rogers', title: "Founder, Flexin' In My Complexion" },
   { name: 'Dr. Bob Dodge', title: 'President, Physicians for Social Responsibility Los Angeles' },
   { name: 'Carlos Gonzales', title: 'Vice President of Manufacturing, The Peggs Company' },
-  // TODO(jax): the site lists him as Anthony Mendoza. Which name should show?
-  { name: 'Tony Mendoza', title: 'VP of Candles, Bath & Body Works' },
+  // Name as on his Nov 14 tag. TODO(jax): confirm Anthony, not Tony.
+  { name: 'Anthony Mendoza', title: 'VP of Candles, Bath & Body Works' },
   { name: 'Chris Swain', title: 'Co-founder, EA Game Innovation Lab · USC Iovine and Young' },
   { name: 'Julian Lewis', title: 'Board Member, EnCorps' },
   { name: 'Dr. Ellen Junn', title: 'President Emerita, California State University, Stanislaus' },
-  { name: 'Dr. Ted Lawrence', title: 'Principal, Oxnard High School' },
+  // TODO(jax): his title. His Nov 14 tag says only "Ardelyx".
+  { name: 'Jamin Wright', title: 'Ardelyx' },
   { name: 'Dr. Yan Searcy', title: 'Dean, California State University, Northridge' },
   { name: 'Darren Prince', title: 'Founder and CEO, Prince Marketing Group · Sports and celebrity agent' },
   { name: 'Paul C. Pereira, JD', title: 'SVP, Patient Advocacy and Government Affairs, Ardelyx', zoom: true },

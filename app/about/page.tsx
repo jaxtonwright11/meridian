@@ -36,8 +36,8 @@ export default function AboutPage() {
                 <h2 id="founder-h" className="m-h2" style={{ marginBottom: 6 }}>Jaxton Wright</h2>
                 <p className="m-small" style={{ marginBottom: 18 }}>Founder</p>
                 <p className="m-lead">
-                  Jaxton Wright founded Meridian. He is a graduate of Oxnard High School and studies Honors
-                  Economics and Political Science at UC Berkeley. In July 2025, he spoke at Harvard.
+                  Jaxton Wright founded Meridian. He is a junior at UC Berkeley, studying Honors Economics
+                  and Political Science. In July 2025, he spoke at Harvard.
                 </p>
                 <p style={{ marginTop: 16, display: 'flex', gap: 24, flexWrap: 'wrap' }}>
                   <a className="m-link" href={FOUNDER_INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {FOUNDER_INSTAGRAM.handle}</a>
@@ -58,6 +58,7 @@ export default function AboutPage() {
               <a className="btn btn-tan" href="/team/">Meet the team</a>
               <a className="btn btn-ink" href={JOIN_TEAM_MAILTO}>Join the team</a>
             </p>
+            <p className="m-names"><a className="m-link" href="/past/">Before Meridian: December 2025</a></p>
           </div>
         </section>
       </main>

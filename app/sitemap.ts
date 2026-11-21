@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 const BASE = 'https://meridianventura.com';
 // Every public page. /dev/palettes is deliberately left out.
 const PATHS = [
-  '/', '/conference/', '/students/', '/speakers/', '/partners/', '/about/', '/team/',
+  '/', '/conference/', '/students/', '/speakers/', '/partners/', '/about/', '/team/', '/past/',
   '/contact/', '/terms/', '/privacy/', '/accessibility/',
 ];
 
