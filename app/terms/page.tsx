@@ -41,7 +41,7 @@ export default function TermsPage() {
 
                 <h2>2. Registration and Seats</h2>
                 <p>
-                  Seats are capped at 400 and given first come, first served. Each
+                  Seats are capped at 400. Each
                   attendee needs their own registration. Registration is confirmed by
                   email. If plans change, tell us so your seat can go to someone else.
                   We may decline or cancel a registration to keep the event safe and

@@ -31,8 +31,8 @@ const splineMono = Spline_Sans_Mono({
 // One canonical description everywhere (meta, og, twitter).
 const DESCRIPTION = `${COMPANY_LINE} ${PROOF_LINE}`;
 
-const HOME_TITLE = 'Meridian | Connecting Executives With Student Talent';
-const SHARE_TITLE = 'Meridian: Connecting Executives With Student Talent';
+const HOME_TITLE = 'Meridian | Connecting Executives With Screened Student Talent';
+const SHARE_TITLE = 'Meridian: Connecting Executives With Screened Student Talent';
 
 
 export const metadata: Metadata = {
