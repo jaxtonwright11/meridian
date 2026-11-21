@@ -1,13 +1,14 @@
 // Facts about Meridian and its first conference. Every page reads these, so a
 // change here changes the whole site. Use only facts Jax has confirmed.
 
-export const COMPANY_LINE = 'Meridian is a company that connects executives with the next generation of talent.';
+export const COMPANY_LINE = 'Meridian is a company that connects executives with student talent.';
 /** Footer tagline. */
-export const TAGLINE = 'A company that connects executives with the next generation of talent.';
+export const TAGLINE = 'A company that connects executives with student talent.';
 export const HEADLINE = 'Executives and students. Same room.';
 
-/** The proof, in the one wording used everywhere. Always "close to 400". */
-export const STUDENTS = 'close to 400';
+/** 400, everywhere, not "close to 400" (Jax, Nov 21). */
+export const STUDENTS = '400';
+export const STUDENTS_NUMBER = '400';
 export const EXECUTIVES = 20;
 export const STARTUPS = 12;
 export const PROOF_LINE = `Our first conference: ${STUDENTS} students and ${EXECUTIVES} executives at UCLA, in collaboration with USC.`;
@@ -108,11 +109,11 @@ export interface Startup {
 const d = (n: string) => `/opt/nov14/demo/${n}.webp`;
 export const STARTUPS_LIST: Startup[] = [
   { slug: 'cardiostat', name: 'Cardiostat', founders: 'Jonathan Chung and SJ Lim (UCLA)', line: 'One patch that reads the heart and delivers aspirin during a heart attack.',
-    photos: [{ src: d('cardiostat-1'), alt: 'The Cardiostat founders pitching on stage' }, { src: d('cardiostat-2'), alt: 'The Cardiostat founders on stage' }] },
+    photos: [{ src: d('cardiostat-3'), alt: 'A Cardiostat founder pitching with a microphone' }, { src: d('cardiostat-1'), alt: 'The two Cardiostat founders pitching on stage' }, { src: d('cardiostat-2'), alt: 'The Cardiostat founders on stage' }] },
   { slug: 'zesty', name: 'Zesty', founders: 'Delaney Duan, Boran Wang and William Zhang (UCLA)', line: 'An app that plans healthy meals students grew up on, with one-tap grocery ordering.',
     photos: [{ src: d('zesty-1'), alt: 'A Zesty founder pitching with a microphone' }, { src: d('zesty-2'), alt: 'The Zesty team on stage' }] },
   { slug: 'squaloo', name: 'Squaloo', founders: 'Marshal Aldoph (USC)', line: "Offline AI that keeps veteran technicians' know-how at the machine and shows where every answer came from.",
-    photos: [{ src: d('squaloo-1'), alt: 'The Squaloo founder pitching at the podium' }, { src: d('squaloo-2'), alt: 'The Squaloo founder smiling at the podium' }] },
+    photos: [{ src: d('squaloo-2'), alt: 'The Squaloo founder smiling at the podium' }, { src: d('squaloo-1'), alt: 'The Squaloo founder pitching at the podium' }] },
   { slug: 'nyc-esports', name: 'NYC High School Esports League', founders: 'Edison Zhong (USC), pitched by Zoom', line: 'A high school esports league in New York City.', photos: [] },
   { slug: 'cat-counselor', name: 'Cat Counselor', founders: 'Yin Qiao Zhang (USC) and team', line: 'A cozy mobile game that turns anxiety-coping worksheets into minigames.',
     photos: [{ src: d('cat-counselor-1'), alt: 'The Cat Counselor founder pitching at the podium, with a slide beside her' }, { src: d('cat-counselor-2'), alt: 'The Cat Counselor pitch, seen from the side of the stage' }] },

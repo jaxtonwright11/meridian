@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { SITE_NAME } from '@/config';
 import { JOIN_TEAM_MAILTO } from '@/data/recap';
 
-// Header on every page: wordmark, four sections, Join the team.
+// Header on every page: wordmark, four sections, Contact us and Join the team.
 // Desktop: the sections sit in the header. Phones: the header keeps the wordmark and
 // Join the team, and the sections show as a row of tabs under it.
 const items = [
@@ -39,9 +39,10 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
           <a className="m-logo" href="/" aria-label={`${SITE_NAME} home`}>
             {SITE_NAME}<span>.</span>
           </a>
-          <a className="v-btn v-btn-head m-register" href={JOIN_TEAM_MAILTO}>
-            Join the team
-          </a>
+          <span className="v-head-actions">
+            <a className="v-btn v-btn-head v-btn-line" href="/contact/">Contact us</a>
+            <a className="v-btn v-btn-head" href={JOIN_TEAM_MAILTO}>Join the team</a>
+          </span>
           <nav className="m-nav" aria-label="Main">
             {items.map((i) => (
               <a key={i.href} className="m-navlink" href={i.href} aria-current={isCurrent(i.match) ? 'page' : undefined}>

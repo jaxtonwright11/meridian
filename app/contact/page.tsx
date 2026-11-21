@@ -4,6 +4,7 @@ import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { JoinTeam, PartnerLine } from '@/components/site/recap';
 import { EMAIL, INSTAGRAM, LINKEDIN } from '@/data/recap';
+import { ContactForm } from '@/components/ContactForm';
 
 export const metadata: Metadata = pageMeta(
   'Contact',
@@ -19,8 +20,9 @@ export default function ContactPage() {
         <section className="v-section v-top">
           <div className="v-wrap">
             <p className="v-eyebrow">Contact</p>
-            <h1 className="v-h1">Write to us.</h1>
-            <p className="v-lead"><a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
+            <h1 className="v-h1">Contact us.</h1>
+            <p className="v-lead">Send a message here, or write to <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.</p>
+            <ContactForm />
             <p className="v-links">
               <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {INSTAGRAM.handle}</a>
               <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn</a>

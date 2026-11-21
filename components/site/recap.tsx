@@ -1,5 +1,5 @@
 import {
-  EXECS_IN_ROOM, PARTNERS, ALSO_NOV14, WORKED_WITH, PHOTOS, PHOTO_CREDIT, STUDENTS, EXECUTIVES, STARTUPS,
+  EXECS_IN_ROOM, PARTNERS, ALSO_NOV14, WORKED_WITH, PHOTOS, PHOTO_CREDIT, STUDENTS, STUDENTS_NUMBER, EXECUTIVES, STARTUPS,
   CONFERENCE_DATE, JOIN_TEAM_MAILTO, JOIN_TEAM_LINE, PARTNER_LINE, EMAIL, EXEC_GROUP_PHOTO, TEAM_PHOTO,
   FOUNDER_LINE, ORIGIN_STORY, FOUNDER_INSTAGRAM, LINKEDIN, type ExecInRoom,
 } from '@/data/recap';
@@ -13,9 +13,8 @@ export const RECAP_LINES = [
 
 /** The three numbers. */
 export function Proof() {
-  const cap = STUDENTS.charAt(0).toUpperCase() + STUDENTS.slice(1);
   const items = [
-    { n: cap, l: 'students' },
+    { n: STUDENTS_NUMBER, l: 'students' },
     { n: String(EXECUTIVES), l: 'executives' },
     { n: String(STARTUPS), l: 'student startups' },
   ];
