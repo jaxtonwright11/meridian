@@ -1,40 +1,39 @@
-import { PRESS_URL } from '@/data/press';
-import { CONTACT_EMAIL_PUBLIC, INSTAGRAM_URL, SITE_NAME } from '@/config';
+import { SITE_NAME } from '@/config';
+import { TAGLINE, EMAIL, INSTAGRAM, LINKEDIN, PARTNERS } from '@/data/recap';
 
 const cols = [
-  { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/'], ['About', '/about/']] },
-  { h: 'Conference', links: [['Who Is Joining', '/leaders/'], ['Demo Day', '/demo-day/'], ['FAQ', '/faq/']] },
-  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Past Events', '/past/'], ['Press', PRESS_URL], ['Investors', '/contact/#investors'], ['Contact', '/contact/']] },
-  { h: 'Legal', links: [['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
+  { h: 'Meridian', links: [['About', '/about/'], ['November 14', '/conference/'], ['Demo Day', '/demo-day/'], ['Team', '/team/']] },
+  { h: 'More', links: [['Before Meridian', '/past/'], ['Contact', '/contact/'], ['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
 ];
 
 export function Footer() {
   return (
     <footer className="m-footer">
       <div className="m-wrap">
-        <div className="m-fgrid">
+        <div className="m-fgrid v-fgrid">
           <div>
             <a className="m-logo" href="/">{SITE_NAME}<span>.</span></a>
-            <p style={{ marginTop: 12, color: '#C9B79C', fontSize: 15 }}>
-              Students and executives, together in person, by field.
+            <p className="v-foot-tag">{TAGLINE}</p>
+            <p className="v-foot-contact">
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a><br />
+              <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {INSTAGRAM.handle}</a><br />
+              <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </p>
-            <p style={{ marginTop: 14, fontSize: 15 }}>
-              <a href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>{CONTACT_EMAIL_PUBLIC}</a>
-            </p>
-            {INSTAGRAM_URL && (
-              <p style={{ marginTop: 6, fontSize: 15 }}>
-                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">@meridianconference</a>
-              </p>
-            )}
           </div>
           {cols.map((c) => (
             <div key={c.h}>
               <h3>{c.h}</h3>
               <ul>
-                {c.links.map(([l, h]) => (<li key={h}><a href={h} {...(h.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}>{l}</a></li>))}
+                {c.links.map(([l, h]) => (<li key={h}><a href={h}>{l}</a></li>))}
               </ul>
             </div>
           ))}
+          <div>
+            <h3>Partners</h3>
+            <ul className="v-foot-names">
+              {PARTNERS.map((p) => (<li key={p}>{p}</li>))}
+            </ul>
+          </div>
         </div>
         <div className="m-fbottom">
           <span>&copy; {new Date().getFullYear()} {SITE_NAME}</span>

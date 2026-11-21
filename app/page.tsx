@@ -2,94 +2,81 @@ import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
-import {
-  Doors, Spotlight, LeadersBand, TeamStrip, PartnerList,
-  PressLinks, RegisterButton,
-} from '@/components/site/parts';
-import { FirstMeridian } from '@/components/FirstMeridian';
-import { CONTACT_EMAIL_PUBLIC, EVENT_DATE_SHORT, EVENT_OVER } from '@/config';
-import { press } from '@/data/press';
+import { Proof, ExecGrid, Gallery, PartnersBlock, FounderStory, JoinTeam, PartnerLine } from '@/components/site/recap';
+import { DemoDay } from '@/components/site/DemoDay';
+import { COMPANY_LINE, PROOF_LINE, HEADLINE, ROOM_PHOTO, STARTUPS, EXECUTIVES } from '@/data/recap';
 
 export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 export default function Home() {
   return (
-    <div className="m-page">
+    <div className="m-page v-page">
       <MovedAnchors />
       <Nav />
       <main id="main">
-        {/* 1. Hero */}
-        <section className="m-hero m-hero-home">
-          <div className="m-wrap">
-            <h1>CEOs Come to You.</h1>
-            <p className="m-sub">
-              Meridian brings <strong>executives</strong> and <strong>students</strong> together.{' '}
-              {EVENT_OVER
-                ? <>Our first <a className="m-sublink" href="/conference/">conference</a> took place at UCLA on November 14.</>
-                : <>We start with a <a className="m-sublink" href="/conference/">conference</a> at UCLA on November 14.</>}
-            </p>
-            <div className="m-actions">
-              <RegisterButton>Register for Nov. 14</RegisterButton>
-              <a className="btn btn-tan" href="/partners/">Partner With Us</a>
+        <section className="v-hero" aria-labelledby="hero-h">
+          <picture>
+            <source media="(max-width: 700px)" srcSet={ROOM_PHOTO.small} />
+            <img className="v-hero-img" src={ROOM_PHOTO.src} alt={ROOM_PHOTO.alt} width={1800} height={1200} fetchPriority="high" />
+          </picture>
+          <div className="v-hero-text">
+            <div className="v-wrap">
+              <h1 id="hero-h" className="v-h1">{HEADLINE}</h1>
+              <p className="v-hero-sub">{COMPANY_LINE} {PROOF_LINE}</p>
             </div>
           </div>
         </section>
 
-        {/* 2. Leaders proof band */}
-        <LeadersBand />
+        <section className="v-band" aria-label="In numbers">
+          <div className="v-wrap"><Proof /></div>
+        </section>
 
-        <TeamStrip />
-
-        {/* What is Meridian: what the company does, with links into the pages that explain each part. */}
-        <section className="m-section m-alt" id="what-is-meridian" aria-labelledby="what-h">
-          <div className="m-wrap m-what">
-            <h2 id="what-h" className="m-title">What Is Meridian?</h2>
-            <p className="m-whatp">
-              Meridian brings executives and students together in person, by field. It begins with
-              the <a href="/conference/">November 14 conference</a>, where executives from every field
-              come to get to know students. After November 14, Meridian creates <a href="/partners/">hackathon-style
-              events for executives and students</a>. We are building software that matches students
-              with opportunities that fit them. Everyone who attends joins the Meridian network.
-            </p>
-            <Spotlight />
+        <section className="v-section" id="executives" aria-labelledby="execs-h">
+          <div className="v-wrap">
+            <p className="v-eyebrow">November 14, 2026 · UCLA</p>
+            <h2 id="execs-h" className="v-h2">Executives in the room</h2>
+            <p className="v-lead">{EXECUTIVES} executives came to get to know students for who they are, not their resumes.</p>
+            <ExecGrid />
           </div>
         </section>
 
-        {/* 3. Three doors */}
-        <section className="m-section"><Doors /></section>
+        <section className="v-section v-tint" id="demo-day" aria-labelledby="demo-h">
+          <div className="v-wrap">
+            <h2 id="demo-h" className="v-h2">Demo Day</h2>
+            <p className="v-lead">{STARTUPS} student startups pitched, in this order.</p>
+          </div>
+          <DemoDay carousel />
+        </section>
 
-        {/* 8. Who is working with us */}
-        <section className="m-section">
-          <div className="m-wrap">
-            <PartnerList home />
-            <p className="m-actions"><a className="btn btn-tan" href="/partners/directory/">See all partners</a></p>
+        <section className="v-section" aria-labelledby="photos-h">
+          <div className="v-wrap">
+            <h2 id="photos-h" className="v-h2">The day</h2>
+            <Gallery />
           </div>
         </section>
 
-        {/* In the press */}
-        {press.length > 0 && (
-          <section className="m-section">
-            <div className="m-wrap">
-              <h2 className="m-title">In the Press</h2>
-              <PressLinks />
-            </div>
-          </section>
-        )}
-
-        {/* 10. The first Meridian */}
-        <FirstMeridian />
-
-        {/* 12. Closing band */}
-        <section className="m-section">
-          <div className="m-wrap">
-            <div className="m-closing">
-              <h2 className="m-title" style={{ marginBottom: 8 }}>Questions?</h2>
-              <div className="m-actions">
-                <a className="btn btn-ink" href={`mailto:${CONTACT_EMAIL_PUBLIC}`}>Write to us</a>
-                <a className="btn btn-tan" href="/faq/">Read the FAQ</a>
-              </div>
-            </div>
+        <section className="v-section v-tint" id="partners" aria-labelledby="partners-h">
+          <div className="v-wrap">
+            <h2 id="partners-h" className="v-h2">Partners and organizations</h2>
+            <PartnersBlock />
           </div>
+        </section>
+
+        <section className="v-section" id="founder" aria-labelledby="founder-h">
+          <div className="v-wrap">
+            <h2 id="founder-h" className="v-h2">The founder</h2>
+            <FounderStory />
+          </div>
+        </section>
+
+        <section className="v-section v-tint" aria-labelledby="join-h">
+          <div className="v-wrap">
+            <JoinTeam />
+          </div>
+        </section>
+
+        <section className="v-section v-section-quiet" aria-label="For companies and organizations">
+          <div className="v-wrap"><PartnerLine /></div>
         </section>
       </main>
       <Footer />
