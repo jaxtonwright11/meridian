@@ -1,9 +1,9 @@
 // Facts about Meridian and its first conference. Every page reads these, so a
 // change here changes the whole site. Use only facts Jax has confirmed.
 
-export const COMPANY_LINE = 'Meridian is a company that connects executives with screened student talent.';
+export const COMPANY_LINE = 'Meridian is a company that connects executives with top student talent.';
 /** Footer tagline. */
-export const TAGLINE = 'A company that connects executives with screened student talent.';
+export const TAGLINE = 'A company that connects executives with top student talent.';
 export const HEADLINE = 'Executives and students. Same room.';
 
 /** 400, everywhere, not "close to 400" (Jax, Nov 21). */
