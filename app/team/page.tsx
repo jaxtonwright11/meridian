@@ -2,49 +2,46 @@ import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { JOIN_TEAM_MAILTO } from '@/data/recap';
+import { JoinTeam } from '@/components/site/recap';
+import { TEAM_PHOTO } from '@/data/recap';
 import { founder, team, detailLines } from '@/data/team';
 
 export const metadata: Metadata = pageMeta(
   'Team',
-  'The team behind Meridian, across UCLA, USC, and UC Berkeley.',
+  'The team behind Meridian.',
   '/team/',
 );
 
 export default function TeamPage() {
   return (
-    <div className="m-page">
-      <Nav trail={[{ label: 'About', href: '/about/' }, { label: 'Team' }]} />
+    <div className="m-page v-page">
+      <Nav />
       <main id="main">
-        <section className="m-hero" style={{ paddingBottom: 32 }}>
-          <div className="m-wrap">
-            <h1>The Team</h1>
-            <p className="m-lead" style={{ marginTop: 16 }}>A team across UCLA, USC, and UC Berkeley.</p>
+        <section className="v-section v-top">
+          <div className="v-wrap">
+            <p className="v-eyebrow">Team</p>
+            <h1 className="v-h1">The team behind Meridian.</h1>
+            <img className="v-wide" src={TEAM_PHOTO.src} alt={TEAM_PHOTO.alt} width={1320} height={950} />
           </div>
         </section>
-        <section className="m-section">
-          <div className="m-wrap">
-            <h2 className="sr-only">Team members</h2>
-            <div className="m-cards">
+        <section className="v-section" aria-label="Team members">
+          <div className="v-wrap">
+            <ul className="v-grid v-grid-3">
               {[founder, ...team].map((m) => (
-                <article className="m-card" key={m.slug}>
-                  <img src={m.photo} alt={m.name} width={400} height={400} loading="lazy" />
-                  <h3>{m.linkedin ? <a className="m-namelink" href={m.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`}>{m.name}</a> : m.name}</h3>
-                  <p className="m-role">{m.role}</p>
-                  {detailLines(m).map((l) => (<p className="m-dl" key={l}>{l}</p>))}
-                  {m.approved && m.bio && <p style={{ marginTop: 10 }}>{m.bio}</p>}
-                  {m.slug === 'jaxton-wright' && <p style={{ marginTop: 10 }}><a className="m-link" href="/about/#founder">About the founder</a></p>}
-                </article>
+                <li className="v-card" key={m.slug}>
+                  <img className="v-card-img" src={m.photo} alt={m.name} width={640} height={640} loading="lazy" />
+                  <h2 className="v-card-name">
+                    {m.linkedin ? <a href={m.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${m.name} on LinkedIn`}>{m.name}</a> : m.name}
+                  </h2>
+                  <p className="v-card-title">{m.role}</p>
+                  {detailLines(m).length > 0 && <p className="v-card-sub">{detailLines(m).join(' · ')}</p>}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
-        <section className="m-section m-alt" aria-labelledby="join-h">
-          <div className="m-wrap">
-            <h2 id="join-h" className="m-title">Join the Team</h2>
-            <p className="m-lead">Meridian is growing from here. Write to us about joining the team.</p>
-            <div className="m-actions"><a className="btn btn-ink" href={JOIN_TEAM_MAILTO}>Join the team</a></div>
-          </div>
+        <section className="v-section v-tint" aria-labelledby="join-h">
+          <div className="v-wrap"><JoinTeam photo={false} /></div>
         </section>
       </main>
       <Footer />

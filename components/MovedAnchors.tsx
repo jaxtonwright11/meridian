@@ -6,13 +6,11 @@ import { useEffect } from 'react';
 // (for example meridianventura.com/#founder) must still resolve.
 const MOVED: Record<string, string> = {
   mission: '/about/',
-  founder: '/about/#founder',
   beyond: '/conference/',
   'the-day': '/conference/',
   faq: '/contact/',
   'getting-there': '/conference/',
-  partners: '/partners/',
-  speakers: '/conference/#executives',
+  speakers: '/#executives',
 };
 
 export function MovedAnchors() {

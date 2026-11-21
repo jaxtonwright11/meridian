@@ -1,27 +1,22 @@
 import { SITE_NAME } from '@/config';
-import { COMPANY_LINE, EMAIL, INSTAGRAM, LINKEDIN } from '@/data/recap';
+import { TAGLINE, EMAIL, INSTAGRAM, LINKEDIN, PARTNERS } from '@/data/recap';
 
 const cols = [
-  { h: 'Meridian', links: [['Conference', '/conference/'], ['Students', '/students/'], ['Executives', '/speakers/'], ['Partners', '/partners/']] },
-  { h: 'Company', links: [['About', '/about/'], ['Team', '/team/'], ['Before Meridian', '/past/'], ['Contact', '/contact/']] },
-  { h: 'Legal', links: [['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
+  { h: 'Meridian', links: [['About', '/about/'], ['November 14', '/conference/'], ['Demo Day', '/demo-day/'], ['Team', '/team/']] },
+  { h: 'More', links: [['Before Meridian', '/past/'], ['Contact', '/contact/'], ['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
 ];
 
 export function Footer() {
   return (
     <footer className="m-footer">
       <div className="m-wrap">
-        <div className="m-fgrid">
+        <div className="m-fgrid v-fgrid">
           <div>
             <a className="m-logo" href="/">{SITE_NAME}<span>.</span></a>
-            <p style={{ marginTop: 12, color: '#C9B79C', fontSize: 15 }}>{COMPANY_LINE}</p>
-            <p style={{ marginTop: 14, fontSize: 15 }}>
-              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-            </p>
-            <p style={{ marginTop: 6, fontSize: 15 }}>
-              <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {INSTAGRAM.handle}</a>
-            </p>
-            <p style={{ marginTop: 6, fontSize: 15 }}>
+            <p className="v-foot-tag">{TAGLINE}</p>
+            <p className="v-foot-contact">
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a><br />
+              <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {INSTAGRAM.handle}</a><br />
               <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </p>
           </div>
@@ -33,6 +28,12 @@ export function Footer() {
               </ul>
             </div>
           ))}
+          <div>
+            <h3>Partners</h3>
+            <ul className="v-foot-names">
+              {PARTNERS.map((p) => (<li key={p}>{p}</li>))}
+            </ul>
+          </div>
         </div>
         <div className="m-fbottom">
           <span>&copy; {new Date().getFullYear()} {SITE_NAME}</span>
