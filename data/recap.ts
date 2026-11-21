@@ -52,7 +52,7 @@ export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Tony Hsieh', title: 'Founder, Shriller Creative; comedian and TEDx speaker', photo: ex('tony-hsieh'), alt: 'Tony Hsieh at the conference' },
   { name: 'Troy Palmquist', title: 'Founder, HomeCode Advisors', photo: ex('troy-palmquist'), alt: 'Troy Palmquist talking with students' },
   { name: 'Michael Kang', title: 'Graduate Director of Film and Television Production, LMU School of Film and Television', photo: ex('michael-kang'), alt: 'Michael Kang talking with students' },
-  { name: 'Dr. Shanna Shaked', title: 'Director, UCLA Learning Assistant Program; Senior Associate Director, UCLA CEILS', photo: ex('shanna-shaked'), alt: 'Dr. Shanna Shaked at a table at the conference' },
+  { name: 'Dr. Shanna Shaked', title: 'Director, UCLA Learning Assistant Program; Senior Associate Director, UCLA CEILS', photo: ex('shanna-shaked'), alt: 'Dr. Shanna Shaked smiling, on stage with the other executives' },
   { name: 'Jody Stiger', title: 'Deputy Chief, Administrative Services Division, LA Metro Police Department of Public Safety', photo: ex('jody-stiger'), alt: 'Jody Stiger in conversation at the conference' },
   { name: 'Joe Killinger', title: 'Co-founder, Commercial Brokers International', photo: ex('joe-killinger'), alt: 'Joe Killinger at the conference' },
   { name: 'David Lash', title: "Managing Counsel for Pro Bono and Public Interest Services, O'Melveny & Myers", photo: ex('david-lash'), alt: 'David Lash talking with students' },
