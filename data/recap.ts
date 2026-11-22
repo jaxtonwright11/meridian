@@ -55,12 +55,12 @@ const ex = (slug: string) => `/opt/nov14/exec/${slug}.webp`;
  * Executives, in the order Jax set (Nov 22). Titles match the stage slides: use them exactly.
  * Portraits where we have one, otherwise the best photo from the day. No "by Zoom" label.
  * Kheris Rogers attended but is not listed (Jax, Nov 22).
- * TODO(jax): headshots still needed for David Meltzer, Anthony Mendoza, Dr. Shanna Shaked, Julian Lewis.
+ * TODO(jax): headshots still wanted for Anthony Mendoza and Dr. Shanna Shaked.
+ * David Meltzer and Troy Palmquist: portraits supplied by Jax (Nov 22).
  */
 export const EXECS_IN_ROOM: ExecInRoom[] = [
+  { name: 'David Meltzer', title: 'Co-founder and CEO, Sports 1 Marketing · Co-creator, Entrepreneur Elevator Pitch', photo: ex('david-meltzer'), alt: 'David Meltzer' },
   { name: 'Darren Prince', title: 'Founder and CEO, Prince Marketing Group; sports and celebrity agent', photo: ex('darren-prince'), alt: 'Darren Prince' },
-  // No headshot yet: shows initials until Jax sends one. Second so the top-left card has a face.
-  { name: 'David Meltzer', title: 'Co-founder and CEO, Sports 1 Marketing · Co-creator, Entrepreneur Elevator Pitch' },
   { name: 'Chris Swain', title: 'Co-founder, EA Game Innovation Lab; USC Iovine and Young Academy', photo: '/opt/people/chris-swain.webp', alt: 'Chris Swain' },
   { name: 'Anthony Mendoza', title: 'VP of Candles, Bath & Body Works', photo: ex('anthony-mendoza'), alt: 'Anthony Mendoza' },
   { name: 'Carlos Gonzales', title: 'Vice President of Manufacturing, The Peggs Company', photo: ex('carlos-gonzales'), alt: 'Carlos Gonzales' },
@@ -75,7 +75,7 @@ export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Michael Kang', title: 'Graduate Director of Film and Television Production, LMU School of Film and Television', photo: '/opt/people/michael-kang.webp', alt: 'Michael Kang' },
   { name: 'Dr. Shanna Shaked', title: 'Director, UCLA Learning Assistant Program; Senior Associate Director, UCLA CEILS', photo: ex('shanna-shaked'), alt: 'Dr. Shanna Shaked' },
   { name: 'Jamin Wright', title: 'Associate Director, Talent Acquisition, Ardelyx', photo: ex('jamin-wright'), alt: 'Jamin Wright' },
-  { name: 'Troy Palmquist', title: 'Founder, HomeCode Advisors', photo: '/opt/people/troy-palmquist.webp', alt: 'Troy Palmquist' },
+  { name: 'Troy Palmquist', title: 'Founder, HomeCode Advisors', photo: ex('troy-palmquist'), alt: 'Troy Palmquist' },
   { name: 'Tony Hsieh', title: 'Founder, Shriller Creative; comedian and TEDx speaker', photo: '/opt/people/tony-shriller.webp', alt: 'Tony Hsieh' },
   { name: 'Julian Lewis', title: 'Board Member, EnCorps', photo: ex('julian-lewis'), alt: 'Julian Lewis' },
 ];
