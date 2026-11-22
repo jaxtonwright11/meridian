@@ -128,8 +128,9 @@ export const STARTUPS_LIST: Startup[] = [
     photos: [{ src: d('squaloo-2'), alt: 'The Squaloo founder smiling at the podium' }, { src: d('squaloo-1'), alt: 'The Squaloo founder pitching at the podium' }] },
   { slug: 'cat-counselor', name: 'Cat Counselor', founders: 'Yin Qiao Zhang (USC) and team', line: 'A cozy mobile game that turns anxiety-coping worksheets into minigames.',
     photos: [{ src: d('cat-counselor-1'), alt: 'The Cat Counselor founder pitching at the podium, with a slide beside her' }, { src: d('cat-counselor-2'), alt: 'The Cat Counselor pitch, seen from the side of the stage' }] },
-  // The founders are high school students: never their names or photos.
-  { slug: 'safe-pulse', name: 'Safe Pulse', line: 'A wristband that helps caregivers look after people living with dementia.', photos: [] },
+  // Photos cleared by Jax (Nov 22): the founders and families are fine with them. Names still not published.
+  { slug: 'safe-pulse', name: 'Safe Pulse', line: 'A wristband that helps caregivers look after people living with dementia.',
+    photos: [{ src: d('safe-pulse-1'), alt: 'The Safe Pulse team pitching on stage' }, { src: d('safe-pulse-2'), alt: 'The Safe Pulse team on stage beside the podium' }] },
   { slug: 'project-play', name: 'Project Play', founders: 'Rila He (USC)', line: 'Gets you playing your favorite song in under 15 minutes.',
     photos: [{ src: d('project-play-1'), alt: 'The Project Play founder pitching, holding a small keyboard' }, { src: d('project-play-2'), alt: 'The Project Play founder at the microphone' }] },
   { slug: 'blendwell', name: 'BlendWell', founders: 'Ian Robinson', line: "A smoothie app that builds blends from what's already in your kitchen and your goals.",
