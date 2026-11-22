@@ -975,7 +975,7 @@ button.v-demo-photo { cursor: pointer; }
 @media (min-width: 701px) { .v-wide-short { aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 42%; } }
 @media (min-width: 901px) { .m-header .v-head-actions { order: 3; margin-left: 10px; } }
 .v-names-2 { margin-top: 20px; }
-.v-names-2 li { display: flex; flex-wrap: wrap; gap: 2px 14px; align-items: baseline; }
+.v-names-2 li { display: flex; flex-direction: column; gap: 2px; }
 .v-names-2 li span { font-size: 16px; color: var(--v-soft); }
 
 /* Founder. */
@@ -1043,3 +1043,36 @@ button.v-demo-photo { cursor: pointer; }
 .v-founder-name { margin: 0 0 10px; font-family: var(--font-fraunces), Georgia, serif; font-weight: 500; font-size: 26px; color: var(--v-ink); }
 .v-page .v-credit a { font-weight: 600; }
 .v-credit a { display: inline-block; padding: 6px 0; }
+
+/* Nov 22 (handoff): contact select, centred last row, partner logos, company section, footer on phones */
+.v-form select { width: 100%; min-height: 48px; padding: 12px 40px 12px 14px; border: 1px solid #A8895C; border-radius: 8px; color: var(--v-ink); font: inherit; font-size: 16px; appearance: none; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%237A4F1C' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center; }
+.v-form select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+/* Executive grid: flex so a short last row sits in the middle instead of leaving a hole. */
+.v-grid.v-grid-center { display: flex; flex-wrap: wrap; justify-content: center; }
+.v-grid.v-grid-center > li { width: calc((100% - 14px) / 2); }
+@media (min-width: 701px) { .v-grid.v-grid-center > li { width: calc((100% - 44px) / 3); } }
+@media (min-width: 1000px) { .v-grid.v-grid-center > li { width: calc((100% - 72px) / 4); } }
+
+/* Team page: the photo and the cards were two full sections apart. */
+.v-section.v-tight-top { padding-top: 0; }
+
+/* Footer on phones: Meridian and More side by side; the brand block and Partners span both columns. */
+@media (max-width: 700px) {
+  .m-footer .m-fgrid.v-fgrid { grid-template-columns: 1fr 1fr; gap: 24px 20px; }
+  .m-footer .m-fgrid.v-fgrid > div:first-child, .m-footer .m-fgrid.v-fgrid > div:last-child { grid-column: 1 / -1; }
+  .m-footer .v-fgrid li { margin-bottom: 0; }
+}
+
+/* Partner logos: one tile each, the organization's name under it. */
+.v-logos { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; }
+@media (min-width: 701px) { .v-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px 20px; } }
+@media (min-width: 1000px) { .v-logos { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.v-logo { display: flex; flex-direction: column; gap: 8px; }
+.v-logo-box { display: flex; align-items: center; justify-content: center; height: 104px; padding: 18px 20px; border-radius: 10px; background: #fff; border: 1px solid var(--rule); }
+.v-logo-dark .v-logo-box { background: #3B2A18; border-color: #3B2A18; }
+.v-logo-box img { display: block; max-width: 86%; max-height: 50px; width: auto; height: auto; object-fit: contain; }
+.v-logo-name { font-size: 14.5px; line-height: 1.35; color: var(--v-ink); }
+@media (max-width: 700px) { .v-logo-box { height: 84px; padding: 14px; } .v-logo-box img { max-height: 40px; } }
+.v-logo-small .v-logo-box img { max-height: 34px; }
+@media (max-width: 700px) { .v-logo-small .v-logo-box img { max-height: 28px; } }

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { JoinTeam, PartnerLine } from '@/components/site/recap';
+import { JoinTeam } from '@/components/site/recap';
 import { EMAIL, INSTAGRAM, LINKEDIN } from '@/data/recap';
 import { ContactForm } from '@/components/ContactForm';
 
@@ -25,15 +25,12 @@ export default function ContactPage() {
             <ContactForm />
             <p className="v-links">
               <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {INSTAGRAM.handle}</a>
-              <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn (Jaxton Wright)</a>
             </p>
           </div>
         </section>
         <section className="v-section v-tint" aria-labelledby="join-h">
           <div className="v-wrap"><JoinTeam photo={false} /></div>
-        </section>
-        <section className="v-section v-section-quiet" aria-label="For companies and organizations">
-          <div className="v-wrap"><PartnerLine /></div>
         </section>
       </main>
       <Footer />

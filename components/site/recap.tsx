@@ -1,6 +1,6 @@
 import {
   EXECS_IN_ROOM, PARTNERS, PHOTOS, PHOTOGRAPHERS, STUDENTS, EXECUTIVES, STARTUPS,
-  CONFERENCE_DATE, JOIN_TEAM_MAILTO, JOIN_TEAM_LINE, PARTNER_LINE, EMAIL, TEAM_PHOTO,
+  CONFERENCE_DATE, JOIN_TEAM_MAILTO, JOIN_TEAM_LINE, EMAIL, TEAM_PHOTO, CONTACT_COMPANY,
   FOUNDER_BIO, FOUNDER_INSTAGRAM, LINKEDIN, type ExecInRoom,
 } from '@/data/recap';
 
@@ -26,10 +26,10 @@ function ExecCard({ e }: { e: ExecInRoom }) {
   );
 }
 
-/** The executives: one card each, in the order set in the data file. */
+/** The executives: one card each, in the order set in the data file. A short last row is centred. */
 export function ExecGrid() {
   return (
-    <ul className="v-grid">
+    <ul className="v-grid v-grid-center">
       {EXECS_IN_ROOM.map((e) => (<ExecCard e={e} key={e.name} />))}
     </ul>
   );
@@ -64,10 +64,20 @@ export function Gallery({ limit, credit = true }: { limit?: number; credit?: boo
   );
 }
 
-/** Partners: one list of names. */
+/**
+ * Partners: each organization's own logo, unedited, with its name under it (four share a
+ * USC or UCLA parent logo, so the name is what tells them apart). White logos sit on a dark tile.
+ */
 export function PartnersBlock() {
   return (
-    <ul className="v-names v-names-cols">{PARTNERS.map((p) => (<li key={p}>{p}</li>))}</ul>
+    <ul className="v-logos">
+      {PARTNERS.map((p) => (
+        <li key={p.name} className={['v-logo', p.dark && 'v-logo-dark', p.small && 'v-logo-small'].filter(Boolean).join(' ')}>
+          <span className="v-logo-box"><img src={p.logo} alt="" width={p.w} height={p.h} loading="lazy" /></span>
+          <span className="v-logo-name">{p.name}</span>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -102,11 +112,12 @@ export function JoinTeam({ photo = true }: { photo?: boolean }) {
   );
 }
 
-/** One quiet line for companies. Never a button. */
+/** One quiet closing line for companies. Never a "partner with us" button. */
 export function PartnerLine() {
   return (
     <p className="v-quiet">
-      {PARTNER_LINE} <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+      Companies and organizations: get in touch at <a href={`mailto:${EMAIL}`}>{EMAIL}</a> or
+      through the <a href={CONTACT_COMPANY}>contact form</a>.
     </p>
   );
 }

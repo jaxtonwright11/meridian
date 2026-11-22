@@ -6,7 +6,7 @@ export const COMPANY_LINE = 'Meridian is a company that connects executives with
 export const TAGLINE = 'A company that connects executives with top student talent.';
 export const HEADLINE = 'Meridian connects executives with top student talent.';
 /** What Meridian does, in two sentences. Company first, not conference first. */
-export const WHAT_LINE = 'Meridian reverses the usual conference. Executives come to the students and get to know them for who they are, not their resumes.';
+export const WHAT_LINE = 'Meridian brings executives to students. They meet in person, by field, and executives get to know students for who they are, not their resumes.';
 
 /** 400, everywhere, not "close to 400" (Jax, Nov 21). */
 export const STUDENTS = '400';
@@ -22,28 +22,40 @@ export const INSTAGRAM = { handle: '@meridianventura', url: 'https://www.instagr
 export const FOUNDER_INSTAGRAM = { handle: '@jaxtonwright', url: 'https://www.instagram.com/jaxtonwright/' };
 export const LINKEDIN = { label: 'linkedin.com/in/jaxtonwright', url: 'https://www.linkedin.com/in/jaxtonwright/' };
 
-const mail = (subject: string) => `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}`;
-export const JOIN_TEAM_MAILTO = mail('Joining the Meridian team');
+const mail = (subject: string, body?: string) =>
+  `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}${body ? `&body=${encodeURIComponent(body)}` : ''}`;
+export const JOIN_TEAM_MAILTO = mail('Joining the Meridian team', 'Name:\nSchool and year:\nWhat I would like to work on:\n');
 export const JOIN_TEAM_LINE = "We're building the team. If you want to be part of what Meridian does next, write to us.";
-/** The one quiet line for companies. Never a button. */
-export const PARTNER_LINE = "Companies and organizations that want to be part of what's next:";
+/** Contact form links that preselect who is writing (read by the form from ?as=). */
+export const CONTACT_COMPANY = '/contact/?as=company';
+export const CONTACT_EXECUTIVE = '/contact/?as=executive';
+/** Home: the short section for companies, after the partners. */
+export const WORK_WITH_LINE = 'Companies and organizations work with Meridian to meet students in person, by field. If your team wants to be part of what Meridian does next, write to us.';
+/** Home: one line under the executive grid. */
+export const EXEC_LINE = 'Executives who want to take part, or know a colleague who should, can reach us here.';
 
-/** Partners: one list, names only, no logos (Jax, Nov 22). Never list the UCLA Black Alumni Association. */
-export const PARTNERS = [
-  'USC Career Center',
-  'USC Latino Alumni Association',
-  'USC Neighborhood Academic Initiative',
-  'USC Iovine and Young Academy',
-  'UCLA Career Center',
-  'UCLA SOLE',
-  'UCLA Undergraduate Research Center',
-  'UCLA Design Media Arts',
-  'Petersen Automotive Museum',
-  'Bruin Formula Racing',
-  'Las Fotos Project',
-  'EnCorps',
-  'Youth Cinema Project',
-  'General Atomics',
+/**
+ * Partners: each organization's own logo file, unedited (sources in the "Asset sources" doc in
+ * Drive, Nov 22). `dark`: the logo is white, so it sits on a dark tile. `small`: a bare wordmark, drawn smaller so it doesn't outweigh the rest. Four share a USC or UCLA
+ * parent logo, so every tile shows the name too. Never list the UCLA Black Alumni Association.
+ */
+export interface Partner { name: string; logo: string; w: number; h: number; dark?: boolean; small?: boolean }
+const lg = (f: string) => `/logos/${f}`;
+export const PARTNERS: Partner[] = [
+  { name: 'USC Career Center', logo: lg('usc-career-center.png'), w: 340, h: 109 },
+  { name: 'USC Latino Alumni Association', logo: lg('usc-latino-alumni-association.svg'), w: 379, h: 84, dark: true },
+  { name: 'USC Neighborhood Academic Initiative', logo: lg('usc-neighborhood-academic-initiative.png'), w: 340, h: 109 },
+  { name: 'USC Iovine and Young Academy', logo: lg('usc-iovine-young-academy.svg'), w: 517, h: 116, dark: true },
+  { name: 'UCLA Career Center', logo: lg('ucla-career-center.svg'), w: 133, h: 43, dark: true, small: true },
+  { name: 'UCLA SOLE', logo: lg('ucla-sole.svg'), w: 339, h: 86, dark: true },
+  { name: 'UCLA Undergraduate Research Center', logo: lg('ucla-undergraduate-research-center.png'), w: 456, h: 70 },
+  { name: 'UCLA Design Media Arts', logo: lg('ucla-design-media-arts.svg'), w: 133, h: 43, dark: true, small: true },
+  { name: 'Petersen Automotive Museum', logo: lg('petersen-automotive-museum.png'), w: 1500, h: 227 },
+  { name: 'Bruin Formula Racing', logo: lg('bruin-formula-racing.svg'), w: 2713, h: 1915 },
+  { name: 'Las Fotos Project', logo: lg('las-fotos-project.png'), w: 1899, h: 631, dark: true },
+  { name: 'EnCorps', logo: lg('encorps.png'), w: 560, h: 143 },
+  { name: 'Youth Cinema Project', logo: lg('youth-cinema-project.png'), w: 327, h: 93 },
+  { name: 'General Atomics', logo: lg('general-atomics.svg'), w: 422, h: 65, dark: true },
 ];
 /** The five shown in the footer. */
 export const PARTNERS_SHORT = PARTNERS.slice(0, 5);
@@ -94,14 +106,12 @@ export const TEAM_PHOTO: Photo = { src: '/opt/nov14/team.webp', alt: 'Six member
 /** Gallery, in order. Real, unaltered photos from November 14, from Jax's own shortlist. Full rooms only. */
 const g = (n: string) => `/opt/nov14/day/${n}.webp`;
 export const PHOTOS: Photo[] = [
-  { src: g('founder-room'), alt: 'Jaxton Wright on stage, speaking to a full room' },
-  { src: g('mendoza-students'), alt: 'An executive talking with students in a crowded room' },
   { src: g('room-back'), alt: 'The full room from the back, during Dr. Bob Dodge\'s talk' },
   { src: g('team-laughing'), alt: 'Two members of the Meridian team laughing, with the crowd behind them' },
   { src: g('tony-crowd'), alt: 'Tony Hsieh talking with students by the windows' },
-  { src: g('founder-podium'), alt: 'Jaxton Wright at the podium, with students and executives below' },
   { src: g('dodge-story'), alt: 'Dr. Bob Dodge telling a story to a student' },
   { src: g('kang-student'), alt: 'Michael Kang in conversation with a student' },
+  { src: g('founder-room'), alt: 'Jaxton Wright on stage, speaking to a full room' },
 ];
 
 /** Photographers, each name linked. TODO(jax): confirm Catherine's link (her portfolio; no LinkedIn found). */
@@ -144,7 +154,7 @@ export const STARTUPS_LIST: Startup[] = [
   { slug: 'papertok', name: 'PaperTok', founders: 'Pablo Presa Carrera (USC Iovine and Young Academy)', line: 'Scientific papers in one short-form, scrollable feed.',
     link: { label: 'papertok.app', url: 'https://papertok.app' },
     photos: [{ src: d('papertok-1'), alt: 'The PaperTok founder pitching on stage beside his slide' }, { src: d('papertok-2'), alt: 'The PaperTok founder at the podium' }] },
-  { slug: 'nyc-esports', name: 'NYC High School Esports League', founders: 'Edison Zhong (USC)', line: 'A high school esports league in New York City.', photos: [] },
+  { slug: 'nyc-esports', name: 'NYC High School Esports League', founders: 'Edison Zhong (USC)', line: 'A high school esports league in New York City.', photos: [{ src: d('edison-zhong'), alt: 'Edison Zhong, founder of NYC High School Esports League' }] },
 ];
 
 /** Founder bio: the wording from before the rewrite, restored (Jax, Nov 22). Its later sentences were about plans for November 14 and are left out. */

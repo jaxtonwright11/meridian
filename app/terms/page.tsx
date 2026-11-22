@@ -8,7 +8,7 @@ import styles from './terms.module.css';
 
 export const metadata: Metadata = pageMeta(
   'Terms for the November 14, 2026 Event',
-  'Meridian Conference event terms and code of conduct: registration, photo and video, sharing your ask, communications, attendees under 18, accessibility, and safety.',
+  'Meridian event terms and code of conduct: registration, photo and video, sharing your ask, communications, attendees under 18, accessibility, and safety.',
   '/terms/',
 );
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMeta(
 export default function TermsPage() {
   return (
     <>
-      <Nav home={false} />
+      <Nav trail={[{ label: 'Meridian', href: '/' }, { label: 'Terms' }]} />
       <main id="main" className={styles.main}>
         <section className={styles.section}>
           <div className="container">
@@ -26,7 +26,7 @@ export default function TermsPage() {
               <p className="eyebrow">Terms for the November 14, 2026 event</p>
               <h1 className={styles.headline}>Event Terms and Code of Conduct</h1>
               <p className={styles.meta}>
-                Applies to Meridian Conference on {EVENT_DATE} at {EVENT_VENUE}, Los
+                Applies to the Meridian conference on {EVENT_DATE} at {EVENT_VENUE}, Los
                 Angeles, in person and on Zoom. Last updated October 16, 2026. The event has
                 taken place. These terms are kept as a record.
               </p>
@@ -34,7 +34,7 @@ export default function TermsPage() {
               <div className={styles.body}>
                 <h2>1. The Event</h2>
                 <p>
-                  Meridian Conference is run by Meridian Conference. The event is free. There is no
+                  The event is run by Meridian. The event is free. There is no
                   ticket, no fee, and nothing sold. Attending, whether in person or on
                   Zoom, means you agree to these terms.
                 </p>
@@ -112,7 +112,7 @@ export default function TermsPage() {
                 <h2>10. Assumption of Risk</h2>
                 <p>
                   You attend at your own risk. To the fullest extent permitted by law,
-                  Meridian Conference, its organizers, volunteers, partners, and the
+                  Meridian, its organizers, volunteers, partners, and the
                   venue are not liable for personal injury, or for loss or damage to
                   personal property, arising from your attendance, except where caused
                   by their own negligence or misconduct.

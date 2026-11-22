@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
-import { ExecGrid, Gallery, PartnersBlock, FounderStory, JoinTeam, PartnerLine } from '@/components/site/recap';
-import { HEADLINE, WHAT_LINE, ROOM_PHOTO, STUDENTS, EXECUTIVES, STARTUPS, CONFERENCE_DATE } from '@/data/recap';
+import { ExecGrid, Gallery, PartnersBlock, FounderStory, JoinTeam } from '@/components/site/recap';
+import {
+  HEADLINE, WHAT_LINE, ROOM_PHOTO, STUDENTS, EXECUTIVES, STARTUPS, CONFERENCE_DATE,
+  EXEC_LINE, WORK_WITH_LINE, CONTACT_COMPANY, CONTACT_EXECUTIVE,
+} from '@/data/recap';
 
 export const metadata: Metadata = { alternates: { canonical: '/' } };
 
@@ -50,8 +53,11 @@ export default function Home() {
         <section className="v-section v-tint" id="executives" aria-labelledby="execs-h">
           <div className="v-wrap">
             <h2 id="execs-h" className="v-h2">Executives</h2>
-            <p className="v-lead">The executives who came to get to know students.</p>
+            <p className="v-lead">Executives who met students on November 14.</p>
             <ExecGrid />
+            <p className="v-quiet v-after">
+              {EXEC_LINE} <a href={CONTACT_EXECUTIVE}>Get in touch</a>
+            </p>
           </div>
         </section>
 
@@ -68,6 +74,14 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="v-section" id="work-with" aria-labelledby="work-h">
+          <div className="v-wrap">
+            <h2 id="work-h" className="v-h2">Working with Meridian</h2>
+            <p className="v-lead">{WORK_WITH_LINE}</p>
+            <p><a className="v-btn" href={CONTACT_COMPANY}>Get in touch</a></p>
+          </div>
+        </section>
+
         <section className="v-section" id="founder" aria-labelledby="founder-h">
           <div className="v-wrap">
             <h2 id="founder-h" className="v-h2">The founder</h2>
@@ -78,7 +92,6 @@ export default function Home() {
         <section className="v-section v-tint" aria-labelledby="join-h">
           <div className="v-wrap">
             <JoinTeam />
-            <div className="v-after"><PartnerLine /></div>
           </div>
         </section>
       </main>
