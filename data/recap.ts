@@ -56,9 +56,9 @@ export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Jody Stiger', title: 'Deputy Chief, Administrative Services Division, LA Metro Police Department of Public Safety', photo: ex('jody-stiger'), alt: 'Jody Stiger in conversation at the conference' },
   { name: 'Joe Killinger', title: 'Co-founder, Commercial Brokers International', photo: ex('joe-killinger'), alt: 'Joe Killinger at the conference' },
   { name: 'David Lash', title: "Managing Counsel for Pro Bono and Public Interest Services, O'Melveny & Myers", photo: ex('david-lash'), alt: 'David Lash talking with students' },
-  { name: 'Dr. Bob Dodge', title: 'President, Physicians for Social Responsibility Los Angeles', photo: ex('bob-dodge'), alt: 'Dr. Bob Dodge talking with a student' },
+  { name: 'Dr. Bob Dodge', title: 'President, Physicians for Social Responsibility Los Angeles', photo: ex('bob-dodge'), alt: 'Dr. Bob Dodge in conversation at the conference' },
   { name: 'Carlos Gonzales', title: 'Vice President of Manufacturing, The Peggs Company', photo: ex('carlos-gonzales'), alt: 'Carlos Gonzales at the conference' },
-  { name: 'Anthony Mendoza', title: 'VP of Candles, Bath & Body Works', photo: ex('anthony-mendoza'), alt: 'Anthony Mendoza talking with a student' },
+  { name: 'Anthony Mendoza', title: 'VP of Candles, Bath & Body Works', photo: ex('anthony-mendoza'), alt: 'Anthony Mendoza smiling at the conference' },
   { name: 'Chris Swain', title: 'Co-founder, EA Game Innovation Lab; USC Iovine and Young Academy', photo: ex('chris-swain'), alt: 'Chris Swain at the conference' },
   { name: 'Julian Lewis', title: 'Board Member, EnCorps', photo: ex('julian-lewis'), alt: 'Julian Lewis at a table with students' },
   { name: 'Dr. Ellen Junn', title: 'Former President, California State University, Stanislaus', photo: ex('ellen-junn'), alt: 'Dr. Ellen Junn speaking with a microphone' },
@@ -66,11 +66,11 @@ export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Dr. Yan Searcy', title: 'Dean, California State University, Northridge', photo: '/opt/people/yan-searcy.webp', alt: 'Dr. Yan Searcy' },
   // Portrait supplied by Jax (not from the day).
   { name: 'Darren Prince', title: 'Founder and CEO, Prince Marketing Group; sports and celebrity agent', photo: ex('darren-prince'), alt: 'Darren Prince' },
-  { name: 'Jamin Wright', title: 'Associate Director, Talent Acquisition, Ardelyx', photo: ex('jamin-wright'), alt: 'Jamin Wright talking with students' },
+  { name: 'Jamin Wright', title: 'Associate Director, Talent Acquisition, Ardelyx', photo: ex('jamin-wright'), alt: 'Jamin Wright at the conference' },
   // Last of the in-person cards, by request (Jax, Nov 21).
   { name: 'Kheris Rogers', title: "Founder, Flexin' In My Complexion", photo: ex('kheris-rogers'), alt: 'Kheris Rogers at the conference' },
   { name: 'Paul C. Pereira, JD', title: 'SVP, Patient Advocacy and Government Affairs, Ardelyx', zoom: true, photo: ex('paul-pereira'), alt: 'Paul C. Pereira on the screen, joining by Zoom' },
-  { name: 'Dr. Naveen Vetcha', title: 'NASA Marshall Space Flight Center', zoom: true, photo: ex('naveen-vetcha'), alt: 'Dr. Naveen Vetcha on the screen, joining by Zoom, with the room watching' },
+  { name: 'Dr. Naveen Vetcha', title: 'NASA Marshall Space Flight Center', zoom: true, photo: ex('naveen-vetcha'), alt: 'Dr. Naveen Vetcha on the screen, joining by Zoom' },
   { name: 'David Meltzer', title: 'Co-founder and CEO, Sports 1 Marketing · Co-creator, Entrepreneur Elevator Pitch', zoom: true, photo: ex('david-meltzer'), alt: 'David Meltzer on the screen, joining by Zoom' },
 ];
 
