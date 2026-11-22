@@ -1,10 +1,51 @@
 # Prompt: gather assets and review meridianventura.com
 
-Copy everything below the line into a new Claude chat that has Google Drive and web search connected. It does two jobs: Part A collects headshots and logos, Part B reviews the whole site.
+Copy everything below the line into a new Claude chat that has Google Drive and web search connected. It starts with a site brief, then does three jobs: Part A collects headshots and logos, Part B reviews the whole site, Part C turns everything into a to-do list.
 
 ---
 
-I run Meridian (meridianventura.com), a company that connects executives with top student talent. I need two things from you: (A) research and collect image files for the website into my Google Drive, and (B) a full quality review of the site. Do the research yourself; do not ask me for links.
+I run Meridian (meridianventura.com), a company that connects executives with top student talent. I need three things from you: (A) research and collect image files for the website into my Google Drive, (B) a full quality review of the site, and (C) a prioritized to-do list built from both. Read the site brief below first. Do the research yourself; do not ask me for links.
+
+# Site brief (read this first; it is the source of truth for Parts A to C)
+
+## What the site is for
+
+meridianventura.com is the public face of Meridian, a company that connects executives with top student talent. Its job is to make a busy executive or a company decide, in under a minute on a phone, that Meridian is credible and worth replying to, and then make replying effortless. Everything else is secondary.
+
+## Tone
+
+- Confident, plain and specific. Short sentences. Proof over adjectives.
+- A company, not a student club: no exclamation marks, no hype, no "we're so excited", no begging for support.
+- Let the evidence do the selling: real names and titles of the executives who came, real photos, real partners, real numbers (400 students, 20 executives, 12 startups).
+- Never sound like a one-off event. November 14 was the first conference; Meridian is the company.
+
+## Current structure (as of Nov 22, 2026)
+
+- **Header:** Meridian wordmark; tabs About, November 14, Demo Day, Team; buttons "Contact us" and "Join the team".
+- **Home (= About):** full-room hero photo with the headline "Meridian connects executives with top student talent." Then "What Meridian does" next to a two-line summary of the first conference (links to November 14 and Demo Day). Then the executive grid (19 headshots in a set order of prominence). Then four photos of the day, a list of 14 partners, the founder (photo and short bio), "Join the team" with a team photo, and one quiet line with the email for companies.
+- **November 14:** what happened on the day, a large room photo, a gallery of 8 photos with photographer credits, partners.
+- **Demo Day:** 12 student startup cards (photo, founders, one line each); photos open in a viewer.
+- **Team:** team photo and team cards.
+- **Contact:** a short form (name, email, company or school, message) and the email address.
+- **Before Meridian:** a December 2025 event the founder ran before founding Meridian. Linked only from the footer.
+- **Footer:** tagline, email, Instagram, LinkedIn, page links, five main partners.
+
+## The audiences, what we want each to do, and what exists today
+
+| Priority | Audience | What we want them to do | How the site should get them there | What exists today | Known gap |
+|---|---|---|---|---|---|
+| 1 | Companies and organizations (potential partners) | Email or message Meridian to talk about partnering on what comes next | Impress fast (executive names, partners, the full room), then one obvious, low-effort way to reach out | "Contact us" header button to a form; one line with the email at the bottom of the home page | No partner-specific call to action or short "why partner" framing; partner logos missing |
+| 2 | Executives | Get in touch to take part next time, or refer a colleague | Peer proof (who already came, with titles), a sense of how little it asks of them, and a one-step way to say "count me in" | Same generic "Contact us" | No executive-specific line or button; nothing says what taking part involves |
+| 3 | Students | Stay connected with Meridian and hear about what is next | A clear way to join something | Nothing student-facing today: the earlier student sign-up link was removed | **Meridian needs an actual network** (for example a Slack community, or a simple member list or software) before the site can offer "join the network". Note this as a project, not a site fix. |
+| 4 | People who want to join the Meridian team | Write to us about joining | "Join the team" button in the header and a section on the home page | Both open an email to the founder with a preset subject | Says nothing about roles or what joining involves |
+
+## Things that are decided (do not suggest reversing them)
+
+- The home page is the About page and is about the company, not the conference.
+- No number band (400 / 20 / 12) as a standalone strip; the numbers live in sentences.
+- No "partner with us" or "sponsor" buttons; the site attracts, it does not ask. A quiet line or a "Contact us" path is fine.
+- Executives are shown with professional headshots, without any "by Zoom" label.
+- Contact email for everything public: jaxtonwright11@berkeley.edu.
 
 # Part A: collect headshots and logos
 
@@ -140,4 +181,24 @@ Create a Google Doc named **"Website review"** in the "Meridian website review (
 3. **Photo notes**: every photo you would replace, with the reason.
 4. **Questions for me**: anything you could not judge without more information.
 
-Then reply with links to both folders, a short summary of Part A (found and not found), and the top 5 fixes from Part B.
+Then move on to Part C.
+
+# Part C: the to-do list
+
+Using the site brief, Part A and Part B, create a Google Doc named **"Website to-do list"** in the "Meridian website review (Nov 2026)" folder. It is the working list I will hand back to the developer, so make every item concrete and doable.
+
+Organize it in this order:
+
+1. **Per audience** (companies, executives, students, people joining the team): the single next action we want from them, the exact wording for the button or line that asks for it, where on the site it goes, and what happens when they click (form, email with a preset subject, or a page). Keep each path to as few steps as possible for a busy executive.
+2. **Site fixes**, each as a checkbox line with:
+   - priority: **P1** (do before sharing the site widely), **P2** (this week), **P3** (nice to have)
+   - the page and section
+   - the change, with exact replacement copy where it is a wording change
+   - the asset needed, if any (and whether Part A found it)
+3. **Assets still missing** after Part A: who or what, and where I might get it.
+4. **Projects beyond the website**, kept separate from site fixes. Include, at minimum: **build the Meridian network** (decide between a Slack community, a simple member directory, or software; what it needs to launch; and only then add a "join the network" call to action to the site). Add any other project the review shows is needed (for example a one-page partner overview to send to companies).
+5. **Decisions for me**: questions only I can answer, each with your recommended answer.
+
+Do not include anything that breaks the hard rules in Part B or reverses a decision in the site brief.
+
+When you are done, reply with links to both folders and the three docs, a short summary of Part A (found and not found), and the top 5 items from the to-do list.
