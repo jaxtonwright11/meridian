@@ -1,6 +1,13 @@
 {
   "routes": [
     {
+      "src": "^/about/?$",
+      "status": 307,
+      "headers": {
+        "Location": "/"
+      }
+    },
+    {
       "src": "^/students/?$",
       "status": 307,
       "headers": {

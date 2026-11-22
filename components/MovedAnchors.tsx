@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 // Sections that used to live on the home page. Previously shared deep links
 // (for example meridianventura.com/#founder) must still resolve.
 const MOVED: Record<string, string> = {
-  mission: '/about/',
+  mission: '/#about',
   beyond: '/conference/',
   'the-day': '/conference/',
   faq: '/contact/',

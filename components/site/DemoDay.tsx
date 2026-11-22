@@ -132,7 +132,7 @@ export function DemoDay({ carousel = false }: { carousel?: boolean }) {
   }
 
   return (
-    <div className="v-demo" role="group" aria-roledescription="carousel" aria-label={`${TOTAL} student startups, in pitch order`}>
+    <div className="v-demo" role="group" aria-roledescription="carousel" aria-label={`${TOTAL} student startups`}>
       <div
         className="v-demo-track"
         ref={track}

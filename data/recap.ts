@@ -4,7 +4,9 @@
 export const COMPANY_LINE = 'Meridian is a company that connects executives with top student talent.';
 /** Footer tagline. */
 export const TAGLINE = 'A company that connects executives with top student talent.';
-export const HEADLINE = 'Executives and students. Same room.';
+export const HEADLINE = 'Meridian connects executives with top student talent.';
+/** What Meridian does, in two sentences. Company first, not conference first. */
+export const WHAT_LINE = 'Meridian reverses the usual conference. Executives come to the students and get to know them for who they are, not their resumes.';
 
 /** 400, everywhere, not "close to 400" (Jax, Nov 21). */
 export const STUDENTS = '400';
@@ -26,52 +28,56 @@ export const JOIN_TEAM_LINE = "We're building the team. If you want to be part o
 /** The one quiet line for companies. Never a button. */
 export const PARTNER_LINE = "Companies and organizations that want to be part of what's next:";
 
-/** Partners. Names only, no logos. Never list the UCLA Black Alumni Association. */
+/** Partners: one list, names only, no logos (Jax, Nov 22). Never list the UCLA Black Alumni Association. */
 export const PARTNERS = [
   'USC Career Center',
   'USC Latino Alumni Association',
   'USC Neighborhood Academic Initiative',
   'USC Iovine and Young Academy',
   'UCLA Career Center',
+  'UCLA SOLE',
+  'UCLA Undergraduate Research Center',
+  'UCLA Design Media Arts',
+  'Petersen Automotive Museum',
+  'Bruin Formula Racing',
+  'Las Fotos Project',
+  'EnCorps',
+  'Youth Cinema Project',
+  'General Atomics',
 ];
-export const ALSO_NOV14 = ['Petersen Automotive Museum', 'Bruin Formula Racing', 'Las Fotos Project'];
-export const WORKED_WITH = [
-  'LA Clippers Foundation', 'UCLA SOLE', 'UCLA Undergraduate Research Center', 'UCLA Design Media Arts',
-  '826LA', 'I Have A Dream Foundation LA', 'EnCorps', 'Project ECHO', 'Youth Cinema Project', 'HOPE',
-  'Vital Teens', 'Trojan Marketing Group', 'General Atomics',
-];
+/** The five shown in the footer. */
+export const PARTNERS_SHORT = PARTNERS.slice(0, 5);
 
-export interface ExecInRoom { name: string; title: string; zoom?: boolean; photo?: string; alt?: string }
+export interface ExecInRoom { name: string; title: string; photo?: string; alt?: string }
 const ex = (slug: string) => `/opt/nov14/exec/${slug}.webp`;
 
 /**
- * The 20 executives at the conference. Titles match the stage slides (Jax, Nov 21): use them
- * exactly. Photos are from the day. No photo means the card shows initials.
+ * Executives, in the order Jax set (Nov 22). Titles match the stage slides: use them exactly.
+ * Portraits where we have one, otherwise the best photo from the day. No "by Zoom" label.
+ * Kheris Rogers attended but is not listed (Jax, Nov 22).
+ * TODO(jax): headshots still wanted for Anthony Mendoza and Dr. Shanna Shaked.
+ * David Meltzer and Troy Palmquist: portraits supplied by Jax (Nov 22).
  */
 export const EXECS_IN_ROOM: ExecInRoom[] = [
-  { name: 'Tony Hsieh', title: 'Founder, Shriller Creative; comedian and TEDx speaker', photo: ex('tony-hsieh'), alt: 'Tony Hsieh at the conference' },
-  { name: 'Troy Palmquist', title: 'Founder, HomeCode Advisors', photo: ex('troy-palmquist'), alt: 'Troy Palmquist talking with students' },
-  { name: 'Michael Kang', title: 'Graduate Director of Film and Television Production, LMU School of Film and Television', photo: ex('michael-kang'), alt: 'Michael Kang talking with students' },
-  { name: 'Dr. Shanna Shaked', title: 'Director, UCLA Learning Assistant Program; Senior Associate Director, UCLA CEILS', photo: ex('shanna-shaked'), alt: 'Dr. Shanna Shaked smiling, on stage with the other executives' },
-  { name: 'Jody Stiger', title: 'Deputy Chief, Administrative Services Division, LA Metro Police Department of Public Safety', photo: ex('jody-stiger'), alt: 'Jody Stiger in conversation at the conference' },
-  { name: 'Joe Killinger', title: 'Co-founder, Commercial Brokers International', photo: ex('joe-killinger'), alt: 'Joe Killinger at the conference' },
-  { name: 'David Lash', title: "Managing Counsel for Pro Bono and Public Interest Services, O'Melveny & Myers", photo: ex('david-lash'), alt: 'David Lash talking with students' },
-  { name: 'Dr. Bob Dodge', title: 'President, Physicians for Social Responsibility Los Angeles', photo: ex('bob-dodge'), alt: 'Dr. Bob Dodge in conversation at the conference' },
-  { name: 'Carlos Gonzales', title: 'Vice President of Manufacturing, The Peggs Company', photo: ex('carlos-gonzales'), alt: 'Carlos Gonzales at the conference' },
-  { name: 'Anthony Mendoza', title: 'VP of Candles, Bath & Body Works', photo: ex('anthony-mendoza'), alt: 'Anthony Mendoza smiling at the conference' },
-  { name: 'Chris Swain', title: 'Co-founder, EA Game Innovation Lab; USC Iovine and Young Academy', photo: ex('chris-swain'), alt: 'Chris Swain at the conference' },
-  { name: 'Julian Lewis', title: 'Board Member, EnCorps', photo: ex('julian-lewis'), alt: 'Julian Lewis at a table with students' },
-  { name: 'Dr. Ellen Junn', title: 'Former President, California State University, Stanislaus', photo: ex('ellen-junn'), alt: 'Dr. Ellen Junn speaking with a microphone' },
-  // No photo from the day for Dr. Searcy: his portrait from the earlier site.
-  { name: 'Dr. Yan Searcy', title: 'Dean, California State University, Northridge', photo: '/opt/people/yan-searcy.webp', alt: 'Dr. Yan Searcy' },
-  // Portrait supplied by Jax (not from the day).
+  { name: 'David Meltzer', title: 'Co-founder and CEO, Sports 1 Marketing · Co-creator, Entrepreneur Elevator Pitch', photo: ex('david-meltzer'), alt: 'David Meltzer' },
   { name: 'Darren Prince', title: 'Founder and CEO, Prince Marketing Group; sports and celebrity agent', photo: ex('darren-prince'), alt: 'Darren Prince' },
-  { name: 'Jamin Wright', title: 'Associate Director, Talent Acquisition, Ardelyx', photo: ex('jamin-wright'), alt: 'Jamin Wright at the conference' },
-  // Last of the in-person cards, by request (Jax, Nov 21).
-  { name: 'Kheris Rogers', title: "Founder, Flexin' In My Complexion", photo: ex('kheris-rogers'), alt: 'Kheris Rogers at the conference' },
-  { name: 'Paul C. Pereira, JD', title: 'SVP, Patient Advocacy and Government Affairs, Ardelyx', zoom: true, photo: ex('paul-pereira'), alt: 'Paul C. Pereira on the screen, joining by Zoom' },
-  { name: 'Dr. Naveen Vetcha', title: 'NASA Marshall Space Flight Center', zoom: true, photo: ex('naveen-vetcha'), alt: 'Dr. Naveen Vetcha on the screen, joining by Zoom' },
-  { name: 'David Meltzer', title: 'Co-founder and CEO, Sports 1 Marketing · Co-creator, Entrepreneur Elevator Pitch', zoom: true, photo: ex('david-meltzer'), alt: 'David Meltzer on the screen, joining by Zoom' },
+  { name: 'Chris Swain', title: 'Co-founder, EA Game Innovation Lab; USC Iovine and Young Academy', photo: '/opt/people/chris-swain.webp', alt: 'Chris Swain' },
+  { name: 'Anthony Mendoza', title: 'VP of Candles, Bath & Body Works', photo: ex('anthony-mendoza'), alt: 'Anthony Mendoza' },
+  { name: 'Carlos Gonzales', title: 'Vice President of Manufacturing, The Peggs Company', photo: ex('carlos-gonzales'), alt: 'Carlos Gonzales' },
+  { name: 'Paul C. Pereira, JD', title: 'SVP, Patient Advocacy and Government Affairs, Ardelyx', photo: '/opt/people/paul-pereira.webp', alt: 'Paul C. Pereira, JD' },
+  { name: 'Dr. Naveen Vetcha', title: 'NASA Marshall Space Flight Center', photo: '/opt/people/naveen-vetcha.webp', alt: 'Dr. Naveen Vetcha' },
+  { name: 'Joe Killinger', title: 'Co-founder, Commercial Brokers International', photo: '/opt/people/joe-killinger.webp', alt: 'Joe Killinger' },
+  { name: 'Jody Stiger', title: 'Deputy Chief, Administrative Services Division, LA Metro Police Department of Public Safety', photo: ex('jody-stiger'), alt: 'Jody Stiger' },
+  { name: 'Dr. Ellen Junn', title: 'Former President, California State University, Stanislaus', photo: '/opt/people/ellen-junn.webp', alt: 'Dr. Ellen Junn' },
+  { name: 'Dr. Bob Dodge', title: 'President, Physicians for Social Responsibility Los Angeles', photo: '/opt/people/bob-dodge.webp', alt: 'Dr. Bob Dodge' },
+  { name: 'David Lash', title: "Managing Counsel for Pro Bono and Public Interest Services, O'Melveny & Myers", photo: ex('david-lash'), alt: 'David Lash' },
+  { name: 'Dr. Yan Searcy', title: 'Dean, California State University, Northridge', photo: '/opt/people/yan-searcy.webp', alt: 'Dr. Yan Searcy' },
+  { name: 'Michael Kang', title: 'Graduate Director of Film and Television Production, LMU School of Film and Television', photo: '/opt/people/michael-kang.webp', alt: 'Michael Kang' },
+  { name: 'Dr. Shanna Shaked', title: 'Director, UCLA Learning Assistant Program; Senior Associate Director, UCLA CEILS', photo: ex('shanna-shaked'), alt: 'Dr. Shanna Shaked' },
+  { name: 'Jamin Wright', title: 'Associate Director, Talent Acquisition, Ardelyx', photo: ex('jamin-wright'), alt: 'Jamin Wright' },
+  { name: 'Troy Palmquist', title: 'Founder, HomeCode Advisors', photo: ex('troy-palmquist'), alt: 'Troy Palmquist' },
+  { name: 'Tony Hsieh', title: 'Founder, Shriller Creative; comedian and TEDx speaker', photo: '/opt/people/tony-shriller.webp', alt: 'Tony Hsieh' },
+  { name: 'Julian Lewis', title: 'Board Member, EnCorps', photo: ex('julian-lewis'), alt: 'Julian Lewis' },
 ];
 
 export interface Photo { src: string; alt: string }
@@ -85,22 +91,27 @@ export const ROOM_PHOTO = {
 export const EXEC_GROUP_PHOTO: Photo = { src: '/opt/nov14/exec-group.webp', alt: 'Executives from the conference standing together on stage' };
 export const TEAM_PHOTO: Photo = { src: '/opt/nov14/team.webp', alt: 'Six members of the Meridian team at the conference' };
 
-/** Gallery, in order. Real, unaltered photos from November 14. No photo features a high school student. */
-const g = (n: string) => `/opt/nov14/gallery/${n}.webp`;
+/** Gallery, in order. Real, unaltered photos from November 14, from Jax's own shortlist. Full rooms only. */
+const g = (n: string) => `/opt/nov14/day/${n}.webp`;
 export const PHOTOS: Photo[] = [
-  { src: g('kang'), alt: 'Michael Kang in conversation with a student' },
-  { src: g('room'), alt: 'The room watching an executive join by Zoom on the big screen' },
-  { src: g('mendoza'), alt: 'Anthony Mendoza talking with three students' },
-  { src: g('dodge'), alt: 'Dr. Bob Dodge talking with a student' },
-  { src: g('junn'), alt: 'Dr. Ellen Junn at a table, handing a card to a student' },
-  { src: g('lash'), alt: 'David Lash talking with two students' },
-  { src: g('lewis'), alt: 'Julian Lewis talking with a group at a table' },
-  { src: g('stiger'), alt: 'Jody Stiger speaking on stage' },
+  { src: g('founder-room'), alt: 'Jaxton Wright on stage, speaking to a full room' },
+  { src: g('mendoza-students'), alt: 'An executive talking with students in a crowded room' },
+  { src: g('room-back'), alt: 'The full room from the back, during Dr. Bob Dodge\'s talk' },
+  { src: g('team-laughing'), alt: 'Two members of the Meridian team laughing, with the crowd behind them' },
+  { src: g('tony-crowd'), alt: 'Tony Hsieh talking with students by the windows' },
+  { src: g('founder-podium'), alt: 'Jaxton Wright at the podium, with students and executives below' },
+  { src: g('dodge-story'), alt: 'Dr. Bob Dodge telling a story to a student' },
+  { src: g('kang-student'), alt: 'Michael Kang in conversation with a student' },
 ];
 
-export const PHOTO_CREDIT = 'Photos by Catherine Rodriguez (Las Fotos Project), Aaron Colgan and Elijah Carraby.';
+/** Photographers, each name linked. TODO(jax): confirm Catherine's link (her portfolio; no LinkedIn found). */
+export const PHOTOGRAPHERS = [
+  { name: 'Catherine Rodriguez', url: 'https://new.express.adobe.com/webpage/aG3Xe5qhfJCQp' },
+  { name: 'Aaron Colgan', url: 'https://www.linkedin.com/in/aaron-colgan-153475389/' },
+  { name: 'Elijah Carraby', url: 'https://www.linkedin.com/in/elijah-carraby-29b303180/' },
+];
 
-/** Demo Day: the 12 student startups, in pitch order. One line each, exactly as confirmed. Never add to them. */
+/** Demo Day: the 12 student startups. Pitch order, except NYC High School Esports League, which Jax moved last (Nov 22). One line each, exactly as confirmed. Never add to them. */
 export interface Startup {
   slug: string; name: string; founders?: string; line: string;
   /** Shown after the line as a link. */
@@ -115,7 +126,6 @@ export const STARTUPS_LIST: Startup[] = [
     photos: [{ src: d('zesty-1'), alt: 'A Zesty founder pitching with a microphone' }, { src: d('zesty-2'), alt: 'The Zesty team on stage' }] },
   { slug: 'squaloo', name: 'Squaloo', founders: 'Marshal Aldoph (USC)', line: "Offline AI that keeps veteran technicians' know-how at the machine and shows where every answer came from.",
     photos: [{ src: d('squaloo-2'), alt: 'The Squaloo founder smiling at the podium' }, { src: d('squaloo-1'), alt: 'The Squaloo founder pitching at the podium' }] },
-  { slug: 'nyc-esports', name: 'NYC High School Esports League', founders: 'Edison Zhong (USC), pitched by Zoom', line: 'A high school esports league in New York City.', photos: [] },
   { slug: 'cat-counselor', name: 'Cat Counselor', founders: 'Yin Qiao Zhang (USC) and team', line: 'A cozy mobile game that turns anxiety-coping worksheets into minigames.',
     photos: [{ src: d('cat-counselor-1'), alt: 'The Cat Counselor founder pitching at the podium, with a slide beside her' }, { src: d('cat-counselor-2'), alt: 'The Cat Counselor pitch, seen from the side of the stage' }] },
   // The founders are high school students: never their names or photos.
@@ -129,12 +139,12 @@ export const STARTUPS_LIST: Startup[] = [
   { slug: 'amor', name: 'AMOR Smash Burger', founders: 'Eric Rios', line: 'A smash burger brand built on simple ingredients and community impact.',
     photos: [{ src: d('amor-1'), alt: 'The AMOR Smash Burger founder pitching at the podium' }, { src: d('amor-3'), alt: 'The AMOR Smash Burger founder waving from the podium beside his slide' }, { src: d('amor-2'), alt: 'The AMOR Smash Burger founder with a microphone' }] },
   { slug: 'prism', name: 'PRISM', founders: 'Ayla Schorn (USC)', line: 'MedTech for early detection of respiratory reflux.',
-    photos: [{ src: d('prism-1'), alt: 'The PRISM founder pitching on stage beside her slide' }, { src: d('prism-2'), alt: 'The PRISM pitch, seen from the tables' }] },
+    photos: [{ src: d('prism-1'), alt: 'The PRISM founder pitching on stage beside her slide, How PRISM works' }, { src: d('prism-2'), alt: 'The PRISM pitch, seen from the tables' }] },
   { slug: 'papertok', name: 'PaperTok', founders: 'Pablo Presa Carrera (USC Iovine and Young Academy)', line: 'Scientific papers in one short-form, scrollable feed.',
     link: { label: 'papertok.app', url: 'https://papertok.app' },
     photos: [{ src: d('papertok-1'), alt: 'The PaperTok founder pitching on stage beside his slide' }, { src: d('papertok-2'), alt: 'The PaperTok founder at the podium' }] },
+  { slug: 'nyc-esports', name: 'NYC High School Esports League', founders: 'Edison Zhong (USC)', line: 'A high school esports league in New York City.', photos: [] },
 ];
 
-/** Founder story (confirmed, Part 2 section 2). */
-export const FOUNDER_LINE = 'Jaxton Wright founded Meridian. He is a junior at UC Berkeley, studying Honors Economics and Political Science. In July 2025, he spoke at Harvard.';
-export const ORIGIN_STORY = 'A speech for Laphonza Butler led to speaking at Harvard, which led to a small conference, which became Meridian. Dr. Yan Searcy introduced Jaxton to his mentor George Leis, past chair of the YMCA of the USA, who introduced him to many of the people behind Meridian.';
+/** Founder bio: the wording from before the rewrite, restored (Jax, Nov 22). Its later sentences were about plans for November 14 and are left out. */
+export const FOUNDER_BIO = 'Jaxton Wright is from Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025, he gave a speech at Harvard, and afterward he created Meridian, which brings executives and students together in person, by field.';
