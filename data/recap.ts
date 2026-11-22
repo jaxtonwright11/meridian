@@ -1,40 +1,39 @@
-// Facts about Meridian and its first conference. Every page reads these, so a
+// Facts about Meridian and the conference it launched with. Every page reads these, so a
 // change here changes the whole site. Use only facts Jax has confirmed.
 
 export const COMPANY_LINE = 'Meridian is a company that connects executives with top student talent.';
 /** Footer tagline. */
 export const TAGLINE = 'A company that connects executives with top student talent.';
 export const HEADLINE = 'Meridian connects executives with top student talent.';
-/** What Meridian does, in two sentences. Company first, not conference first. */
-export const WHAT_LINE = 'Meridian brings executives to students. They meet in person, by field, and executives get to know students for who they are, not their resumes.';
+/** What Meridian does. Company first, not conference first. */
+export const WHAT_LINE = 'Meridian connects executives with top student talent. Executives meet students in their field, in person, and get to know them for who they are, not their resumes. Companies get an early look at strong students, and executives meet each other. Afterward, Meridian makes the introductions both sides ask for.';
 
 /** 400, everywhere, not "close to 400" (Jax, Nov 21). */
 export const STUDENTS = '400';
 export const STUDENTS_NUMBER = '400';
 export const EXECUTIVES = 20;
 export const STARTUPS = 12;
-export const PROOF_LINE = `Our first conference: ${STUDENTS} students and ${EXECUTIVES} executives at UCLA, in collaboration with USC.`;
+export const PROOF_LINE = `Meridian launched with a conference: ${STUDENTS} students and ${EXECUTIVES} executives at UCLA, in collaboration with USC.`;
 export const CONFERENCE_DATE = 'Saturday, November 14, 2026';
 
 /** Contact. One address for everything public. */
 export const EMAIL = 'jaxtonwright11@berkeley.edu';
 export const INSTAGRAM = { handle: '@meridianventura', url: 'https://www.instagram.com/meridianventura/' };
 export const FOUNDER_INSTAGRAM = { handle: '@jaxtonwright', url: 'https://www.instagram.com/jaxtonwright/' };
-export const LINKEDIN = { label: 'linkedin.com/in/jaxtonwright', url: 'https://www.linkedin.com/in/jaxtonwright/' };
+/** Meridian's own LinkedIn. */
+export const LINKEDIN = { label: 'LinkedIn', url: 'https://www.linkedin.com/in/meridian-conference-b65a5943b/' };
+/** Jaxton's personal LinkedIn, linked from the founder section and the contact page. */
+export const FOUNDER_LINKEDIN = { label: 'LinkedIn (Jaxton Wright)', url: 'https://www.linkedin.com/in/jaxtonwright/' };
 
 const mail = (subject: string, body?: string) =>
   `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}${body ? `&body=${encodeURIComponent(body)}` : ''}`;
-export const JOIN_TEAM_MAILTO = mail('Joining the Meridian team', 'Name:\nSchool and year:\nWhat I would like to work on:\n');
-export const JOIN_TEAM_LINE = "We're building the team. If you want to be part of what Meridian does next, write to us.";
+export const JOIN_TEAM_MAILTO = mail('Joining the Meridian team', 'Name:\nSchool and year:\nRole I am interested in:\nWhat I have built or done:\n');
+export const JOIN_TEAM_LINE = "Meridian's team works across partnerships, software engineering, design, content, outreach and events, and is open to people who bring other skills.";
 /**
  * The contact form. It never asks people to pick a category ("executive", "student"): people are
  * more than a label (Jax, Nov 22). Every contact link goes to the same plain form.
  */
 export const CONTACT = '/contact/';
-/** Home: the short section for companies, after the partners. */
-export const WORK_WITH_LINE = 'Companies and organizations work with Meridian to meet students in person, by field. If your team wants to be part of what Meridian does next, write to us.';
-/** Home: one line under the executive grid. */
-export const EXEC_LINE = 'Executives who want to take part, or know a colleague who should, can reach us here.';
 
 /**
  * Partners: each organization's own logo file, unedited (sources in the "Asset sources" doc in
@@ -149,7 +148,7 @@ export const STARTUPS_LIST: Startup[] = [
     photos: [{ src: d('blendwell-1'), alt: 'The BlendWell founder, seated, smiling' }, { src: d('blendwell-2'), alt: 'The BlendWell founder at the conference' }, { src: d('blendwell-3'), alt: 'The BlendWell founder smiling, close up' }] },
   { slug: 'turtle', name: 'Turtle', founders: 'Kalyan Toussaint (UC Berkeley)', line: 'A 6 lb sleeping bag, tent and backpack in one, for people facing homelessness or displaced by disaster.',
     photos: [{ src: d('turtle-1'), alt: 'The Turtle founder pitching with a microphone' }, { src: d('turtle-2'), alt: 'The Turtle founder on stage' }] },
-  { slug: 'amor', name: 'AMOR Smash Burger', founders: 'Eric Rios', line: 'A smash burger brand built on simple ingredients and community impact.',
+  { slug: 'amor', name: 'AMOR Smash Burger', founders: 'Eric Rios (Oxnard)', line: 'A smash burger brand built on simple ingredients and community impact.',
     photos: [{ src: d('amor-1'), alt: 'The AMOR Smash Burger founder pitching at the podium' }, { src: d('amor-3'), alt: 'The AMOR Smash Burger founder waving from the podium beside his slide' }, { src: d('amor-2'), alt: 'The AMOR Smash Burger founder with a microphone' }] },
   { slug: 'prism', name: 'PRISM', founders: 'Ayla Schorn (USC)', line: 'MedTech for early detection of respiratory reflux.',
     photos: [{ src: d('prism-1'), alt: 'The PRISM founder pitching on stage beside her slide, How PRISM works' }, { src: d('prism-2'), alt: 'The PRISM pitch, seen from the tables' }] },
@@ -160,4 +159,4 @@ export const STARTUPS_LIST: Startup[] = [
 ];
 
 /** Founder bio: the wording from before the rewrite, restored (Jax, Nov 22). Its later sentences were about plans for November 14 and are left out. */
-export const FOUNDER_BIO = 'Jaxton Wright is from Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025, he gave a speech at Harvard, and afterward he created Meridian, which brings executives and students together in person, by field.';
+export const FOUNDER_BIO = 'Jaxton Wright is the founder of Meridian. He grew up in Oxnard, California, and studies Honors Economics and Political Science at UC Berkeley. In July 2025 he gave a speech at Harvard on AI and policy. He founded Meridian to connect executives with top student talent, and it launched with a conference that brought 20 executives and 400 students together at UCLA, in collaboration with USC.';

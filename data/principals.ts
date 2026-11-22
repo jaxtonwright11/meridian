@@ -4,7 +4,7 @@
 // Until then he is listed with name and title only.
 export const principals = [
   // His school is not published on the site (Jax, Nov 21).
-  { name: 'Dr. Ted Lawrence', title: 'Principal', org: '' },
+  { name: 'Dr. Ted Lawrence', title: 'Principal', org: 'Oxnard High School' },
   { name: 'Marianne Ramos', title: 'Principal', org: 'Channel Islands High School' },
   { name: 'Gary Peterson', title: 'Principal', org: 'Rio Mesa High School' },
   { name: 'Bryan Martin', title: 'Principal', org: 'Rancho Campana High School' },

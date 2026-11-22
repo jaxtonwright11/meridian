@@ -26,7 +26,7 @@ export function Footer() {
           <span className="v-foot-contact">
             <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn (Jaxton Wright)</a>
+            <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">{LINKEDIN.label}</a>
           </span>
           <span>&copy; {new Date().getFullYear()} {SITE_NAME}</span>
         </div>

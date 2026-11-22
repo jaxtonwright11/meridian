@@ -3,12 +3,12 @@ import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { DemoDay } from '@/components/site/DemoDay';
-import { PartnerLine, PhotoCredit } from '@/components/site/recap';
+import { PhotoCredit } from '@/components/site/recap';
 import { CONFERENCE_DATE, STARTUPS } from '@/data/recap';
 
 export const metadata: Metadata = pageMeta(
   'Demo Day',
-  `${STARTUPS} student startups pitched at Demo Day at Meridian's first conference, ${CONFERENCE_DATE}, at UCLA.`,
+  `${STARTUPS} student startups pitched at Demo Day at the conference Meridian launched with, ${CONFERENCE_DATE}, at UCLA.`,
   '/demo-day/',
 );
 
@@ -21,7 +21,7 @@ export default function DemoDayPage() {
           <div className="v-wrap">
             <p className="v-eyebrow">{CONFERENCE_DATE} · UCLA</p>
             <h1 className="v-h1">Demo Day.</h1>
-            <p className="v-lead">{STARTUPS} student startups pitched to a room of executives and students at Meridian&rsquo;s first conference.</p>
+            <p className="v-lead">{STARTUPS} student startups pitched to a room of executives and students at the conference Meridian launched with.</p>
           </div>
         </section>
         <section className="v-section v-tint" aria-label="The startups">
@@ -29,9 +29,6 @@ export default function DemoDayPage() {
             <DemoDay />
             <PhotoCredit />
           </div>
-        </section>
-        <section className="v-section v-section-quiet" aria-label="For companies and organizations">
-          <div className="v-wrap"><PartnerLine /></div>
         </section>
       </main>
       <Footer />

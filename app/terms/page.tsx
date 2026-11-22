@@ -2,19 +2,17 @@ import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { EVENT_DATE, EVENT_VENUE } from '@/config';
 import { EMAIL as CONTACT_EMAIL } from '@/data/recap';
 import styles from './terms.module.css';
 
 export const metadata: Metadata = pageMeta(
-  'Terms for the November 14, 2026 Event',
-  'Meridian event terms and code of conduct: registration, photo and video, sharing your ask, communications, attendees under 18, accessibility, and safety.',
+  'Terms',
+  'Meridian terms: the Meridian network, how member information is used to make introductions, conduct, photos, members under 18, and the November 14, 2026 conference.',
   '/terms/',
 );
 
-// The registration form links here ("I agree to the Meridian event terms and
-// code of conduct"). Each numbered section matches a consent checkbox on the
-// form, so what people agree to is written out in one place, in plain language.
+// Terms for Meridian as a company and a network. The November 14 registration form
+// linked here, so section 10 keeps what attendees agreed to as a record.
 export default function TermsPage() {
   return (
     <>
@@ -23,120 +21,75 @@ export default function TermsPage() {
         <section className={styles.section}>
           <div className="container">
             <div className={`chunk ${styles.doc}`}>
-              <p className="eyebrow">Terms for the November 14, 2026 event</p>
-              <h1 className={styles.headline}>Event Terms and Code of Conduct</h1>
-              <p className={styles.meta}>
-                Applies to the Meridian conference on {EVENT_DATE} at {EVENT_VENUE}, Los
-                Angeles, in person and on Zoom. Last updated October 16, 2026. The event has
-                taken place. These terms are kept as a record.
-              </p>
+              <p className="eyebrow">Terms</p>
+              <h1 className={styles.headline}>Terms of Use</h1>
+              <p className={styles.meta}>Last updated November 22, 2026.</p>
 
               <div className={styles.body}>
-                <h2>1. The Event</h2>
+                <h2>1. About Meridian</h2>
                 <p>
-                  The event is run by Meridian. The event is free. There is no
-                  ticket, no fee, and nothing sold. Attending, whether in person or on
-                  Zoom, means you agree to these terms.
+                  Meridian is a company that connects executives with top student talent. These terms cover meridianventura.com, the Meridian network, and the conference Meridian launched with on November 14, 2026. Using this site, joining the network, or attending a Meridian event means you agree to them.
                 </p>
 
-                <h2>2. Registration and Seats</h2>
+                <h2>2. The Meridian Network</h2>
                 <p>
-                  Seats are capped at 400. Each
-                  attendee needs their own registration. Registration is confirmed by
-                  email. If plans change, tell us so your seat can go to someone else.
-                  We may decline or cancel a registration to keep the event safe and
-                  within capacity.
+                  The Meridian network is the students, executives, companies, and organizations Meridian works with. You join it when you send Meridian your information through this site, a registration form, a network form, or by email. Meridian decides who it connects, and may decline or end anyone&apos;s place in the network.
                 </p>
 
-                <h2>3. Code of Conduct</h2>
+                <h2>3. How Meridian Uses Your Information</h2>
                 <p>
-                  Everyone in the room, students, executives, volunteers, and guests, is
-                  expected to treat everyone else with respect. No harassment,
-                  discrimination, or intimidation of any kind. No soliciting or selling
-                  to attendees. Follow the directions of Meridian staff and venue
-                  staff. We may ask anyone who does not meet this standard to leave,
-                  and that decision is final.
+                  Meridian uses what you share, such as your name, email, school or company, field, and what you are looking for, to connect people in the network. That includes making introductions between students and executives, between executives, and with companies and organizations. Meridian shares your information with another member only to make an introduction or a connection you would reasonably expect, and makes introductions both sides want. Meridian does not sell or rent your information. The Privacy page explains this in more detail.
                 </p>
 
-                <h2>4. Photography and Filming</h2>
+                <h2>4. Staying in Touch</h2>
                 <p>
-                  Meridian photographs and films the event. By attending, you agree
-                  that your image and voice may appear in the Meridian recap film, on
-                  the Meridian website, and on Meridian social media. You agreed to
-                  this on the registration form. If a specific photo or clip of you is
-                  a problem, email us and we will work with you.
+                  Meridian may contact you about introductions, follow-ups, and what Meridian is doing. Every email includes a way to opt out, and you can ask at any time to leave the network or to have your information removed.
                 </p>
 
-                <h2>5. Sharing Your Ask</h2>
+                <h2>5. Conduct</h2>
                 <p>
-                  The registration form asks what you are looking for. With your
-                  consent on the form, Meridian shares that with attending executives and
-                  partner organizations so they can act on it. That is the mechanism of
-                  the day. We do not sell attendee information.
+                  Everyone in the network and at Meridian events is expected to treat everyone else with respect. No harassment, discrimination, or intimidation of any kind. Do not use an introduction or a contact from Meridian to spam, sell to, or solicit other members. Meridian may remove anyone who does not meet this standard, and that decision is final.
                 </p>
 
-                <h2>6. Staying in Touch</h2>
+                <h2>6. No Guarantees</h2>
                 <p>
-                  With your consent on the form, Meridian sends event updates and
-                  reminders before the day, and contacts you afterward about
-                  follow-ups, introductions, and future Meridian events. Every email
-                  includes a way to opt out.
+                  Meridian works to make useful connections, but it does not guarantee any outcome, including an introduction, a meeting, a job, an internship, or an investment. Members are responsible for their own conversations, agreements, and decisions with each other. Meridian is not a party to any arrangement between members.
                 </p>
 
-                <h2>7. Attendee Directory</h2>
+                <h2>7. Photos and Video</h2>
                 <p>
-                  The attendee directory is optional and opt-in only. If you opted in,
-                  your name and what you are looking for may be visible to executives
-                  connected to Meridian. You can ask to be removed at
-                  any time by emailing us.
+                  Meridian photographs and films its events. Your image and voice may appear in Meridian videos, on this website, and on Meridian social media. If a specific photo or clip of you is a problem, email Meridian and it will work with you.
                 </p>
 
-                <h2>8. Attendees Under 18</h2>
+                <h2>8. Members Under 18</h2>
                 <p>
-                  Attendees who will be under 18 on the event date need a parent or
-                  guardian&apos;s consent to attend and to be photographed and filmed,
-                  collected on the registration form. A parent or guardian signature is
-                  also collected at check-in, and the parent or guardian listed serves
-                  as the attendee&apos;s emergency contact for the day.
+                  Students under 18 need a parent or guardian&apos;s consent to join the network, to attend a Meridian event, and to be photographed or filmed. Meridian does not publish the names of student founders under 18.
                 </p>
 
-                <h2>9. Accessibility</h2>
+                <h2>9. This Website</h2>
                 <p>
-                  We want the day to work for you. For accommodations of any kind,
-                  mobility, hearing, vision, learning, dietary, or anything else, note
-                  it on the registration form or email{' '}
-                  <a href={`mailto:${CONTACT_EMAIL}?subject=Accessibility`}>{CONTACT_EMAIL}</a>{' '}
-                  and we will make it work.
+                  The Meridian name, logo, writing, and photos on this site belong to Meridian or are used with permission. Partner names and logos belong to their owners and appear to show who took part with Meridian. Do not copy or reuse them without permission.
                 </p>
 
-                <h2>10. Assumption of Risk</h2>
+                <h2>10. The November 14, 2026 Conference</h2>
                 <p>
-                  You attend at your own risk. To the fullest extent permitted by law,
-                  Meridian, its organizers, volunteers, partners, and the
-                  venue are not liable for personal injury, or for loss or damage to
-                  personal property, arising from your attendance, except where caused
-                  by their own negligence or misconduct.
+                  The conference was free, with no ticket, fee, or anything sold. Seats were capped at 400, and each attendee registered individually. Attendees agreed on the registration form to the code of conduct, photography and filming, sharing what they were looking for with attending executives and partners, an optional and opt-in attendee directory, and parent or guardian consent for attendees under 18. Zoom attendees followed the same code of conduct and agreed not to record or redistribute other attendees without consent. These points are kept here as a record.
                 </p>
 
-                <h2>11. Changes and Cancellation</h2>
+                <h2>11. Assumption of Risk and Liability</h2>
                 <p>
-                  The schedule, speakers, and venue details may change. If the event is
-                  postponed or canceled, everyone registered is notified by email as
-                  early as possible. Because the event is free, there are no refunds to
-                  process.
+                  You attend Meridian events and use this site at your own risk. To the fullest extent permitted by law, Meridian, its team, volunteers, and partners are not liable for personal injury, for loss or damage to property, or for anything arising from dealings between members, except where caused by their own negligence or misconduct.
                 </p>
 
-                <h2>12. Zoom Attendance</h2>
+                <h2>12. Changes to These Terms</h2>
                 <p>
-                  Zoom attendees follow the same code of conduct. Sessions may be
-                  recorded, and recordings are covered by section 4. Do not record,
-                  screenshot, or redistribute other attendees without their consent.
+                  Meridian may update these terms. The date at the top shows when they last changed. Continuing to use the site or the network after a change means you accept the updated terms. These terms are governed by the laws of California.
                 </p>
 
                 <h2>13. Contact</h2>
                 <p>
                   Questions about these terms, or a request under any section:{' '}
-                  <a href={`mailto:${CONTACT_EMAIL}?subject=Event%20terms`}>{CONTACT_EMAIL}</a>.
+                  <a href={`mailto:${CONTACT_EMAIL}?subject=Terms`}>{CONTACT_EMAIL}</a>.
                 </p>
               </div>
             </div>

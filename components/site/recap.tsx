@@ -1,7 +1,7 @@
 import {
   EXECS_IN_ROOM, PARTNERS, PHOTOS, PHOTOGRAPHERS, STUDENTS, EXECUTIVES, STARTUPS,
-  CONFERENCE_DATE, JOIN_TEAM_MAILTO, JOIN_TEAM_LINE, EMAIL, TEAM_PHOTO, CONTACT,
-  FOUNDER_BIO, FOUNDER_INSTAGRAM, LINKEDIN, type ExecInRoom,
+  CONFERENCE_DATE, JOIN_TEAM_MAILTO, JOIN_TEAM_LINE, TEAM_PHOTO,
+  FOUNDER_BIO, FOUNDER_INSTAGRAM, FOUNDER_LINKEDIN, type ExecInRoom,
 } from '@/data/recap';
 
 /** What happened on November 14, in a few short lines. */
@@ -90,7 +90,7 @@ export function FounderStory() {
         <h3 className="v-founder-name">Jaxton Wright</h3>
         <p className="v-lead">{FOUNDER_BIO}</p>
         <p className="v-links">
-          <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href={FOUNDER_LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href={FOUNDER_INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {FOUNDER_INSTAGRAM.handle}</a>
         </p>
       </div>
@@ -112,12 +112,3 @@ export function JoinTeam({ photo = true }: { photo?: boolean }) {
   );
 }
 
-/** One quiet closing line for companies. Never a "partner with us" button. */
-export function PartnerLine() {
-  return (
-    <p className="v-quiet">
-      Companies and organizations: get in touch at <a href={`mailto:${EMAIL}`}>{EMAIL}</a> or
-      through the <a href={CONTACT}>contact form</a>.
-    </p>
-  );
-}

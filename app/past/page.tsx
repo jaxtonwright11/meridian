@@ -21,10 +21,9 @@ export default function BeforeMeridianPage() {
           <div className="v-wrap">
             <p className="v-eyebrow">December 2025</p>
             <h1 className="v-h1">Before Meridian.</h1>
-            <p className="v-lead">A December 2025 event Jaxton organized before founding Meridian.</p>
             <p className="v-lead">
-              150 students met executives from Netflix, OpenAI, and Chase Bank. 23 executives attended, and
-              nine students left with internships.
+              A December 2025 event Jaxton organized before founding Meridian, where 150 students met
+              executives from Netflix, OpenAI and Chase Bank.
             </p>
             <div className="v-pair">
               <img src="/opt/before-panel.webp" alt="A panel of five speakers with Jaxton Wright moderating, December 2025" width={1200} height={547} loading="lazy" />

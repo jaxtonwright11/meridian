@@ -4,8 +4,7 @@ import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
 import { ExecGrid, Gallery, PartnersBlock, FounderStory, JoinTeam } from '@/components/site/recap';
 import {
-  HEADLINE, WHAT_LINE, ROOM_PHOTO, STUDENTS, EXECUTIVES, STARTUPS, CONFERENCE_DATE,
-  EXEC_LINE, WORK_WITH_LINE, CONTACT,
+  HEADLINE, WHAT_LINE, ROOM_PHOTO, STUDENTS, EXECUTIVES, STARTUPS,
 } from '@/data/recap';
 
 export const metadata: Metadata = { alternates: { canonical: '/' } };
@@ -37,10 +36,10 @@ export default function Home() {
               <p className="v-lead">{WHAT_LINE}</p>
             </div>
             <div>
-              <h2 className="v-h2">Our first conference</h2>
+              <h2 className="v-h2">November 14, 2026</h2>
               <p className="v-lead">
-                {CONFERENCE_DATE}, at UCLA, in collaboration with USC. {STUDENTS} students
-                and {EXECUTIVES} executives took part, and {STARTUPS} student startups pitched at Demo Day.
+                Meridian launched with a conference at UCLA, in collaboration with USC. {EXECUTIVES} executives
+                and {STUDENTS} students took part, and {STARTUPS} student startups pitched at Demo Day.
               </p>
               <p className="v-links">
                 <a href="/conference/">See November 14</a>
@@ -55,9 +54,6 @@ export default function Home() {
             <h2 id="execs-h" className="v-h2">Executives</h2>
             <p className="v-lead">Executives who met students on November 14.</p>
             <ExecGrid />
-            <p className="v-quiet v-after">
-              {EXEC_LINE} <a href={CONTACT}>Get in touch</a>
-            </p>
           </div>
         </section>
 
@@ -74,13 +70,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="v-section" id="work-with" aria-labelledby="work-h">
-          <div className="v-wrap">
-            <h2 id="work-h" className="v-h2">Working with Meridian</h2>
-            <p className="v-lead">{WORK_WITH_LINE}</p>
-            <p><a className="v-btn" href={CONTACT}>Get in touch</a></p>
-          </div>
-        </section>
 
         <section className="v-section" id="founder" aria-labelledby="founder-h">
           <div className="v-wrap">
