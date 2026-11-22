@@ -26,9 +26,11 @@ const mail = (subject: string, body?: string) =>
   `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}${body ? `&body=${encodeURIComponent(body)}` : ''}`;
 export const JOIN_TEAM_MAILTO = mail('Joining the Meridian team', 'Name:\nSchool and year:\nWhat I would like to work on:\n');
 export const JOIN_TEAM_LINE = "We're building the team. If you want to be part of what Meridian does next, write to us.";
-/** Contact form links that preselect who is writing (read by the form from ?as=). */
-export const CONTACT_COMPANY = '/contact/?as=company';
-export const CONTACT_EXECUTIVE = '/contact/?as=executive';
+/**
+ * The contact form. It never asks people to pick a category ("executive", "student"): people are
+ * more than a label (Jax, Nov 22). Every contact link goes to the same plain form.
+ */
+export const CONTACT = '/contact/';
 /** Home: the short section for companies, after the partners. */
 export const WORK_WITH_LINE = 'Companies and organizations work with Meridian to meet students in person, by field. If your team wants to be part of what Meridian does next, write to us.';
 /** Home: one line under the executive grid. */

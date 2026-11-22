@@ -1,6 +1,6 @@
 import {
   EXECS_IN_ROOM, PARTNERS, PHOTOS, PHOTOGRAPHERS, STUDENTS, EXECUTIVES, STARTUPS,
-  CONFERENCE_DATE, JOIN_TEAM_MAILTO, JOIN_TEAM_LINE, EMAIL, TEAM_PHOTO, CONTACT_COMPANY,
+  CONFERENCE_DATE, JOIN_TEAM_MAILTO, JOIN_TEAM_LINE, EMAIL, TEAM_PHOTO, CONTACT,
   FOUNDER_BIO, FOUNDER_INSTAGRAM, LINKEDIN, type ExecInRoom,
 } from '@/data/recap';
 
@@ -117,7 +117,7 @@ export function PartnerLine() {
   return (
     <p className="v-quiet">
       Companies and organizations: get in touch at <a href={`mailto:${EMAIL}`}>{EMAIL}</a> or
-      through the <a href={CONTACT_COMPANY}>contact form</a>.
+      through the <a href={CONTACT}>contact form</a>.
     </p>
   );
 }

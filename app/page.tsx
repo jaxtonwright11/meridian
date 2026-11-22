@@ -5,7 +5,7 @@ import { MovedAnchors } from '@/components/MovedAnchors';
 import { ExecGrid, Gallery, PartnersBlock, FounderStory, JoinTeam } from '@/components/site/recap';
 import {
   HEADLINE, WHAT_LINE, ROOM_PHOTO, STUDENTS, EXECUTIVES, STARTUPS, CONFERENCE_DATE,
-  EXEC_LINE, WORK_WITH_LINE, CONTACT_COMPANY, CONTACT_EXECUTIVE,
+  EXEC_LINE, WORK_WITH_LINE, CONTACT,
 } from '@/data/recap';
 
 export const metadata: Metadata = { alternates: { canonical: '/' } };
@@ -56,7 +56,7 @@ export default function Home() {
             <p className="v-lead">Executives who met students on November 14.</p>
             <ExecGrid />
             <p className="v-quiet v-after">
-              {EXEC_LINE} <a href={CONTACT_EXECUTIVE}>Get in touch</a>
+              {EXEC_LINE} <a href={CONTACT}>Get in touch</a>
             </p>
           </div>
         </section>
@@ -78,7 +78,7 @@ export default function Home() {
           <div className="v-wrap">
             <h2 id="work-h" className="v-h2">Working with Meridian</h2>
             <p className="v-lead">{WORK_WITH_LINE}</p>
-            <p><a className="v-btn" href={CONTACT_COMPANY}>Get in touch</a></p>
+            <p><a className="v-btn" href={CONTACT}>Get in touch</a></p>
           </div>
         </section>
 
