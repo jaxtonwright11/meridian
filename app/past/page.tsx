@@ -2,46 +2,55 @@ import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { FirstMeridian } from '@/components/FirstMeridian';
-import { Explore, RegisterButton } from '@/components/site/parts';
-import { principals, PRINCIPAL_LINE } from '@/data/principals';
+import { principals } from '@/data/principals';
 
 export const metadata: Metadata = pageMeta(
-  'Past Events',
-  'The first Meridian, December 2025.',
+  'Before Meridian',
+  'A December 2025 event Jaxton Wright organized before founding Meridian.',
   '/past/',
 );
 
-export default function PastPage() {
+// Linked from About and the footer only. Never name the December 2025 event or the
+// organizations tied to it (Jax, Nov 21). The numbers are the ones already on the site.
+export default function BeforeMeridianPage() {
   return (
-    <div className="m-page">
-      <Nav trail={[{ label: 'About', href: '/about/' }, { label: 'Past events' }]} />
+    <div className="m-page v-page">
+      <Nav />
       <main id="main">
-        <FirstMeridian detail page />
-
-        <section className="m-section" id="principals">
-          <div className="m-wrap">
-            <span className="m-eyebrow">December 2025</span>
-            <h2 className="m-display m-h2">Who Shared the First Meridian</h2>
-            <p className="m-lead" style={{ marginBottom: 20 }}>
-              Schools and educators who shared the first Meridian with their students in December 2025.
+        <section className="v-section v-top">
+          <div className="v-wrap">
+            <p className="v-eyebrow">December 2025</p>
+            <h1 className="v-h1">Before Meridian.</h1>
+            <p className="v-lead">A December 2025 event Jaxton organized before founding Meridian.</p>
+            <p className="v-lead">
+              150 students met executives from Netflix, OpenAI, and Chase Bank. 23 executives attended, and
+              nine students left with internships.
             </p>
-            <div className="m-list">
-              {principals.map((p) => (
-                <div className="m-row" key={p.name}>
-                  <span className="n">{p.name}</span>
-                  <span className="r">{p.title}{p.org ? `, ${p.org}` : ''}. {PRINCIPAL_LINE}</span>
-                </div>
-              ))}
+            <div className="v-pair">
+              <img src="/opt/before-panel.webp" alt="A panel of five speakers with Jaxton Wright moderating, December 2025" width={1200} height={547} loading="lazy" />
+              <img src="/opt/img_1728.webp" alt="A speaker with a microphone addressing the room, December 2025" width={1178} height={720} loading="lazy" />
             </div>
+            <blockquote className="v-quote">
+              <p>
+                &ldquo;I had an amazing time speaking on my experience and being able to hear the experiences
+                of so many other talented individuals.&rdquo;
+              </p>
+              <footer><strong>Adriel Miramontes</strong>, Journalist and Host, The Adriel Show</footer>
+            </blockquote>
           </div>
         </section>
 
-        <section className="m-section">
-          <div className="m-wrap"><div className="m-actions" style={{ marginTop: 0 }}><RegisterButton /></div></div>
+        <section className="v-section v-tint" aria-labelledby="principals-h">
+          <div className="v-wrap">
+            <h2 id="principals-h" className="v-h2">Schools that shared it</h2>
+            <ul className="v-names v-names-2">
+              {principals.map((p) => (
+                <li key={p.name}><strong>{p.name}</strong><span>{p.title}{p.org ? `, ${p.org}` : ''}</span></li>
+              ))}
+            </ul>
+          </div>
         </section>
       </main>
-      <Explore links={[['About', '/about/'], ['Conference', '/conference/']]} />
       <Footer />
     </div>
   );

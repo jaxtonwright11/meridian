@@ -3,7 +3,7 @@ import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { Explore } from '@/components/site/parts';
-import { CONTACT_EMAIL_PUBLIC } from '@/config';
+import { EMAIL as CONTACT_EMAIL_PUBLIC } from '@/data/recap';
 
 export const metadata: Metadata = pageMeta(
   'Privacy',
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
         <section className="m-hero" style={{ paddingBottom: 32 }}>
           <div className="m-wrap">
             <h1>Privacy</h1>
-            <p className="m-lead" style={{ marginTop: 16 }}>What this site collects, in plain words.</p>
+            <p className="m-lead" style={{ marginTop: 16 }}>Privacy for the November 14, 2026 event, kept as a record.</p>
           </div>
         </section>
         <section className="m-section">

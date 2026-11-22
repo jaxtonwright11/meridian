@@ -3,6 +3,8 @@ import { Fraunces, Hanken_Grotesk, Spline_Sans_Mono } from 'next/font/google';
 import './globals.css';
 import './site.css';
 import { SITE_NAME } from '@/config';
+import { COMPANY_LINE, PROOF_LINE, INSTAGRAM, LINKEDIN } from '@/data/recap';
+import { OG_IMAGE } from '@/lib/meta';
 import { RevealOnScroll } from '@/components/RevealOnScroll';
 
 const fraunces = Fraunces({
@@ -27,26 +29,17 @@ const splineMono = Spline_Sans_Mono({
 });
 
 // One canonical description everywhere (meta, og, twitter).
-const DESCRIPTION =
-  'Meridian brings executives and students together in person, by field. It starts with a conference at UCLA on Saturday, November 14, 2026, then expands into in-person events by field.';
+const DESCRIPTION = `${COMPANY_LINE} ${PROOF_LINE}`;
 
-const HOME_TITLE = 'Meridian | Executives and Students, in Person';
-// Link previews already show the wordmark image, so their title is the short hook alone.
-const SHARE_TITLE = 'Executives and Students, in Person';
+const HOME_TITLE = 'Meridian | Connecting Executives With Top Student Talent';
+const SHARE_TITLE = 'Meridian: Connecting Executives With Top Student Talent';
 
-// TODO(jax): the share image may still say "Meridian Conference". Not changed.
-const OG_IMAGE = {
-  url: '/og-image-v2.jpg',
-  width: 1200,
-  height: 630,
-  alt: 'Meridian',
-};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://meridianventura.com'),
   title: { default: HOME_TITLE, template: '%s | Meridian' },
   description: DESCRIPTION,
-  keywords: ['Meridian', 'students', 'executives', 'Los Angeles', 'events by field', 'UCLA'],
+  keywords: ['Meridian', 'executives', 'talent', 'students', 'UCLA', 'USC'],
   authors: [{ name: 'Jaxton Wright' }],
   icons: {
     icon: [
@@ -79,7 +72,7 @@ const ORG_JSONLD = {
   url: 'https://meridianventura.com',
   description: DESCRIPTION,
   founder: { '@type': 'Person', name: 'Jaxton Wright' },
-  sameAs: ['https://www.instagram.com/meridianconference/'],
+  sameAs: [INSTAGRAM.url, LINKEDIN.url],
 };
 
 export default function RootLayout({

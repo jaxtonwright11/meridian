@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { EVENT_DATE, EVENT_VENUE, CONTACT_EMAIL_PUBLIC as CONTACT_EMAIL } from '@/config';
+import { EVENT_DATE, EVENT_VENUE } from '@/config';
+import { EMAIL as CONTACT_EMAIL } from '@/data/recap';
 import styles from './terms.module.css';
 
 export const metadata: Metadata = pageMeta(
-  'Event Terms',
+  'Terms for the November 14, 2026 Event',
   'Meridian Conference event terms and code of conduct: registration, photo and video, sharing your ask, communications, attendees under 18, accessibility, and safety.',
   '/terms/',
 );
@@ -22,11 +23,12 @@ export default function TermsPage() {
         <section className={styles.section}>
           <div className="container">
             <div className={`chunk ${styles.doc}`}>
-              <p className="eyebrow">Meridian Conference</p>
+              <p className="eyebrow">Terms for the November 14, 2026 event</p>
               <h1 className={styles.headline}>Event Terms and Code of Conduct</h1>
               <p className={styles.meta}>
                 Applies to Meridian Conference on {EVENT_DATE} at {EVENT_VENUE}, Los
-                Angeles, in person and on Zoom. Last updated October 16, 2026.
+                Angeles, in person and on Zoom. Last updated October 16, 2026. The event has
+                taken place. These terms are kept as a record.
               </p>
 
               <div className={styles.body}>
@@ -39,7 +41,7 @@ export default function TermsPage() {
 
                 <h2>2. Registration and Seats</h2>
                 <p>
-                  Seats are capped at 400 and given first come, first served. Each
+                  Seats are capped at 400. Each
                   attendee needs their own registration. Registration is confirmed by
                   email. If plans change, tell us so your seat can go to someone else.
                   We may decline or cancel a registration to keep the event safe and

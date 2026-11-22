@@ -1,6 +1,48 @@
 {
   "routes": [
     {
+      "src": "^/students/?$",
+      "status": 307,
+      "headers": {
+        "Location": "/conference/"
+      }
+    },
+    {
+      "src": "^/speakers/?$",
+      "status": 307,
+      "headers": {
+        "Location": "/#executives"
+      }
+    },
+    {
+      "src": "^/partners/?$",
+      "status": 307,
+      "headers": {
+        "Location": "/#partners"
+      }
+    },
+    {
+      "src": "^/faq/?$",
+      "status": 307,
+      "headers": {
+        "Location": "/contact/"
+      }
+    },
+    {
+      "src": "^/leaders/?$",
+      "status": 307,
+      "headers": {
+        "Location": "/#executives"
+      }
+    },
+    {
+      "src": "^/partners/directory/?$",
+      "status": 307,
+      "headers": {
+        "Location": "/#partners"
+      }
+    },
+    {
       "src": "^/[tT]1/?$",
       "status": 307,
       "headers": {
