@@ -1,10 +1,12 @@
-# Prompt: gather logos and headshots for meridianventura.com
+# Prompt: gather assets and review meridianventura.com
 
-Copy everything below the line into a new Claude chat that has Google Drive and web search connected.
+Copy everything below the line into a new Claude chat that has Google Drive and web search connected. It does two jobs: Part A collects headshots and logos, Part B reviews the whole site.
 
 ---
 
-I run Meridian (meridianventura.com), a company that connects executives with top student talent. I need you to research and collect image files for the website, and save them into my Google Drive. Do the research yourself; do not ask me for links.
+I run Meridian (meridianventura.com), a company that connects executives with top student talent. I need two things from you: (A) research and collect image files for the website into my Google Drive, and (B) a full quality review of the site. Do the research yourself; do not ask me for links.
+
+# Part A: collect headshots and logos
 
 ## Where to save
 
@@ -80,4 +82,62 @@ Create a Google Doc in the same folder named **"Asset sources"** with one row pe
 - the image's pixel size
 - any concern (low resolution, unofficial-looking source, unsure identity)
 
-Then reply with the folder link and a short summary: what you found, what you could not find, and anything I should double-check.
+Then move on to Part B.
+
+# Part B: review the whole site
+
+## How to see the site
+
+1. **Read every page** at these addresses (fetch each one and read all of its text, links and buttons):
+   - https://www.meridianventura.com/ (home, which is the About page)
+   - https://www.meridianventura.com/conference/ (November 14)
+   - https://www.meridianventura.com/demo-day/
+   - https://www.meridianventura.com/team/
+   - https://www.meridianventura.com/contact/
+   - https://www.meridianventura.com/past/ (Before Meridian)
+   - https://www.meridianventura.com/terms/, /privacy/, /accessibility/
+2. **Look at how it looks.** Fetching a page only gives you text, not the design. Full-page screenshots of every page, at desktop width (1440 px) and phone width (390 px), are in my Google Drive folder **"Meridian website review (Nov 2026)"**: https://drive.google.com/drive/folders/13pQuCgW0_rYEGmimYP0SVq4CWQdlWoOQ . Open and look at every image in it. Files are numbered in page order; long pages are split into parts.
+
+## Who the site is for, in priority order
+
+1. Companies and organizations that could partner with Meridian
+2. Executives who might take part
+3. Students
+4. People who want to join the Meridian team
+
+Most visitors arrive on a phone from LinkedIn or Instagram, so judge the phone screenshots first.
+
+## What Meridian is (use these facts; do not invent others)
+
+- Meridian is a **company** that connects executives with top student talent. It is not a nonprofit, club, program or "student-led event". It held its first conference; it is not just a conference.
+- First conference: Saturday, November 14, 2026, at UCLA, in collaboration with USC. 400 students, 20 executives, 12 student startups pitched at Demo Day.
+- Executives get to know students for who they are, not their resumes.
+- Founder: Jaxton Wright, a junior at UC Berkeley studying Honors Economics and Political Science.
+
+## What to check
+
+1. **First impression.** In five seconds on a phone, does a company or executive understand what Meridian is and why it is credible? Is the headline strong? Does anything feel corny, vague, student-club-like or unfinished?
+2. **Navigation and tabs.** Is the header clear (About, November 14, Demo Day, Team, plus Contact us and Join the team)? Does every link and button go somewhere sensible? Any dead ends or pages that repeat each other?
+3. **Intent and calls to action.** For each audience above, what is the one thing they should do next, and does the site make it obvious? Are there too many or too few buttons? Is there a clear way for a company to reach out?
+4. **Copy.** Flag every sentence that is weak, repetitive, wordy, braggy, or sounds like a conference instead of a company. Suggest a replacement for each.
+5. **Photos.** Check every photo: is it sharp, well lit, flattering, and the right person? Flag anything blurry, awkward (mid-word, eyes closed), badly cropped, showing empty seats, or showing unrelated logos or text.
+6. **Consistency.** Spelling of names and titles, capitalization, the same fact stated two different ways, numbers that disagree.
+7. **Design.** Spacing, alignment, font sizes, contrast, sections that feel cramped or empty, and anything that breaks on the phone screenshots.
+8. **Trust.** What would make a skeptical executive or company take Meridian more seriously, using only what is already true?
+
+## Hard rules for your suggestions
+
+- Never suggest saying: "nonprofit", "program", "student-led", "hackathon", "first-generation", "underserved", "investors", "press", "close to 400", "next generation of talent", or anything about future events, dates or ticket prices.
+- Never suggest adding people who did not attend, or inventing quotes, numbers, partners or outcomes.
+- Do not use em dashes in any suggested copy.
+
+## Where to put the review
+
+Create a Google Doc named **"Website review"** in the "Meridian website review (Nov 2026)" folder. Structure it as:
+
+1. **Top 10 fixes**, ranked by impact, each one line with the page and what to change.
+2. **Page by page**: for each page, what works, what does not, and exact suggested copy where relevant.
+3. **Photo notes**: every photo you would replace, with the reason.
+4. **Questions for me**: anything you could not judge without more information.
+
+Then reply with links to both folders, a short summary of Part A (found and not found), and the top 5 fixes from Part B.
