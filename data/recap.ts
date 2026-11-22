@@ -64,7 +64,8 @@ export const EXECS_IN_ROOM: ExecInRoom[] = [
   { name: 'Dr. Ellen Junn', title: 'Former President, California State University, Stanislaus', photo: ex('ellen-junn'), alt: 'Dr. Ellen Junn speaking with a microphone' },
   // No photo from the day for Dr. Searcy: his portrait from the earlier site.
   { name: 'Dr. Yan Searcy', title: 'Dean, California State University, Northridge', photo: '/opt/people/yan-searcy.webp', alt: 'Dr. Yan Searcy' },
-  { name: 'Darren Prince', title: 'Founder and CEO, Prince Marketing Group; sports and celebrity agent' },
+  // Portrait supplied by Jax (not from the day).
+  { name: 'Darren Prince', title: 'Founder and CEO, Prince Marketing Group; sports and celebrity agent', photo: ex('darren-prince'), alt: 'Darren Prince' },
   { name: 'Jamin Wright', title: 'Associate Director, Talent Acquisition, Ardelyx', photo: ex('jamin-wright'), alt: 'Jamin Wright talking with students' },
   // Last of the in-person cards, by request (Jax, Nov 21).
   { name: 'Kheris Rogers', title: "Founder, Flexin' In My Complexion", photo: ex('kheris-rogers'), alt: 'Kheris Rogers at the conference' },
