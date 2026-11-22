@@ -2,12 +2,13 @@ import type { Metadata } from 'next';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { MovedAnchors } from '@/components/MovedAnchors';
-import { Proof, ExecGrid, Gallery, PartnersBlock, FounderStory, JoinTeam, PartnerLine } from '@/components/site/recap';
-import { DemoDay } from '@/components/site/DemoDay';
-import { COMPANY_LINE, PROOF_LINE, HEADLINE, ROOM_PHOTO, STARTUPS, EXECUTIVES } from '@/data/recap';
+import { ExecGrid, Gallery, PartnersBlock, FounderStory, JoinTeam, PartnerLine } from '@/components/site/recap';
+import { HEADLINE, WHAT_LINE, ROOM_PHOTO, STUDENTS, EXECUTIVES, STARTUPS, CONFERENCE_DATE } from '@/data/recap';
 
 export const metadata: Metadata = { alternates: { canonical: '/' } };
 
+// The home page is the About page: what Meridian is, who has taken part, who is behind it.
+// The conference has its own page; this one stays about the company.
 export default function Home() {
   return (
     <div className="m-page v-page">
@@ -22,42 +23,47 @@ export default function Home() {
           <div className="v-hero-text">
             <div className="v-wrap">
               <h1 id="hero-h" className="v-h1">{HEADLINE}</h1>
-              <p className="v-hero-sub">{COMPANY_LINE} {PROOF_LINE}</p>
             </div>
           </div>
         </section>
 
-        <section className="v-band" aria-label="In numbers">
-          <div className="v-wrap"><Proof /></div>
+        <section className="v-section" id="about" aria-labelledby="about-h">
+          <div className="v-wrap v-two">
+            <div>
+              <h2 id="about-h" className="v-h2">What Meridian does</h2>
+              <p className="v-lead">{WHAT_LINE}</p>
+            </div>
+            <div>
+              <h2 className="v-h2">Our first conference</h2>
+              <p className="v-lead">
+                {CONFERENCE_DATE}, at UCLA, in collaboration with USC. {STUDENTS} students
+                and {EXECUTIVES} executives took part, and {STARTUPS} student startups pitched at Demo Day.
+              </p>
+              <p className="v-links">
+                <a href="/conference/">See November 14</a>
+                <a href="/demo-day/">See Demo Day</a>
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section className="v-section" id="executives" aria-labelledby="execs-h">
+        <section className="v-section v-tint" id="executives" aria-labelledby="execs-h">
           <div className="v-wrap">
-            <p className="v-eyebrow">November 14, 2026 · UCLA</p>
-            <h2 id="execs-h" className="v-h2">Executives in the room</h2>
-            <p className="v-lead">{EXECUTIVES} executives came to get to know students for who they are, not their resumes.</p>
+            <h2 id="execs-h" className="v-h2">Executives</h2>
+            <p className="v-lead">The executives who came to get to know students.</p>
             <ExecGrid />
           </div>
         </section>
 
-        <section className="v-section v-tint" id="demo-day" aria-labelledby="demo-h">
+        <section className="v-section" aria-label="Photos from November 14">
           <div className="v-wrap">
-            <h2 id="demo-h" className="v-h2">Demo Day</h2>
-            <p className="v-lead">{STARTUPS} student startups pitched, in this order.</p>
-          </div>
-          <DemoDay carousel />
-        </section>
-
-        <section className="v-section" aria-labelledby="photos-h">
-          <div className="v-wrap">
-            <h2 id="photos-h" className="v-h2">The day</h2>
-            <Gallery />
+            <Gallery limit={4} />
           </div>
         </section>
 
         <section className="v-section v-tint" id="partners" aria-labelledby="partners-h">
           <div className="v-wrap">
-            <h2 id="partners-h" className="v-h2">Partners and organizations</h2>
+            <h2 id="partners-h" className="v-h2">Partners</h2>
             <PartnersBlock />
           </div>
         </section>
@@ -72,11 +78,8 @@ export default function Home() {
         <section className="v-section v-tint" aria-labelledby="join-h">
           <div className="v-wrap">
             <JoinTeam />
+            <div className="v-after"><PartnerLine /></div>
           </div>
-        </section>
-
-        <section className="v-section v-section-quiet" aria-label="For companies and organizations">
-          <div className="v-wrap"><PartnerLine /></div>
         </section>
       </main>
       <Footer />

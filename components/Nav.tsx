@@ -9,7 +9,7 @@ import { JOIN_TEAM_MAILTO } from '@/data/recap';
 // Desktop: the sections sit in the header. Phones: the header keeps the wordmark and
 // Join the team, and the sections show as a row of tabs under it.
 const items = [
-  { href: '/about/', label: 'About', match: ['/about', '/contact', '/past'] },
+  { href: '/', label: 'About', match: ['/', '/contact', '/past'] },
   { href: '/conference/', label: 'November 14', match: ['/conference'] },
   { href: '/demo-day/', label: 'Demo Day', match: ['/demo-day'] },
   { href: '/team/', label: 'Team', match: ['/team'] },

@@ -1,8 +1,8 @@
 import { SITE_NAME } from '@/config';
-import { TAGLINE, EMAIL, INSTAGRAM, LINKEDIN, PARTNERS } from '@/data/recap';
+import { TAGLINE, EMAIL, INSTAGRAM, LINKEDIN, PARTNERS_SHORT } from '@/data/recap';
 
 const cols = [
-  { h: 'Meridian', links: [['About', '/about/'], ['November 14', '/conference/'], ['Demo Day', '/demo-day/'], ['Team', '/team/']] },
+  { h: 'Meridian', links: [['About', '/'], ['November 14', '/conference/'], ['Demo Day', '/demo-day/'], ['Team', '/team/']] },
   { h: 'More', links: [['Before Meridian', '/past/'], ['Contact', '/contact/'], ['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
 ];
 
@@ -31,7 +31,8 @@ export function Footer() {
           <div>
             <h3>Partners</h3>
             <ul className="v-foot-names">
-              {PARTNERS.map((p) => (<li key={p}>{p}</li>))}
+              {PARTNERS_SHORT.map((p) => (<li key={p}>{p}</li>))}
+              <li><a href="/#partners">All partners</a></li>
             </ul>
           </div>
         </div>
