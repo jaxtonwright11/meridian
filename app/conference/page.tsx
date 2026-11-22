@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { pageMeta } from '@/lib/meta';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
-import { RECAP_LINES, Gallery, PartnersBlock, PartnerLine } from '@/components/site/recap';
+import { Gallery, PartnersBlock, PartnerLine } from '@/components/site/recap';
 import { CONFERENCE_DATE, STUDENTS, EXECUTIVES, STARTUPS, ROOM_PHOTO } from '@/data/recap';
 
 export const metadata: Metadata = pageMeta(
@@ -20,9 +20,11 @@ export default function ConferencePage() {
           <div className="v-wrap">
             <p className="v-eyebrow">{CONFERENCE_DATE} · UCLA</p>
             <h1 className="v-h1">Our first conference.</h1>
-            <ul className="v-facts">
-              {RECAP_LINES.map((l) => (<li key={l}>{l}</li>))}
-            </ul>
+            <p className="v-lead">
+              {STUDENTS} students and {EXECUTIVES} executives met at UCLA, in collaboration with USC.
+              Executives got to know students by field, for who they are and not their resumes,
+              and {STARTUPS} student startups pitched at Demo Day.
+            </p>
             <p className="v-links">
               <a href="/#executives">See the executives</a>
               <a href="/demo-day/">See all {STARTUPS} startups</a>

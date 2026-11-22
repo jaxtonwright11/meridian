@@ -17,7 +17,7 @@ export function Footer() {
             <p className="v-foot-contact">
               <a href={`mailto:${EMAIL}`}>{EMAIL}</a><br />
               <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {INSTAGRAM.handle}</a><br />
-              <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn (Jaxton Wright)</a>
             </p>
           </div>
           {cols.map((c) => (
@@ -31,7 +31,7 @@ export function Footer() {
           <div>
             <h3>Partners</h3>
             <ul className="v-foot-names">
-              {PARTNERS_SHORT.map((p) => (<li key={p}>{p}</li>))}
+              {PARTNERS_SHORT.map((p) => (<li key={p.name}>{p.name}</li>))}
               <li><a href="/#partners">All partners</a></li>
             </ul>
           </div>

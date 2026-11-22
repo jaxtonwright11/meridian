@@ -9,7 +9,7 @@ import { JOIN_TEAM_MAILTO } from '@/data/recap';
 // Desktop: the sections sit in the header. Phones: the header keeps the wordmark and
 // Join the team, and the sections show as a row of tabs under it.
 const items = [
-  { href: '/', label: 'About', match: ['/', '/contact', '/past'] },
+  { href: '/', label: 'About', match: ['/'] },
   { href: '/conference/', label: 'November 14', match: ['/conference'] },
   { href: '/demo-day/', label: 'Demo Day', match: ['/demo-day'] },
   { href: '/team/', label: 'Team', match: ['/team'] },
@@ -18,7 +18,8 @@ const items = [
 export function Nav({ trail }: { trail?: { label: string; href?: string }[]; home?: boolean }) {
   const path = (usePathname() || '/').replace(/\/$/, '') || '/';
   const tabsRef = useRef<HTMLElement>(null);
-  const isCurrent = (match: string[]) => match.some((m) => path === m || path.startsWith(m + '/'));
+  // '/' matches the home page only; Contact and Before Meridian show no current tab.
+  const isCurrent = (match: string[]) => match.some((m) => path === m || (m !== '/' && path.startsWith(m + '/')));
 
   // Center the current section's tab in the row. Sets the row's own scroll, never the page's.
   useEffect(() => {
@@ -40,8 +41,8 @@ export function Nav({ trail }: { trail?: { label: string; href?: string }[]; hom
             {SITE_NAME}<span>.</span>
           </a>
           <span className="v-head-actions">
-            <a className="v-btn v-btn-head v-btn-line" href="/contact/">Contact us</a>
-            <a className="v-btn v-btn-head" href={JOIN_TEAM_MAILTO}>Join the team</a>
+            <a className="v-btn v-btn-head" href="/contact/">Contact us</a>
+            <a className="v-btn v-btn-head v-btn-line" href={JOIN_TEAM_MAILTO}>Join the team</a>
           </span>
           <nav className="m-nav" aria-label="Main">
             {items.map((i) => (

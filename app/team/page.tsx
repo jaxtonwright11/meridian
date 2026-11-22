@@ -24,7 +24,7 @@ export default function TeamPage() {
             <img className="v-wide" src={TEAM_PHOTO.src} alt={TEAM_PHOTO.alt} width={1320} height={950} />
           </div>
         </section>
-        <section className="v-section" aria-label="Team members">
+        <section className="v-section v-tight-top" aria-label="Team members">
           <div className="v-wrap">
             <ul className="v-grid v-grid-3">
               {[founder, ...team].map((m) => (
