@@ -1,42 +1,33 @@
 import { SITE_NAME } from '@/config';
-import { TAGLINE, EMAIL, INSTAGRAM, LINKEDIN, PARTNERS_SHORT } from '@/data/recap';
+import { TAGLINE, EMAIL, INSTAGRAM, LINKEDIN } from '@/data/recap';
 
-const cols = [
-  { h: 'Meridian', links: [['About', '/'], ['November 14', '/conference/'], ['Demo Day', '/demo-day/'], ['Team', '/team/']] },
-  { h: 'More', links: [['Before Meridian', '/past/'], ['Contact', '/contact/'], ['Terms', '/terms/'], ['Privacy', '/privacy/'], ['Accessibility', '/accessibility/']] },
+// Short on purpose: wordmark and tagline, one wrapping row of links, contact on the bottom line.
+// Partners are on the home page, so the footer does not list them.
+const links = [
+  ['About', '/'], ['November 14', '/conference/'], ['Demo Day', '/demo-day/'], ['Team', '/team/'],
+  ['Contact', '/contact/'], ['Before Meridian', '/past/'], ['Terms', '/terms/'], ['Privacy', '/privacy/'],
+  ['Accessibility', '/accessibility/'],
 ];
 
 export function Footer() {
   return (
-    <footer className="m-footer">
+    <footer className="m-footer v-foot">
       <div className="m-wrap">
-        <div className="m-fgrid v-fgrid">
+        <div className="v-foot-top">
           <div>
             <a className="m-logo" href="/">{SITE_NAME}<span>.</span></a>
             <p className="v-foot-tag">{TAGLINE}</p>
-            <p className="v-foot-contact">
-              <a href={`mailto:${EMAIL}`}>{EMAIL}</a><br />
-              <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram {INSTAGRAM.handle}</a><br />
-              <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn (Jaxton Wright)</a>
-            </p>
           </div>
-          {cols.map((c) => (
-            <div key={c.h}>
-              <h3>{c.h}</h3>
-              <ul>
-                {c.links.map(([l, h]) => (<li key={h}><a href={h}>{l}</a></li>))}
-              </ul>
-            </div>
-          ))}
-          <div>
-            <h3>Partners</h3>
-            <ul className="v-foot-names">
-              {PARTNERS_SHORT.map((p) => (<li key={p.name}>{p.name}</li>))}
-              <li><a href="/#partners">All partners</a></li>
-            </ul>
-          </div>
+          <nav className="v-foot-links" aria-label="Footer">
+            {links.map(([l, h]) => (<a key={h} href={h}>{l}</a>))}
+          </nav>
         </div>
-        <div className="m-fbottom">
+        <div className="m-fbottom v-foot-bottom">
+          <span className="v-foot-contact">
+            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            <a href={INSTAGRAM.url} target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href={LINKEDIN.url} target="_blank" rel="noopener noreferrer">LinkedIn (Jaxton Wright)</a>
+          </span>
           <span>&copy; {new Date().getFullYear()} {SITE_NAME}</span>
         </div>
       </div>

@@ -1076,3 +1076,16 @@ button.v-demo-photo { cursor: pointer; }
 @media (max-width: 700px) { .v-logo-box { height: 84px; padding: 14px; } .v-logo-box img { max-height: 40px; } }
 .v-logo-small .v-logo-box img { max-height: 34px; }
 @media (max-width: 700px) { .v-logo-small .v-logo-box img { max-height: 28px; } }
+
+/* Footer, Nov 22: short. Wordmark and tagline beside one wrapping row of links; contact and copyright on the last line. */
+.m-footer.v-foot { padding: 36px 0 20px; }
+.v-foot-top { display: grid; gap: 18px; }
+@media (min-width: 801px) { .v-foot-top { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 48px; align-items: start; } }
+.v-foot .v-foot-tag { margin-top: 6px; font-size: 15px; }
+.v-foot-links { display: flex; flex-wrap: wrap; gap: 0 22px; }
+.v-foot-links a { display: inline-flex; align-items: center; min-height: 40px; font-size: 15px; }
+@media (min-width: 801px) { .v-foot-links { justify-content: flex-end; } }
+.v-foot .m-fbottom.v-foot-bottom { margin-top: 18px; padding-top: 12px; align-items: center; }
+.v-foot .v-foot-contact { margin: 0; display: flex; flex-wrap: wrap; gap: 0 20px; font-size: 14.5px; }
+.v-foot .v-foot-contact a { min-height: 40px; }
+@media (max-width: 700px) { .v-foot-links { gap: 0 18px; } }
